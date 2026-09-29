@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scope": "English-only source-reviewed preassigned development facts",
+  "status": "Frozen before English E4 Aya outputs; earlier E1/E2/E5 outcomes already existed",
+  "model_id": "CohereLabs/aya-23-8B",
+  "model_revision": "89da1a0ed02d6130f93ae0ffdbedb63b760c0471",
+  "precision": "nf4",
+  "selected_fact_ids": [
+    "Q13230-P19-Q71",
+    "Q152433-P740-Q49218",
+    "Q190368-P19-Q87",
+    "Q218255-P740-Q2256",
+    "Q223041-P159-Q84",
+    "Q239663-P159-Q11194",
+    "Q318219-P19-Q220",
+    "Q319896-P19-Q1874",
+    "Q34624-P20-Q641",
+    "Q44197-P20-Q90",
+    "Q549786-P20-Q84",
+    "Q77253-P19-Q1726",
+    "Q910379-P740-Q220",
+    "Q912887-P159-Q350"
+  ],
+  "screen_rule": "both two preexisting English screen templates correct using Aya; no target-language screen",
+  "e4_sites": [
+    "first_subject",
+    "last_subject",
+    "prediction"
+  ],
+  "e4_layers": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28
+  ],
+  "file_sha256": {
+    "data/curated/aya-e4-english-dev-ReviewerA-reviewed-20260927.jsonl": "af2a8a2d95ca93539657f546926c2b3b2ca4815978c49615e62a47a850221fe1",
+    "data/curated/aya-e4-english-dev-ReviewerA-reviewed-20260927.manifest.json": "5208abadaf11974eeda80d0a5a216b8419293e529bc359168cabc16ede6890bc",
+    "data/review/heldout_batch_v1/E4_ENGLISH_DEV_REVIEW_20260927.csv": "28780eb0eed429c1381013092a9f9321926692c151452bfcc16c1887765bebe4",
+    "data/review/heldout_batch_v1/E4_ENGLISH_DEV_RECONCILED_20260927.csv": "dd3268eecfb7e78d649e2e4c8793dc8504c6a1e043b70c099ad7e5648a2ca4c4",
+    "data/review/heldout_batch_v1/E4_ENGLISH_DEV_RECONCILIATION_20260927.json": "d2af8bc99b38ac2a034bfa47f2046523d26bafb48c5f183fa1fb8b0b2babb14e",
+    "data/review/heldout_batch_v1/manifest.json": "bbccb64ac7a28adace93851c968c760e44f2a1bf91fa6c10b18e15d09248332d",
+    "data/review/imported_ReviewerA_20260926/templates.json": "77f198af8d582e61900ab6ceb6ae3d23cf6162af52194c18a35838ec6d6997a4",
+    "configs/e4_english_dev_20260927.json": "482ec161094c3000606e9e589c681eb7fb38da3cc544ef3ea349516016c79b33",
+    "project_plan/feasibility/e4_english_dev_run_20260927.py": "445e1876e8ec091f2b4977cde94b2c53428e32e8512b53369fe2bbb6887d5dec",
+    "project_plan/feasibility/e4_english_dev_workflow_tau_20260927.py": "d6fc452144eb8884ac226be0efff056691afd644b7d677abd87e3464fb848a07",
+    "slurm/e4-english-dev-20260927.slurm": "5a29c42f18fb0f79b309ea4640d93310d6f75e4fd2adbf3ae13bf606c99be2b8",
+    "src/fragmented_facts/experiments.py": "b4d1646d2edf1bd7f10fd7e724bed7fc119643a39302e219f176e48b49ae4cb1",
+    "src/fragmented_facts/model.py": "015c7d113c790ad7043ab1342b258a0299e8478d267dbec2603bc728e191ce6e",
+    "src/fragmented_facts/prompts.py": "f8c5ac66d7d9b62c747e146d73def44eee979c962ca38f0cd0ae1e5efac58629",
+    "src/fragmented_facts/scoring.py": "8634d19ad787c7aa85dd6b3286f01b685767ba1da91bd1d0dd43752a3d81f0c8",
+    "src/fragmented_facts/hooks.py": "2dc0bcdc94e7f87d2442cc43b68a1937941d1af0452cac38d004b79640016711"
+  }
+}

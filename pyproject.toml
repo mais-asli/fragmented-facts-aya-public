@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fragmented-facts"
+version = "0.1.0"
+description = "Controlled multilingual factual-recall experiments for Aya-23-8B"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "scikit-learn>=1.4", "statsmodels>=0.14", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+model = ["torch>=2.4", "transformers==4.56.2", "accelerate==1.10.1", "sentencepiece>=0.2"]
+quantization = ["bitsandbytes==0.47.0"]
+test = ["pytest>=8"]
+
+[project.scripts]
+fragmented-facts = "fragmented_facts.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

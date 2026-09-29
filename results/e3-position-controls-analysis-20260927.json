@@ -1,0 +1,222 @@
+{
+  "scope": "post-original-E3 and post-byte-E3 exploratory sensitivity",
+  "protocol_sha256": "e51f4c2c68055f8aad7ba6b3378c6203fec94154529f8d9e36a2fe63cddfaa77",
+  "original_records": 240,
+  "new_records": 160,
+  "languages": [
+    {
+      "language": "he",
+      "facts": 40,
+      "relations": {
+        "P159": 6,
+        "P740": 10,
+        "P19": 11,
+        "P20": 13
+      },
+      "contrasts": {
+        "inside_minus_outside_split": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": -0.18466335745307866,
+          "ci95": [
+            -0.5011843738142644,
+            0.15434784070158938
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "outside_split_minus_canonical": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": -0.06387043543120308,
+          "ci95": [
+            -0.15606940778772552,
+            0.03147456046021857
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "inside_minus_nearest_before": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": -0.22185997026802107,
+          "ci95": [
+            -0.5175142589673322,
+            0.10112426641461336
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "nearest_before_minus_canonical": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": -0.02667382261626067,
+          "ci95": [
+            -0.24260319462254776,
+            0.20416245229636382
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "inside_minus_nearest_after": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": -0.21067258698709412,
+          "ci95": [
+            -0.5719430121218805,
+            0.1674704244589957
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "nearest_after_minus_canonical": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": -0.03786120589718759,
+          "ci95": [
+            -0.08197878101297443,
+            0.003579956839831442
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        }
+      },
+      "relation_diagnostics": {
+        "P19": {
+          "inside_minus_outside_split_mean_nats": -0.045492345436783085,
+          "inside_minus_nearest_before_mean_nats": -0.2530182949598053,
+          "inside_minus_nearest_after_mean_nats": -0.176345853668119,
+          "n_facts": 11
+        },
+        "P20": {
+          "inside_minus_outside_split_mean_nats": 0.026387227488717493,
+          "inside_minus_nearest_before_mean_nats": -0.11817598074692516,
+          "inside_minus_nearest_after_mean_nats": -0.09577117944942214,
+          "n_facts": 13
+        },
+        "P159": {
+          "inside_minus_outside_split_mean_nats": 0.06405682469509581,
+          "inside_minus_nearest_before_mean_nats": 0.15592313919963394,
+          "inside_minus_nearest_after_mean_nats": 0.10043520725594135,
+          "n_facts": 6
+        },
+        "P740": {
+          "inside_minus_outside_split_mean_nats": -0.7836051365593448,
+          "inside_minus_nearest_before_mean_nats": -0.6721687445649878,
+          "inside_minus_nearest_after_mean_nats": -0.6710085220867767,
+          "n_facts": 10
+        }
+      }
+    },
+    {
+      "language": "ar",
+      "facts": 40,
+      "relations": {
+        "P159": 6,
+        "P740": 10,
+        "P19": 11,
+        "P20": 13
+      },
+      "contrasts": {
+        "inside_minus_outside_split": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": -0.5282332651708814,
+          "ci95": [
+            -0.981568032576343,
+            -0.03184229674666161
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "outside_split_minus_canonical": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": 0.3599971901354821,
+          "ci95": [
+            0.14903325423999167,
+            0.5660339614230623
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "inside_minus_nearest_before": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": -0.6171343396704896,
+          "ci95": [
+            -1.0854549257894899,
+            -0.10947592882802402
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "nearest_before_minus_canonical": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": 0.44889826463509036,
+          "ci95": [
+            0.1057619904324299,
+            0.7888424457819461
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "inside_minus_nearest_after": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": -0.7366943098628147,
+          "ci95": [
+            -1.2919230700887379,
+            -0.17975309765616054
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        },
+        "nearest_after_minus_canonical": {
+          "n_subjects": 40,
+          "n_observations": 40,
+          "estimate": 0.5684582348274154,
+          "ci95": [
+            0.3175011516456697,
+            0.8637685702356831
+          ],
+          "bootstrap_replicates": 9992,
+          "aggregation": "subject mean, then relation macro"
+        }
+      },
+      "relation_diagnostics": {
+        "P19": {
+          "inside_minus_outside_split_mean_nats": -0.2937054205132716,
+          "inside_minus_nearest_before_mean_nats": 0.2394218566846162,
+          "inside_minus_nearest_after_mean_nats": -0.3308307063391773,
+          "n_facts": 11
+        },
+        "P20": {
+          "inside_minus_outside_split_mean_nats": -1.2489986656384224,
+          "inside_minus_nearest_before_mean_nats": -1.7474929410063151,
+          "inside_minus_nearest_after_mean_nats": -1.9392203916266646,
+          "n_facts": 13
+        },
+        "P159": {
+          "inside_minus_outside_split_mean_nats": -0.13297181713035874,
+          "inside_minus_nearest_before_mean_nats": -0.16115571609861945,
+          "inside_minus_nearest_after_mean_nats": -0.26683497651902144,
+          "n_facts": 6
+        },
+        "P740": {
+          "inside_minus_outside_split_mean_nats": -0.4372571574014728,
+          "inside_minus_nearest_before_mean_nats": -0.7993105582616401,
+          "inside_minus_nearest_after_mean_nats": -0.4098911649663954,
+          "n_facts": 10
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Controls were chosen after inspecting the first byte-level E3 result; this is exploratory sensitivity, not a new confirmatory hypothesis test.",
+    "All controls preserve rendered text and add exactly one token; token IDs, attention positions and context still change.",
+    "The three outside controls affect three distinct template tokens, fixed across facts within each language.",
+    "Intervals for several correlated comparisons are descriptive; no favorable control is selected as the primary causal estimate."
+  ]
+}

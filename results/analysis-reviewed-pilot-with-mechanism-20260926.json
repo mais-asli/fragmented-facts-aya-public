@@ -1,0 +1,2366 @@
+{
+  "schema_version": 1,
+  "data_kind": "research",
+  "run_paths": [
+    "results/e1-reviewed-pilot-20260926-shard0/2ada213732da2ef2124bef7d5dc1eec9e4d11a1b3863ee5c8dc12ad0fc66fd29",
+    "results/e1-reviewed-pilot-20260926-shard1/99049991318cc9d3b6be9c3a94ecda0b55553c6bafd1a926ac2f3fdb30501b3b",
+    "results/e2-reviewed-pilot-20260926-shard0/8a3169d87dfce7f19f3ce4cfb24e0e5b6ef44daef1db0a02f5a75c9e2416a1b9",
+    "results/e2-reviewed-pilot-20260926-shard1/1bedf66ce83293bb0885192b82efedcba42d1398f050f7abe2d51f16dbe2b091",
+    "results/e3-reviewed-pilot-20260926-shard0/265e6f4061b8598c05bb416f3b07c293016a9c0fcf135602fd78eba18cfd591d",
+    "results/e3-reviewed-pilot-20260926-shard1/5f6dc40721ba1010f74821583c6e87ae8ecf1e3bf70051d60a0263d9f42c6f07",
+    "results/e5-reviewed-pilot-20260926-shard0/3a75601998fc2abbbac9f01479493521156489a4c07bfa391ff04512a00656e7",
+    "results/e5-reviewed-pilot-20260926-shard1/58a59c50b5a5dc541ff1e8907f697d4b0a24d8f14c508b175eb3c97cbd64814b"
+  ],
+  "model": {
+    "model_id": "CohereLabs/aya-23-8B",
+    "revision": "89da1a0ed02d6130f93ae0ffdbedb63b760c0471",
+    "precision": "nf4",
+    "compute_dtype": "fp16",
+    "attention": "eager",
+    "data_kind": "research"
+  },
+  "bootstrap_seed": 17,
+  "bootstrap_requested": 10000,
+  "baseline": [
+    {
+      "language": "ar",
+      "split": "pilot",
+      "category_counts": {
+        "wrong_assertion": 149,
+        "correct_entity": 22
+      },
+      "relations": {
+        "P20": 45,
+        "P740": 42,
+        "P159": 42,
+        "P19": 42
+      },
+      "entity_correct": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": 0.13095238095238096,
+        "ci95": [
+          0.05952380952380953,
+          0.2115413752913752
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "micro_accuracy": 0.1286549707602339
+      },
+      "requested_language_correct": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": 0.13095238095238096,
+        "ci95": [
+          0.05952380952380953,
+          0.2115413752913752
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "micro_accuracy": 0.1286549707602339
+      }
+    },
+    {
+      "language": "en",
+      "split": "pilot",
+      "category_counts": {
+        "correct_entity": 92,
+        "wrong_assertion": 79
+      },
+      "relations": {
+        "P159": 42,
+        "P19": 42,
+        "P20": 45,
+        "P740": 42
+      },
+      "entity_correct": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": 0.5384920634920635,
+        "ci95": [
+          0.4199922565179918,
+          0.6604632404632405
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "micro_accuracy": 0.5380116959064327
+      },
+      "requested_language_correct": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": 0.5384920634920635,
+        "ci95": [
+          0.4199922565179918,
+          0.6604632404632405
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "micro_accuracy": 0.5380116959064327
+      }
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "category_counts": {
+        "wrong_assertion": 137,
+        "correct_entity": 32,
+        "malformed_truncated": 2
+      },
+      "relations": {
+        "P20": 45,
+        "P740": 42,
+        "P19": 42,
+        "P159": 42
+      },
+      "entity_correct": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": 0.1884920634920635,
+        "ci95": [
+          0.09927229888167387,
+          0.28624448194349505
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "micro_accuracy": 0.1871345029239766
+      },
+      "requested_language_correct": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": 0.1884920634920635,
+        "ci95": [
+          0.09927229888167387,
+          0.28624448194349505
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "micro_accuracy": 0.1871345029239766
+      }
+    }
+  ],
+  "orthography": [
+    {
+      "language": "he",
+      "split": "pilot",
+      "missing_pairs": 0,
+      "n_pairs": 171,
+      "direction": "D minus U",
+      "transitions": {
+        "1->0": 28,
+        "0->0": 134,
+        "0->1": 5,
+        "1->1": 4
+      },
+      "accuracy": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": -0.13492063492063494,
+        "ci95": [
+          -0.23522952741702743,
+          -0.04019431089743595
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.014098590140985901,
+        "exploratory_holm_p": 0.028197180281971802
+      },
+      "log_likelihood": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": -1.3500960571526213,
+        "ci95": [
+          -2.191225978749486,
+          -0.5268108755305375
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0036996300369963003,
+        "exploratory_holm_p": 0.0047995200479952005
+      },
+      "mean_token_log_likelihood": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": -0.4880452614860535,
+        "ci95": [
+          -0.7752389649743081,
+          -0.20875762711406054
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0015998400159984002
+      }
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "missing_pairs": 0,
+      "n_pairs": 171,
+      "direction": "D minus U",
+      "transitions": {
+        "0->0": 147,
+        "0->1": 2,
+        "1->1": 12,
+        "1->0": 10
+      },
+      "accuracy": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": -0.047619047619047616,
+        "ci95": [
+          -0.1158008658008658,
+          0.010827683346065622
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.24877512248775122,
+        "exploratory_holm_p": 0.24877512248775122
+      },
+      "log_likelihood": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": -1.4680841314750397,
+        "ci95": [
+          -2.4128053252351873,
+          -0.6037815195365386
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0023997600239976003,
+        "exploratory_holm_p": 0.0047995200479952005
+      },
+      "mean_token_log_likelihood": {
+        "n_subjects": 57,
+        "n_observations": 171,
+        "estimate": -0.4392835806867683,
+        "ci95": [
+          -0.7409177741148358,
+          -0.1491945283222478
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0058994100589941
+      }
+    }
+  ],
+  "patch_specificity": [
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "primary": true,
+      "missing_pairs": 0,
+      "direction": "same entity minus unrelated donor",
+      "specificity": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 2.9550615490094754,
+        "ci95": [
+          1.9669965529640807,
+          4.0403691924723395
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 9.999000099990002e-05
+      }
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "primary": false,
+      "missing_pairs": 0,
+      "direction": "same entity minus unrelated donor",
+      "specificity": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.004289348446720742,
+        "ci95": [
+          -0.022054138979614075,
+          0.03096457890132829
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.7537246275372462
+      }
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "primary": false,
+      "missing_pairs": 0,
+      "direction": "same entity minus unrelated donor",
+      "specificity": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 3.197481351641441,
+        "ci95": [
+          2.2594997676485065,
+          4.177949392695693
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 9.999000099990002e-05
+      }
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "primary": false,
+      "missing_pairs": 0,
+      "direction": "same entity minus unrelated donor",
+      "specificity": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 1.760758142803596,
+        "ci95": [
+          1.1166346806973828,
+          2.4733731537419534
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 9.999000099990002e-05
+      }
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "primary": true,
+      "missing_pairs": 0,
+      "direction": "same entity minus unrelated donor",
+      "specificity": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 3.0488695297919497,
+        "ci95": [
+          2.033768112126982,
+          4.166837555851816
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 9.999000099990002e-05
+      }
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "primary": false,
+      "missing_pairs": 0,
+      "direction": "same entity minus unrelated donor",
+      "specificity": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.006715480860236767,
+        "ci95": [
+          -0.020967647125760335,
+          0.006686299895103252
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.3528647135286471
+      }
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "primary": false,
+      "missing_pairs": 0,
+      "direction": "same entity minus unrelated donor",
+      "specificity": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 3.093790863573973,
+        "ci95": [
+          2.1437296820177347,
+          4.1111551338557835
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 9.999000099990002e-05
+      }
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "primary": false,
+      "missing_pairs": 0,
+      "direction": "same entity minus unrelated donor",
+      "specificity": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 1.3802245964035396,
+        "ci95": [
+          0.6937292111980503,
+          2.093411014008936
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.00029997000299970003
+      }
+    }
+  ],
+  "patch_controls": [
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "same_entity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.36605272468020433,
+        "ci95": [
+          -0.314055794602236,
+          1.068121283774924
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.31486851314868514
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.08928571428571427,
+        "ci95": [
+          -0.012021329365079362,
+          0.19471153846153846
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.1795820417958204
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 2
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "unrelated",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -2.589008824329271,
+        "ci95": [
+          -3.5740744646906135,
+          -1.6893200738300456
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 9.999000099990002e-05
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.03571428571428571,
+        "ci95": [
+          -0.09099347190799398,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.49795020497950204
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 2
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "identity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.00040369913257607196,
+        "ci95": [
+          -0.002598766252842673,
+          0.0018260677759651517
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.7131286871312869
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "first_subject",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.006547571664027817,
+        "ci95": [
+          -0.09297453360845223,
+          0.07628070677285968
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.8847115288471152
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "delimiter",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.09886206279344541,
+        "ci95": [
+          0.035248628622870246,
+          0.16354866762925413
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0036996300369963003
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "reverse",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.6131907755680589,
+        "ci95": [
+          -1.3555676709190014,
+          0.03306546469749092
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0908909109089091
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.07023809523809524,
+        "ci95": [
+          -0.1597235275689223,
+          0.008931601486748505
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.21797820217978203
+      },
+      "initially_correct_items": 12,
+      "harmed_items": 5
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "same_entity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.00800303041666796,
+        "ci95": [
+          -0.009033153615216307,
+          0.026712955310018244
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.3902609739026097
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "unrelated",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.003713681969947218,
+        "ci95": [
+          -0.016499230271235937,
+          0.022454566551623426
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.7112288771122888
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "identity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0008608529124363225,
+        "ci95": [
+          -6.943152880994422e-05,
+          0.0018448281537054158
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.08239176082391761
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "first_subject",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.014319534900182805,
+        "ci95": [
+          -0.026684201663084012,
+          -0.002375866323073179
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.034996500349965
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.017857142857142856,
+        "ci95": [
+          0.0,
+          0.058823529411764705
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "delimiter",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.007998087005519967,
+        "ci95": [
+          -0.014277659785638783,
+          0.03673523421906632
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.6266373362663734
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "reverse",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0007474318188715624,
+        "ci95": [
+          -0.01044443889435154,
+          0.012943093742111804
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.9051094890510949
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 12,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "same_entity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.9296503725089549,
+        "ci95": [
+          0.2554439989633012,
+          1.6488791027782277
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.011698830116988301
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.07142857142857142,
+        "ci95": [
+          -0.024803719564748975,
+          0.16818181818181818
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.2833716628337166
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 2
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "unrelated",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -2.2678309791324867,
+        "ci95": [
+          -3.196703230375686,
+          -1.4242822955045438
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 9.999000099990002e-05
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.03571428571428571,
+        "ci95": [
+          -0.09099347190799398,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.5048495150484952
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 2
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "identity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.0014965396790406278,
+        "ci95": [
+          -0.004129124755898913,
+          0.001060734440505439
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.25807419258074193
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "first_subject",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.015765056218653973,
+        "ci95": [
+          -0.0806540119540082,
+          0.039972063467424636
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.6242375762423757
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "delimiter",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.07596868714482255,
+        "ci95": [
+          -0.023136123079722445,
+          0.19332300498410682
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.17428257174282571
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.017857142857142856,
+        "ci95": [
+          0.0,
+          0.058823529411764705
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "reverse",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.5573833300775428,
+        "ci95": [
+          -1.2606126531437254,
+          0.07788708447606742
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.10468953104689531
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.07023809523809524,
+        "ci95": [
+          -0.1597235275689223,
+          0.008931601486748505
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.21737826217378262
+      },
+      "initially_correct_items": 12,
+      "harmed_items": 5
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "same_entity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.8255158734972308,
+        "ci95": [
+          0.28157445694796857,
+          1.4188733179202169
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.005699430056994301
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.10714285714285714,
+        "ci95": [
+          0.017675729332801704,
+          0.20535714285714285
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0648935106489351
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 1
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "unrelated",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.9352422693063653,
+        "ci95": [
+          -1.4011388154832896,
+          -0.4849859831919246
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.00019998000199980003
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          -0.05,
+          0.05
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 1
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "identity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0010427335303445162,
+        "ci95": [
+          -0.0010585027735926034,
+          0.003248952063623365
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.34736526347365265
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "first_subject",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.0452918889711024,
+        "ci95": [
+          -0.12561400961778746,
+          0.017940309472148874
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.254974502549745
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "delimiter",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.04626369865032064,
+        "ci95": [
+          -0.03205189114311048,
+          0.14010162648709928
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.3324667533246675
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 2,
+      "harmed_items": 0
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "reverse",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.28798712044552605,
+        "ci95": [
+          -0.8214028479509836,
+          0.18224021954152775
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.2872712728727127
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.05357142857142857,
+        "ci95": [
+          -0.13510213744588745,
+          0.020604395604395608
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.3765623437656234
+      },
+      "initially_correct_items": 12,
+      "harmed_items": 4
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "same_entity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.806823171475518,
+        "ci95": [
+          0.2535274642419368,
+          1.3928047940317998
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0057994200579942
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.017857142857142856,
+        "ci95": [
+          0.0,
+          0.058823529411764705
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "unrelated",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -2.2420463583164314,
+        "ci95": [
+          -3.21215652648329,
+          -1.3134423808132396
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 9.999000099990002e-05
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.03571428571428571,
+        "ci95": [
+          -0.09090909090909091,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.4981501849815019
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 2
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "identity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0019892794346073324,
+        "ci95": [
+          -0.002013717229567821,
+          0.006451144558589474
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.3828617138286171
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "first_subject",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.012248119036839745,
+        "ci95": [
+          -0.13093085875742957,
+          0.09591555805334337
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.8414158584141586
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "delimiter",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.15241609667782,
+        "ci95": [
+          -0.2574992335006195,
+          -0.05574620029897062
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.004999500049995001
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "condition": "reverse",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.958316328007121,
+        "ci95": [
+          -1.7232594620852453,
+          -0.26534138311689215
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0098990100989901
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.05357142857142857,
+        "ci95": [
+          -0.12083333333333332,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.2440755924407559
+      },
+      "initially_correct_items": 8,
+      "harmed_items": 3
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "same_entity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0023532230274364943,
+        "ci95": [
+          -0.0033476087528091845,
+          0.008082622194707631
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.4296570342965703
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "unrelated",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.00906870388767326,
+        "ci95": [
+          -0.0034499665870074813,
+          0.023138278352757054
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.19908009199080093
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "identity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.0002258364178054589,
+        "ci95": [
+          -0.0011020225034080423,
+          0.0006206664726415304
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.5952404759524048
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "first_subject",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.0030746579600981062,
+        "ci95": [
+          -0.020927644907554763,
+          0.019803763266248848
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.8491150884911509
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "delimiter",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.0006386487104897412,
+        "ci95": [
+          -0.012546592588858811,
+          0.014286908862637327
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.9437056294370563
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "condition": "reverse",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.003207426955529107,
+        "ci95": [
+          -0.004257673872658147,
+          0.012882165122817986
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.5478452154784521
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 8,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "same_entity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 1.0002366393925084,
+        "ci95": [
+          0.47653315883801606,
+          1.5363680158491244
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0004999500049995
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.017857142857142856,
+        "ci95": [
+          0.0,
+          0.058823529411764705
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "unrelated",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -2.093554224181465,
+        "ci95": [
+          -2.996007450356212,
+          -1.2418886199337893
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.00019998000199980003
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.03571428571428571,
+        "ci95": [
+          -0.09090909090909091,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.49345065493450657
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 2
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "identity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.0008685799740013474,
+        "ci95": [
+          -0.00427476306449868,
+          0.0024971449536954245
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.607039296070393
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "first_subject",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0328538123087637,
+        "ci95": [
+          -0.02071123784458404,
+          0.09618509693204844
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.3304669533046695
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "delimiter",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.005445958575835777,
+        "ci95": [
+          -0.08597077674150903,
+          0.11178738982016792
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.9188081191880811
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "condition": "reverse",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.9413491136279156,
+        "ci95": [
+          -1.6020073301171542,
+          -0.3564298497059915
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0038996100389961006
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.05357142857142857,
+        "ci95": [
+          -0.12083333333333332,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.24717528247175283
+      },
+      "initially_correct_items": 8,
+      "harmed_items": 3
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "same_entity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.6374586177932995,
+        "ci95": [
+          0.1650431294856475,
+          1.1329427500191536
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.008599140085991401
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.017857142857142856,
+        "ci95": [
+          0.0,
+          0.058823529411764705
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "unrelated",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.7427659786102401,
+        "ci95": [
+          -1.3484263134862005,
+          -0.1503389902443127
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.024397560243975602
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "identity",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0006613568062675767,
+        "ci95": [
+          -0.0016785364058225815,
+          0.0030122267098527554
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.5881411858814118
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "first_subject",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.04122510756182551,
+        "ci95": [
+          -0.00371458440935858,
+          0.09589548605782161
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.15308469153084692
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "delimiter",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.00826641431957352,
+        "ci95": [
+          -0.03970608462537256,
+          0.025072027174521738
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.6378362163783622
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 1.0
+      },
+      "initially_correct_items": 5,
+      "harmed_items": 0
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "condition": "reverse",
+      "missing_pairs": 0,
+      "score_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.8259064210769611,
+        "ci95": [
+          -1.4356018089006513,
+          -0.28851359616447053
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.0035996400359964
+      },
+      "accuracy_gain": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.05357142857142857,
+        "ci95": [
+          -0.12083333333333332,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.25377462253774624
+      },
+      "initially_correct_items": 8,
+      "harmed_items": 3
+    }
+  ],
+  "readouts": [],
+  "segmentation": [
+    {
+      "language": "ar",
+      "split": "pilot",
+      "extra_tokens": 1,
+      "direction": "subject split minus matched outside-subject split",
+      "effect": {
+        "n_subjects": 57,
+        "n_observations": 57,
+        "estimate": -0.6120593148551647,
+        "ci95": [
+          -1.0346863115183749,
+          -0.23784353870016944
+        ],
+        "bootstrap_replicates": 10000,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p": 0.004399560043995601
+      },
+      "coverage_gate_50_subjects_passed": true,
+      "missing_pairs": 0
+    }
+  ],
+  "descriptive_recovery": [
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "selected_denominator": 11,
+      "generation_observed": 11,
+      "recovered": 7,
+      "warning": "Outcome-selected descriptive subset; the all-pair specificity analysis is primary."
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "selected_denominator": 11,
+      "generation_observed": 11,
+      "recovered": 0,
+      "warning": "Outcome-selected descriptive subset; the all-pair specificity analysis is primary."
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "selected_denominator": 11,
+      "generation_observed": 11,
+      "recovered": 6,
+      "warning": "Outcome-selected descriptive subset; the all-pair specificity analysis is primary."
+    },
+    {
+      "language": "he",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "selected_denominator": 11,
+      "generation_observed": 11,
+      "recovered": 7,
+      "warning": "Outcome-selected descriptive subset; the all-pair specificity analysis is primary."
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "early",
+      "component": "residual",
+      "selected_denominator": 3,
+      "generation_observed": 3,
+      "recovered": 1,
+      "warning": "Outcome-selected descriptive subset; the all-pair specificity analysis is primary."
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "late",
+      "component": "residual",
+      "selected_denominator": 3,
+      "generation_observed": 3,
+      "recovered": 0,
+      "warning": "Outcome-selected descriptive subset; the all-pair specificity analysis is primary."
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "lower_middle",
+      "component": "residual",
+      "selected_denominator": 3,
+      "generation_observed": 3,
+      "recovered": 1,
+      "warning": "Outcome-selected descriptive subset; the all-pair specificity analysis is primary."
+    },
+    {
+      "language": "ar",
+      "split": "pilot",
+      "window": "upper_middle",
+      "component": "residual",
+      "selected_denominator": 3,
+      "generation_observed": 3,
+      "recovered": 1,
+      "warning": "Outcome-selected descriptive subset; the all-pair specificity analysis is primary."
+    }
+  ],
+  "run_coverage": [
+    {
+      "run_path": "results/e1-reviewed-pilot-20260926-shard0/2ada213732da2ef2124bef7d5dc1eec9e4d11a1b3863ee5c8dc12ad0fc66fd29",
+      "experiment": "E1",
+      "expected_count": 225,
+      "ineligible_counts": {}
+    },
+    {
+      "run_path": "results/e1-reviewed-pilot-20260926-shard1/99049991318cc9d3b6be9c3a94ecda0b55553c6bafd1a926ac2f3fdb30501b3b",
+      "experiment": "E1",
+      "expected_count": 288,
+      "ineligible_counts": {}
+    },
+    {
+      "run_path": "results/e2-reviewed-pilot-20260926-shard0/8a3169d87dfce7f19f3ce4cfb24e0e5b6ef44daef1db0a02f5a75c9e2416a1b9",
+      "experiment": "E2",
+      "expected_count": 300,
+      "ineligible_counts": {}
+    },
+    {
+      "run_path": "results/e2-reviewed-pilot-20260926-shard1/1bedf66ce83293bb0885192b82efedcba42d1398f050f7abe2d51f16dbe2b091",
+      "experiment": "E2",
+      "expected_count": 384,
+      "ineligible_counts": {}
+    },
+    {
+      "run_path": "results/e3-reviewed-pilot-20260926-shard0/265e6f4061b8598c05bb416f3b07c293016a9c0fcf135602fd78eba18cfd591d",
+      "experiment": "E3",
+      "expected_count": 100,
+      "ineligible_counts": {
+        "he:same_string_or_position_control_unavailable": 25
+      }
+    },
+    {
+      "run_path": "results/e3-reviewed-pilot-20260926-shard1/5f6dc40721ba1010f74821583c6e87ae8ecf1e3bf70051d60a0263d9f42c6f07",
+      "experiment": "E3",
+      "expected_count": 128,
+      "ineligible_counts": {
+        "he:same_string_or_position_control_unavailable": 32
+      }
+    },
+    {
+      "run_path": "results/e5-reviewed-pilot-20260926-shard0/3a75601998fc2abbbac9f01479493521156489a4c07bfa391ff04512a00656e7",
+      "experiment": "E5",
+      "expected_count": 1350,
+      "ineligible_counts": {}
+    },
+    {
+      "run_path": "results/e5-reviewed-pilot-20260926-shard1/58a59c50b5a5dc541ff1e8907f697d4b0a24d8f14c508b175eb3c97cbd64814b",
+      "experiment": "E5",
+      "expected_count": 1728,
+      "ineligible_counts": {}
+    }
+  ],
+  "limitations": [
+    "Aliases matching multiple QIDs are ambiguous, counted incorrect, and require review.",
+    "Confidence scores are not automatically calibrated probabilities.",
+    "Orthographic effects do not isolate token count as the cause."
+  ],
+  "observation_counts": {
+    "E1": 513,
+    "E2": 684,
+    "E3": 228,
+    "E5": 3078
+  },
+  "failure_predictors": [
+    {
+      "language": "ar",
+      "status": "requires_dev_and_test"
+    },
+    {
+      "language": "en",
+      "status": "requires_dev_and_test"
+    },
+    {
+      "language": "he",
+      "status": "requires_dev_and_test"
+    }
+  ],
+  "majority_baseline": [
+    {
+      "language": "ar",
+      "chosen_objects_from_dev": {},
+      "covered_items": 0,
+      "uncovered_items": 0,
+      "micro_accuracy": null
+    },
+    {
+      "language": "en",
+      "chosen_objects_from_dev": {},
+      "covered_items": 0,
+      "uncovered_items": 0,
+      "micro_accuracy": null
+    },
+    {
+      "language": "he",
+      "chosen_objects_from_dev": {},
+      "covered_items": 0,
+      "uncovered_items": 0,
+      "micro_accuracy": null
+    }
+  ],
+  "matched_comparison": [],
+  "risk_coverage": [
+    {
+      "language": "ar",
+      "status": "uncalibrated_ranking_diagnostic",
+      "points": [
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "status": "uncalibrated_ranking_diagnostic",
+      "points": [
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        }
+      ]
+    },
+    {
+      "language": "he",
+      "status": "uncalibrated_ranking_diagnostic",
+      "points": [
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        },
+        {
+          "coverage": null,
+          "n": 0,
+          "risk": null
+        }
+      ]
+    }
+  ],
+  "clustered_associations": [
+    {
+      "language": "en",
+      "status": "fewer_than_30_subject_clusters"
+    },
+    {
+      "language": "he",
+      "status": "fewer_than_30_subject_clusters"
+    },
+    {
+      "language": "ar",
+      "status": "fewer_than_30_subject_clusters"
+    }
+  ]
+}

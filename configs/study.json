@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "model_id": "CohereLabs/aya-23-8B",
+  "model_kind": "aya23",
+  "precision": "nf4",
+  "nf4_compute_dtype": "fp16",
+  "attention": "eager",
+  "max_new_tokens": 24,
+  "seed": 17,
+  "languages": [
+    "en",
+    "he",
+    "ar"
+  ],
+  "relations": [
+    "P19",
+    "P20",
+    "P159",
+    "P740"
+  ],
+  "mechanism_template": "t1",
+  "partial_diacritics": false,
+  "segmentation_extra_tokens": [
+    1,
+    2
+  ],
+  "patch_generate": true,
+  "patch_components": [
+    "residual"
+  ],
+  "native_smoke_review": {
+    "reviewer": "",
+    "notes": ""
+  },
+  "workload_pilot_report": "",
+  "readout_layers": null,
+  "readout_layers_frozen": false,
+  "windows": [],
+  "primary_window": null,
+  "window_selection_reason": "",
+  "population": "core",
+  "sample_limits": {
+    "E2": {
+      "dev": 60,
+      "test": 180
+    },
+    "E5": {
+      "dev": 60,
+      "test": 120
+    }
+  },
+  "relation_change": "P50 is absent from the original mLAMA archive; P740 (location of formation) replaces it before screening. Native/source validation is required."
+}

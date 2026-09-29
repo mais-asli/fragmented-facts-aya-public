@@ -1,0 +1,31 @@
+{
+  "scope": "Prospective source-disjoint Aya E5 fixed-site replication, separate by Arabic and Hebrew cohort",
+  "frozen_before_e5_outputs": true,
+  "protocol": "configs/aya_source_verified_e5_protocol_20260928.json",
+  "primary_per_cohort": "Answer-stratum macro mean of subject-level (same-entity U-to-D patch margin minus unpatched D margin), where margin is gold-answer total log likelihood minus the frozen distractor total log likelihood.",
+  "answer_strata": {
+    "arabic_geonames": "country ISO2",
+    "hebrew_cbs": "official CBS subdistrict name"
+  },
+  "inference": {
+    "unit": "subject QID, clustered by answer stratum",
+    "two_sided_sign_flip": "Flip the signs of answer-stratum mean paired effects; enumerate all assignments for at most 18 strata, otherwise 200000 Monte Carlo assignments with plus-one correction.",
+    "hierarchical_bootstrap": "Resample answer strata with replacement and then subjects within each sampled stratum; 10000 replicates and percentile 95% interval.",
+    "multiple_testing": "Holm correction across the two cohort primary p-values",
+    "seed": 1729
+  },
+  "fixed_controls": [
+    "Unrelated different-answer donor U-to-D patch minus unpatched D margin",
+    "Identity D-to-D patch minus unpatched D margin, checked for near-zero numerical difference",
+    "First-subject U-to-D patch minus unpatched D margin",
+    "Same-entity minus unrelated-donor margin contrast",
+    "Gold-only likelihood gain for comparability with earlier E5"
+  ],
+  "integrity": "Check all 192 E5 records, donors, hashes, and response-score arithmetic; reproduce the new source-cohort E2 t1 unpatched U/D scores to within 0.1 nat for every gold and distractor score.",
+  "limits": [
+    "No generated-answer claim from this likelihood-only replication.",
+    "The fixed site was selected in previous Aya experiments, so this is a transfer test, not independent localization.",
+    "Whole-residual patching is not a pure token-count intervention.",
+    "The Arabic country and Hebrew subdistrict relations are not matched and absolute outcomes are not directly comparable."
+  ]
+}

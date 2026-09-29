@@ -1,0 +1,2298 @@
+{
+  "method_status": "prospective_for_this_new_source_cohort_after_prior_pilot_and_heldout_E5",
+  "protocol_sha256": "03c3e8b51e913b54181967d75402e72bdcde706d3e91f31493fdd7c5793d5155",
+  "analysis_plan_sha256": "7340d216d567e78ed7e1687eaf12c3f38afa9dee257170c76fda6fd501d69a12",
+  "e5_archive_sha256": "0339a04c25b419c1759db7df25b5e0ee79666c62fdf50f8e2811385b51835e7b",
+  "e2_archive_sha256": "0293206a8bb08a942930c058337f061e6b87f2d3fb827e47c6ffd57420fc8774",
+  "baseline_reproduction": {
+    "arabic_geonames": {
+      "scores_compared": 384,
+      "max_absolute_deviation_nats": 0.0,
+      "tolerance_nats": 0.1
+    },
+    "hebrew_cbs": {
+      "scores_compared": 384,
+      "max_absolute_deviation_nats": 0.0,
+      "tolerance_nats": 0.1
+    }
+  },
+  "model_id": "CohereLabs/aya-23-8B",
+  "revision": "89da1a0ed02d6130f93ae0ffdbedb63b760c0471",
+  "layers": [
+    12,
+    13
+  ],
+  "site": "last_subject",
+  "cohorts": {
+    "arabic_geonames": {
+      "subjects": 96,
+      "distinct_answer_strata": 72,
+      "primary_same_entity_margin_gain": {
+        "subjects": 96,
+        "answer_strata": 72,
+        "answer_macro_mean": 1.3272757871265162,
+        "subject_weighted_mean": 1.3964428083050322,
+        "hierarchical_bootstrap_ci95": [
+          0.6398886539817311,
+          2.0583415564292364
+        ],
+        "two_sided_p": 0.00021999890000549998,
+        "test": "monte_carlo_answer_stratum_sign_flip_200000_plus_one",
+        "bootstrap_replicates": 10000
+      },
+      "controls_vs_baseline_D": {
+        "unrelated_U_to_D": {
+          "subjects": 96,
+          "answer_strata": 72,
+          "answer_macro_mean": -1.2795357288385594,
+          "subject_weighted_mean": -1.1303984827120412,
+          "hierarchical_bootstrap_ci95": [
+            -2.192445124062048,
+            -0.40034443590682306
+          ],
+          "bootstrap_replicates": 10000
+        },
+        "identity_D_to_D": {
+          "subjects": 96,
+          "answer_strata": 72,
+          "answer_macro_mean": 0.0016256714758592732,
+          "subject_weighted_mean": 0.0014604703773457572,
+          "hierarchical_bootstrap_ci95": [
+            -0.0005572198943494379,
+            0.003817903524326224
+          ],
+          "bootstrap_replicates": 10000
+        },
+        "first_subject_U_to_D": {
+          "subjects": 96,
+          "answer_strata": 72,
+          "answer_macro_mean": -0.03477870324223728,
+          "subject_weighted_mean": -0.023763715005801583,
+          "hierarchical_bootstrap_ci95": [
+            -0.09703007286113254,
+            0.029257476366417883
+          ],
+          "bootstrap_replicates": 10000
+        }
+      },
+      "same_entity_minus_unrelated_margin": {
+        "subjects": 96,
+        "answer_strata": 72,
+        "answer_macro_mean": 2.6068115159650755,
+        "subject_weighted_mean": 2.526841291017073,
+        "hierarchical_bootstrap_ci95": [
+          1.6355697810965324,
+          3.6149181524045733
+        ],
+        "bootstrap_replicates": 10000
+      },
+      "same_entity_gold_only_gain": {
+        "subjects": 96,
+        "answer_strata": 72,
+        "answer_macro_mean": 1.5164301014208457,
+        "subject_weighted_mean": 1.388371513593751,
+        "hierarchical_bootstrap_ci95": [
+          0.8576438591801125,
+          2.220632096018235
+        ],
+        "bootstrap_replicates": 10000
+      },
+      "identity_max_absolute_margin_deviation_nats": 0.03447380237048492,
+      "per_subject": [
+        {
+          "fact_id": "Q1004510-GeoNames-country-ZM",
+          "answer_stratum": "ZM",
+          "donor_fact_id": "Q60044-GeoNames-country-LV",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.1012431999479304,
+            "unrelated_U_to_D": -0.3442010639628279,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.1874084245209815
+          }
+        },
+        {
+          "fact_id": "Q1004686-GeoNames-country-NO",
+          "answer_stratum": "NO",
+          "donor_fact_id": "Q854870-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.7326997476629913,
+            "unrelated_U_to_D": 0.5341914435848594,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q1006545-GeoNames-country-RS",
+          "answer_stratum": "RS",
+          "donor_fact_id": "Q6272457-GeoNames-country-AU",
+          "margin_gains": {
+            "same_entity_U_to_D": 9.320477772591403,
+            "unrelated_U_to_D": 3.3838182278268505,
+            "identity_D_to_D": 0.008055448517552577,
+            "first_subject_U_to_D": 0.06507341416727286
+          }
+        },
+        {
+          "fact_id": "Q1013413-GeoNames-country-ZA",
+          "answer_stratum": "ZA",
+          "donor_fact_id": "Q211187-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": -4.182090443035122,
+            "unrelated_U_to_D": -1.9639524519589031,
+            "identity_D_to_D": -4.860549233853817e-05,
+            "first_subject_U_to_D": -0.015357206066255458
+          }
+        },
+        {
+          "fact_id": "Q1015672-GeoNames-country-NZ",
+          "answer_stratum": "NZ",
+          "donor_fact_id": "Q188179-GeoNames-country-EE",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.1406283499673009,
+            "unrelated_U_to_D": -3.4111820409307256,
+            "identity_D_to_D": -0.005338915740139782,
+            "first_subject_U_to_D": -0.4017013426637277
+          }
+        },
+        {
+          "fact_id": "Q1017376-GeoNames-country-PG",
+          "answer_stratum": "PG",
+          "donor_fact_id": "Q3050819-GeoNames-country-PK",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.294393545947969,
+            "unrelated_U_to_D": -1.6384998350404203,
+            "identity_D_to_D": 0.001965731382369995,
+            "first_subject_U_to_D": -0.00684949045535177
+          }
+        },
+        {
+          "fact_id": "Q1019575-GeoNames-country-SE",
+          "answer_stratum": "SE",
+          "donor_fact_id": "Q40626-GeoNames-country-PH",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.8092632688349113,
+            "unrelated_U_to_D": 10.44385436270386,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.010323257185518742
+          }
+        },
+        {
+          "fact_id": "Q1022275-GeoNames-country-AR",
+          "answer_stratum": "AR",
+          "donor_fact_id": "Q985622-GeoNames-country-NA",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.2574694184586406,
+            "unrelated_U_to_D": 1.5196037036948837,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.06984407140407711
+          }
+        },
+        {
+          "fact_id": "Q1026445-GeoNames-country-PH",
+          "answer_stratum": "PH",
+          "donor_fact_id": "Q3657-GeoNames-country-LT",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.617766944895266,
+            "unrelated_U_to_D": -3.0202828934561694,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q11449-GeoNames-country-ID",
+          "answer_stratum": "ID",
+          "donor_fact_id": "Q967701-GeoNames-country-IR",
+          "margin_gains": {
+            "same_entity_U_to_D": 7.245129493065178,
+            "unrelated_U_to_D": 1.0708183065871708,
+            "identity_D_to_D": -8.037651423364878e-05,
+            "first_subject_U_to_D": -0.27318907645531
+          }
+        },
+        {
+          "fact_id": "Q1149502-GeoNames-country-SY",
+          "answer_stratum": "SY",
+          "donor_fact_id": "Q1606115-GeoNames-country-ES",
+          "margin_gains": {
+            "same_entity_U_to_D": 6.2005575739603955,
+            "unrelated_U_to_D": 1.0421553016931284,
+            "identity_D_to_D": 0.02160525240469724,
+            "first_subject_U_to_D": 0.17150866959127598
+          }
+        },
+        {
+          "fact_id": "Q1253395-GeoNames-country-PK",
+          "answer_stratum": "PK",
+          "donor_fact_id": "Q188511-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.6009140546520939,
+            "unrelated_U_to_D": -7.798727005996625,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.06076996164483717
+          }
+        },
+        {
+          "fact_id": "Q13378177-GeoNames-country-SI",
+          "answer_stratum": "SI",
+          "donor_fact_id": "Q4371604-GeoNames-country-IR",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.6317484340397641,
+            "unrelated_U_to_D": 0.2677238207543269,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.031569527578540146
+          }
+        },
+        {
+          "fact_id": "Q1350362-GeoNames-country-KH",
+          "answer_stratum": "KH",
+          "donor_fact_id": "Q535534-GeoNames-country-CN",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.3740617984731216,
+            "unrelated_U_to_D": -2.230415220663417,
+            "identity_D_to_D": -0.0004095902550034225,
+            "first_subject_U_to_D": -0.45834197869407944
+          }
+        },
+        {
+          "fact_id": "Q143892-GeoNames-country-BF",
+          "answer_stratum": "BF",
+          "donor_fact_id": "Q2429147-GeoNames-country-IR",
+          "margin_gains": {
+            "same_entity_U_to_D": -2.3544275788349296,
+            "unrelated_U_to_D": -7.465969758055053,
+            "identity_D_to_D": 0.009237199876224622,
+            "first_subject_U_to_D": 0.17734563089697986
+          }
+        },
+        {
+          "fact_id": "Q16014-GeoNames-country-LU",
+          "answer_stratum": "LU",
+          "donor_fact_id": "Q404873-GeoNames-country-CN",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.2209537328926672,
+            "unrelated_U_to_D": 1.116036052396339,
+            "identity_D_to_D": 0.0037808004972248455,
+            "first_subject_U_to_D": 0.14789817269684136
+          }
+        },
+        {
+          "fact_id": "Q1618499-GeoNames-country-SI",
+          "answer_stratum": "SI",
+          "donor_fact_id": "Q2625453-GeoNames-country-IR",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.8892518151551485,
+            "unrelated_U_to_D": -1.6071442095562816,
+            "identity_D_to_D": 0.015552410390228033,
+            "first_subject_U_to_D": -0.06051949132233858
+          }
+        },
+        {
+          "fact_id": "Q1628122-GeoNames-country-ES",
+          "answer_stratum": "ES",
+          "donor_fact_id": "Q3619248-GeoNames-country-IN",
+          "margin_gains": {
+            "same_entity_U_to_D": -4.866454441566475,
+            "unrelated_U_to_D": -5.786301979331029,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.060794941382255274
+          }
+        },
+        {
+          "fact_id": "Q1632465-GeoNames-country-ES",
+          "answer_stratum": "ES",
+          "donor_fact_id": "Q22801-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.4911451759180636,
+            "unrelated_U_to_D": -12.417570058231831,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q1649746-GeoNames-country-DZ",
+          "answer_stratum": "DZ",
+          "donor_fact_id": "Q2889703-GeoNames-country-IL",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.4772475480567664,
+            "unrelated_U_to_D": 0.8292183065786958,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.2129229698330164
+          }
+        },
+        {
+          "fact_id": "Q168648-GeoNames-country-HU",
+          "answer_stratum": "HU",
+          "donor_fact_id": "Q2625453-GeoNames-country-IR",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.6782226443174295,
+            "unrelated_U_to_D": 2.002781124145258,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.08593440568074584
+          }
+        },
+        {
+          "fact_id": "Q173219-GeoNames-country-BE",
+          "answer_stratum": "BE",
+          "donor_fact_id": "Q67068-GeoNames-country-CH",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.7999552023356955,
+            "unrelated_U_to_D": 4.664059992956936,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -1.1914853530470282e-06
+          }
+        },
+        {
+          "fact_id": "Q179604-GeoNames-country-DZ",
+          "answer_stratum": "DZ",
+          "donor_fact_id": "Q259216-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.3693324467167258,
+            "unrelated_U_to_D": 1.7100473260506988,
+            "identity_D_to_D": 0.019507030490785837,
+            "first_subject_U_to_D": -0.08613339066505432
+          }
+        },
+        {
+          "fact_id": "Q1857915-GeoNames-country-GR",
+          "answer_stratum": "GR",
+          "donor_fact_id": "Q241125-GeoNames-country-SK",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.5220682339859195,
+            "unrelated_U_to_D": -0.2987413794035092,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q188179-GeoNames-country-EE",
+          "answer_stratum": "EE",
+          "donor_fact_id": "Q6397-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 3.123504982511804,
+            "unrelated_U_to_D": -9.930943993073015,
+            "identity_D_to_D": 0.0011088363826274872,
+            "first_subject_U_to_D": -0.17894488527235808
+          }
+        },
+        {
+          "fact_id": "Q1911759-GeoNames-country-TR",
+          "answer_stratum": "TR",
+          "donor_fact_id": "Q349982-GeoNames-country-CN",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.1542889363190625,
+            "unrelated_U_to_D": -4.1670935750735225,
+            "identity_D_to_D": -0.00015544920461252332,
+            "first_subject_U_to_D": -1.062675292370841
+          }
+        },
+        {
+          "fact_id": "Q192859-GeoNames-country-BE",
+          "answer_stratum": "BE",
+          "donor_fact_id": "Q837478-GeoNames-country-SK",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.656161592110266,
+            "unrelated_U_to_D": -1.5038231775738495,
+            "identity_D_to_D": -0.007814287353312466,
+            "first_subject_U_to_D": -0.14843225703361895
+          }
+        },
+        {
+          "fact_id": "Q192926-GeoNames-country-BG",
+          "answer_stratum": "BG",
+          "donor_fact_id": "Q875070-GeoNames-country-PH",
+          "margin_gains": {
+            "same_entity_U_to_D": 12.860502253191953,
+            "unrelated_U_to_D": 1.0124741780236945,
+            "identity_D_to_D": 0.007772310542350169,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q1946056-GeoNames-country-PL",
+          "answer_stratum": "PL",
+          "donor_fact_id": "Q765472-GeoNames-country-MX",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.8870957421604544,
+            "unrelated_U_to_D": -2.037209002766758,
+            "identity_D_to_D": 0.00310380756855011,
+            "first_subject_U_to_D": -0.017907068133354187
+          }
+        },
+        {
+          "fact_id": "Q1968465-GeoNames-country-LR",
+          "answer_stratum": "LR",
+          "donor_fact_id": "Q2341909-GeoNames-country-IN",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.5192233562120236,
+            "unrelated_U_to_D": -2.228997665049974,
+            "identity_D_to_D": 0.018089711666107178,
+            "first_subject_U_to_D": -0.07485824741888791
+          }
+        },
+        {
+          "fact_id": "Q202991-GeoNames-country-LY",
+          "answer_stratum": "LY",
+          "donor_fact_id": "Q854870-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.5702527070243377,
+            "unrelated_U_to_D": -3.6252116345858667,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q2044578-GeoNames-country-LT",
+          "answer_stratum": "LT",
+          "donor_fact_id": "Q188511-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.5009089568629861,
+            "unrelated_U_to_D": -0.10814221528562484,
+            "identity_D_to_D": 0.0022372111925506033,
+            "first_subject_U_to_D": 0.3481986835686257
+          }
+        },
+        {
+          "fact_id": "Q2204078-GeoNames-country-AE",
+          "answer_stratum": "AE",
+          "donor_fact_id": "Q2429147-GeoNames-country-IR",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.787645053351298,
+            "unrelated_U_to_D": -13.06409443798475,
+            "identity_D_to_D": 0.0033963320893235505,
+            "first_subject_U_to_D": 0.010378717153798789
+          }
+        },
+        {
+          "fact_id": "Q245307-GeoNames-country-FR",
+          "answer_stratum": "FR",
+          "donor_fact_id": "Q2341909-GeoNames-country-IN",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.5679293048342515,
+            "unrelated_U_to_D": -0.34016423746470537,
+            "identity_D_to_D": -0.007792281314323191,
+            "first_subject_U_to_D": -0.007086187906679697
+          }
+        },
+        {
+          "fact_id": "Q2470205-GeoNames-country-TJ",
+          "answer_stratum": "TJ",
+          "donor_fact_id": "Q638621-GeoNames-country-IN",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.28128799644764513,
+            "unrelated_U_to_D": 2.6656966774899047,
+            "identity_D_to_D": -0.017305266126641072,
+            "first_subject_U_to_D": 0.012381184045807458
+          }
+        },
+        {
+          "fact_id": "Q2471-GeoNames-country-YE",
+          "answer_stratum": "YE",
+          "donor_fact_id": "Q860304-GeoNames-country-CI",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.2537261048564687,
+            "unrelated_U_to_D": -6.5353481189813465,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 1.0717866357881576
+          }
+        },
+        {
+          "fact_id": "Q2488907-GeoNames-country-UG",
+          "answer_stratum": "UG",
+          "donor_fact_id": "Q43387-GeoNames-country-TR",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.9033721354790032,
+            "unrelated_U_to_D": -1.392002453096211,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.5043463713955134
+          }
+        },
+        {
+          "fact_id": "Q259216-GeoNames-country-FR",
+          "answer_stratum": "FR",
+          "donor_fact_id": "Q750989-GeoNames-country-UZ",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.7265191394740214,
+            "unrelated_U_to_D": -0.4412914058784736,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.31252465980969646
+          }
+        },
+        {
+          "fact_id": "Q2625453-GeoNames-country-IR",
+          "answer_stratum": "IR",
+          "donor_fact_id": "Q693093-GeoNames-country-KE",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.3183737954313983,
+            "unrelated_U_to_D": -0.09906113813485717,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q2658219-GeoNames-country-SE",
+          "answer_stratum": "SE",
+          "donor_fact_id": "Q734315-GeoNames-country-GE",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.5953012350946665,
+            "unrelated_U_to_D": -6.340902181807905,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.006815154105424881
+          }
+        },
+        {
+          "fact_id": "Q2658228-GeoNames-country-IL",
+          "answer_stratum": "IL",
+          "donor_fact_id": "Q2341909-GeoNames-country-IN",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.9847579002380371,
+            "unrelated_U_to_D": 2.341030478477478,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.007297515869140625
+          }
+        },
+        {
+          "fact_id": "Q26757559-GeoNames-country-ID",
+          "answer_stratum": "ID",
+          "donor_fact_id": "Q489679-GeoNames-country-AR",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.035179052661988,
+            "unrelated_U_to_D": 5.21104070074216,
+            "identity_D_to_D": 0.001155578764155507,
+            "first_subject_U_to_D": -0.00743678213621024
+          }
+        },
+        {
+          "fact_id": "Q270821-GeoNames-country-IQ",
+          "answer_stratum": "IQ",
+          "donor_fact_id": "Q1251473-GeoNames-country-PK",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.7234619557857513,
+            "unrelated_U_to_D": -4.235143780708313,
+            "identity_D_to_D": 0.006779789924621582,
+            "first_subject_U_to_D": 0.5740153789520264
+          }
+        },
+        {
+          "fact_id": "Q2731405-GeoNames-country-MK",
+          "answer_stratum": "MK",
+          "donor_fact_id": "Q619440-GeoNames-country-FJ",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.1343949646688998,
+            "unrelated_U_to_D": -0.5926512703299522,
+            "identity_D_to_D": 0.0029038386419415474,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q2889703-GeoNames-country-IL",
+          "answer_stratum": "IL",
+          "donor_fact_id": "Q1004510-GeoNames-country-ZM",
+          "margin_gains": {
+            "same_entity_U_to_D": 3.2857666015625,
+            "unrelated_U_to_D": 2.8935139179229736,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.07723760604858398
+          }
+        },
+        {
+          "fact_id": "Q2900650-GeoNames-country-LB",
+          "answer_stratum": "LB",
+          "donor_fact_id": "Q1262380-GeoNames-country-IN",
+          "margin_gains": {
+            "same_entity_U_to_D": -6.825716697916505,
+            "unrelated_U_to_D": -2.0145885944366455,
+            "identity_D_to_D": -0.026580095291137695,
+            "first_subject_U_to_D": -0.06085824966430664
+          }
+        },
+        {
+          "fact_id": "Q3079830-GeoNames-country-TN",
+          "answer_stratum": "TN",
+          "donor_fact_id": "Q1017376-GeoNames-country-PG",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.123893878684612,
+            "unrelated_U_to_D": -4.790119729615981,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -3.4867203794419765e-05
+          }
+        },
+        {
+          "fact_id": "Q3132444-GeoNames-country-SS",
+          "answer_stratum": "SS",
+          "donor_fact_id": "Q360769-GeoNames-country-CN",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.741207994389697,
+            "unrelated_U_to_D": -0.9845018315245397,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.10258255089865997
+          }
+        },
+        {
+          "fact_id": "Q3138871-GeoNames-country-KM",
+          "answer_stratum": "KM",
+          "donor_fact_id": "Q1968465-GeoNames-country-LR",
+          "margin_gains": {
+            "same_entity_U_to_D": -2.3601634034566814,
+            "unrelated_U_to_D": 2.951692697351973,
+            "identity_D_to_D": 0.03447380237048492,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q3248111-GeoNames-country-PK",
+          "answer_stratum": "PK",
+          "donor_fact_id": "Q870475-GeoNames-country-IQ",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.8686047848896123,
+            "unrelated_U_to_D": -3.1147047776612453,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.32230738014914095
+          }
+        },
+        {
+          "fact_id": "Q33377-GeoNames-country-IN",
+          "answer_stratum": "IN",
+          "donor_fact_id": "Q1013413-GeoNames-country-ZA",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.7137937271036208,
+            "unrelated_U_to_D": -9.071203363128006,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q3347001-GeoNames-country-CA",
+          "answer_stratum": "CA",
+          "donor_fact_id": "Q1350362-GeoNames-country-KH",
+          "margin_gains": {
+            "same_entity_U_to_D": -2.6533728186186636,
+            "unrelated_U_to_D": -0.49595340991800185,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.050458459416404366
+          }
+        },
+        {
+          "fact_id": "Q3560020-GeoNames-country-GR",
+          "answer_stratum": "GR",
+          "donor_fact_id": "Q1013413-GeoNames-country-ZA",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.4283522663317854,
+            "unrelated_U_to_D": -3.2973479491192847,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q360769-GeoNames-country-CN",
+          "answer_stratum": "CN",
+          "donor_fact_id": "Q2438632-GeoNames-country-IR",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.140936323266942,
+            "unrelated_U_to_D": -0.43136996691464446,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.10930021383683197
+          }
+        },
+        {
+          "fact_id": "Q3657-GeoNames-country-LT",
+          "answer_stratum": "LT",
+          "donor_fact_id": "Q192926-GeoNames-country-BG",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.36370311454084003,
+            "unrelated_U_to_D": -0.9387599993424374,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0012388215254759416
+          }
+        },
+        {
+          "fact_id": "Q371354-GeoNames-country-AR",
+          "answer_stratum": "AR",
+          "donor_fact_id": "Q659887-GeoNames-country-IN",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.324459923809627,
+            "unrelated_U_to_D": -3.2319559222378302,
+            "identity_D_to_D": 0.0056131642777472734,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q3763-GeoNames-country-CL",
+          "answer_stratum": "CL",
+          "donor_fact_id": "Q1019575-GeoNames-country-SE",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.9694120606873184,
+            "unrelated_U_to_D": 10.96882385929348,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -6.078073056414723e-06
+          }
+        },
+        {
+          "fact_id": "Q389942-GeoNames-country-SK",
+          "answer_stratum": "SK",
+          "donor_fact_id": "Q106681-GeoNames-country-PL",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.9234067113648052,
+            "unrelated_U_to_D": -0.0802826494909823,
+            "identity_D_to_D": 0.014939045970095322,
+            "first_subject_U_to_D": 0.32226803340017796
+          }
+        },
+        {
+          "fact_id": "Q399083-GeoNames-country-ZW",
+          "answer_stratum": "ZW",
+          "donor_fact_id": "Q1253395-GeoNames-country-PK",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.3316193598293466,
+            "unrelated_U_to_D": -0.5834059058361163,
+            "identity_D_to_D": 0.004023721976409433,
+            "first_subject_U_to_D": -0.02411092755937716
+          }
+        },
+        {
+          "fact_id": "Q4072894-GeoNames-country-IE",
+          "answer_stratum": "IE",
+          "donor_fact_id": "Q34001-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.38319102865852983,
+            "unrelated_U_to_D": -0.7253137265761325,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.7708452530250725
+          }
+        },
+        {
+          "fact_id": "Q42089-GeoNames-country-KR",
+          "answer_stratum": "KR",
+          "donor_fact_id": "Q11449-GeoNames-country-ID",
+          "margin_gains": {
+            "same_entity_U_to_D": 6.512872963074187,
+            "unrelated_U_to_D": 2.623161363459076,
+            "identity_D_to_D": -0.03153038524033036,
+            "first_subject_U_to_D": -0.018840479315258563
+          }
+        },
+        {
+          "fact_id": "Q42117-GeoNames-country-KR",
+          "answer_stratum": "KR",
+          "donor_fact_id": "Q583619-GeoNames-country-NG",
+          "margin_gains": {
+            "same_entity_U_to_D": 3.490183848738525,
+            "unrelated_U_to_D": -1.7649306385646923,
+            "identity_D_to_D": 0.009290701447753236,
+            "first_subject_U_to_D": -0.1363501801606617
+          }
+        },
+        {
+          "fact_id": "Q4709-GeoNames-country-VE",
+          "answer_stratum": "VE",
+          "donor_fact_id": "Q3560020-GeoNames-country-GR",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.1927661246736534,
+            "unrelated_U_to_D": 0.6002194613101892,
+            "identity_D_to_D": 0.0032319145539077,
+            "first_subject_U_to_D": -0.17855003870499786
+          }
+        },
+        {
+          "fact_id": "Q502023-GeoNames-country-MX",
+          "answer_stratum": "MX",
+          "donor_fact_id": "Q993200-GeoNames-country-ZM",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.37228748365305364,
+            "unrelated_U_to_D": 0.07910233514849097,
+            "identity_D_to_D": 0.01520476397126913,
+            "first_subject_U_to_D": 0.003163569374009967
+          }
+        },
+        {
+          "fact_id": "Q515229-GeoNames-country-PW",
+          "answer_stratum": "PW",
+          "donor_fact_id": "Q985622-GeoNames-country-NA",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.9474053382873535,
+            "unrelated_U_to_D": 3.448208808898926,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q5254191-GeoNames-country-MY",
+          "answer_stratum": "MY",
+          "donor_fact_id": "Q13378177-GeoNames-country-SI",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.06181323753844481,
+            "unrelated_U_to_D": 0.4481779440829996,
+            "identity_D_to_D": 0.010991389863193035,
+            "first_subject_U_to_D": -0.15459202203783207
+          }
+        },
+        {
+          "fact_id": "Q583619-GeoNames-country-NG",
+          "answer_stratum": "NG",
+          "donor_fact_id": "Q259216-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.9040996338790137,
+            "unrelated_U_to_D": -2.271867004195883,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.10770516936099739
+          }
+        },
+        {
+          "fact_id": "Q5845677-GeoNames-country-IR",
+          "answer_stratum": "IR",
+          "donor_fact_id": "Q2296366-GeoNames-country-ZA",
+          "margin_gains": {
+            "same_entity_U_to_D": 3.5356097207404673,
+            "unrelated_U_to_D": 2.879450630847714,
+            "identity_D_to_D": -0.011909138411283493,
+            "first_subject_U_to_D": 0.1273353910073638
+          }
+        },
+        {
+          "fact_id": "Q60044-GeoNames-country-LV",
+          "answer_stratum": "LV",
+          "donor_fact_id": "Q820972-GeoNames-country-DJ",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.423653443715011,
+            "unrelated_U_to_D": 0.09680891760217492,
+            "identity_D_to_D": 0.02089415374211967,
+            "first_subject_U_to_D": 0.005031111213611439
+          }
+        },
+        {
+          "fact_id": "Q61750-GeoNames-country-BO",
+          "answer_stratum": "BO",
+          "donor_fact_id": "Q213916-GeoNames-country-GR",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.262482461577747,
+            "unrelated_U_to_D": -3.9556726625887677,
+            "identity_D_to_D": 0.0029508525622077286,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q619440-GeoNames-country-FJ",
+          "answer_stratum": "FJ",
+          "donor_fact_id": "Q1013413-GeoNames-country-ZA",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.15663938969373703,
+            "unrelated_U_to_D": -0.2780326157808304,
+            "identity_D_to_D": -0.024582326412200928,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q626136-GeoNames-country-US",
+          "answer_stratum": "US",
+          "donor_fact_id": "Q754776-GeoNames-country-SK",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.2234350618091412,
+            "unrelated_U_to_D": -6.159847491770051,
+            "identity_D_to_D": 0.023412093752995133,
+            "first_subject_U_to_D": 0.1870209106709808
+          }
+        },
+        {
+          "fact_id": "Q6272457-GeoNames-country-AU",
+          "answer_stratum": "AU",
+          "donor_fact_id": "Q21536-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 6.570760643051472,
+            "unrelated_U_to_D": 0.12856290925992653,
+            "identity_D_to_D": -0.015524577291216701,
+            "first_subject_U_to_D": 0.003892516891937703
+          }
+        },
+        {
+          "fact_id": "Q659887-GeoNames-country-IN",
+          "answer_stratum": "IN",
+          "donor_fact_id": "Q3763-GeoNames-country-CL",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.1157648143125698,
+            "unrelated_U_to_D": -5.83835494768573,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.011717158078681678
+          }
+        },
+        {
+          "fact_id": "Q67068-GeoNames-country-CH",
+          "answer_stratum": "CH",
+          "donor_fact_id": "Q143892-GeoNames-country-BF",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.9712617460063484,
+            "unrelated_U_to_D": 4.441043274797266,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0009937066351994872
+          }
+        },
+        {
+          "fact_id": "Q6748057-GeoNames-country-GN",
+          "answer_stratum": "GN",
+          "donor_fact_id": "Q34001-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.3306805328757036,
+            "unrelated_U_to_D": 0.0038474697212222964,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.44133337002131157
+          }
+        },
+        {
+          "fact_id": "Q684152-GeoNames-country-BI",
+          "answer_stratum": "BI",
+          "donor_fact_id": "Q173219-GeoNames-country-BE",
+          "margin_gains": {
+            "same_entity_U_to_D": -3.0142663120750512,
+            "unrelated_U_to_D": -3.4504207818645227,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.3202639221744903
+          }
+        },
+        {
+          "fact_id": "Q69216-GeoNames-country-CH",
+          "answer_stratum": "CH",
+          "donor_fact_id": "Q734315-GeoNames-country-GE",
+          "margin_gains": {
+            "same_entity_U_to_D": 9.445909308217779,
+            "unrelated_U_to_D": 1.8128788705953411,
+            "identity_D_to_D": -0.0040078405859276245,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q693093-GeoNames-country-KE",
+          "answer_stratum": "KE",
+          "donor_fact_id": "Q535534-GeoNames-country-CN",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.8366746397223324,
+            "unrelated_U_to_D": -6.595895882695913,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.2743200706318021
+          }
+        },
+        {
+          "fact_id": "Q71247-GeoNames-country-CN",
+          "answer_stratum": "CN",
+          "donor_fact_id": "Q1371634-GeoNames-country-GR",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.7067069827462547,
+            "unrelated_U_to_D": -2.990064966492355,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q719707-GeoNames-country-CA",
+          "answer_stratum": "CA",
+          "donor_fact_id": "Q197378-GeoNames-country-CN",
+          "margin_gains": {
+            "same_entity_U_to_D": 6.844510803173762,
+            "unrelated_U_to_D": 2.6689656806120183,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.4197930830268888
+          }
+        },
+        {
+          "fact_id": "Q734315-GeoNames-country-GE",
+          "answer_stratum": "GE",
+          "donor_fact_id": "Q3657-GeoNames-country-LT",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.208646332175704,
+            "unrelated_U_to_D": -2.911205567914294,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.2740623348072404
+          }
+        },
+        {
+          "fact_id": "Q745051-GeoNames-country-PL",
+          "answer_stratum": "PL",
+          "donor_fact_id": "Q21530-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.786730550695211,
+            "unrelated_U_to_D": 3.2613441915018484,
+            "identity_D_to_D": -0.0006733322516083717,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q750989-GeoNames-country-UZ",
+          "answer_stratum": "UZ",
+          "donor_fact_id": "Q798872-GeoNames-country-GR",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.06646913621807471,
+            "unrelated_U_to_D": 0.29174414125736803,
+            "identity_D_to_D": -0.004714494687505066,
+            "first_subject_U_to_D": -0.18113543948857114
+          }
+        },
+        {
+          "fact_id": "Q765472-GeoNames-country-MX",
+          "answer_stratum": "MX",
+          "donor_fact_id": "Q1261509-GeoNames-country-LT",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.8455883983988315,
+            "unrelated_U_to_D": -6.7969712181948125,
+            "identity_D_to_D": 0.011771055869758129,
+            "first_subject_U_to_D": 0.7218943221960217
+          }
+        },
+        {
+          "fact_id": "Q820972-GeoNames-country-DJ",
+          "answer_stratum": "DJ",
+          "donor_fact_id": "Q259216-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 6.562335889320821,
+            "unrelated_U_to_D": 3.783871073741466,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.0983023620210588
+          }
+        },
+        {
+          "fact_id": "Q833016-GeoNames-country-UY",
+          "answer_stratum": "UY",
+          "donor_fact_id": "Q1606829-GeoNames-country-ES",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.8603188647539355,
+            "unrelated_U_to_D": -0.3253262545331381,
+            "identity_D_to_D": 0.012956033868249506,
+            "first_subject_U_to_D": 0.001107117102947086
+          }
+        },
+        {
+          "fact_id": "Q837478-GeoNames-country-SK",
+          "answer_stratum": "SK",
+          "donor_fact_id": "Q3050819-GeoNames-country-PK",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.7987468776991591,
+            "unrelated_U_to_D": -6.546516434522346,
+            "identity_D_to_D": -0.012965374102350324,
+            "first_subject_U_to_D": 0.029843248426914215
+          }
+        },
+        {
+          "fact_id": "Q850676-GeoNames-country-CZ",
+          "answer_stratum": "CZ",
+          "donor_fact_id": "Q143892-GeoNames-country-BF",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.984177054371685,
+            "unrelated_U_to_D": -1.502429177518934,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.05599131854251027
+          }
+        },
+        {
+          "fact_id": "Q854333-GeoNames-country-KG",
+          "answer_stratum": "KG",
+          "donor_fact_id": "Q3657-GeoNames-country-LT",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.41055154117930215,
+            "unrelated_U_to_D": -4.501816469812184,
+            "identity_D_to_D": -0.006108571164077148,
+            "first_subject_U_to_D": -0.7812734483450186
+          }
+        },
+        {
+          "fact_id": "Q860304-GeoNames-country-CI",
+          "answer_stratum": "CI",
+          "donor_fact_id": "Q5680552-GeoNames-country-IR",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.333779420549945,
+            "unrelated_U_to_D": -8.654229863638648,
+            "identity_D_to_D": 0.001671787174018391,
+            "first_subject_U_to_D": -0.23569515693998255
+          }
+        },
+        {
+          "fact_id": "Q870475-GeoNames-country-IQ",
+          "answer_stratum": "IQ",
+          "donor_fact_id": "Q13378177-GeoNames-country-SI",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.3442344665527344,
+            "unrelated_U_to_D": 1.6335227489471436,
+            "identity_D_to_D": -0.003134489059448242,
+            "first_subject_U_to_D": 0.0
+          }
+        },
+        {
+          "fact_id": "Q875070-GeoNames-country-PH",
+          "answer_stratum": "PH",
+          "donor_fact_id": "Q16014-GeoNames-country-LU",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.9566982800024562,
+            "unrelated_U_to_D": -0.15658954053651541,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.00031825187033973634
+          }
+        },
+        {
+          "fact_id": "Q896185-GeoNames-country-CF",
+          "answer_stratum": "CF",
+          "donor_fact_id": "Q535534-GeoNames-country-CN",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.5390443167561898,
+            "unrelated_U_to_D": -3.54412384358875,
+            "identity_D_to_D": -0.0017727169761201367,
+            "first_subject_U_to_D": 0.015285445973859169
+          }
+        },
+        {
+          "fact_id": "Q942842-GeoNames-country-CZ",
+          "answer_stratum": "CZ",
+          "donor_fact_id": "Q69060-GeoNames-country-CN",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.780922115460271,
+            "unrelated_U_to_D": 9.158195886586327,
+            "identity_D_to_D": 0.02106656489195302,
+            "first_subject_U_to_D": -0.0374958336178679
+          }
+        },
+        {
+          "fact_id": "Q985622-GeoNames-country-NA",
+          "answer_stratum": "NA",
+          "donor_fact_id": "Q21530-GeoNames-country-FR",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.112917091319105,
+            "unrelated_U_to_D": 0.12293084508200991,
+            "identity_D_to_D": 0.00391093307553092,
+            "first_subject_U_to_D": -0.0048838607071957085
+          }
+        }
+      ]
+    },
+    "hebrew_cbs": {
+      "subjects": 96,
+      "distinct_answer_strata": 14,
+      "primary_same_entity_margin_gain": {
+        "subjects": 96,
+        "answer_strata": 14,
+        "answer_macro_mean": 0.356846721765745,
+        "subject_weighted_mean": 0.341372267081321,
+        "hierarchical_bootstrap_ci95": [
+          -0.18455644270446397,
+          0.9599282635319198
+        ],
+        "two_sided_p": 0.197021484375,
+        "test": "exact_answer_stratum_sign_flip_16384_assignments",
+        "bootstrap_replicates": 10000
+      },
+      "controls_vs_baseline_D": {
+        "unrelated_U_to_D": {
+          "subjects": 96,
+          "answer_strata": 14,
+          "answer_macro_mean": 0.28947449618222193,
+          "subject_weighted_mean": 0.29442219531226027,
+          "hierarchical_bootstrap_ci95": [
+            -0.18983594542601823,
+            0.772006297809244
+          ],
+          "bootstrap_replicates": 10000
+        },
+        "identity_D_to_D": {
+          "subjects": 96,
+          "answer_strata": 14,
+          "answer_macro_mean": 0.0003234942898638926,
+          "subject_weighted_mean": 0.000386127797582958,
+          "hierarchical_bootstrap_ci95": [
+            -0.0023662751941913415,
+            0.00300485846959245
+          ],
+          "bootstrap_replicates": 10000
+        },
+        "first_subject_U_to_D": {
+          "subjects": 96,
+          "answer_strata": 14,
+          "answer_macro_mean": 0.0032467048141636523,
+          "subject_weighted_mean": 0.006435856599712982,
+          "hierarchical_bootstrap_ci95": [
+            -0.08986135860587409,
+            0.10155959176448538
+          ],
+          "bootstrap_replicates": 10000
+        }
+      },
+      "same_entity_minus_unrelated_margin": {
+        "subjects": 96,
+        "answer_strata": 14,
+        "answer_macro_mean": 0.06737222558352303,
+        "subject_weighted_mean": 0.04695007176906074,
+        "hierarchical_bootstrap_ci95": [
+          -0.6544970370815898,
+          0.8385361102382264
+        ],
+        "bootstrap_replicates": 10000
+      },
+      "same_entity_gold_only_gain": {
+        "subjects": 96,
+        "answer_strata": 14,
+        "answer_macro_mean": 0.313028506932465,
+        "subject_weighted_mean": 0.3043852491045982,
+        "hierarchical_bootstrap_ci95": [
+          -0.14928904930446546,
+          0.816757151111208
+        ],
+        "bootstrap_replicates": 10000
+      },
+      "identity_max_absolute_margin_deviation_nats": 0.02707542477583047,
+      "per_subject": [
+        {
+          "fact_id": "Q1001622-CBS-subdistrict-21",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q730195-CBS-subdistrict-25",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.9161288738250732,
+            "unrelated_U_to_D": -0.8819074630737305,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.726931095123291
+          }
+        },
+        {
+          "fact_id": "Q1025294-CBS-subdistrict-11",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2778107-CBS-subdistrict-43",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.8140019327402115,
+            "unrelated_U_to_D": -2.61841631680727,
+            "identity_D_to_D": 0.021776750683784485,
+            "first_subject_U_to_D": 0.25608110055327415
+          }
+        },
+        {
+          "fact_id": "Q1026806-CBS-subdistrict-62",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2449546-CBS-subdistrict-61",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.1644300898042275,
+            "unrelated_U_to_D": 2.2064625113998773,
+            "identity_D_to_D": -0.022271152600296773,
+            "first_subject_U_to_D": -0.02173033356666565
+          }
+        },
+        {
+          "fact_id": "Q1026815-CBS-subdistrict-11",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2570427-CBS-subdistrict-61",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.7440052181482315,
+            "unrelated_U_to_D": 2.0848438292741776,
+            "identity_D_to_D": 0.01361951231956482,
+            "first_subject_U_to_D": 0.18199147284030914
+          }
+        },
+        {
+          "fact_id": "Q1186956-CBS-subdistrict-22",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q152659-CBS-subdistrict-42",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.646109189838171,
+            "unrelated_U_to_D": -5.468168968334794,
+            "identity_D_to_D": 0.0096127949655056,
+            "first_subject_U_to_D": 0.027722693979740143
+          }
+        },
+        {
+          "fact_id": "Q1339896-CBS-subdistrict-22",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q2130036-CBS-subdistrict-11",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.8410506881773472,
+            "unrelated_U_to_D": 3.6729890555143356,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.007263489067554474
+          }
+        },
+        {
+          "fact_id": "Q151920-CBS-subdistrict-22",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q1019478-CBS-subdistrict-21",
+          "margin_gains": {
+            "same_entity_U_to_D": 3.2980090752243996,
+            "unrelated_U_to_D": -1.0668412931263447,
+            "identity_D_to_D": -7.0229172706604e-05,
+            "first_subject_U_to_D": -0.1383974887430668
+          }
+        },
+        {
+          "fact_id": "Q152387-CBS-subdistrict-31",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q152418-CBS-subdistrict-24",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.5944476048462093,
+            "unrelated_U_to_D": 1.7584018157795072,
+            "identity_D_to_D": 0.020075649954378605,
+            "first_subject_U_to_D": 0.004008393734693527
+          }
+        },
+        {
+          "fact_id": "Q152418-CBS-subdistrict-24",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2920033-CBS-subdistrict-41",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.5785844922065735,
+            "unrelated_U_to_D": 3.276721239089966,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.14364326000213623
+          }
+        },
+        {
+          "fact_id": "Q152467-CBS-subdistrict-52",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q939277-CBS-subdistrict-24",
+          "margin_gains": {
+            "same_entity_U_to_D": 5.683425263501704,
+            "unrelated_U_to_D": -0.5336220003664494,
+            "identity_D_to_D": 0.002179466187953949,
+            "first_subject_U_to_D": 0.029605884104967117
+          }
+        },
+        {
+          "fact_id": "Q152501-CBS-subdistrict-52",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q2588837-CBS-subdistrict-21",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.301318310201168,
+            "unrelated_U_to_D": 1.0665327310562134,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.007729329168796539
+          }
+        },
+        {
+          "fact_id": "Q152659-CBS-subdistrict-42",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q2777893-CBS-subdistrict-61",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.7749761785380542,
+            "unrelated_U_to_D": -0.9240788948372938,
+            "identity_D_to_D": -0.0011446390999481082,
+            "first_subject_U_to_D": -0.638584889122285
+          }
+        },
+        {
+          "fact_id": "Q16132344-CBS-subdistrict-44",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2777766-CBS-subdistrict-25",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.042662543914048,
+            "unrelated_U_to_D": 1.7569940625980962,
+            "identity_D_to_D": -0.0031036162690725178,
+            "first_subject_U_to_D": 0.06931209689355455
+          }
+        },
+        {
+          "fact_id": "Q1660243-CBS-subdistrict-21",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q960557-CBS-subdistrict-43",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.193961501121521,
+            "unrelated_U_to_D": -0.9516321420669556,
+            "identity_D_to_D": 0.007349491119384766,
+            "first_subject_U_to_D": 0.7239999771118164
+          }
+        },
+        {
+          "fact_id": "Q1759981-CBS-subdistrict-44",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2777055-CBS-subdistrict-22",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.0371277499361895,
+            "unrelated_U_to_D": -0.6139648476091679,
+            "identity_D_to_D": -0.0035922540992032737,
+            "first_subject_U_to_D": 0.14686732686823234
+          }
+        },
+        {
+          "fact_id": "Q1814658-CBS-subdistrict-32",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q2890894-CBS-subdistrict-62",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.6208783891052008,
+            "unrelated_U_to_D": 1.7544619627296925,
+            "identity_D_to_D": 0.02294426690787077,
+            "first_subject_U_to_D": -0.6009694579988718
+          }
+        },
+        {
+          "fact_id": "Q1941126-CBS-subdistrict-32",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q2614828-CBS-subdistrict-43",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.2875810312107205,
+            "unrelated_U_to_D": 1.9169890899211168,
+            "identity_D_to_D": 0.026746684685349464,
+            "first_subject_U_to_D": 0.09538389556109905
+          }
+        },
+        {
+          "fact_id": "Q2389508-CBS-subdistrict-51",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q587948-CBS-subdistrict-44",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.146300174295902,
+            "unrelated_U_to_D": -0.44422151148319244,
+            "identity_D_to_D": 0.004048943519592285,
+            "first_subject_U_to_D": -0.24223653972148895
+          }
+        },
+        {
+          "fact_id": "Q2390257-CBS-subdistrict-24",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2777371-CBS-subdistrict-44",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.0683364868164062,
+            "unrelated_U_to_D": -0.8881134986877441,
+            "identity_D_to_D": -0.011130809783935547,
+            "first_subject_U_to_D": -0.06136894226074219
+          }
+        },
+        {
+          "fact_id": "Q2413397-CBS-subdistrict-21",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2889225-CBS-subdistrict-22",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.1737537384033203,
+            "unrelated_U_to_D": 0.6702232360839844,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.17200922966003418
+          }
+        },
+        {
+          "fact_id": "Q2473572-CBS-subdistrict-62",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2613353-CBS-subdistrict-42",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.5542450706416275,
+            "unrelated_U_to_D": 0.30441307196451817,
+            "identity_D_to_D": -0.000999197902274318,
+            "first_subject_U_to_D": 0.003945956967072561
+          }
+        },
+        {
+          "fact_id": "Q2475182-CBS-subdistrict-32",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q2667061-CBS-subdistrict-31",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.715717636514455,
+            "unrelated_U_to_D": -0.17495601950213313,
+            "identity_D_to_D": 0.008862386457622051,
+            "first_subject_U_to_D": -0.4858095794916153
+          }
+        },
+        {
+          "fact_id": "Q2572624-CBS-subdistrict-24",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2623238-CBS-subdistrict-62",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.1506587266921997,
+            "unrelated_U_to_D": 0.017681121826171875,
+            "identity_D_to_D": -0.013603687286376953,
+            "first_subject_U_to_D": -0.0577244758605957
+          }
+        },
+        {
+          "fact_id": "Q2612736-CBS-subdistrict-43",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q1186956-CBS-subdistrict-22",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.8864835068234242,
+            "unrelated_U_to_D": 0.2830893996579107,
+            "identity_D_to_D": -0.01527426391839981,
+            "first_subject_U_to_D": -0.44181845360435545
+          }
+        },
+        {
+          "fact_id": "Q2613167-CBS-subdistrict-43",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q2920129-CBS-subdistrict-11",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.8182757497852435,
+            "unrelated_U_to_D": 0.2503762622072827,
+            "identity_D_to_D": 0.009126975404797122,
+            "first_subject_U_to_D": -0.6316582958534127
+          }
+        },
+        {
+          "fact_id": "Q2614214-CBS-subdistrict-43",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q1186956-CBS-subdistrict-22",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.6565262279182207,
+            "unrelated_U_to_D": -0.5747997646976728,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.4978838573442772
+          }
+        },
+        {
+          "fact_id": "Q2614824-CBS-subdistrict-43",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q2776285-CBS-subdistrict-41",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.31908411557378713,
+            "unrelated_U_to_D": 0.34543874800147023,
+            "identity_D_to_D": -0.007436260537360795,
+            "first_subject_U_to_D": 0.10402849165257066
+          }
+        },
+        {
+          "fact_id": "Q2614828-CBS-subdistrict-43",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q2916378-CBS-subdistrict-11",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.2867224802757846,
+            "unrelated_U_to_D": -0.8176887844892917,
+            "identity_D_to_D": -0.023952282936079428,
+            "first_subject_U_to_D": 0.10195268481038511
+          }
+        },
+        {
+          "fact_id": "Q2623238-CBS-subdistrict-62",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2916378-CBS-subdistrict-11",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.4447574214282213,
+            "unrelated_U_to_D": 4.7080187811588985,
+            "identity_D_to_D": -0.010096477300976403,
+            "first_subject_U_to_D": 0.0011325702798785642
+          }
+        },
+        {
+          "fact_id": "Q2639602-CBS-subdistrict-21",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2890836-CBS-subdistrict-31",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.9547441005706787,
+            "unrelated_U_to_D": -2.36333167552948,
+            "identity_D_to_D": -0.011381864547729492,
+            "first_subject_U_to_D": 0.11346518993377686
+          }
+        },
+        {
+          "fact_id": "Q2640151-CBS-subdistrict-24",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2889270-CBS-subdistrict-31",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.2225334644317627,
+            "unrelated_U_to_D": -0.14019131660461426,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.020914554595947266
+          }
+        },
+        {
+          "fact_id": "Q2655682-CBS-subdistrict-25",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2778126-CBS-subdistrict-43",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.9731086627580225,
+            "unrelated_U_to_D": -1.4313052480574697,
+            "identity_D_to_D": -0.005165916634723544,
+            "first_subject_U_to_D": 0.500345496693626
+          }
+        },
+        {
+          "fact_id": "Q2667061-CBS-subdistrict-31",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q152385-CBS-subdistrict-24",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.4298337968066335,
+            "unrelated_U_to_D": 0.9776149997487664,
+            "identity_D_to_D": 0.016318448819220066,
+            "first_subject_U_to_D": -0.3315312843769789
+          }
+        },
+        {
+          "fact_id": "Q2667322-CBS-subdistrict-31",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q166865-CBS-subdistrict-32",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.6478426307439804,
+            "unrelated_U_to_D": 1.1310171270743012,
+            "identity_D_to_D": 0.011466783471405506,
+            "first_subject_U_to_D": 0.03746858425438404
+          }
+        },
+        {
+          "fact_id": "Q269858-CBS-subdistrict-32",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q1026806-CBS-subdistrict-62",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.3386972062289715,
+            "unrelated_U_to_D": -0.8383760657161474,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.18833992443978786
+          }
+        },
+        {
+          "fact_id": "Q2776779-CBS-subdistrict-42",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q2777930-CBS-subdistrict-61",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.727981656556949,
+            "unrelated_U_to_D": -0.3867320561548695,
+            "identity_D_to_D": 0.006820624228566885,
+            "first_subject_U_to_D": -0.03552437946200371
+          }
+        },
+        {
+          "fact_id": "Q2776880-CBS-subdistrict-21",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2915658-CBS-subdistrict-42",
+          "margin_gains": {
+            "same_entity_U_to_D": -2.2406890392303467,
+            "unrelated_U_to_D": 0.09447956085205078,
+            "identity_D_to_D": -0.007622480392456055,
+            "first_subject_U_to_D": 0.22795486450195312
+          }
+        },
+        {
+          "fact_id": "Q2777055-CBS-subdistrict-22",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q2390257-CBS-subdistrict-24",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.752228207886219,
+            "unrelated_U_to_D": 1.5556924641132355,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.02771686017513275
+          }
+        },
+        {
+          "fact_id": "Q2777328-CBS-subdistrict-31",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q165623-CBS-subdistrict-21",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.9025678271427751,
+            "unrelated_U_to_D": -1.6055841175839305,
+            "identity_D_to_D": -0.011452154256403446,
+            "first_subject_U_to_D": -0.7542657693848014
+          }
+        },
+        {
+          "fact_id": "Q2777339-CBS-subdistrict-23",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q1676894-CBS-subdistrict-22",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.36154352710582316,
+            "unrelated_U_to_D": 0.17431004997342825,
+            "identity_D_to_D": 0.009227097732946277,
+            "first_subject_U_to_D": -0.013006965164095163
+          }
+        },
+        {
+          "fact_id": "Q2777355-CBS-subdistrict-32",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q932073-CBS-subdistrict-42",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.15402500797063112,
+            "unrelated_U_to_D": -0.6542401015758514,
+            "identity_D_to_D": -0.02036104816943407,
+            "first_subject_U_to_D": -0.023854595609009266
+          }
+        },
+        {
+          "fact_id": "Q2777886-CBS-subdistrict-11",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q1012741-CBS-subdistrict-32",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.6693336889147758,
+            "unrelated_U_to_D": -0.7626507803797722,
+            "identity_D_to_D": -0.01500653475522995,
+            "first_subject_U_to_D": -0.14092376455664635
+          }
+        },
+        {
+          "fact_id": "Q2777930-CBS-subdistrict-61",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q1025294-CBS-subdistrict-11",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.6363146127405344,
+            "unrelated_U_to_D": -3.2921456831682008,
+            "identity_D_to_D": -0.00682028011942748,
+            "first_subject_U_to_D": 0.23886719756410457
+          }
+        },
+        {
+          "fact_id": "Q2778078-CBS-subdistrict-43",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q2614185-CBS-subdistrict-42",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.195164768549148,
+            "unrelated_U_to_D": -0.35897998926520813,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.06552441458916292
+          }
+        },
+        {
+          "fact_id": "Q2843398-CBS-subdistrict-11",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2777766-CBS-subdistrict-25",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.146249808371067,
+            "unrelated_U_to_D": 0.6998505890369415,
+            "identity_D_to_D": -0.009583622217178345,
+            "first_subject_U_to_D": 0.17055773735046387
+          }
+        },
+        {
+          "fact_id": "Q2888798-CBS-subdistrict-61",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2614192-CBS-subdistrict-42",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.2218820313428296,
+            "unrelated_U_to_D": 2.031548125698464,
+            "identity_D_to_D": 0.004930225215503015,
+            "first_subject_U_to_D": 0.40385027033335064
+          }
+        },
+        {
+          "fact_id": "Q2888897-CBS-subdistrict-61",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2776831-CBS-subdistrict-22",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.17218556595616974,
+            "unrelated_U_to_D": -0.9402001871203538,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.04710500933288131
+          }
+        },
+        {
+          "fact_id": "Q2889072-CBS-subdistrict-62",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2778107-CBS-subdistrict-43",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.0363395261374535,
+            "unrelated_U_to_D": 0.4657776282838313,
+            "identity_D_to_D": 0.002314800425665453,
+            "first_subject_U_to_D": -0.659251478035003
+          }
+        },
+        {
+          "fact_id": "Q2889225-CBS-subdistrict-22",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q950347-CBS-subdistrict-52",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.10635251179337502,
+            "unrelated_U_to_D": 2.9196974374353886,
+            "identity_D_to_D": -0.005587395280599594,
+            "first_subject_U_to_D": 0.051562290638685226
+          }
+        },
+        {
+          "fact_id": "Q2889270-CBS-subdistrict-31",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q2130036-CBS-subdistrict-11",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.5832218192517757,
+            "unrelated_U_to_D": -3.266361794434488,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.10045081097632647
+          }
+        },
+        {
+          "fact_id": "Q2889493-CBS-subdistrict-21",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2614818-CBS-subdistrict-43",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.11594128608703613,
+            "unrelated_U_to_D": 1.3567636013031006,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.5333294868469238
+          }
+        },
+        {
+          "fact_id": "Q2889745-CBS-subdistrict-21",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2168131-CBS-subdistrict-61",
+          "margin_gains": {
+            "same_entity_U_to_D": -3.5389199256896973,
+            "unrelated_U_to_D": -1.6908836364746094,
+            "identity_D_to_D": -0.00585627555847168,
+            "first_subject_U_to_D": 0.1200406551361084
+          }
+        },
+        {
+          "fact_id": "Q2889772-CBS-subdistrict-11",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q921505-CBS-subdistrict-44",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.3826886862516403,
+            "unrelated_U_to_D": 0.8336601704359055,
+            "identity_D_to_D": -0.006335064768791199,
+            "first_subject_U_to_D": -0.07377712428569794
+          }
+        },
+        {
+          "fact_id": "Q2889969-CBS-subdistrict-41",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q168215-CBS-subdistrict-31",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.8093179878196679,
+            "unrelated_U_to_D": 2.39533451636089,
+            "identity_D_to_D": 0.018677279469557106,
+            "first_subject_U_to_D": 0.023849934455938637
+          }
+        },
+        {
+          "fact_id": "Q2890199-CBS-subdistrict-44",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2389508-CBS-subdistrict-51",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.13205268364981748,
+            "unrelated_U_to_D": -0.12360258944681846,
+            "identity_D_to_D": 0.011263817577855662,
+            "first_subject_U_to_D": -0.28059589583426714
+          }
+        },
+        {
+          "fact_id": "Q2890367-CBS-subdistrict-41",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q2891278-CBS-subdistrict-61",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.2106655956013128,
+            "unrelated_U_to_D": -0.7361009772866964,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.40389767577289604
+          }
+        },
+        {
+          "fact_id": "Q2890389-CBS-subdistrict-61",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2890467-CBS-subdistrict-31",
+          "margin_gains": {
+            "same_entity_U_to_D": -2.5642098479293054,
+            "unrelated_U_to_D": -4.0065038353641285,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.18077607272425666
+          }
+        },
+        {
+          "fact_id": "Q2890461-CBS-subdistrict-42",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q2920033-CBS-subdistrict-41",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.4308653777698055,
+            "unrelated_U_to_D": 2.5843192763859406,
+            "identity_D_to_D": 0.001269439235329628,
+            "first_subject_U_to_D": 0.21273279981687665
+          }
+        },
+        {
+          "fact_id": "Q2890467-CBS-subdistrict-31",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q2889308-CBS-subdistrict-11",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.0365123795345426,
+            "unrelated_U_to_D": -1.4947503143921494,
+            "identity_D_to_D": -0.002485230565071106,
+            "first_subject_U_to_D": 0.34018422197550535
+          }
+        },
+        {
+          "fact_id": "Q2890485-CBS-subdistrict-44",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2623238-CBS-subdistrict-62",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.36402894742786884,
+            "unrelated_U_to_D": 0.07398911914788187,
+            "identity_D_to_D": 0.0069934421335347,
+            "first_subject_U_to_D": 0.054547612846363336
+          }
+        },
+        {
+          "fact_id": "Q2890894-CBS-subdistrict-62",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2588837-CBS-subdistrict-21",
+          "margin_gains": {
+            "same_entity_U_to_D": 3.10688039627712,
+            "unrelated_U_to_D": -1.4134377171649248,
+            "identity_D_to_D": 0.0030136891145957634,
+            "first_subject_U_to_D": -0.001897543654195033
+          }
+        },
+        {
+          "fact_id": "Q2891272-CBS-subdistrict-23",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q1759981-CBS-subdistrict-44",
+          "margin_gains": {
+            "same_entity_U_to_D": -2.574013172998093,
+            "unrelated_U_to_D": 1.159695853246376,
+            "identity_D_to_D": 0.026948786806315184,
+            "first_subject_U_to_D": -0.13165863673202693
+          }
+        },
+        {
+          "fact_id": "Q2915526-CBS-subdistrict-23",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2916531-CBS-subdistrict-41",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.5853309562662616,
+            "unrelated_U_to_D": 1.0545036136172712,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.030691556399688125
+          }
+        },
+        {
+          "fact_id": "Q2916531-CBS-subdistrict-41",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q2888897-CBS-subdistrict-61",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.5138197938795201,
+            "unrelated_U_to_D": -0.8995322909322567,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.01385353715158999
+          }
+        },
+        {
+          "fact_id": "Q2916599-CBS-subdistrict-32",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q1853103-CBS-subdistrict-22",
+          "margin_gains": {
+            "same_entity_U_to_D": -3.5570058235898614,
+            "unrelated_U_to_D": 0.03195446729660034,
+            "identity_D_to_D": 0.005979766137897968,
+            "first_subject_U_to_D": 0.4967642528936267
+          }
+        },
+        {
+          "fact_id": "Q2916661-CBS-subdistrict-22",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q2920053-CBS-subdistrict-44",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.3924291245639324,
+            "unrelated_U_to_D": 0.42286584712564945,
+            "identity_D_to_D": 0.003982473164796829,
+            "first_subject_U_to_D": -0.3193925768136978
+          }
+        },
+        {
+          "fact_id": "Q2917263-CBS-subdistrict-61",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q1026531-CBS-subdistrict-62",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.029384811292402446,
+            "unrelated_U_to_D": 0.4333546252310043,
+            "identity_D_to_D": -0.02707542477583047,
+            "first_subject_U_to_D": 0.4027712204406271
+          }
+        },
+        {
+          "fact_id": "Q2917286-CBS-subdistrict-23",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2777017-CBS-subdistrict-21",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.2540198960341513,
+            "unrelated_U_to_D": -0.5107634239830077,
+            "identity_D_to_D": -0.0013219078537076712,
+            "first_subject_U_to_D": 0.35606329469010234
+          }
+        },
+        {
+          "fact_id": "Q2920013-CBS-subdistrict-41",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q2390257-CBS-subdistrict-24",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.8725027327309363,
+            "unrelated_U_to_D": 0.4327361842151731,
+            "identity_D_to_D": -0.0003671596059575677,
+            "first_subject_U_to_D": 0.043194880010560155
+          }
+        },
+        {
+          "fact_id": "Q2920020-CBS-subdistrict-41",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q647488-CBS-subdistrict-42",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.9134986948338337,
+            "unrelated_U_to_D": -0.2662066699413117,
+            "identity_D_to_D": -0.01750165969133377,
+            "first_subject_U_to_D": 0.2993704208347481
+          }
+        },
+        {
+          "fact_id": "Q2920034-CBS-subdistrict-44",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2777329-CBS-subdistrict-23",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.1293896472780034,
+            "unrelated_U_to_D": 3.123130504274741,
+            "identity_D_to_D": -0.0005361512885428965,
+            "first_subject_U_to_D": -0.01368711149552837
+          }
+        },
+        {
+          "fact_id": "Q2920041-CBS-subdistrict-11",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2889493-CBS-subdistrict-21",
+          "margin_gains": {
+            "same_entity_U_to_D": 4.043371003121138,
+            "unrelated_U_to_D": 1.4445758257061243,
+            "identity_D_to_D": 0.010283078998327255,
+            "first_subject_U_to_D": -0.0030792206525802612
+          }
+        },
+        {
+          "fact_id": "Q2920053-CBS-subdistrict-44",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q571191-CBS-subdistrict-24",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.2883702731633093,
+            "unrelated_U_to_D": -0.5276458175794687,
+            "identity_D_to_D": -0.0031347829790320247,
+            "first_subject_U_to_D": -0.26719938733731396
+          }
+        },
+        {
+          "fact_id": "Q2920086-CBS-subdistrict-42",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q731831-CBS-subdistrict-22",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.118852773681283,
+            "unrelated_U_to_D": 4.260840566130355,
+            "identity_D_to_D": 0.001747302943840623,
+            "first_subject_U_to_D": -0.00198386306874454
+          }
+        },
+        {
+          "fact_id": "Q2920107-CBS-subdistrict-41",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q1012741-CBS-subdistrict-32",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.11867215053644031,
+            "unrelated_U_to_D": 1.4316909419139847,
+            "identity_D_to_D": -0.006151933339424431,
+            "first_subject_U_to_D": 0.5783053742488846
+          }
+        },
+        {
+          "fact_id": "Q2920136-CBS-subdistrict-42",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q938477-CBS-subdistrict-41",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.15127152297645807,
+            "unrelated_U_to_D": 0.7557829798897728,
+            "identity_D_to_D": 0.01118103542830795,
+            "first_subject_U_to_D": 0.09280266566202044
+          }
+        },
+        {
+          "fact_id": "Q2920181-CBS-subdistrict-42",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q1026531-CBS-subdistrict-62",
+          "margin_gains": {
+            "same_entity_U_to_D": -2.168515963247046,
+            "unrelated_U_to_D": 5.057628507143818,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.0037633292376995087
+          }
+        },
+        {
+          "fact_id": "Q2920231-CBS-subdistrict-44",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q1026531-CBS-subdistrict-62",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.3916650555329397,
+            "unrelated_U_to_D": 2.723626656399574,
+            "identity_D_to_D": 0.0019286871538497508,
+            "first_subject_U_to_D": 0.16369891207432374
+          }
+        },
+        {
+          "fact_id": "Q2920461-CBS-subdistrict-41",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q2889963-CBS-subdistrict-32",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.5320561540138442,
+            "unrelated_U_to_D": 0.9492967921833042,
+            "identity_D_to_D": 0.02205739915370941,
+            "first_subject_U_to_D": 0.25673308144905604
+          }
+        },
+        {
+          "fact_id": "Q2975331-CBS-subdistrict-62",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2573500-CBS-subdistrict-22",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.0113387055534986,
+            "unrelated_U_to_D": 0.6569610869337339,
+            "identity_D_to_D": -0.013796543855278287,
+            "first_subject_U_to_D": -0.0083235837664688
+          }
+        },
+        {
+          "fact_id": "Q351620-CBS-subdistrict-24",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q1018902-CBS-subdistrict-62",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.4964540004730225,
+            "unrelated_U_to_D": 0.0033960342407226562,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.04971575736999512
+          }
+        },
+        {
+          "fact_id": "Q501543-CBS-subdistrict-61",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2919844-CBS-subdistrict-43",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.116024668837781,
+            "unrelated_U_to_D": -1.4180773892003344,
+            "identity_D_to_D": -0.0040038927691057324,
+            "first_subject_U_to_D": 0.0008445419807685539
+          }
+        },
+        {
+          "fact_id": "Q550025-CBS-subdistrict-23",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2613167-CBS-subdistrict-43",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.4027363817440346,
+            "unrelated_U_to_D": 4.653647974249907,
+            "identity_D_to_D": -0.007171552046202123,
+            "first_subject_U_to_D": -0.003425325616262853
+          }
+        },
+        {
+          "fact_id": "Q571191-CBS-subdistrict-24",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2920036-CBS-subdistrict-41",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.4493067264556885,
+            "unrelated_U_to_D": -0.166703462600708,
+            "identity_D_to_D": 0.010575532913208008,
+            "first_subject_U_to_D": 0.005507469177246094
+          }
+        },
+        {
+          "fact_id": "Q586687-CBS-subdistrict-31",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q2916751-CBS-subdistrict-23",
+          "margin_gains": {
+            "same_entity_U_to_D": 3.7057941164821386,
+            "unrelated_U_to_D": -0.34365957137197256,
+            "identity_D_to_D": -0.002860723063349724,
+            "first_subject_U_to_D": -0.0105582345277071
+          }
+        },
+        {
+          "fact_id": "Q607414-CBS-subdistrict-11",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2890180-CBS-subdistrict-61",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.03446334972977638,
+            "unrelated_U_to_D": 3.3712260611355305,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": 0.15038106963038445
+          }
+        },
+        {
+          "fact_id": "Q647488-CBS-subdistrict-42",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q607414-CBS-subdistrict-11",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.7915546951116994,
+            "unrelated_U_to_D": 0.1824871168937534,
+            "identity_D_to_D": -0.002946046181023121,
+            "first_subject_U_to_D": -0.009558793739415705
+          }
+        },
+        {
+          "fact_id": "Q730195-CBS-subdistrict-25",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2919998-CBS-subdistrict-41",
+          "margin_gains": {
+            "same_entity_U_to_D": 0.4867981573333964,
+            "unrelated_U_to_D": 0.7382581625133753,
+            "identity_D_to_D": -0.010598778142593801,
+            "first_subject_U_to_D": -0.002994074486196041
+          }
+        },
+        {
+          "fact_id": "Q731831-CBS-subdistrict-22",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q2777355-CBS-subdistrict-32",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.8332819528877735,
+            "unrelated_U_to_D": -0.8846374712884426,
+            "identity_D_to_D": 0.0020452290773391724,
+            "first_subject_U_to_D": -0.5696676522493362
+          }
+        },
+        {
+          "fact_id": "Q814900-CBS-subdistrict-24",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2776865-CBS-subdistrict-23",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.8574044704437256,
+            "unrelated_U_to_D": -2.309189558029175,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.2923140525817871
+          }
+        },
+        {
+          "fact_id": "Q845866-CBS-subdistrict-51",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q277749-CBS-subdistrict-32",
+          "margin_gains": {
+            "same_entity_U_to_D": 3.038933251053095,
+            "unrelated_U_to_D": -1.4504204243421555,
+            "identity_D_to_D": -0.006563946604728699,
+            "first_subject_U_to_D": 0.027126073837280273
+          }
+        },
+        {
+          "fact_id": "Q863890-CBS-subdistrict-32",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q2667061-CBS-subdistrict-31",
+          "margin_gains": {
+            "same_entity_U_to_D": -1.3945173704996705,
+            "unrelated_U_to_D": -1.0778573313727975,
+            "identity_D_to_D": 0.0032764174975454807,
+            "first_subject_U_to_D": 0.10887881461530924
+          }
+        },
+        {
+          "fact_id": "Q925908-CBS-subdistrict-62",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q1011497-CBS-subdistrict-21",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.954963865922764,
+            "unrelated_U_to_D": -0.7029957816994283,
+            "identity_D_to_D": 0.0,
+            "first_subject_U_to_D": -0.21290815853717504
+          }
+        },
+        {
+          "fact_id": "Q950347-CBS-subdistrict-52",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q2916536-CBS-subdistrict-62",
+          "margin_gains": {
+            "same_entity_U_to_D": 1.1661497205495834,
+            "unrelated_U_to_D": 2.972997769713402,
+            "identity_D_to_D": -0.001093253493309021,
+            "first_subject_U_to_D": -0.10090239346027374
+          }
+        },
+        {
+          "fact_id": "Q952186-CBS-subdistrict-53",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q2776946-CBS-subdistrict-23",
+          "margin_gains": {
+            "same_entity_U_to_D": -0.3687528483569622,
+            "unrelated_U_to_D": -0.1148831807076931,
+            "identity_D_to_D": 0.006769653409719467,
+            "first_subject_U_to_D": -0.0729508213698864
+          }
+        },
+        {
+          "fact_id": "Q990653-CBS-subdistrict-61",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2920053-CBS-subdistrict-44",
+          "margin_gains": {
+            "same_entity_U_to_D": 2.8075292565044947,
+            "unrelated_U_to_D": 1.172543559659971,
+            "identity_D_to_D": 0.017110830114688724,
+            "first_subject_U_to_D": -0.11969866958679631
+          }
+        }
+      ]
+    }
+  },
+  "holm_adjusted_primary_p": {
+    "arabic_geonames": 0.00043999780001099996,
+    "hebrew_cbs": 0.197021484375
+  }
+}

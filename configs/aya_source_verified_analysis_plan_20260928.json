@@ -1,0 +1,27 @@
+{
+  "frozen_date": "2026-09-28",
+  "scope": "Prospective Aya-only analysis of source-checked external Arabic and Hebrew cohorts; defined before model results",
+  "protocol": "configs/aya_source_verified_external_protocol_20260928.json",
+  "primary_estimand": "Within each language separately, mean per-answer-stratum paired difference in gold-minus-frozen-distractor total log likelihood (marked minus unmarked), t1 prompt. Negative means marking worsens relative support for the correct answer.",
+  "unit_of_independence": "Distinct subject QID. For the macro estimand, answer strata are country ISO2 for Arabic and official subdistrict name for Hebrew.",
+  "inference": {
+    "two_sided_cluster_sign_flip": "Flip the signs of answer-stratum mean paired effects. Enumerate all flips when there are at most 18 strata; otherwise use 200000 Monte Carlo flips with plus-one correction.",
+    "multiple_testing": "Holm adjustment over the two primary language tests.",
+    "hierarchical_bootstrap": "Sample answer strata with replacement, then subjects within selected strata with replacement; 10000 replicates, percentile 95% interval.",
+    "random_seed": 1729
+  },
+  "secondary": [
+    "Repeat the paired-margin effect with t2 wording.",
+    "Report subject-weighted paired margin change beside the answer-macro result.",
+    "Report canonical gold-answer likelihood change to compare with prior E2 results.",
+    "Report strict full-answer generation accuracy and deterministic prefix-stripped rematch separately; do not label uncaught paraphrases as definitively wrong.",
+    "For the Arabic cohort, report English-control exact answer recall as a descriptive pre-specified knowledge screen.",
+    "Report first-name token counts and full prompt counts without treating count associations as causal evidence."
+  ],
+  "restrictions": [
+    "Keep the pilot, first heldout, and Google-RE results as separate prior cohorts.",
+    "Do not compare Arabic and Hebrew absolute accuracies as if their source relations and answer sets were matched.",
+    "Do not describe Wikipedia/Wikidata source checks as independent speaker review.",
+    "Do not claim E6 or the new data isolate token count, spelling, and identity fully."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "exploratory_analysis_addition_after_slurm_submission",
+  "date": "2026-09-28",
+  "relationship_to_original_plan": "Does not alter either prespecified primary outcome, inference, multiplicity correction, or original secondary outcomes.",
+  "additions": [
+    "Show a paired U/D generation correctness cross-tab, since the same subject receives both variants.",
+    "For Arabic, describe the t1 margin change in the exact-English-control-correct subset without a confirmatory p-value; English exact matching is a conservative familiarity screen."
+  ],
+  "interpretation": "These two summaries were added after the four Slurm jobs were submitted. They were not selected after viewing returned model outputs, but are labeled exploratory because job execution could already have begun."
+}

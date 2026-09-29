@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "model_id": "CohereLabs/aya-23-8B",
+  "model_kind": "aya23",
+  "precision": "nf4",
+  "nf4_compute_dtype": "fp16",
+  "attention": "eager",
+  "max_new_tokens": 24,
+  "seed": 17,
+  "languages": ["en"],
+  "relations": ["P19", "P20", "P159", "P740"],
+  "mechanism_template": "t1",
+  "readout_layers": [0, 4, 8, 12, 16, 20, 24, 28],
+  "readout_layers_frozen": true,
+  "population": "core",
+  "sample_limits": {},
+  "analysis_scope": "retrospective_english_E4_pilot_and_heldout_core_20260927",
+  "readout_scope": "First-token English answer-versus-distractor logit lens and full-answer same-relation donor restoration",
+  "claim_limit": "Frozen before these E4 outputs but designed after original E5 outcomes and after separate E4 dev gate failure; exploratory triangulation only"
+}

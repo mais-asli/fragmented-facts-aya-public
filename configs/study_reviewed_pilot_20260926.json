@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "model_id": "CohereLabs/aya-23-8B",
+  "model_kind": "aya23",
+  "precision": "nf4",
+  "nf4_compute_dtype": "fp16",
+  "attention": "eager",
+  "max_new_tokens": 24,
+  "seed": 17,
+  "languages": ["en", "he", "ar"],
+  "relations": ["P19", "P20", "P159", "P740"],
+  "mechanism_template": "t1",
+  "partial_diacritics": false,
+  "segmentation_extra_tokens": [1],
+  "patch_generate": true,
+  "patch_components": ["residual"],
+  "native_smoke_review": {
+    "reviewer": "Reviewer A",
+    "notes": "ReviewerA explicitly confirmed all six smoke-review entries on 2026-09-26; review provenance is retained in data/review/ReviewerA_confirmed_all_20260926."
+  },
+  "workload_pilot_report": "results/workload-ReviewerA-20260926.json",
+  "readout_layers": null,
+  "readout_layers_frozen": false,
+  "windows": [],
+  "primary_window": null,
+  "window_selection_reason": "",
+  "population": "unfiltered",
+  "sample_limits": {},
+  "analysis_scope": "exploratory_reviewed_pilot_only",
+  "primary_answer_policy": "canonical_reviewed_exact_name",
+  "sensitivity_answer_policy": "all_source_aliases",
+  "relation_change": "P50 is absent from the original mLAMA archive; P740 replaces it before screening. Native/source validation is required."
+}

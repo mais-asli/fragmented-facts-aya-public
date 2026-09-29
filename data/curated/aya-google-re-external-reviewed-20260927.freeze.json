@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "cohort": "google_re_external_pre_aya_20260927",
+  "reviewer": "Reviewer A",
+  "candidate_count": 32,
+  "approved_count": 26,
+  "excluded": [
+    {
+      "fact_id": "Q7814801-P19-Q84",
+      "reason": "Fact true (Telegraph obituary, https://uk.news.yahoo.com/sir-tom-arnold-tory-party-160330086.html: \"born in London on January 25 1947\"), but the name alone points to the far better-known American actor Tom Arnold (born Ottumwa, Iowa)."
+    },
+    {
+      "fact_id": "Q1600325-P19-Q84",
+      "reason": "No credible non-Wikipedia source for the London birthplace (only IMDb), and the name alone points to the composer John Barry (born York)."
+    },
+    {
+      "fact_id": "Q5361791-P20-Q1218",
+      "reason": "No non-Wikipedia source states the death place. The Technion memorial (https://history.math.technion.ac.il/sites/inmemoriam/Elisha-Netanyahu/) says only that the couple moved to Jerusalem and that he died on 3 April 1986; the Google-RE snippet does not state the death place either."
+    },
+    {
+      "fact_id": "Q174772-P20-Q16869",
+      "reason": "Fact true (https://www.britannica.com/biography/Abdulmecid-I: \"died June 25, 1861, Constantinople\"; TDV: Ihlamur pavilion, Istanbul), but the freeze script stores only the single answer label, so an equally correct Istanbul answer would be scored wrong. Keepable if Istanbul is accepted as an alias; then Hebrew D אַבְּדִילְמַגִ'יט הָרִאשׁוֹן, Arabic D عَبْد الْمَجِيد الْأَوَّل."
+    },
+    {
+      "fact_id": "Q327148-P20-Q84",
+      "reason": "Conflicting source: contemporary IMM obituary (https://nmrs.org.uk/resources/obituaries-of-members/obituaries-of-members-names-beginning-with-n/peter-norman-nissen/): \"died at his home in Westerham, Kent, on March 2nd, 1930\", not London."
+    },
+    {
+      "fact_id": "Q5479973-P20-Q2044",
+      "reason": "Sources conflict: National Gallery of Art (https://nga.gov/collection/artist-info.53.html) says \"He died in Rome on March 27, 1880\"; Killingly Historical Society says Florence. Arabic U also lacks the hamza (الكسندر)."
+    }
+  ],
+  "by_relation": {
+    "P19": 14,
+    "P20": 12
+  },
+  "source_description": "Different archived dataset from mLAMA; Google-RE underlying evidence also from Wikipedia",
+  "selection_manifest_sha256": "ee43c85bd8c101879ae506689dfc7bb53ebf76abe750ede3be79630934560d12",
+  "source_candidates_sha256": "6aa51db365d808d868fe2c7bab85fccc3690abac561fafbe0d3705cdb1b05f03",
+  "ReviewerA_review_csv_sha256": "921beaba4f3c3f93432e7d6ac64f7eca9a1a964af04e73cb4de2f1b8b7ee7355",
+  "curated_sha256": "0709729c5192698f9037710906af79dbdd303ada3154961c02b35d1be9da2deb",
+  "status": "Frozen only after ReviewerA completed the review and before Aya external-cohort inference"
+}

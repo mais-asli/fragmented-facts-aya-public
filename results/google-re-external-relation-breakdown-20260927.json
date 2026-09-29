@@ -1,0 +1,67 @@
+{
+  "scope": "Descriptive relation breakdown; repeated templates are not independent subjects",
+  "primary": "Frozen strict complete-answer scoring",
+  "sensitivity": "Exact Arabic answer-prefix removal only, post-hoc for this external cohort",
+  "cells": {
+    "P19/en": {
+      "subjects": 14,
+      "e1_outputs": 42,
+      "e1_strict_correct": 11,
+      "e1_arabic_exact_prefix_rescues": 0
+    },
+    "P19/he": {
+      "subjects": 14,
+      "e1_outputs": 42,
+      "e1_strict_correct": 3,
+      "e1_arabic_exact_prefix_rescues": 0,
+      "e2_pairs": 42,
+      "e2_u_strict_correct": 3,
+      "e2_d_strict_correct": 4,
+      "e2_u_arabic_exact_prefix_rescues": 0,
+      "e2_d_arabic_exact_prefix_rescues": 0,
+      "e2_mean_d_minus_u_gold_loglik_nats": -0.04093405789241106
+    },
+    "P19/ar": {
+      "subjects": 14,
+      "e1_outputs": 42,
+      "e1_strict_correct": 0,
+      "e1_arabic_exact_prefix_rescues": 3,
+      "e2_pairs": 42,
+      "e2_u_strict_correct": 0,
+      "e2_d_strict_correct": 0,
+      "e2_u_arabic_exact_prefix_rescues": 3,
+      "e2_d_arabic_exact_prefix_rescues": 0,
+      "e2_mean_d_minus_u_gold_loglik_nats": -1.2886214977029122
+    },
+    "P20/en": {
+      "subjects": 12,
+      "e1_outputs": 36,
+      "e1_strict_correct": 13,
+      "e1_arabic_exact_prefix_rescues": 0
+    },
+    "P20/he": {
+      "subjects": 12,
+      "e1_outputs": 36,
+      "e1_strict_correct": 5,
+      "e1_arabic_exact_prefix_rescues": 0,
+      "e2_pairs": 36,
+      "e2_u_strict_correct": 5,
+      "e2_d_strict_correct": 2,
+      "e2_u_arabic_exact_prefix_rescues": 0,
+      "e2_d_arabic_exact_prefix_rescues": 0,
+      "e2_mean_d_minus_u_gold_loglik_nats": -0.5225974396210707
+    },
+    "P20/ar": {
+      "subjects": 12,
+      "e1_outputs": 36,
+      "e1_strict_correct": 0,
+      "e1_arabic_exact_prefix_rescues": 11,
+      "e2_pairs": 36,
+      "e2_u_strict_correct": 0,
+      "e2_d_strict_correct": 0,
+      "e2_u_arabic_exact_prefix_rescues": 11,
+      "e2_d_arabic_exact_prefix_rescues": 7,
+      "e2_mean_d_minus_u_gold_loglik_nats": -0.40873078668141716
+    }
+  }
+}

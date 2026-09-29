@@ -1,0 +1,727 @@
+{
+  "scope": "Retrospective English E4 on disjoint ReviewerA-reviewed pilot and held-out strict cores",
+  "timing": "Frozen before these E4 outputs, after the earlier E5 test and the separate E4 development-gate failure",
+  "protocol_sha256": "85c1e0fbaac0c2482679e247a7fbecde0c611630b2be7f420c26427aa0fe359f",
+  "sites": [
+    "first_subject",
+    "last_subject",
+    "prediction"
+  ],
+  "layers": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28
+  ],
+  "cohorts": {
+    "pilot": {
+      "reviewed_n": 57,
+      "core_n": 17,
+      "core_by_relation": {
+        "P740": 4,
+        "P19": 2,
+        "P20": 6,
+        "P159": 5
+      },
+      "records": 408,
+      "cells": [
+        {
+          "site": "first_subject",
+          "layer": 0,
+          "n_subjects": 17,
+          "gain_mean_nats": 5.764819004538688,
+          "gain_median_nats": 5.1872429847717285,
+          "gain_positive_fraction": 0.8823529411764706,
+          "gain_subject_bootstrap_95_interval": [
+            4.416993274428772,
+            7.064401088830302
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 1.0202834185431986
+        },
+        {
+          "site": "first_subject",
+          "layer": 4,
+          "n_subjects": 17,
+          "gain_mean_nats": 3.576547320356921,
+          "gain_median_nats": 1.4429497718811035,
+          "gain_positive_fraction": 0.7058823529411765,
+          "gain_subject_bootstrap_95_interval": [
+            1.9672996669405085,
+            5.142102111897924
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.5574987074908089
+        },
+        {
+          "site": "first_subject",
+          "layer": 8,
+          "n_subjects": 17,
+          "gain_mean_nats": 3.3644354060730515,
+          "gain_median_nats": 1.2239398956298828,
+          "gain_positive_fraction": 0.7058823529411765,
+          "gain_subject_bootstrap_95_interval": [
+            1.8717970058650655,
+            4.7545815638321285
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 1.1037238625919117
+        },
+        {
+          "site": "first_subject",
+          "layer": 12,
+          "n_subjects": 17,
+          "gain_mean_nats": 3.4394116699695587,
+          "gain_median_nats": 1.0506372451782227,
+          "gain_positive_fraction": 0.7058823529411765,
+          "gain_subject_bootstrap_95_interval": [
+            2.0731927664840923,
+            4.712550184525111
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.7439736758961397
+        },
+        {
+          "site": "first_subject",
+          "layer": 16,
+          "n_subjects": 17,
+          "gain_mean_nats": 2.9703398121192173,
+          "gain_median_nats": 1.1770267486572266,
+          "gain_positive_fraction": 0.7058823529411765,
+          "gain_subject_bootstrap_95_interval": [
+            1.7056443873135483,
+            4.147255822358763
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.7287505654727712
+        },
+        {
+          "site": "first_subject",
+          "layer": 20,
+          "n_subjects": 17,
+          "gain_mean_nats": 2.2354214522878038,
+          "gain_median_nats": 0.42743968963623047,
+          "gain_positive_fraction": 0.7058823529411765,
+          "gain_subject_bootstrap_95_interval": [
+            1.106365035123685,
+            3.392354522503036
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.661770315731273
+        },
+        {
+          "site": "first_subject",
+          "layer": 24,
+          "n_subjects": 17,
+          "gain_mean_nats": 0.5465615247102344,
+          "gain_median_nats": 0.03166770935058594,
+          "gain_positive_fraction": 0.6470588235294118,
+          "gain_subject_bootstrap_95_interval": [
+            0.1342714100199587,
+            0.9744797852985999
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.9975576961741728
+        },
+        {
+          "site": "first_subject",
+          "layer": 28,
+          "n_subjects": 17,
+          "gain_mean_nats": 0.18046454055344358,
+          "gain_median_nats": 0.03992462158203125,
+          "gain_positive_fraction": 0.7647058823529411,
+          "gain_subject_bootstrap_95_interval": [
+            0.0645987682921045,
+            0.308236750171465
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.5302231732536765
+        },
+        {
+          "site": "last_subject",
+          "layer": 0,
+          "n_subjects": 17,
+          "gain_mean_nats": 3.530370707568877,
+          "gain_median_nats": 2.465290069580078,
+          "gain_positive_fraction": 0.8235294117647058,
+          "gain_subject_bootstrap_95_interval": [
+            2.724463227588464,
+            4.383447339977412
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.20881922104779413
+        },
+        {
+          "site": "last_subject",
+          "layer": 4,
+          "n_subjects": 17,
+          "gain_mean_nats": 6.396655440823558,
+          "gain_median_nats": 6.905957221984863,
+          "gain_positive_fraction": 0.9411764705882353,
+          "gain_subject_bootstrap_95_interval": [
+            5.2155649728853914,
+            7.855801051756477
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.09890029009650736
+        },
+        {
+          "site": "last_subject",
+          "layer": 8,
+          "n_subjects": 17,
+          "gain_mean_nats": 7.026730019982685,
+          "gain_median_nats": 7.1977235078811646,
+          "gain_positive_fraction": 0.9411764705882353,
+          "gain_subject_bootstrap_95_interval": [
+            5.540601850213373,
+            8.573756537619321
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.530632916618796
+        },
+        {
+          "site": "last_subject",
+          "layer": 12,
+          "n_subjects": 17,
+          "gain_mean_nats": 6.6407801380161855,
+          "gain_median_nats": 6.9444193840026855,
+          "gain_positive_fraction": 0.9411764705882353,
+          "gain_subject_bootstrap_95_interval": [
+            5.481310889837058,
+            7.991291038308511
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.21880744485294118
+        },
+        {
+          "site": "last_subject",
+          "layer": 16,
+          "n_subjects": 17,
+          "gain_mean_nats": 5.641380192711949,
+          "gain_median_nats": 5.887773275375366,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            5.03034851185101,
+            6.280198997434447
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.5303863076602712
+        },
+        {
+          "site": "last_subject",
+          "layer": 20,
+          "n_subjects": 17,
+          "gain_mean_nats": 3.982690221410902,
+          "gain_median_nats": 4.349576771259308,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            3.164552876506658,
+            4.669231959125575
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.41421643425436583
+        },
+        {
+          "site": "last_subject",
+          "layer": 24,
+          "n_subjects": 17,
+          "gain_mean_nats": 0.14038331039688168,
+          "gain_median_nats": 0.12450742721557617,
+          "gain_positive_fraction": 0.7647058823529411,
+          "gain_subject_bootstrap_95_interval": [
+            0.04901701146188904,
+            0.2448051363668021
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 1.3417434692382812
+        },
+        {
+          "site": "last_subject",
+          "layer": 28,
+          "n_subjects": 17,
+          "gain_mean_nats": 0.11637132373802803,
+          "gain_median_nats": 0.06919670104980469,
+          "gain_positive_fraction": 0.7647058823529411,
+          "gain_subject_bootstrap_95_interval": [
+            0.057478807428303885,
+            0.17845511546029763
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 1.4975173052619486
+        },
+        {
+          "site": "prediction",
+          "layer": 0,
+          "n_subjects": 17,
+          "gain_mean_nats": 0.0017821935608106501,
+          "gain_median_nats": 0.003394603729248047,
+          "gain_positive_fraction": 0.5294117647058824,
+          "gain_subject_bootstrap_95_interval": [
+            -0.003104958902387058,
+            0.006349510348895017
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.13134227079503677
+        },
+        {
+          "site": "prediction",
+          "layer": 4,
+          "n_subjects": 17,
+          "gain_mean_nats": 0.01077699157245019,
+          "gain_median_nats": 0.005523681640625,
+          "gain_positive_fraction": 0.5294117647058824,
+          "gain_subject_bootstrap_95_interval": [
+            -0.005832774235921747,
+            0.026645608246326447
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": -0.02754480698529412
+        },
+        {
+          "site": "prediction",
+          "layer": 8,
+          "n_subjects": 17,
+          "gain_mean_nats": 0.013099803644068101,
+          "gain_median_nats": 0.005856513977050781,
+          "gain_positive_fraction": 0.7058823529411765,
+          "gain_subject_bootstrap_95_interval": [
+            -0.032866687897373646,
+            0.0550990385167739
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.035064697265625
+        },
+        {
+          "site": "prediction",
+          "layer": 12,
+          "n_subjects": 17,
+          "gain_mean_nats": 0.07464457325199071,
+          "gain_median_nats": 0.0383915901184082,
+          "gain_positive_fraction": 0.7647058823529411,
+          "gain_subject_bootstrap_95_interval": [
+            0.010368014521458569,
+            0.13669631060431986
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.04992226993336397
+        },
+        {
+          "site": "prediction",
+          "layer": 16,
+          "n_subjects": 17,
+          "gain_mean_nats": 0.13064306733362815,
+          "gain_median_nats": 0.09424209594726562,
+          "gain_positive_fraction": 0.6470588235294118,
+          "gain_subject_bootstrap_95_interval": [
+            0.03357494228026446,
+            0.23635484650731087
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.14871911441578584
+        },
+        {
+          "site": "prediction",
+          "layer": 20,
+          "n_subjects": 17,
+          "gain_mean_nats": 1.6778490219046087,
+          "gain_median_nats": 1.522078514099121,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            1.2616758013472837,
+            2.0941318799467648
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 0.3794672348920037
+        },
+        {
+          "site": "prediction",
+          "layer": 24,
+          "n_subjects": 17,
+          "gain_mean_nats": 8.95425908311325,
+          "gain_median_nats": 7.7223803997039795,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            8.428913995404454,
+            9.475489648606848
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 2.6708445829503678
+        },
+        {
+          "site": "prediction",
+          "layer": 28,
+          "n_subjects": 17,
+          "gain_mean_nats": 9.09335129549179,
+          "gain_median_nats": 7.8889479637146,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            8.492779798093526,
+            9.693134636563414
+          ],
+          "readout_eligible_n": 17,
+          "readout_first_token_margin_mean": 4.181845272288603
+        }
+      ]
+    },
+    "test": {
+      "reviewed_n": 40,
+      "core_n": 16,
+      "core_by_relation": {
+        "P20": 8,
+        "P740": 3,
+        "P19": 2,
+        "P159": 3
+      },
+      "records": 384,
+      "cells": [
+        {
+          "site": "first_subject",
+          "layer": 0,
+          "n_subjects": 16,
+          "gain_mean_nats": 2.278068352956325,
+          "gain_median_nats": 1.1588146686553955,
+          "gain_positive_fraction": 0.8125,
+          "gain_subject_bootstrap_95_interval": [
+            1.2443521916866302,
+            3.3766886205412447
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.35802459716796875
+        },
+        {
+          "site": "first_subject",
+          "layer": 4,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.7838285441976041,
+          "gain_median_nats": 0.10930085182189941,
+          "gain_positive_fraction": 0.625,
+          "gain_subject_bootstrap_95_interval": [
+            0.2698250561952591,
+            1.3120896369218826
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.3492295742034912
+        },
+        {
+          "site": "first_subject",
+          "layer": 8,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.5486083014402539,
+          "gain_median_nats": 0.08138375170528889,
+          "gain_positive_fraction": 0.6875,
+          "gain_subject_bootstrap_95_interval": [
+            0.1640932005830109,
+            0.9513133657164872
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.49869823455810547
+        },
+        {
+          "site": "first_subject",
+          "layer": 12,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.5476973075419664,
+          "gain_median_nats": 0.11318910121917725,
+          "gain_positive_fraction": 0.75,
+          "gain_subject_bootstrap_95_interval": [
+            0.16800526157021523,
+            0.9388395268470049
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.19807004928588867
+        },
+        {
+          "site": "first_subject",
+          "layer": 16,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.501758286729455,
+          "gain_median_nats": 0.09683310985565186,
+          "gain_positive_fraction": 0.625,
+          "gain_subject_bootstrap_95_interval": [
+            0.13837944902479649,
+            0.8696806579828262
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.08045196533203125
+        },
+        {
+          "site": "first_subject",
+          "layer": 20,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.4658280969597399,
+          "gain_median_nats": 0.03632878139615059,
+          "gain_positive_fraction": 0.75,
+          "gain_subject_bootstrap_95_interval": [
+            0.10667909123003483,
+            0.8809923576191068
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.20320892333984375
+        },
+        {
+          "site": "first_subject",
+          "layer": 24,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.059126687701791525,
+          "gain_median_nats": 0.06111929938197136,
+          "gain_positive_fraction": 0.6875,
+          "gain_subject_bootstrap_95_interval": [
+            0.012606531381607056,
+            0.11046769982203841
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.30821990966796875
+        },
+        {
+          "site": "first_subject",
+          "layer": 28,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.062144511146470904,
+          "gain_median_nats": 0.032979488372802734,
+          "gain_positive_fraction": 0.75,
+          "gain_subject_bootstrap_95_interval": [
+            0.024995744228363037,
+            0.10690820286981761
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.5464720726013184
+        },
+        {
+          "site": "last_subject",
+          "layer": 0,
+          "n_subjects": 16,
+          "gain_mean_nats": 3.182785028766375,
+          "gain_median_nats": 2.2775591611862183,
+          "gain_positive_fraction": 0.9375,
+          "gain_subject_bootstrap_95_interval": [
+            1.9295853679650463,
+            4.354333211085759
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.15187525749206543
+        },
+        {
+          "site": "last_subject",
+          "layer": 4,
+          "n_subjects": 16,
+          "gain_mean_nats": 7.103448526468128,
+          "gain_median_nats": 7.446463346481323,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            6.265446520410478,
+            8.078316743019968
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.1529850959777832
+        },
+        {
+          "site": "last_subject",
+          "layer": 8,
+          "n_subjects": 16,
+          "gain_mean_nats": 8.29952994766063,
+          "gain_median_nats": 8.781157757155597,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            7.199692150927149,
+            9.463972456229385
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.4597024917602539
+        },
+        {
+          "site": "last_subject",
+          "layer": 12,
+          "n_subjects": 16,
+          "gain_mean_nats": 7.708888088542153,
+          "gain_median_nats": 7.366890199482441,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            6.55484254960902,
+            8.91566069664259
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.19504356384277344
+        },
+        {
+          "site": "last_subject",
+          "layer": 16,
+          "n_subjects": 16,
+          "gain_mean_nats": 7.039307697996264,
+          "gain_median_nats": 7.007499262690544,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            5.710244795307517,
+            8.39449625852285
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.2514533996582031
+        },
+        {
+          "site": "last_subject",
+          "layer": 20,
+          "n_subjects": 16,
+          "gain_mean_nats": 5.863067596452311,
+          "gain_median_nats": 4.43028324842453,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            4.703966074390337,
+            7.13297864748165
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.3984041213989258
+        },
+        {
+          "site": "last_subject",
+          "layer": 24,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.128691062098369,
+          "gain_median_nats": 0.11722045950591564,
+          "gain_positive_fraction": 0.8125,
+          "gain_subject_bootstrap_95_interval": [
+            0.04819835675880313,
+            0.21442685998044908
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.966796875
+        },
+        {
+          "site": "last_subject",
+          "layer": 28,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.11830481537617743,
+          "gain_median_nats": 0.0951690673828125,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            0.07587425108067691,
+            0.1673424020409584
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 1.1756210327148438
+        },
+        {
+          "site": "prediction",
+          "layer": 0,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.007882474921643734,
+          "gain_median_nats": 0.005278110504150391,
+          "gain_positive_fraction": 0.75,
+          "gain_subject_bootstrap_95_interval": [
+            0.0022853007540106773,
+            0.013640612363815308
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.1206207275390625
+        },
+        {
+          "site": "prediction",
+          "layer": 4,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.017126380698755383,
+          "gain_median_nats": 0.014286041259765625,
+          "gain_positive_fraction": 0.75,
+          "gain_subject_bootstrap_95_interval": [
+            0.004925786051899195,
+            0.029908253345638514
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.0065460205078125
+        },
+        {
+          "site": "prediction",
+          "layer": 8,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.031503715086728334,
+          "gain_median_nats": 0.012657880783081055,
+          "gain_positive_fraction": 0.6875,
+          "gain_subject_bootstrap_95_interval": [
+            0.0075573548674583435,
+            0.056884259916841984
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.21145296096801758
+        },
+        {
+          "site": "prediction",
+          "layer": 12,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.05851799342781305,
+          "gain_median_nats": 0.06539899110794067,
+          "gain_positive_fraction": 0.6875,
+          "gain_subject_bootstrap_95_interval": [
+            0.024807728826999664,
+            0.09137472603470087
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.23499822616577148
+        },
+        {
+          "site": "prediction",
+          "layer": 16,
+          "n_subjects": 16,
+          "gain_mean_nats": 0.13052174914628267,
+          "gain_median_nats": 0.16412979364395142,
+          "gain_positive_fraction": 0.75,
+          "gain_subject_bootstrap_95_interval": [
+            0.054539781995117664,
+            0.20958890952169895
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.1970062255859375
+        },
+        {
+          "site": "prediction",
+          "layer": 20,
+          "n_subjects": 16,
+          "gain_mean_nats": 1.1827182810520753,
+          "gain_median_nats": 0.8883888125419617,
+          "gain_positive_fraction": 0.9375,
+          "gain_subject_bootstrap_95_interval": [
+            0.7990713268518448,
+            1.6095309786032885
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 0.5145187377929688
+        },
+        {
+          "site": "prediction",
+          "layer": 24,
+          "n_subjects": 16,
+          "gain_mean_nats": 8.004356861114502,
+          "gain_median_nats": 7.857967913150787,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            7.237114375457168,
+            8.80631833896041
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 2.4325103759765625
+        },
+        {
+          "site": "prediction",
+          "layer": 28,
+          "n_subjects": 16,
+          "gain_mean_nats": 8.004020711872727,
+          "gain_median_nats": 7.817559741437435,
+          "gain_positive_fraction": 1.0,
+          "gain_subject_bootstrap_95_interval": [
+            7.246795376762748,
+            8.778702435549349
+          ],
+          "readout_eligible_n": 16,
+          "readout_first_token_margin_mean": 3.7610702514648438
+        }
+      ]
+    }
+  },
+  "limits": [
+    "E4 data were collected after earlier E5 outcomes and after the separate E4 development gate failed.",
+    "The two cohorts are subject-disjoint but from the same mLAMA candidate archive.",
+    "English readout/restoration is not direct Hebrew or Arabic localization evidence.",
+    "Each bootstrap interval is for a fixed cell; 24 cells per cohort are shown without peak-selection or multiplicity adjustment.",
+    "The first-token readout may be ineligible if gold and distractor first tokens collide; full-answer restoration remains separate."
+  ]
+}

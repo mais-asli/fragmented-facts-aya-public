@@ -1,0 +1,4005 @@
+{
+  "protocol_sha256": "1070611805d78e63b3f29705f43507e0d5f0d3aec0bf34fcf5bc204f10acaf0c",
+  "archive_sha256": "0293206a8bb08a942930c058337f061e6b87f2d3fb827e47c6ffd57420fc8774",
+  "analysis_plan_sha256": "63c51817b9debd08c3cc9b4d9be6af4cd2e6eab2faefa29d931d80433ce7249a",
+  "post_submission_exploratory_amendment_sha256": "b087fe551d1bcea0d03df6a83519a3be8eb9e9b91e4cf16101c09922cba5f8fe",
+  "model_id": "CohereLabs/aya-23-8B",
+  "revision": "89da1a0ed02d6130f93ae0ffdbedb63b760c0471",
+  "precision": "nf4",
+  "cohorts": {
+    "arabic_geonames": {
+      "subjects": 184,
+      "primary_t1_paired_margin": {
+        "subjects": 184,
+        "answer_strata": 72,
+        "answer_macro_mean": -1.3703411053050258,
+        "subject_weighted_mean": -0.9875915704651455,
+        "hierarchical_bootstrap_ci95": [
+          -2.15866041917251,
+          -0.5871298659303322
+        ],
+        "two_sided_p": 0.0004949975250123749,
+        "test": "monte_carlo_answer_stratum_sign_flip_200000_plus_one",
+        "bootstrap_replicates": 10000
+      },
+      "secondary_t2_paired_margin": {
+        "subjects": 184,
+        "answer_strata": 72,
+        "answer_macro_mean": -1.6118067211949452,
+        "subject_weighted_mean": -1.0582262150466157,
+        "hierarchical_bootstrap_ci95": [
+          -2.486599097222547,
+          -0.7562167977850669
+        ],
+        "two_sided_p": 0.00026999865000674995,
+        "test": "monte_carlo_answer_stratum_sign_flip_200000_plus_one",
+        "bootstrap_replicates": 10000
+      },
+      "secondary_t1_gold_loglik_change": {
+        "subjects": 184,
+        "answer_strata": 72,
+        "answer_macro_mean": -1.7404386927739752,
+        "subject_weighted_mean": -1.0868313745150189,
+        "hierarchical_bootstrap_ci95": [
+          -2.4542322083058745,
+          -1.039663122821309
+        ],
+        "two_sided_p": 4.9999750001249995e-06,
+        "test": "monte_carlo_answer_stratum_sign_flip_200000_plus_one",
+        "bootstrap_replicates": 10000
+      },
+      "generation": {
+        "U": {
+          "strict_exact_count": 49,
+          "prefix_rematch_count": 53,
+          "prefix_only_rescues": 4,
+          "denominator": 184,
+          "generation_hit_cap_count": 0
+        },
+        "D": {
+          "strict_exact_count": 30,
+          "prefix_rematch_count": 31,
+          "prefix_only_rescues": 1,
+          "denominator": 184,
+          "generation_hit_cap_count": 0
+        }
+      },
+      "paired_generation": {
+        "strict_exact": {
+          "both_correct": 26,
+          "unmarked_only_correct": 23,
+          "marked_only_correct": 4,
+          "neither_correct": 131
+        },
+        "prefix_rematch": {
+          "both_correct": 26,
+          "unmarked_only_correct": 27,
+          "marked_only_correct": 5,
+          "neither_correct": 126
+        }
+      },
+      "english_control": {
+        "strict_exact_count": 144,
+        "denominator": 184,
+        "descriptive_exact_recall_subset": {
+          "subjects": 144,
+          "answer_strata": 60,
+          "answer_macro_t1_margin_change": -1.6397041300970392,
+          "subject_weighted_t1_margin_change": -1.1066965382699885,
+          "confirmatory_test": false
+        }
+      },
+      "subject_token_delta": {
+        "mean": 5.690217391304348,
+        "median": 6.0,
+        "negative": 0,
+        "zero": 0,
+        "positive": 184
+      },
+      "per_fact": [
+        {
+          "fact_id": "Q1004510-GeoNames-country-ZM",
+          "subject_qid": "Q1004510",
+          "answer_stratum": "ZM",
+          "t1_margin_change": 0.483050605533208,
+          "t2_margin_change": -0.010009628276748117,
+          "generation_U": "جنوب أفريقيا",
+          "generation_D": "كينيا"
+        },
+        {
+          "fact_id": "Q1004686-GeoNames-country-NO",
+          "subject_qid": "Q1004686",
+          "answer_stratum": "NO",
+          "t1_margin_change": 0.6947252438403666,
+          "t2_margin_change": -3.7617722493596375,
+          "generation_U": "الصين",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q1006545-GeoNames-country-RS",
+          "subject_qid": "Q1006545",
+          "answer_stratum": "RS",
+          "t1_margin_change": -8.617052911278734,
+          "t2_margin_change": -9.634215087622579,
+          "generation_U": "الجبل الأسود",
+          "generation_D": "روسيا"
+        },
+        {
+          "fact_id": "Q1013413-GeoNames-country-ZA",
+          "subject_qid": "Q1013413",
+          "answer_stratum": "ZA",
+          "t1_margin_change": 7.407601066326606,
+          "t2_margin_change": 4.570466585944814,
+          "generation_U": "روسيا",
+          "generation_D": "النِمْلُ"
+        },
+        {
+          "fact_id": "Q1015672-GeoNames-country-NZ",
+          "subject_qid": "Q1015672",
+          "answer_stratum": "NZ",
+          "t1_margin_change": -0.36164110532263294,
+          "t2_margin_change": -1.3647513680625707,
+          "generation_U": "تونس",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q1017376-GeoNames-country-PG",
+          "subject_qid": "Q1017376",
+          "answer_stratum": "PG",
+          "t1_margin_change": 0.27968822134425864,
+          "t2_margin_change": -2.026494304998778,
+          "generation_U": "الهند",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q1019575-GeoNames-country-SE",
+          "subject_qid": "Q1019575",
+          "answer_stratum": "SE",
+          "t1_margin_change": -1.02938811754575,
+          "t2_margin_change": -1.230301966686966,
+          "generation_U": "النرويج",
+          "generation_D": "النرويج"
+        },
+        {
+          "fact_id": "Q1020939-GeoNames-country-PH",
+          "subject_qid": "Q1020939",
+          "answer_stratum": "PH",
+          "t1_margin_change": 2.3466830549150473,
+          "t2_margin_change": 2.585006746943691,
+          "generation_U": "كولومبيا",
+          "generation_D": "الإجابة: باراغواي"
+        },
+        {
+          "fact_id": "Q1022275-GeoNames-country-AR",
+          "subject_qid": "Q1022275",
+          "answer_stratum": "AR",
+          "t1_margin_change": -1.6231434959045146,
+          "t2_margin_change": -0.7791454178804997,
+          "generation_U": "المكسيك",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q1026445-GeoNames-country-PH",
+          "subject_qid": "Q1026445",
+          "answer_stratum": "PH",
+          "t1_margin_change": -3.3730942857509945,
+          "t2_margin_change": -7.557424360566074,
+          "generation_U": "ماليزيا",
+          "generation_D": "كندا"
+        },
+        {
+          "fact_id": "Q10640373-GeoNames-country-GR",
+          "subject_qid": "Q10640373",
+          "answer_stratum": "GR",
+          "t1_margin_change": 0.2699836809406406,
+          "t2_margin_change": 0.3237449015650782,
+          "generation_U": "اليونان",
+          "generation_D": "اليونان."
+        },
+        {
+          "fact_id": "Q106681-GeoNames-country-PL",
+          "subject_qid": "Q106681",
+          "answer_stratum": "PL",
+          "t1_margin_change": -5.91154075920349,
+          "t2_margin_change": -8.2866466086125,
+          "generation_U": "اليابان",
+          "generation_D": "بولندا"
+        },
+        {
+          "fact_id": "Q11449-GeoNames-country-ID",
+          "subject_qid": "Q11449",
+          "answer_stratum": "ID",
+          "t1_margin_change": -8.824748933519004,
+          "t2_margin_change": -5.836707311827922,
+          "generation_U": "الإجابة: إندونيسيا",
+          "generation_D": "الهند"
+        },
+        {
+          "fact_id": "Q1149502-GeoNames-country-SY",
+          "subject_qid": "Q1149502",
+          "answer_stratum": "SY",
+          "t1_margin_change": -6.148096300777979,
+          "t2_margin_change": -7.094973806029884,
+          "generation_U": "تركيا",
+          "generation_D": "ليبيا"
+        },
+        {
+          "fact_id": "Q1207076-GeoNames-country-CN",
+          "subject_qid": "Q1207076",
+          "answer_stratum": "CN",
+          "t1_margin_change": -1.536943275059457,
+          "t2_margin_change": -0.9776800876061316,
+          "generation_U": "الصين",
+          "generation_D": "الصين."
+        },
+        {
+          "fact_id": "Q1251473-GeoNames-country-PK",
+          "subject_qid": "Q1251473",
+          "answer_stratum": "PK",
+          "t1_margin_change": -1.9219710741890594,
+          "t2_margin_change": -2.5523239623289555,
+          "generation_U": "المكسيك",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q1253395-GeoNames-country-PK",
+          "subject_qid": "Q1253395",
+          "answer_stratum": "PK",
+          "t1_margin_change": -1.6428223335824441,
+          "t2_margin_change": -1.0898579994682223,
+          "generation_U": "الهند",
+          "generation_D": "الهند"
+        },
+        {
+          "fact_id": "Q1261509-GeoNames-country-LT",
+          "subject_qid": "Q1261509",
+          "answer_stratum": "LT",
+          "t1_margin_change": -1.1619040180157754,
+          "t2_margin_change": -0.26291925854820875,
+          "generation_U": "بولندا",
+          "generation_D": "روسيا"
+        },
+        {
+          "fact_id": "Q1262380-GeoNames-country-IN",
+          "subject_qid": "Q1262380",
+          "answer_stratum": "IN",
+          "t1_margin_change": -0.8897127748350613,
+          "t2_margin_change": -1.4112855427665636,
+          "generation_U": "المغرب",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q126898-GeoNames-country-FR",
+          "subject_qid": "Q126898",
+          "answer_stratum": "FR",
+          "t1_margin_change": 2.492720780424861,
+          "t2_margin_change": 3.414723442545437,
+          "generation_U": "فرنسا",
+          "generation_D": "فرنسا."
+        },
+        {
+          "fact_id": "Q131662-GeoNames-country-ZA",
+          "subject_qid": "Q131662",
+          "answer_stratum": "ZA",
+          "t1_margin_change": -2.1646729020903877,
+          "t2_margin_change": -5.1661558764517395,
+          "generation_U": "جنوب أفريقيا",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q13378177-GeoNames-country-SI",
+          "subject_qid": "Q13378177",
+          "answer_stratum": "SI",
+          "t1_margin_change": -4.66894650796894,
+          "t2_margin_change": -6.583209300879389,
+          "generation_U": "النرويج",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q134346-GeoNames-country-FR",
+          "subject_qid": "Q134346",
+          "answer_stratum": "FR",
+          "t1_margin_change": -0.5186190698386994,
+          "t2_margin_change": -1.398920712119434,
+          "generation_U": "فرنسا",
+          "generation_D": "البرتغال."
+        },
+        {
+          "fact_id": "Q1350362-GeoNames-country-KH",
+          "subject_qid": "Q1350362",
+          "answer_stratum": "KH",
+          "t1_margin_change": 1.688379245752003,
+          "t2_margin_change": -1.9617471680394374,
+          "generation_U": "ميانمار",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q1371634-GeoNames-country-GR",
+          "subject_qid": "Q1371634",
+          "answer_stratum": "GR",
+          "t1_margin_change": 2.1580533611977444,
+          "t2_margin_change": 2.9460100004616834,
+          "generation_U": "إيطاليا",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q1389472-GeoNames-country-IN",
+          "subject_qid": "Q1389472",
+          "answer_stratum": "IN",
+          "t1_margin_change": 4.485847610165365,
+          "t2_margin_change": 0.9089883246924728,
+          "generation_U": "السودان",
+          "generation_D": "الإجابة: إيطاليا"
+        },
+        {
+          "fact_id": "Q143892-GeoNames-country-BF",
+          "subject_qid": "Q143892",
+          "answer_stratum": "BF",
+          "t1_margin_change": 6.709533768215806,
+          "t2_margin_change": 5.260690124618122,
+          "generation_U": "الهند",
+          "generation_D": "الهند."
+        },
+        {
+          "fact_id": "Q154715-GeoNames-country-FR",
+          "subject_qid": "Q154715",
+          "answer_stratum": "FR",
+          "t1_margin_change": -6.890023596586161,
+          "t2_margin_change": -6.711046165316361,
+          "generation_U": "فرنسا",
+          "generation_D": "إسبانيا"
+        },
+        {
+          "fact_id": "Q15858-GeoNames-country-SI",
+          "subject_qid": "Q15858",
+          "answer_stratum": "SI",
+          "t1_margin_change": 0.6063511168613331,
+          "t2_margin_change": 0.9084139681071974,
+          "generation_U": "بلغاريا",
+          "generation_D": "النرويج"
+        },
+        {
+          "fact_id": "Q16014-GeoNames-country-LU",
+          "subject_qid": "Q16014",
+          "answer_stratum": "LU",
+          "t1_margin_change": -1.2096240349737855,
+          "t2_margin_change": -0.5428343382754974,
+          "generation_U": "الصين",
+          "generation_D": "الهند."
+        },
+        {
+          "fact_id": "Q1606115-GeoNames-country-ES",
+          "subject_qid": "Q1606115",
+          "answer_stratum": "ES",
+          "t1_margin_change": 0.5935969992215178,
+          "t2_margin_change": 0.9479105373320635,
+          "generation_U": "الأرجنتين",
+          "generation_D": "الهند."
+        },
+        {
+          "fact_id": "Q1606829-GeoNames-country-ES",
+          "subject_qid": "Q1606829",
+          "answer_stratum": "ES",
+          "t1_margin_change": 3.968052750431525,
+          "t2_margin_change": 4.346997854176152,
+          "generation_U": "البرازيل",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q1618499-GeoNames-country-SI",
+          "subject_qid": "Q1618499",
+          "answer_stratum": "SI",
+          "t1_margin_change": -0.1835476658307016,
+          "t2_margin_change": -2.2586080534383655,
+          "generation_U": "المكسيك",
+          "generation_D": "كندا"
+        },
+        {
+          "fact_id": "Q1628122-GeoNames-country-ES",
+          "subject_qid": "Q1628122",
+          "answer_stratum": "ES",
+          "t1_margin_change": 3.2938365789666477,
+          "t2_margin_change": 2.167722762623953,
+          "generation_U": "اليونان",
+          "generation_D": "اليونان."
+        },
+        {
+          "fact_id": "Q1632465-GeoNames-country-ES",
+          "subject_qid": "Q1632465",
+          "answer_stratum": "ES",
+          "t1_margin_change": 0.22613739079429251,
+          "t2_margin_change": 1.6883673953539073,
+          "generation_U": "المكسيك",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q1649746-GeoNames-country-DZ",
+          "subject_qid": "Q1649746",
+          "answer_stratum": "DZ",
+          "t1_margin_change": -2.426059422432445,
+          "t2_margin_change": -5.804694143938832,
+          "generation_U": "البرازيل",
+          "generation_D": "البرازيل"
+        },
+        {
+          "fact_id": "Q168648-GeoNames-country-HU",
+          "subject_qid": "Q168648",
+          "answer_stratum": "HU",
+          "t1_margin_change": 2.3462884992040927,
+          "t2_margin_change": 1.290474337831256,
+          "generation_U": "النمسا",
+          "generation_D": "فرنسا"
+        },
+        {
+          "fact_id": "Q173219-GeoNames-country-BE",
+          "subject_qid": "Q173219",
+          "answer_stratum": "BE",
+          "t1_margin_change": -3.494854050947197,
+          "t2_margin_change": -1.9288322369238813,
+          "generation_U": "تركيا",
+          "generation_D": "ليبيا"
+        },
+        {
+          "fact_id": "Q174916-GeoNames-country-SY",
+          "subject_qid": "Q174916",
+          "answer_stratum": "SY",
+          "t1_margin_change": 0.10938334258389659,
+          "t2_margin_change": -0.30164171432261355,
+          "generation_U": "سورية",
+          "generation_D": "سورية"
+        },
+        {
+          "fact_id": "Q179604-GeoNames-country-DZ",
+          "subject_qid": "Q179604",
+          "answer_stratum": "DZ",
+          "t1_margin_change": -0.3227700151037425,
+          "t2_margin_change": 0.10648090485483408,
+          "generation_U": "المغرب",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q179949-GeoNames-country-FR",
+          "subject_qid": "Q179949",
+          "answer_stratum": "FR",
+          "t1_margin_change": -0.5312939032035047,
+          "t2_margin_change": 0.4960059060849744,
+          "generation_U": "الإجابة: إسبانيا",
+          "generation_D": "جورجيا"
+        },
+        {
+          "fact_id": "Q1819480-GeoNames-country-GR",
+          "subject_qid": "Q1819480",
+          "answer_stratum": "GR",
+          "t1_margin_change": 2.666872729889292,
+          "t2_margin_change": 6.959366370239877,
+          "generation_U": "إيطاليا",
+          "generation_D": "نيجيريا"
+        },
+        {
+          "fact_id": "Q1857915-GeoNames-country-GR",
+          "subject_qid": "Q1857915",
+          "answer_stratum": "GR",
+          "t1_margin_change": 2.58673162544801,
+          "t2_margin_change": 3.7944963773661584,
+          "generation_U": "تركيا",
+          "generation_D": "اليونان"
+        },
+        {
+          "fact_id": "Q188179-GeoNames-country-EE",
+          "subject_qid": "Q188179",
+          "answer_stratum": "EE",
+          "t1_margin_change": -2.6709748218636378,
+          "t2_margin_change": -7.7286181551462505,
+          "generation_U": "الإجابة: إستونيا",
+          "generation_D": "الإجابة: فنلندا"
+        },
+        {
+          "fact_id": "Q188511-GeoNames-country-FR",
+          "subject_qid": "Q188511",
+          "answer_stratum": "FR",
+          "t1_margin_change": -1.7774030473758557,
+          "t2_margin_change": -2.120448211470716,
+          "generation_U": "المكسيك",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q189546-GeoNames-country-TN",
+          "subject_qid": "Q189546",
+          "answer_stratum": "TN",
+          "t1_margin_change": -1.0696423191402573,
+          "t2_margin_change": -2.4837472516373964,
+          "generation_U": "تونس",
+          "generation_D": "تونس"
+        },
+        {
+          "fact_id": "Q1911759-GeoNames-country-TR",
+          "subject_qid": "Q1911759",
+          "answer_stratum": "TR",
+          "t1_margin_change": 0.6351164818333928,
+          "t2_margin_change": 0.09987987525528297,
+          "generation_U": "تركيا",
+          "generation_D": "روسيا"
+        },
+        {
+          "fact_id": "Q192859-GeoNames-country-BE",
+          "subject_qid": "Q192859",
+          "answer_stratum": "BE",
+          "t1_margin_change": -5.617285511277487,
+          "t2_margin_change": -0.5236027670864587,
+          "generation_U": "بلجيكا",
+          "generation_D": "هولندا"
+        },
+        {
+          "fact_id": "Q192926-GeoNames-country-BG",
+          "subject_qid": "Q192926",
+          "answer_stratum": "BG",
+          "t1_margin_change": -13.187346516981052,
+          "t2_margin_change": -14.332535917903442,
+          "generation_U": "بلغاريا",
+          "generation_D": "أرمينيا"
+        },
+        {
+          "fact_id": "Q1946056-GeoNames-country-PL",
+          "subject_qid": "Q1946056",
+          "answer_stratum": "PL",
+          "t1_margin_change": -3.334942213346949,
+          "t2_margin_change": -0.8689412944659125,
+          "generation_U": "بولندا",
+          "generation_D": "النرويج"
+        },
+        {
+          "fact_id": "Q1968465-GeoNames-country-LR",
+          "subject_qid": "Q1968465",
+          "answer_stratum": "LR",
+          "t1_margin_change": 0.6068103908910416,
+          "t2_margin_change": 2.5453064574103337,
+          "generation_U": "تركيا",
+          "generation_D": "كندا"
+        },
+        {
+          "fact_id": "Q197378-GeoNames-country-CN",
+          "subject_qid": "Q197378",
+          "answer_stratum": "CN",
+          "t1_margin_change": -0.31456567008717684,
+          "t2_margin_change": -0.09293252548377495,
+          "generation_U": "الصين",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q202991-GeoNames-country-LY",
+          "subject_qid": "Q202991",
+          "answer_stratum": "LY",
+          "t1_margin_change": -0.8355109659169102,
+          "t2_margin_change": -1.8434043163288152,
+          "generation_U": "ليبيا",
+          "generation_D": "مصر"
+        },
+        {
+          "fact_id": "Q2044578-GeoNames-country-LT",
+          "subject_qid": "Q2044578",
+          "answer_stratum": "LT",
+          "t1_margin_change": -1.2493384535846417,
+          "t2_margin_change": -0.6175337499153102,
+          "generation_U": "تركيا",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q2088448-GeoNames-country-IN",
+          "subject_qid": "Q2088448",
+          "answer_stratum": "IN",
+          "t1_margin_change": 0.846595947019523,
+          "t2_margin_change": 0.46712285830290057,
+          "generation_U": "تركيا",
+          "generation_D": "مصر"
+        },
+        {
+          "fact_id": "Q209086-GeoNames-country-FR",
+          "subject_qid": "Q209086",
+          "answer_stratum": "FR",
+          "t1_margin_change": 0.036758463875003144,
+          "t2_margin_change": 0.05092874133242731,
+          "generation_U": "إندونيسيا",
+          "generation_D": "إندونيسيا"
+        },
+        {
+          "fact_id": "Q211187-GeoNames-country-FR",
+          "subject_qid": "Q211187",
+          "answer_stratum": "FR",
+          "t1_margin_change": -2.4139036590391925,
+          "t2_margin_change": -1.259483870071108,
+          "generation_U": "فرنسا",
+          "generation_D": "المملكة المتحدة"
+        },
+        {
+          "fact_id": "Q21167-GeoNames-country-SE",
+          "subject_qid": "Q21167",
+          "answer_stratum": "SE",
+          "t1_margin_change": -7.069376990548335,
+          "t2_margin_change": -7.715325301600387,
+          "generation_U": "السويد",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q213916-GeoNames-country-GR",
+          "subject_qid": "Q213916",
+          "answer_stratum": "GR",
+          "t1_margin_change": 0.8094359326350968,
+          "t2_margin_change": 2.229083979036659,
+          "generation_U": "الولايات المتحدة الأمريكية.",
+          "generation_D": "الولايات المتحدة الأمريكية."
+        },
+        {
+          "fact_id": "Q21424-GeoNames-country-FR",
+          "subject_qid": "Q21424",
+          "answer_stratum": "FR",
+          "t1_margin_change": -0.8762112421293295,
+          "t2_margin_change": 0.10398957579309354,
+          "generation_U": "اليونان",
+          "generation_D": "المملكة المتحدة"
+        },
+        {
+          "fact_id": "Q21530-GeoNames-country-FR",
+          "subject_qid": "Q21530",
+          "answer_stratum": "FR",
+          "t1_margin_change": 3.859608655988268,
+          "t2_margin_change": 2.7034536332462267,
+          "generation_U": "فرنسا",
+          "generation_D": "فرنسا"
+        },
+        {
+          "fact_id": "Q21536-GeoNames-country-FR",
+          "subject_qid": "Q21536",
+          "answer_stratum": "FR",
+          "t1_margin_change": -1.967054582977653,
+          "t2_margin_change": -0.4652404330270201,
+          "generation_U": "المكسيك",
+          "generation_D": "كوريا الجنوبية"
+        },
+        {
+          "fact_id": "Q219045-GeoNames-country-FR",
+          "subject_qid": "Q219045",
+          "answer_stratum": "FR",
+          "t1_margin_change": 0.8056783065549098,
+          "t2_margin_change": 1.0615493467958004,
+          "generation_U": "إيطاليا",
+          "generation_D": "اليابان."
+        },
+        {
+          "fact_id": "Q2204078-GeoNames-country-AE",
+          "subject_qid": "Q2204078",
+          "answer_stratum": "AE",
+          "t1_margin_change": -5.152465824619867,
+          "t2_margin_change": -5.722266023600241,
+          "generation_U": "الإمارات",
+          "generation_D": "الإجابة: تقع كَلْبَاء في دولة الإمارات العربية المتحدة."
+        },
+        {
+          "fact_id": "Q2275300-GeoNames-country-GR",
+          "subject_qid": "Q2275300",
+          "answer_stratum": "GR",
+          "t1_margin_change": -1.9689901841338724,
+          "t2_margin_change": -0.0023387134569929913,
+          "generation_U": "المغرب",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q22801-GeoNames-country-FR",
+          "subject_qid": "Q22801",
+          "answer_stratum": "FR",
+          "t1_margin_change": 3.363766930894144,
+          "t2_margin_change": 3.2824158944783903,
+          "generation_U": "النمسا",
+          "generation_D": "ألمانيا"
+        },
+        {
+          "fact_id": "Q2296366-GeoNames-country-ZA",
+          "subject_qid": "Q2296366",
+          "answer_stratum": "ZA",
+          "t1_margin_change": -4.005092675881315,
+          "t2_margin_change": -7.0906688500981545,
+          "generation_U": "جنوب أفريقيا",
+          "generation_D": "إسرائيل"
+        },
+        {
+          "fact_id": "Q2341909-GeoNames-country-IN",
+          "subject_qid": "Q2341909",
+          "answer_stratum": "IN",
+          "t1_margin_change": 0.8199799379071919,
+          "t2_margin_change": 0.6836451948911417,
+          "generation_U": "روسيا",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q2351813-GeoNames-country-IR",
+          "subject_qid": "Q2351813",
+          "answer_stratum": "IR",
+          "t1_margin_change": 3.2507727125776,
+          "t2_margin_change": 0.3857751755567733,
+          "generation_U": "تقع زازران في دولة أذربيجان.",
+          "generation_D": "إيران"
+        },
+        {
+          "fact_id": "Q2407786-GeoNames-country-IR",
+          "subject_qid": "Q2407786",
+          "answer_stratum": "IR",
+          "t1_margin_change": 0.8372037815861404,
+          "t2_margin_change": -0.2578663858876098,
+          "generation_U": "الهند",
+          "generation_D": "الهند"
+        },
+        {
+          "fact_id": "Q241125-GeoNames-country-SK",
+          "subject_qid": "Q241125",
+          "answer_stratum": "SK",
+          "t1_margin_change": -0.21292370300216135,
+          "t2_margin_change": -1.6412476411787793,
+          "generation_U": "الإجابة: إيطاليا",
+          "generation_D": "الإجابة: إيطاليا"
+        },
+        {
+          "fact_id": "Q2428588-GeoNames-country-IR",
+          "subject_qid": "Q2428588",
+          "answer_stratum": "IR",
+          "t1_margin_change": 4.873047669418156,
+          "t2_margin_change": 4.857521259691566,
+          "generation_U": "الصين",
+          "generation_D": "روسيا"
+        },
+        {
+          "fact_id": "Q2429147-GeoNames-country-IR",
+          "subject_qid": "Q2429147",
+          "answer_stratum": "IR",
+          "t1_margin_change": -3.865749451404554,
+          "t2_margin_change": 1.401687743178627,
+          "generation_U": "سريلانكا",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q2438632-GeoNames-country-IR",
+          "subject_qid": "Q2438632",
+          "answer_stratum": "IR",
+          "t1_margin_change": 1.307054145989241,
+          "t2_margin_change": 3.380590669825324,
+          "generation_U": "النمسا",
+          "generation_D": "الهند"
+        },
+        {
+          "fact_id": "Q245307-GeoNames-country-FR",
+          "subject_qid": "Q245307",
+          "answer_stratum": "FR",
+          "t1_margin_change": -0.8571538071746545,
+          "t2_margin_change": -1.280015937603821,
+          "generation_U": "كوبا",
+          "generation_D": "روسيا"
+        },
+        {
+          "fact_id": "Q2470205-GeoNames-country-TJ",
+          "subject_qid": "Q2470205",
+          "answer_stratum": "TJ",
+          "t1_margin_change": 2.250705520855263,
+          "t2_margin_change": -1.431321372409002,
+          "generation_U": "إثيوبيا",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q2471-GeoNames-country-YE",
+          "subject_qid": "Q2471",
+          "answer_stratum": "YE",
+          "t1_margin_change": -2.6405529025942087,
+          "t2_margin_change": -3.299037882941775,
+          "generation_U": "اليمن",
+          "generation_D": "اليمن"
+        },
+        {
+          "fact_id": "Q2488907-GeoNames-country-UG",
+          "subject_qid": "Q2488907",
+          "answer_stratum": "UG",
+          "t1_margin_change": 1.3468135355506092,
+          "t2_margin_change": 3.22587663307786,
+          "generation_U": "الكاميرون",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q2542644-GeoNames-country-IN",
+          "subject_qid": "Q2542644",
+          "answer_stratum": "IN",
+          "t1_margin_change": -3.9350325313862413,
+          "t2_margin_change": -2.9235391950351186,
+          "generation_U": "الإجابة: إيطاليا",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q258481-GeoNames-country-SK",
+          "subject_qid": "Q258481",
+          "answer_stratum": "SK",
+          "t1_margin_change": -1.131711313733831,
+          "t2_margin_change": -5.472756637434941,
+          "generation_U": "بولندا",
+          "generation_D": "المملكة المتحدة"
+        },
+        {
+          "fact_id": "Q259216-GeoNames-country-FR",
+          "subject_qid": "Q259216",
+          "answer_stratum": "FR",
+          "t1_margin_change": -2.6880251689935903,
+          "t2_margin_change": 0.6512011431264,
+          "generation_U": "المكسيك",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q2625453-GeoNames-country-IR",
+          "subject_qid": "Q2625453",
+          "answer_stratum": "IR",
+          "t1_margin_change": 1.680240519133804,
+          "t2_margin_change": 1.3305395967836375,
+          "generation_U": "مصر",
+          "generation_D": "النرويج"
+        },
+        {
+          "fact_id": "Q2658219-GeoNames-country-SE",
+          "subject_qid": "Q2658219",
+          "answer_stratum": "SE",
+          "t1_margin_change": -1.3158992044627666,
+          "t2_margin_change": -0.5334640285000205,
+          "generation_U": "المكسيك",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q2658228-GeoNames-country-IL",
+          "subject_qid": "Q2658228",
+          "answer_stratum": "IL",
+          "t1_margin_change": -0.8407506942749023,
+          "t2_margin_change": -0.26271939277648926,
+          "generation_U": "المغرب",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q26757559-GeoNames-country-ID",
+          "subject_qid": "Q26757559",
+          "answer_stratum": "ID",
+          "t1_margin_change": -1.62343703701481,
+          "t2_margin_change": -0.7533838445815491,
+          "generation_U": "إندونيسيا",
+          "generation_D": "المملكة المتحدة"
+        },
+        {
+          "fact_id": "Q270821-GeoNames-country-IQ",
+          "subject_qid": "Q270821",
+          "answer_stratum": "IQ",
+          "t1_margin_change": -2.022061347961426,
+          "t2_margin_change": 3.123566120862961,
+          "generation_U": "الولايات المتحدة الأمريكية.",
+          "generation_D": "ليبيا"
+        },
+        {
+          "fact_id": "Q2731405-GeoNames-country-MK",
+          "subject_qid": "Q2731405",
+          "answer_stratum": "MK",
+          "t1_margin_change": -0.7230902796145529,
+          "t2_margin_change": -2.1249203220941126,
+          "generation_U": "روسيا",
+          "generation_D": "بولندا"
+        },
+        {
+          "fact_id": "Q2778894-GeoNames-country-IR",
+          "subject_qid": "Q2778894",
+          "answer_stratum": "IR",
+          "t1_margin_change": -0.8439744101488031,
+          "t2_margin_change": -3.5694356516905827,
+          "generation_U": "الصين",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q2790350-GeoNames-country-SE",
+          "subject_qid": "Q2790350",
+          "answer_stratum": "SE",
+          "t1_margin_change": 1.798547860700637,
+          "t2_margin_change": 2.5938885803334415,
+          "generation_U": "النرويج",
+          "generation_D": "المجر"
+        },
+        {
+          "fact_id": "Q2889703-GeoNames-country-IL",
+          "subject_qid": "Q2889703",
+          "answer_stratum": "IL",
+          "t1_margin_change": -3.364377498626709,
+          "t2_margin_change": -0.13297486305236816,
+          "generation_U": "جنوب أفريقيا",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q2900650-GeoNames-country-LB",
+          "subject_qid": "Q2900650",
+          "answer_stratum": "LB",
+          "t1_margin_change": 6.0351521171978675,
+          "t2_margin_change": 9.712452446692623,
+          "generation_U": "سوريا",
+          "generation_D": "الإجابة: الأردن"
+        },
+        {
+          "fact_id": "Q3050819-GeoNames-country-PK",
+          "subject_qid": "Q3050819",
+          "answer_stratum": "PK",
+          "t1_margin_change": -0.9317375161335804,
+          "t2_margin_change": 1.1705702664330602,
+          "generation_U": "الهند",
+          "generation_D": "الهند"
+        },
+        {
+          "fact_id": "Q3079830-GeoNames-country-TN",
+          "subject_qid": "Q3079830",
+          "answer_stratum": "TN",
+          "t1_margin_change": -0.4204780508298427,
+          "t2_margin_change": 1.9225156334723579,
+          "generation_U": "تونس",
+          "generation_D": "الجزائر"
+        },
+        {
+          "fact_id": "Q3132444-GeoNames-country-SS",
+          "subject_qid": "Q3132444",
+          "answer_stratum": "SS",
+          "t1_margin_change": -1.772680531561491,
+          "t2_margin_change": -3.257122622249881,
+          "generation_U": "الجواب: مالي",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q31356-GeoNames-country-PK",
+          "subject_qid": "Q31356",
+          "answer_stratum": "PK",
+          "t1_margin_change": -6.753192720236257,
+          "t2_margin_change": -9.24388509610435,
+          "generation_U": "أستراليا",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q3138871-GeoNames-country-KM",
+          "subject_qid": "Q3138871",
+          "answer_stratum": "KM",
+          "t1_margin_change": -2.2559928961200058,
+          "t2_margin_change": 1.80686118363883,
+          "generation_U": "الصين",
+          "generation_D": "فيتنام."
+        },
+        {
+          "fact_id": "Q3248111-GeoNames-country-PK",
+          "subject_qid": "Q3248111",
+          "answer_stratum": "PK",
+          "t1_margin_change": -2.5359376977430657,
+          "t2_margin_change": -4.823816808027914,
+          "generation_U": "باكستان",
+          "generation_D": "الإجابة: الهند"
+        },
+        {
+          "fact_id": "Q326879-GeoNames-country-FR",
+          "subject_qid": "Q326879",
+          "answer_stratum": "FR",
+          "t1_margin_change": -3.9758235422382313,
+          "t2_margin_change": -1.6944884006588836,
+          "generation_U": "فرنسا",
+          "generation_D": "إيطاليا"
+        },
+        {
+          "fact_id": "Q33377-GeoNames-country-IN",
+          "subject_qid": "Q33377",
+          "answer_stratum": "IN",
+          "t1_margin_change": -1.7566193450111314,
+          "t2_margin_change": 0.06749149413371924,
+          "generation_U": "الهند",
+          "generation_D": "الهند."
+        },
+        {
+          "fact_id": "Q3347001-GeoNames-country-CA",
+          "subject_qid": "Q3347001",
+          "answer_stratum": "CA",
+          "t1_margin_change": 2.4864220873787417,
+          "t2_margin_change": 2.077521374914795,
+          "generation_U": "اليابان",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q34001-GeoNames-country-FR",
+          "subject_qid": "Q34001",
+          "answer_stratum": "FR",
+          "t1_margin_change": 2.3124474025773907,
+          "t2_margin_change": 0.7661315284317425,
+          "generation_U": "فرنسا",
+          "generation_D": "فرنسا"
+        },
+        {
+          "fact_id": "Q349982-GeoNames-country-CN",
+          "subject_qid": "Q349982",
+          "answer_stratum": "CN",
+          "t1_margin_change": -0.16473549293004908,
+          "t2_margin_change": -1.7284443985845428,
+          "generation_U": "الصين",
+          "generation_D": "الصين."
+        },
+        {
+          "fact_id": "Q3556113-GeoNames-country-GR",
+          "subject_qid": "Q3556113",
+          "answer_stratum": "GR",
+          "t1_margin_change": 0.6300726723857224,
+          "t2_margin_change": 1.8660686846124008,
+          "generation_U": "الإجابة: الأردن",
+          "generation_D": "الإجابة: عُمان"
+        },
+        {
+          "fact_id": "Q3560020-GeoNames-country-GR",
+          "subject_qid": "Q3560020",
+          "answer_stratum": "GR",
+          "t1_margin_change": 0.7526374441076769,
+          "t2_margin_change": 2.151903694466455,
+          "generation_U": "جورجيا",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q360769-GeoNames-country-CN",
+          "subject_qid": "Q360769",
+          "answer_stratum": "CN",
+          "t1_margin_change": 0.8059596569510177,
+          "t2_margin_change": 0.6270744102730532,
+          "generation_U": "تركيا",
+          "generation_D": "اليابان."
+        },
+        {
+          "fact_id": "Q3619248-GeoNames-country-IN",
+          "subject_qid": "Q3619248",
+          "answer_stratum": "IN",
+          "t1_margin_change": 1.8320754551095888,
+          "t2_margin_change": 5.642469640355557,
+          "generation_U": "كندا",
+          "generation_D": "النمسا"
+        },
+        {
+          "fact_id": "Q3657-GeoNames-country-LT",
+          "subject_qid": "Q3657",
+          "answer_stratum": "LT",
+          "t1_margin_change": 0.215021836294909,
+          "t2_margin_change": -0.1266693204488547,
+          "generation_U": "الإجابة: إسبانيا",
+          "generation_D": "إسبانيا"
+        },
+        {
+          "fact_id": "Q3667407-GeoNames-country-IR",
+          "subject_qid": "Q3667407",
+          "answer_stratum": "IR",
+          "t1_margin_change": -1.4680339741025819,
+          "t2_margin_change": -0.4402697168843588,
+          "generation_U": "إيطاليا",
+          "generation_D": "إيطاليا"
+        },
+        {
+          "fact_id": "Q371354-GeoNames-country-AR",
+          "subject_qid": "Q371354",
+          "answer_stratum": "AR",
+          "t1_margin_change": -0.906154890457401,
+          "t2_margin_change": -1.8773089655733202,
+          "generation_U": "إسبانيا",
+          "generation_D": "إسبانيا"
+        },
+        {
+          "fact_id": "Q372111-GeoNames-country-FR",
+          "subject_qid": "Q372111",
+          "answer_stratum": "FR",
+          "t1_margin_change": -1.233469704603408,
+          "t2_margin_change": -1.9996397165937196,
+          "generation_U": "فرنسا",
+          "generation_D": "فرنسا"
+        },
+        {
+          "fact_id": "Q373808-GeoNames-country-TJ",
+          "subject_qid": "Q373808",
+          "answer_stratum": "TJ",
+          "t1_margin_change": 1.2090539865439496,
+          "t2_margin_change": -0.12893836637340428,
+          "generation_U": "طاجيكستان",
+          "generation_D": "السعودية"
+        },
+        {
+          "fact_id": "Q3763-GeoNames-country-CL",
+          "subject_qid": "Q3763",
+          "answer_stratum": "CL",
+          "t1_margin_change": -4.050613272469491,
+          "t2_margin_change": -4.5290404675834,
+          "generation_U": "كولومبيا",
+          "generation_D": "كولومبيا"
+        },
+        {
+          "fact_id": "Q389942-GeoNames-country-SK",
+          "subject_qid": "Q389942",
+          "answer_stratum": "SK",
+          "t1_margin_change": -3.005933479988016,
+          "t2_margin_change": -6.103157041470695,
+          "generation_U": "كرواتيا",
+          "generation_D": "بولندا"
+        },
+        {
+          "fact_id": "Q399083-GeoNames-country-ZW",
+          "subject_qid": "Q399083",
+          "answer_stratum": "ZW",
+          "t1_margin_change": -1.9618734066298202,
+          "t2_margin_change": -2.060369097318471,
+          "generation_U": "البرتغال",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q40194-GeoNames-country-MX",
+          "subject_qid": "Q40194",
+          "answer_stratum": "MX",
+          "t1_margin_change": -0.1769509962759912,
+          "t2_margin_change": 0.321648838580586,
+          "generation_U": "المكسيك",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q404873-GeoNames-country-CN",
+          "subject_qid": "Q404873",
+          "answer_stratum": "CN",
+          "t1_margin_change": -0.5515477500957786,
+          "t2_margin_change": -0.09672964198398404,
+          "generation_U": "الصين",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q40626-GeoNames-country-PH",
+          "subject_qid": "Q40626",
+          "answer_stratum": "PH",
+          "t1_margin_change": 1.0527783966099378,
+          "t2_margin_change": -1.541808059118921,
+          "generation_U": "الفلبين",
+          "generation_D": "الفلبين"
+        },
+        {
+          "fact_id": "Q4072894-GeoNames-country-IE",
+          "subject_qid": "Q4072894",
+          "answer_stratum": "IE",
+          "t1_margin_change": -0.9459181855841052,
+          "t2_margin_change": -3.444389912031511,
+          "generation_U": "المغرب",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q42087-GeoNames-country-KR",
+          "subject_qid": "Q42087",
+          "answer_stratum": "KR",
+          "t1_margin_change": 8.17293040966615,
+          "t2_margin_change": 6.019618093167082,
+          "generation_U": "الصين",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q42089-GeoNames-country-KR",
+          "subject_qid": "Q42089",
+          "answer_stratum": "KR",
+          "t1_margin_change": -2.985746330865368,
+          "t2_margin_change": -5.319998530947487,
+          "generation_U": "كوريا الجنوبية",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q42117-GeoNames-country-KR",
+          "subject_qid": "Q42117",
+          "answer_stratum": "KR",
+          "t1_margin_change": -3.65914522777166,
+          "t2_margin_change": -6.031909634868498,
+          "generation_U": "كوريا الجنوبية",
+          "generation_D": "كوريا الجنوبية."
+        },
+        {
+          "fact_id": "Q42148-GeoNames-country-KR",
+          "subject_qid": "Q42148",
+          "answer_stratum": "KR",
+          "t1_margin_change": -3.054253283647995,
+          "t2_margin_change": -4.746780827645125,
+          "generation_U": "كوريا الشمالية",
+          "generation_D": "كوريا الشمالية"
+        },
+        {
+          "fact_id": "Q429215-GeoNames-country-IN",
+          "subject_qid": "Q429215",
+          "answer_stratum": "IN",
+          "t1_margin_change": 1.6071156014222652,
+          "t2_margin_change": 1.4800069311168045,
+          "generation_U": "السنغال",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q43387-GeoNames-country-TR",
+          "subject_qid": "Q43387",
+          "answer_stratum": "TR",
+          "t1_margin_change": -3.1200554026290774,
+          "t2_margin_change": -2.9374357268607127,
+          "generation_U": "تركيا",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q4371604-GeoNames-country-IR",
+          "subject_qid": "Q4371604",
+          "answer_stratum": "IR",
+          "t1_margin_change": -2.979407076287316,
+          "t2_margin_change": -5.270198785656248,
+          "generation_U": "الصين",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q4709-GeoNames-country-VE",
+          "subject_qid": "Q4709",
+          "answer_stratum": "VE",
+          "t1_margin_change": -2.0063936884107534,
+          "t2_margin_change": -2.224834150838433,
+          "generation_U": "جمهورية الدومينيكان",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q471100-GeoNames-country-FR",
+          "subject_qid": "Q471100",
+          "answer_stratum": "FR",
+          "t1_margin_change": -1.4139321804610745,
+          "t2_margin_change": -3.038955009160418,
+          "generation_U": "فرنسا",
+          "generation_D": "النرويج"
+        },
+        {
+          "fact_id": "Q489679-GeoNames-country-AR",
+          "subject_qid": "Q489679",
+          "answer_stratum": "AR",
+          "t1_margin_change": -2.1609905475052074,
+          "t2_margin_change": -4.1662371735146735,
+          "generation_U": "أندالجالا هي مدينة تقع في جنوب أفريقيا.",
+          "generation_D": "إسبانيا."
+        },
+        {
+          "fact_id": "Q502023-GeoNames-country-MX",
+          "subject_qid": "Q502023",
+          "answer_stratum": "MX",
+          "t1_margin_change": 1.4357066821539775,
+          "t2_margin_change": -1.016411610879004,
+          "generation_U": "المكسيك",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q515229-GeoNames-country-PW",
+          "subject_qid": "Q515229",
+          "answer_stratum": "PW",
+          "t1_margin_change": 2.2438066005706787,
+          "t2_margin_change": 7.134860277175903,
+          "generation_U": "المكسيك",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q5254191-GeoNames-country-MY",
+          "subject_qid": "Q5254191",
+          "answer_stratum": "MY",
+          "t1_margin_change": -3.5324628686503274,
+          "t2_margin_change": -1.8486035455716774,
+          "generation_U": "إيطاليا",
+          "generation_D": "الإجابة: اليابان"
+        },
+        {
+          "fact_id": "Q534444-GeoNames-country-IN",
+          "subject_qid": "Q534444",
+          "answer_stratum": "IN",
+          "t1_margin_change": -1.4679789194196928,
+          "t2_margin_change": -1.9180567961302586,
+          "generation_U": "النمسا",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q535534-GeoNames-country-CN",
+          "subject_qid": "Q535534",
+          "answer_stratum": "CN",
+          "t1_margin_change": 2.7767431632746593,
+          "t2_margin_change": 0.3730788506072713,
+          "generation_U": "الصين",
+          "generation_D": "الصين."
+        },
+        {
+          "fact_id": "Q5680552-GeoNames-country-IR",
+          "subject_qid": "Q5680552",
+          "answer_stratum": "IR",
+          "t1_margin_change": 0.49024869229469914,
+          "t2_margin_change": 1.9956571148941293,
+          "generation_U": "المغرب",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q5783867-GeoNames-country-IR",
+          "subject_qid": "Q5783867",
+          "answer_stratum": "IR",
+          "t1_margin_change": 1.1134919317701133,
+          "t2_margin_change": 0.9648901910404675,
+          "generation_U": "لاوس",
+          "generation_D": "نيوزيلندا"
+        },
+        {
+          "fact_id": "Q583619-GeoNames-country-NG",
+          "subject_qid": "Q583619",
+          "answer_stratum": "NG",
+          "t1_margin_change": 5.156613658446076,
+          "t2_margin_change": -0.9304255097249552,
+          "generation_U": "كينيا",
+          "generation_D": "المملكة المتحدة"
+        },
+        {
+          "fact_id": "Q5845677-GeoNames-country-IR",
+          "subject_qid": "Q5845677",
+          "answer_stratum": "IR",
+          "t1_margin_change": -1.7066156051587313,
+          "t2_margin_change": -0.8461616474669427,
+          "generation_U": "السويد",
+          "generation_D": "المملكة المتحدة"
+        },
+        {
+          "fact_id": "Q60044-GeoNames-country-LV",
+          "subject_qid": "Q60044",
+          "answer_stratum": "LV",
+          "t1_margin_change": -3.7349100580177037,
+          "t2_margin_change": -1.7684460438758833,
+          "generation_U": "الهند",
+          "generation_D": "المملكة المتحدة"
+        },
+        {
+          "fact_id": "Q61750-GeoNames-country-BO",
+          "subject_qid": "Q61750",
+          "answer_stratum": "BO",
+          "t1_margin_change": -3.9044488123618066,
+          "t2_margin_change": -6.387091650482034,
+          "generation_U": "الإجابة: بوليفيا",
+          "generation_D": "الإجابة: المكسيك"
+        },
+        {
+          "fact_id": "Q619440-GeoNames-country-FJ",
+          "subject_qid": "Q619440",
+          "answer_stratum": "FJ",
+          "t1_margin_change": 2.9802883099764585,
+          "t2_margin_change": 1.4522331394255161,
+          "generation_U": "الجواب: ساموا الأمريكية.",
+          "generation_D": "الجواب: ساموا الأمريكية."
+        },
+        {
+          "fact_id": "Q626136-GeoNames-country-US",
+          "subject_qid": "Q626136",
+          "answer_stratum": "US",
+          "t1_margin_change": -0.8922938103351044,
+          "t2_margin_change": -0.04509242239873856,
+          "generation_U": "الولايات المتحدة الأمريكية.",
+          "generation_D": "الولايات المتحدة الأمريكية."
+        },
+        {
+          "fact_id": "Q6272457-GeoNames-country-AU",
+          "subject_qid": "Q6272457",
+          "answer_stratum": "AU",
+          "t1_margin_change": -5.169565296324436,
+          "t2_margin_change": -4.4230210850946605,
+          "generation_U": "المملكة المتحدة",
+          "generation_D": "المانيا"
+        },
+        {
+          "fact_id": "Q638621-GeoNames-country-IN",
+          "subject_qid": "Q638621",
+          "answer_stratum": "IN",
+          "t1_margin_change": -10.0220868170436,
+          "t2_margin_change": -10.555349827074679,
+          "generation_U": "الهند",
+          "generation_D": "النمسا"
+        },
+        {
+          "fact_id": "Q6397-GeoNames-country-FR",
+          "subject_qid": "Q6397",
+          "answer_stratum": "FR",
+          "t1_margin_change": -3.4189408354212674,
+          "t2_margin_change": -2.26602697243311,
+          "generation_U": "فرنسا",
+          "generation_D": "فرنسا"
+        },
+        {
+          "fact_id": "Q659887-GeoNames-country-IN",
+          "subject_qid": "Q659887",
+          "answer_stratum": "IN",
+          "t1_margin_change": 1.23165274119674,
+          "t2_margin_change": 2.433459078616579,
+          "generation_U": "الهند",
+          "generation_D": "الهند."
+        },
+        {
+          "fact_id": "Q669967-GeoNames-country-GR",
+          "subject_qid": "Q669967",
+          "answer_stratum": "GR",
+          "t1_margin_change": 5.290586213763163,
+          "t2_margin_change": 5.867692021522089,
+          "generation_U": "اليابان",
+          "generation_D": "اليونان"
+        },
+        {
+          "fact_id": "Q67068-GeoNames-country-CH",
+          "subject_qid": "Q67068",
+          "answer_stratum": "CH",
+          "t1_margin_change": -5.107009841944091,
+          "t2_margin_change": -4.155033198216188,
+          "generation_U": "المكسيك",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q6748057-GeoNames-country-GN",
+          "subject_qid": "Q6748057",
+          "answer_stratum": "GN",
+          "t1_margin_change": 0.12957014204584993,
+          "t2_margin_change": 0.0580283691524528,
+          "generation_U": "موريشيوس",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q684152-GeoNames-country-BI",
+          "subject_qid": "Q684152",
+          "answer_stratum": "BI",
+          "t1_margin_change": 4.020409853272213,
+          "t2_margin_change": 2.0463713441058644,
+          "generation_U": "إيطاليا",
+          "generation_D": "الإجابة: إيطاليا"
+        },
+        {
+          "fact_id": "Q69060-GeoNames-country-CN",
+          "subject_qid": "Q69060",
+          "answer_stratum": "CN",
+          "t1_margin_change": 0.051785125775495544,
+          "t2_margin_change": 1.3258373113640118,
+          "generation_U": "الصين",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q69216-GeoNames-country-CH",
+          "subject_qid": "Q69216",
+          "answer_stratum": "CH",
+          "t1_margin_change": -11.190549397015502,
+          "t2_margin_change": -10.747362192898436,
+          "generation_U": "سويسرا",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q693093-GeoNames-country-KE",
+          "subject_qid": "Q693093",
+          "answer_stratum": "KE",
+          "t1_margin_change": -3.221160381915979,
+          "t2_margin_change": 0.773086266242899,
+          "generation_U": "كينيا",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q71247-GeoNames-country-CN",
+          "subject_qid": "Q71247",
+          "answer_stratum": "CN",
+          "t1_margin_change": -0.5482144799170783,
+          "t2_margin_change": 0.25281754572642967,
+          "generation_U": "الصين",
+          "generation_D": "الصين."
+        },
+        {
+          "fact_id": "Q71284-GeoNames-country-CN",
+          "subject_qid": "Q71284",
+          "answer_stratum": "CN",
+          "t1_margin_change": -3.082243968092371,
+          "t2_margin_change": -1.863244864391163,
+          "generation_U": "الصين",
+          "generation_D": "الصين"
+        },
+        {
+          "fact_id": "Q719707-GeoNames-country-CA",
+          "subject_qid": "Q719707",
+          "answer_stratum": "CA",
+          "t1_margin_change": -5.537800449732458,
+          "t2_margin_change": -13.708004709871602,
+          "generation_U": "كندا",
+          "generation_D": "كندا"
+        },
+        {
+          "fact_id": "Q720616-GeoNames-country-IR",
+          "subject_qid": "Q720616",
+          "answer_stratum": "IR",
+          "t1_margin_change": -4.267134060690296,
+          "t2_margin_change": -2.41574372521427,
+          "generation_U": "إيران",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q734315-GeoNames-country-GE",
+          "subject_qid": "Q734315",
+          "answer_stratum": "GE",
+          "t1_margin_change": -4.746186062810011,
+          "t2_margin_change": -5.350880110818252,
+          "generation_U": "الإجابة: جورجيا",
+          "generation_D": "النرويج"
+        },
+        {
+          "fact_id": "Q745051-GeoNames-country-PL",
+          "subject_qid": "Q745051",
+          "answer_stratum": "PL",
+          "t1_margin_change": -6.8681335668079555,
+          "t2_margin_change": -5.985498588532209,
+          "generation_U": "قيرغيزستان",
+          "generation_D": "روسيا"
+        },
+        {
+          "fact_id": "Q745065-GeoNames-country-TR",
+          "subject_qid": "Q745065",
+          "answer_stratum": "TR",
+          "t1_margin_change": -4.006291160803812,
+          "t2_margin_change": -3.5249692497382057,
+          "generation_U": "تركيا",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q750989-GeoNames-country-UZ",
+          "subject_qid": "Q750989",
+          "answer_stratum": "UZ",
+          "t1_margin_change": 2.3466951926093316,
+          "t2_margin_change": 1.3459623297458165,
+          "generation_U": "المغرب",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q754776-GeoNames-country-SK",
+          "subject_qid": "Q754776",
+          "answer_stratum": "SK",
+          "t1_margin_change": 1.3155675833113492,
+          "t2_margin_change": 2.923021240683738,
+          "generation_U": "رومانيا",
+          "generation_D": "رومانيا"
+        },
+        {
+          "fact_id": "Q765472-GeoNames-country-MX",
+          "subject_qid": "Q765472",
+          "answer_stratum": "MX",
+          "t1_margin_change": -0.8655582828214392,
+          "t2_margin_change": 0.8280450741294771,
+          "generation_U": "المكسيك",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q766923-GeoNames-country-AR",
+          "subject_qid": "Q766923",
+          "answer_stratum": "AR",
+          "t1_margin_change": -1.0491320930887014,
+          "t2_margin_change": -0.7625865430163685,
+          "generation_U": "البرتغال",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q798872-GeoNames-country-GR",
+          "subject_qid": "Q798872",
+          "answer_stratum": "GR",
+          "t1_margin_change": 0.4509816513527767,
+          "t2_margin_change": -0.10315075073958724,
+          "generation_U": "اليابان",
+          "generation_D": "اليابان"
+        },
+        {
+          "fact_id": "Q81030-GeoNames-country-IR",
+          "subject_qid": "Q81030",
+          "answer_stratum": "IR",
+          "t1_margin_change": 3.013959581963718,
+          "t2_margin_change": 3.9459788492531516,
+          "generation_U": "الهند.",
+          "generation_D": "الإجابة: قيرغيزستان"
+        },
+        {
+          "fact_id": "Q820972-GeoNames-country-DJ",
+          "subject_qid": "Q820972",
+          "answer_stratum": "DJ",
+          "t1_margin_change": -7.5572097327094525,
+          "t2_margin_change": -8.322224302217364,
+          "generation_U": "موريتانيا",
+          "generation_D": "الجزائر"
+        },
+        {
+          "fact_id": "Q833016-GeoNames-country-UY",
+          "subject_qid": "Q833016",
+          "answer_stratum": "UY",
+          "t1_margin_change": -1.923967495415127,
+          "t2_margin_change": -2.4481160853174515,
+          "generation_U": "كولومبيا",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q837478-GeoNames-country-SK",
+          "subject_qid": "Q837478",
+          "answer_stratum": "SK",
+          "t1_margin_change": 2.9103495699819177,
+          "t2_margin_change": 2.934388732537627,
+          "generation_U": "روسيا",
+          "generation_D": "روسيا"
+        },
+        {
+          "fact_id": "Q842018-GeoNames-country-SK",
+          "subject_qid": "Q842018",
+          "answer_stratum": "SK",
+          "t1_margin_change": 4.124380293069407,
+          "t2_margin_change": 3.6985882502049208,
+          "generation_U": "الهند",
+          "generation_D": "النمسا"
+        },
+        {
+          "fact_id": "Q845928-GeoNames-country-FR",
+          "subject_qid": "Q845928",
+          "answer_stratum": "FR",
+          "t1_margin_change": -1.093688486670544,
+          "t2_margin_change": -1.2156390790946716,
+          "generation_U": "المكسيك",
+          "generation_D": "كوريا."
+        },
+        {
+          "fact_id": "Q850676-GeoNames-country-CZ",
+          "subject_qid": "Q850676",
+          "answer_stratum": "CZ",
+          "t1_margin_change": -4.5552691533230245,
+          "t2_margin_change": -2.771037057042122,
+          "generation_U": "الإجابة: إسبانيا",
+          "generation_D": "رومانيا"
+        },
+        {
+          "fact_id": "Q854333-GeoNames-country-KG",
+          "subject_qid": "Q854333",
+          "answer_stratum": "KG",
+          "t1_margin_change": 0.05128294094174635,
+          "t2_margin_change": 2.8150756165996427,
+          "generation_U": "قيرغيزستان",
+          "generation_D": "كندا"
+        },
+        {
+          "fact_id": "Q854870-GeoNames-country-FR",
+          "subject_qid": "Q854870",
+          "answer_stratum": "FR",
+          "t1_margin_change": 2.2967665912896678,
+          "t2_margin_change": 2.7494332714534266,
+          "generation_U": "هولندا",
+          "generation_D": "النرويج"
+        },
+        {
+          "fact_id": "Q860304-GeoNames-country-CI",
+          "subject_qid": "Q860304",
+          "answer_stratum": "CI",
+          "t1_margin_change": 0.4581446004285681,
+          "t2_margin_change": 0.7173050269602754,
+          "generation_U": "ليبيريا",
+          "generation_D": "المملكة المتحدة"
+        },
+        {
+          "fact_id": "Q870475-GeoNames-country-IQ",
+          "subject_qid": "Q870475",
+          "answer_stratum": "IQ",
+          "t1_margin_change": -3.1751182228326797,
+          "t2_margin_change": -0.5286632631905377,
+          "generation_U": "الإجابة: الهند",
+          "generation_D": "المغرب"
+        },
+        {
+          "fact_id": "Q875070-GeoNames-country-PH",
+          "subject_qid": "Q875070",
+          "answer_stratum": "PH",
+          "t1_margin_change": -2.193185318421456,
+          "t2_margin_change": -1.7147649736143649,
+          "generation_U": "تركيا",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q888678-GeoNames-country-IR",
+          "subject_qid": "Q888678",
+          "answer_stratum": "IR",
+          "t1_margin_change": -3.879229857760947,
+          "t2_margin_change": -3.639475794392638,
+          "generation_U": "الإجابة: كندا",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q888697-GeoNames-country-IR",
+          "subject_qid": "Q888697",
+          "answer_stratum": "IR",
+          "t1_margin_change": 3.179319756804034,
+          "t2_margin_change": 0.8643839228898287,
+          "generation_U": "الهند",
+          "generation_D": "الإجابة: إيران"
+        },
+        {
+          "fact_id": "Q896185-GeoNames-country-CF",
+          "subject_qid": "Q896185",
+          "answer_stratum": "CF",
+          "t1_margin_change": -1.4397367568381014,
+          "t2_margin_change": -1.6986054526641965,
+          "generation_U": "المكسيك",
+          "generation_D": "تركيا"
+        },
+        {
+          "fact_id": "Q942842-GeoNames-country-CZ",
+          "subject_qid": "Q942842",
+          "answer_stratum": "CZ",
+          "t1_margin_change": -0.5379991669906303,
+          "t2_margin_change": -0.044196761038620025,
+          "generation_U": "بولندا",
+          "generation_D": "بولندا"
+        },
+        {
+          "fact_id": "Q967701-GeoNames-country-IR",
+          "subject_qid": "Q967701",
+          "answer_stratum": "IR",
+          "t1_margin_change": -4.236492271556926,
+          "t2_margin_change": -2.8619332285088603,
+          "generation_U": "النرويج",
+          "generation_D": "النمسا"
+        },
+        {
+          "fact_id": "Q985622-GeoNames-country-NA",
+          "subject_qid": "Q985622",
+          "answer_stratum": "NA",
+          "t1_margin_change": -5.23160700886001,
+          "t2_margin_change": -6.112693500483147,
+          "generation_U": "الإجابة: الإكوادور",
+          "generation_D": "المكسيك"
+        },
+        {
+          "fact_id": "Q986102-GeoNames-country-CZ",
+          "subject_qid": "Q986102",
+          "answer_stratum": "CZ",
+          "t1_margin_change": -8.726882709626807,
+          "t2_margin_change": -3.695817427127622,
+          "generation_U": "ألمانيا",
+          "generation_D": "إسبانيا"
+        },
+        {
+          "fact_id": "Q993200-GeoNames-country-ZM",
+          "subject_qid": "Q993200",
+          "answer_stratum": "ZM",
+          "t1_margin_change": -0.2744866503671801,
+          "t2_margin_change": 0.850684013665159,
+          "generation_U": "تنزانيا",
+          "generation_D": "الكاميرون"
+        }
+      ]
+    },
+    "hebrew_cbs": {
+      "subjects": 240,
+      "primary_t1_paired_margin": {
+        "subjects": 240,
+        "answer_strata": 14,
+        "answer_macro_mean": -0.30759593983180317,
+        "subject_weighted_mean": -0.19293495835111873,
+        "hierarchical_bootstrap_ci95": [
+          -0.8468078983464089,
+          0.16087571998702543
+        ],
+        "two_sided_p": 0.205810546875,
+        "test": "exact_answer_stratum_sign_flip_16384_assignments",
+        "bootstrap_replicates": 10000
+      },
+      "secondary_t2_paired_margin": {
+        "subjects": 240,
+        "answer_strata": 14,
+        "answer_macro_mean": -0.38100454414440543,
+        "subject_weighted_mean": -0.39846985371996957,
+        "hierarchical_bootstrap_ci95": [
+          -0.8658669848487006,
+          0.09035190836193804
+        ],
+        "two_sided_p": 0.07470703125,
+        "test": "exact_answer_stratum_sign_flip_16384_assignments",
+        "bootstrap_replicates": 10000
+      },
+      "secondary_t1_gold_loglik_change": {
+        "subjects": 240,
+        "answer_strata": 14,
+        "answer_macro_mean": -0.27165685322489147,
+        "subject_weighted_mean": -0.19844587279534,
+        "hierarchical_bootstrap_ci95": [
+          -0.7121950104871614,
+          0.12572109749821642
+        ],
+        "two_sided_p": 0.16015625,
+        "test": "exact_answer_stratum_sign_flip_16384_assignments",
+        "bootstrap_replicates": 10000
+      },
+      "generation": {
+        "U": {
+          "strict_exact_count": 8,
+          "prefix_rematch_count": 9,
+          "prefix_only_rescues": 1,
+          "denominator": 240,
+          "generation_hit_cap_count": 0
+        },
+        "D": {
+          "strict_exact_count": 4,
+          "prefix_rematch_count": 4,
+          "prefix_only_rescues": 0,
+          "denominator": 240,
+          "generation_hit_cap_count": 0
+        }
+      },
+      "paired_generation": {
+        "strict_exact": {
+          "both_correct": 2,
+          "unmarked_only_correct": 6,
+          "marked_only_correct": 2,
+          "neither_correct": 230
+        },
+        "prefix_rematch": {
+          "both_correct": 2,
+          "unmarked_only_correct": 7,
+          "marked_only_correct": 2,
+          "neither_correct": 229
+        }
+      },
+      "english_control": null,
+      "subject_token_delta": {
+        "mean": 7.020833333333333,
+        "median": 7.0,
+        "negative": 0,
+        "zero": 0,
+        "positive": 240
+      },
+      "per_fact": [
+        {
+          "fact_id": "Q1000900-CBS-subdistrict-23",
+          "subject_qid": "Q1000900",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": -1.4342896358575672,
+          "t2_margin_change": -3.9432569816708565,
+          "generation_U": "חוף",
+          "generation_D": "שדה ורבין"
+        },
+        {
+          "fact_id": "Q1001622-CBS-subdistrict-21",
+          "subject_qid": "Q1001622",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 0.2007615566253662,
+          "t2_margin_change": -1.3683243989944458,
+          "generation_U": "מחוז חוף",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q1011497-CBS-subdistrict-21",
+          "subject_qid": "Q1011497",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 3.1489588618278503,
+          "t2_margin_change": 0.3901074528694153,
+          "generation_U": "חיספון",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q1011505-CBS-subdistrict-43",
+          "subject_qid": "Q1011505",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 0.1996232785168104,
+          "t2_margin_change": 0.39809074392542243,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q1011518-CBS-subdistrict-61",
+          "subject_qid": "Q1011518",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": 5.944274512803531,
+          "t2_margin_change": 1.167474116795347,
+          "generation_U": "שדה",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q1012741-CBS-subdistrict-32",
+          "subject_qid": "Q1012741",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -1.715439866296947,
+          "t2_margin_change": -0.3649849663488567,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יהודה"
+        },
+        {
+          "fact_id": "Q1018902-CBS-subdistrict-62",
+          "subject_qid": "Q1018902",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": -5.350166691627237,
+          "t2_margin_change": -2.39223532199685,
+          "generation_U": "שדה אלון",
+          "generation_D": "חלץ"
+        },
+        {
+          "fact_id": "Q1019478-CBS-subdistrict-21",
+          "subject_qid": "Q1019478",
+          "answer_stratum": "צפת",
+          "t1_margin_change": -0.34137606620788574,
+          "t2_margin_change": 3.0011050701141357,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q1022506-CBS-subdistrict-22",
+          "subject_qid": "Q1022506",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -1.6495681311935186,
+          "t2_margin_change": -2.6262491699308157,
+          "generation_U": "חולדה",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q1025294-CBS-subdistrict-11",
+          "subject_qid": "Q1025294",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": -0.8601192682981491,
+          "t2_margin_change": 0.04754320811480284,
+          "generation_U": "מרכז",
+          "generation_D": "שפלת ירקון"
+        },
+        {
+          "fact_id": "Q1026531-CBS-subdistrict-62",
+          "subject_qid": "Q1026531",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 4.225972345098853,
+          "t2_margin_change": -3.9473325846192893,
+          "generation_U": "שדות",
+          "generation_D": "שדה בוקר נמצאת בנפה: נגב."
+        },
+        {
+          "fact_id": "Q1026806-CBS-subdistrict-62",
+          "subject_qid": "Q1026806",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 1.264758708246518,
+          "t2_margin_change": 0.338010360908811,
+          "generation_U": "חולון",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q1026815-CBS-subdistrict-11",
+          "subject_qid": "Q1026815",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": 1.0983312278985977,
+          "t2_margin_change": -0.7562828660011292,
+          "generation_U": "שדה אלון",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q1186956-CBS-subdistrict-22",
+          "subject_qid": "Q1186956",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -3.4104832876473665,
+          "t2_margin_change": -3.750788901001215,
+          "generation_U": "תקוע",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q1339896-CBS-subdistrict-22",
+          "subject_qid": "Q1339896",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -0.7719702124595642,
+          "t2_margin_change": -0.5770617835223675,
+          "generation_U": "מרדכי",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q135484-CBS-subdistrict-31",
+          "subject_qid": "Q135484",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": 1.863463751040399,
+          "t2_margin_change": 2.050813131965697,
+          "generation_U": "שער העמקים נמצאת בנפה מרכז.",
+          "generation_D": "חוֹקֵק"
+        },
+        {
+          "fact_id": "Q135485-CBS-subdistrict-31",
+          "subject_qid": "Q135485",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": 1.9756255056709051,
+          "t2_margin_change": 0.7312361714430153,
+          "generation_U": "שפלת יפו-רמת עכרם",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q1399102-CBS-subdistrict-23",
+          "subject_qid": "Q1399102",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": 1.1068170994985849,
+          "t2_margin_change": 0.09044014336541295,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q1487392-CBS-subdistrict-21",
+          "subject_qid": "Q1487392",
+          "answer_stratum": "צפת",
+          "t1_margin_change": -1.9998514652252197,
+          "t2_margin_change": -3.557610034942627,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q151920-CBS-subdistrict-22",
+          "subject_qid": "Q151920",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -2.7970653101801872,
+          "t2_margin_change": -0.8104940690100193,
+          "generation_U": "מחוז עכו",
+          "generation_D": "שפלת יפו-מצפה ים"
+        },
+        {
+          "fact_id": "Q152385-CBS-subdistrict-24",
+          "subject_qid": "Q152385",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -3.405872106552124,
+          "t2_margin_change": -2.16522216796875,
+          "generation_U": "מחוז חוף",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q152387-CBS-subdistrict-31",
+          "subject_qid": "Q152387",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": -0.9727302151732147,
+          "t2_margin_change": 0.7076634168624878,
+          "generation_U": "נפת חפר",
+          "generation_D": "חיפה"
+        },
+        {
+          "fact_id": "Q152418-CBS-subdistrict-24",
+          "subject_qid": "Q152418",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -0.1472998857498169,
+          "t2_margin_change": 1.0428618788719177,
+          "generation_U": "מחוז הגליל העליון",
+          "generation_D": "כרמל"
+        },
+        {
+          "fact_id": "Q152436-CBS-subdistrict-42",
+          "subject_qid": "Q152436",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -0.3751051735598594,
+          "t2_margin_change": -0.9258751134620979,
+          "generation_U": "מרכז",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q152467-CBS-subdistrict-52",
+          "subject_qid": "Q152467",
+          "answer_stratum": "תל אביב",
+          "t1_margin_change": -5.98443500045687,
+          "t2_margin_change": -1.4236963894218206,
+          "generation_U": "תל אביב",
+          "generation_D": "שפלת יפו-מצפון"
+        },
+        {
+          "fact_id": "Q152473-CBS-subdistrict-62",
+          "subject_qid": "Q152473",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 3.4419445831881603,
+          "t2_margin_change": -2.598482984540169,
+          "generation_U": "נפת ערד",
+          "generation_D": "שדה"
+        },
+        {
+          "fact_id": "Q152501-CBS-subdistrict-52",
+          "subject_qid": "Q152501",
+          "answer_stratum": "תל אביב",
+          "t1_margin_change": -3.6723217237740755,
+          "t2_margin_change": 1.7881838977336884,
+          "generation_U": "מרכז",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q152659-CBS-subdistrict-42",
+          "subject_qid": "Q152659",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": 0.32605103723471984,
+          "t2_margin_change": 3.6466215836117044,
+          "generation_U": "חולון",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q16132344-CBS-subdistrict-44",
+          "subject_qid": "Q16132344",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -0.1308451259828871,
+          "t2_margin_change": 0.538821536465548,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יהודה"
+        },
+        {
+          "fact_id": "Q165623-CBS-subdistrict-21",
+          "subject_qid": "Q165623",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 2.5305750370025635,
+          "t2_margin_change": 1.0135941803455353,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q1660243-CBS-subdistrict-21",
+          "subject_qid": "Q1660243",
+          "answer_stratum": "צפת",
+          "t1_margin_change": -1.507278323173523,
+          "t2_margin_change": -0.6467683911323547,
+          "generation_U": "חיסכון",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q166857-CBS-subdistrict-32",
+          "subject_qid": "Q166857",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": 2.638528516050428,
+          "t2_margin_change": 4.130066591780633,
+          "generation_U": "חיפה",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q166865-CBS-subdistrict-32",
+          "subject_qid": "Q166865",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -0.05529119726270437,
+          "t2_margin_change": -0.24521101312711835,
+          "generation_U": "מרדכי",
+          "generation_D": "שפלת ירושלים"
+        },
+        {
+          "fact_id": "Q1676894-CBS-subdistrict-22",
+          "subject_qid": "Q1676894",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": 0.797753069549799,
+          "t2_margin_change": 0.11231819912791252,
+          "generation_U": "חי\"ש",
+          "generation_D": "שפלת יפו-מצפון"
+        },
+        {
+          "fact_id": "Q168215-CBS-subdistrict-31",
+          "subject_qid": "Q168215",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": 0.07397330924868584,
+          "t2_margin_change": -0.021578644402325153,
+          "generation_U": "חיפה",
+          "generation_D": "חיפה"
+        },
+        {
+          "fact_id": "Q1759981-CBS-subdistrict-44",
+          "subject_qid": "Q1759981",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": 0.35751084238290787,
+          "t2_margin_change": -3.704071492073126,
+          "generation_U": "שער הנגב",
+          "generation_D": "שפלת יפו-תל אביב"
+        },
+        {
+          "fact_id": "Q1814658-CBS-subdistrict-32",
+          "subject_qid": "Q1814658",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -0.6179744265973568,
+          "t2_margin_change": 0.20714646624401212,
+          "generation_U": "שפלת עזה",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q1853103-CBS-subdistrict-22",
+          "subject_qid": "Q1853103",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": 1.225925536826253,
+          "t2_margin_change": -0.6075979452580214,
+          "generation_U": "שדה יוסף",
+          "generation_D": "שדה ורבין"
+        },
+        {
+          "fact_id": "Q192213-CBS-subdistrict-53",
+          "subject_qid": "Q192213",
+          "answer_stratum": "תל אביב",
+          "t1_margin_change": 0.9388030497357249,
+          "t2_margin_change": 1.2796553988009691,
+          "generation_U": "אשכול",
+          "generation_D": "תל אביב"
+        },
+        {
+          "fact_id": "Q192225-CBS-subdistrict-41",
+          "subject_qid": "Q192225",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -1.4154407068708679,
+          "t2_margin_change": -2.449243392300559,
+          "generation_U": "נפת תל אביב",
+          "generation_D": "שפלת יפו-מצפון"
+        },
+        {
+          "fact_id": "Q1941126-CBS-subdistrict-32",
+          "subject_qid": "Q1941126",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -1.3480941914021969,
+          "t2_margin_change": -1.940156692173332,
+          "generation_U": "שפלת יפו-מפתח",
+          "generation_D": "חיפה"
+        },
+        {
+          "fact_id": "Q2111856-CBS-subdistrict-61",
+          "subject_qid": "Q2111856",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -3.355342761380598,
+          "t2_margin_change": -0.061806146026356146,
+          "generation_U": "חיפה",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2130036-CBS-subdistrict-11",
+          "subject_qid": "Q2130036",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": -0.9337637946009636,
+          "t2_margin_change": -3.6961839608848095,
+          "generation_U": "שפלת יהודה",
+          "generation_D": "לוזון"
+        },
+        {
+          "fact_id": "Q2168131-CBS-subdistrict-61",
+          "subject_qid": "Q2168131",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": 1.6123562550055794,
+          "t2_margin_change": -1.681852733134292,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2371396-CBS-subdistrict-22",
+          "subject_qid": "Q2371396",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -0.7144106272608042,
+          "t2_margin_change": -3.315845437347889,
+          "generation_U": "חולדה",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2389508-CBS-subdistrict-51",
+          "subject_qid": "Q2389508",
+          "answer_stratum": "תל אביב",
+          "t1_margin_change": -3.8110628593713045,
+          "t2_margin_change": -1.2314953841269016,
+          "generation_U": "השומרון",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2390257-CBS-subdistrict-24",
+          "subject_qid": "Q2390257",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -0.07633399963378906,
+          "t2_margin_change": 2.301708459854126,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2413397-CBS-subdistrict-21",
+          "subject_qid": "Q2413397",
+          "answer_stratum": "צפת",
+          "t1_margin_change": -0.005626678466796875,
+          "t2_margin_change": -2.7138878107070923,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יפו-מצפון"
+        },
+        {
+          "fact_id": "Q2418411-CBS-subdistrict-32",
+          "subject_qid": "Q2418411",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -0.4532271334901452,
+          "t2_margin_change": -4.259139403467998,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2449546-CBS-subdistrict-61",
+          "subject_qid": "Q2449546",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": 6.428209550882457,
+          "t2_margin_change": 7.634108575861319,
+          "generation_U": "חי\"ש",
+          "generation_D": "שפרי"
+        },
+        {
+          "fact_id": "Q2471186-CBS-subdistrict-61",
+          "subject_qid": "Q2471186",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": 0.5170879972720286,
+          "t2_margin_change": 3.463491226779297,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q2473572-CBS-subdistrict-62",
+          "subject_qid": "Q2473572",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": -1.249651992780855,
+          "t2_margin_change": 5.407398286144598,
+          "generation_U": "חברון",
+          "generation_D": "שדה דור"
+        },
+        {
+          "fact_id": "Q2475182-CBS-subdistrict-32",
+          "subject_qid": "Q2475182",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -0.6797312912531197,
+          "t2_margin_change": -1.8959633482154459,
+          "generation_U": "חי\"ש",
+          "generation_D": "שפלת יפו-מצפון"
+        },
+        {
+          "fact_id": "Q25488222-CBS-subdistrict-42",
+          "subject_qid": "Q25488222",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -2.1931452706921846,
+          "t2_margin_change": -4.986353340558708,
+          "generation_U": "שפלת ירושלים",
+          "generation_D": "שפלת ירושלים"
+        },
+        {
+          "fact_id": "Q2570427-CBS-subdistrict-61",
+          "subject_qid": "Q2570427",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -1.7715815684059635,
+          "t2_margin_change": 3.295343513134867,
+          "generation_U": "אשכול",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q2572624-CBS-subdistrict-24",
+          "subject_qid": "Q2572624",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -0.8969640731811523,
+          "t2_margin_change": 1.461653709411621,
+          "generation_U": "מחוז מנשה",
+          "generation_D": "מרדכי"
+        },
+        {
+          "fact_id": "Q2573500-CBS-subdistrict-22",
+          "subject_qid": "Q2573500",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -0.893316125497222,
+          "t2_margin_change": -1.23471699655056,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q257555-CBS-subdistrict-62",
+          "subject_qid": "Q257555",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 4.9006064009299735,
+          "t2_margin_change": -0.30192301646457054,
+          "generation_U": "שער הנגב",
+          "generation_D": "מרדכי"
+        },
+        {
+          "fact_id": "Q2588837-CBS-subdistrict-21",
+          "subject_qid": "Q2588837",
+          "answer_stratum": "צפת",
+          "t1_margin_change": -0.06019401550292969,
+          "t2_margin_change": -0.10522419214248657,
+          "generation_U": "מחוז חוף",
+          "generation_D": "חיפה"
+        },
+        {
+          "fact_id": "Q2612736-CBS-subdistrict-43",
+          "subject_qid": "Q2612736",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 0.5088081210851669,
+          "t2_margin_change": -3.173113444005139,
+          "generation_U": "שדה יהודה",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q2612861-CBS-subdistrict-43",
+          "subject_qid": "Q2612861",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 2.163331528980052,
+          "t2_margin_change": 1.5359276358503848,
+          "generation_U": "חבל עזה",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2613167-CBS-subdistrict-43",
+          "subject_qid": "Q2613167",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 1.877062524916255,
+          "t2_margin_change": -1.0045308889239095,
+          "generation_U": "מרכז",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2613353-CBS-subdistrict-42",
+          "subject_qid": "Q2613353",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -1.4727309700101614,
+          "t2_margin_change": -0.3271728240069933,
+          "generation_U": "שער הנגב",
+          "generation_D": "שדה ורבין"
+        },
+        {
+          "fact_id": "Q2614185-CBS-subdistrict-42",
+          "subject_qid": "Q2614185",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -1.643279326846823,
+          "t2_margin_change": -1.9151654521701857,
+          "generation_U": "שפיר",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2614192-CBS-subdistrict-42",
+          "subject_qid": "Q2614192",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -0.7276145353680477,
+          "t2_margin_change": 2.551886815810576,
+          "generation_U": "שדה אליהו",
+          "generation_D": "שפלת ירושלים"
+        },
+        {
+          "fact_id": "Q2614199-CBS-subdistrict-43",
+          "subject_qid": "Q2614199",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 1.3634996447362937,
+          "t2_margin_change": -0.5922117815061938,
+          "generation_U": "שער הנגב",
+          "generation_D": "שדה"
+        },
+        {
+          "fact_id": "Q2614214-CBS-subdistrict-43",
+          "subject_qid": "Q2614214",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 1.5287975078099407,
+          "t2_margin_change": -3.4697260904940777,
+          "generation_U": "שדה אלון",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2614818-CBS-subdistrict-43",
+          "subject_qid": "Q2614818",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 3.7879663158673793,
+          "t2_margin_change": 1.064798208186403,
+          "generation_U": "מרמורק",
+          "generation_D": "שפלת"
+        },
+        {
+          "fact_id": "Q2614824-CBS-subdistrict-43",
+          "subject_qid": "Q2614824",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": -0.5366405652748654,
+          "t2_margin_change": 1.0224799802526832,
+          "generation_U": "שדה הארץ",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2614828-CBS-subdistrict-43",
+          "subject_qid": "Q2614828",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 0.976579015419702,
+          "t2_margin_change": -0.9677789297420532,
+          "generation_U": "שער הנגב",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q2623238-CBS-subdistrict-62",
+          "subject_qid": "Q2623238",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": -0.9395294895948609,
+          "t2_margin_change": 1.6442022832634393,
+          "generation_U": "חברון",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2639602-CBS-subdistrict-21",
+          "subject_qid": "Q2639602",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 1.7534492015838623,
+          "t2_margin_change": 1.166869044303894,
+          "generation_U": "מרדכי",
+          "generation_D": "מְחוֹזָה יְהוּדִי"
+        },
+        {
+          "fact_id": "Q2640151-CBS-subdistrict-24",
+          "subject_qid": "Q2640151",
+          "answer_stratum": "עכו",
+          "t1_margin_change": 0.15618538856506348,
+          "t2_margin_change": 2.8952640295028687,
+          "generation_U": "מחוז מרכז",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q2655682-CBS-subdistrict-25",
+          "subject_qid": "Q2655682",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": -1.0109932336490601,
+          "t2_margin_change": 2.4853027500212193,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2667061-CBS-subdistrict-31",
+          "subject_qid": "Q2667061",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": -2.5978251863271,
+          "t2_margin_change": -2.57136308029294,
+          "generation_U": "חיפה",
+          "generation_D": "חיפה"
+        },
+        {
+          "fact_id": "Q2667322-CBS-subdistrict-31",
+          "subject_qid": "Q2667322",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": -1.0654364135116339,
+          "t2_margin_change": -0.4949429561384022,
+          "generation_U": "חיפה",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q269858-CBS-subdistrict-32",
+          "subject_qid": "Q269858",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": 0.7511177295818925,
+          "t2_margin_change": -1.3940360844135284,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q2776285-CBS-subdistrict-41",
+          "subject_qid": "Q2776285",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -0.8844284808437806,
+          "t2_margin_change": 0.016604530508629978,
+          "generation_U": "שדה",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2776779-CBS-subdistrict-42",
+          "subject_qid": "Q2776779",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": 0.5433185352594592,
+          "t2_margin_change": -1.473678833048325,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2776831-CBS-subdistrict-22",
+          "subject_qid": "Q2776831",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -2.024304011836648,
+          "t2_margin_change": -3.785177579149604,
+          "generation_U": "שדה אילן נמצאת בנפה: אזור תעשייה.",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2776835-CBS-subdistrict-62",
+          "subject_qid": "Q2776835",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 5.063109092850937,
+          "t2_margin_change": 2.783315369510092,
+          "generation_U": "שער הנגב",
+          "generation_D": "שדה וֶרֶת"
+        },
+        {
+          "fact_id": "Q2776841-CBS-subdistrict-44",
+          "subject_qid": "Q2776841",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -0.2536450137558859,
+          "t2_margin_change": -1.6416517023462802,
+          "generation_U": "שדה יוסף",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2776865-CBS-subdistrict-23",
+          "subject_qid": "Q2776865",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": -0.4970707534812391,
+          "t2_margin_change": -0.9413018907653168,
+          "generation_U": "חיספון",
+          "generation_D": "חוֹקֵק"
+        },
+        {
+          "fact_id": "Q2776880-CBS-subdistrict-21",
+          "subject_qid": "Q2776880",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 3.490813970565796,
+          "t2_margin_change": 1.5563842058181763,
+          "generation_U": "שער הנגב",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2776935-CBS-subdistrict-22",
+          "subject_qid": "Q2776935",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -3.3160490468144417,
+          "t2_margin_change": -4.428083445876837,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2776946-CBS-subdistrict-23",
+          "subject_qid": "Q2776946",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": -1.3377212674822658,
+          "t2_margin_change": 1.7955770548433065,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2777017-CBS-subdistrict-21",
+          "subject_qid": "Q2777017",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 1.2149782180786133,
+          "t2_margin_change": 1.080393671989441,
+          "generation_U": "מטה יהודה",
+          "generation_D": "חולון"
+        },
+        {
+          "fact_id": "Q2777055-CBS-subdistrict-22",
+          "subject_qid": "Q2777055",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": 0.19905321300029755,
+          "t2_margin_change": -2.629459336400032,
+          "generation_U": "שפלת יפו-מצפון",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2777088-CBS-subdistrict-32",
+          "subject_qid": "Q2777088",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -0.03578611556440592,
+          "t2_margin_change": -0.32275748159736395,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q2777147-CBS-subdistrict-32",
+          "subject_qid": "Q2777147",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": 0.6942521324381232,
+          "t2_margin_change": -0.9072444448247552,
+          "generation_U": "מרום הגליל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2777225-CBS-subdistrict-31",
+          "subject_qid": "Q2777225",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": -3.2981893718242645,
+          "t2_margin_change": 0.28586121439002454,
+          "generation_U": "חיפה",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2777234-CBS-subdistrict-21",
+          "subject_qid": "Q2777234",
+          "answer_stratum": "צפת",
+          "t1_margin_change": -1.1986637115478516,
+          "t2_margin_change": -0.3360653519630432,
+          "generation_U": "חיפה",
+          "generation_D": "שדה"
+        },
+        {
+          "fact_id": "Q2777301-CBS-subdistrict-22",
+          "subject_qid": "Q2777301",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": 0.5871205516159534,
+          "t2_margin_change": -0.5780003480613232,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2777328-CBS-subdistrict-31",
+          "subject_qid": "Q2777328",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": 1.260216218419373,
+          "t2_margin_change": 5.780758385080844,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2777329-CBS-subdistrict-23",
+          "subject_qid": "Q2777329",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": 4.451364535605535,
+          "t2_margin_change": 0.31677309167571366,
+          "generation_U": "חיפה",
+          "generation_D": "שפרעם"
+        },
+        {
+          "fact_id": "Q2777339-CBS-subdistrict-23",
+          "subject_qid": "Q2777339",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": 0.08534004795365036,
+          "t2_margin_change": -2.635490090236999,
+          "generation_U": "שפלת יפו-מצפון",
+          "generation_D": "שפלת יהודה"
+        },
+        {
+          "fact_id": "Q2777355-CBS-subdistrict-32",
+          "subject_qid": "Q2777355",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -0.05323925195261836,
+          "t2_margin_change": -1.5381823722273111,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2777371-CBS-subdistrict-44",
+          "subject_qid": "Q2777371",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -0.34958534670295194,
+          "t2_margin_change": -0.36946820514276624,
+          "generation_U": "שדה אלון",
+          "generation_D": "שפלת יהודה"
+        },
+        {
+          "fact_id": "Q2777403-CBS-subdistrict-24",
+          "subject_qid": "Q2777403",
+          "answer_stratum": "עכו",
+          "t1_margin_change": 3.0090436935424805,
+          "t2_margin_change": 3.5024027824401855,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "חיפה"
+        },
+        {
+          "fact_id": "Q2777474-CBS-subdistrict-23",
+          "subject_qid": "Q2777474",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": -2.160146325826645,
+          "t2_margin_change": 0.970781821408309,
+          "generation_U": "חולדה",
+          "generation_D": "מרדכי"
+        },
+        {
+          "fact_id": "Q277749-CBS-subdistrict-32",
+          "subject_qid": "Q277749",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": 1.639342381618917,
+          "t2_margin_change": 2.40788067644462,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2777518-CBS-subdistrict-23",
+          "subject_qid": "Q2777518",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": 5.478648946154863,
+          "t2_margin_change": 2.567642130772583,
+          "generation_U": "בשומרון",
+          "generation_D": "שדה"
+        },
+        {
+          "fact_id": "Q2777727-CBS-subdistrict-24",
+          "subject_qid": "Q2777727",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -1.6786706447601318,
+          "t2_margin_change": 1.5996527671813965,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2777766-CBS-subdistrict-25",
+          "subject_qid": "Q2777766",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": 0.2848199575673789,
+          "t2_margin_change": -1.6229051516856998,
+          "generation_U": "מחוז חוף",
+          "generation_D": "מחוז חלב"
+        },
+        {
+          "fact_id": "Q2777868-CBS-subdistrict-24",
+          "subject_qid": "Q2777868",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -1.107652187347412,
+          "t2_margin_change": -5.414164304733276,
+          "generation_U": "חיפה",
+          "generation_D": "חיפה"
+        },
+        {
+          "fact_id": "Q2777886-CBS-subdistrict-11",
+          "subject_qid": "Q2777886",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": 0.9572532698512077,
+          "t2_margin_change": -0.05413520336151123,
+          "generation_U": "חי\"ש",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2777893-CBS-subdistrict-61",
+          "subject_qid": "Q2777893",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": 0.6428892585099675,
+          "t2_margin_change": -6.90715003493824,
+          "generation_U": "לורן",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2777930-CBS-subdistrict-61",
+          "subject_qid": "Q2777930",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -0.8049872400588356,
+          "t2_margin_change": -1.9134166826115688,
+          "generation_U": "שער הנגב",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2778037-CBS-subdistrict-11",
+          "subject_qid": "Q2778037",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": 0.5863316133618355,
+          "t2_margin_change": -2.163365602493286,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2778071-CBS-subdistrict-61",
+          "subject_qid": "Q2778071",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": 0.6281576791807311,
+          "t2_margin_change": 4.06708595433156,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2778078-CBS-subdistrict-43",
+          "subject_qid": "Q2778078",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 0.8001901321986225,
+          "t2_margin_change": 1.5797290881164372,
+          "generation_U": "שדה",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2778107-CBS-subdistrict-43",
+          "subject_qid": "Q2778107",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 0.223660711228149,
+          "t2_margin_change": 0.06621369777712971,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q2778113-CBS-subdistrict-11",
+          "subject_qid": "Q2778113",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": -0.4468105584383011,
+          "t2_margin_change": -0.8800322413444519,
+          "generation_U": "שדה יוסף",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2778126-CBS-subdistrict-43",
+          "subject_qid": "Q2778126",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 0.36531569753424264,
+          "t2_margin_change": -1.9177210463676602,
+          "generation_U": "שדה אלון",
+          "generation_D": "שדה"
+        },
+        {
+          "fact_id": "Q2778240-CBS-subdistrict-43",
+          "subject_qid": "Q2778240",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 2.714281228429172,
+          "t2_margin_change": 1.0424805348739028,
+          "generation_U": "חיפה",
+          "generation_D": "שפלת יפו-מצפה יותם"
+        },
+        {
+          "fact_id": "Q279745-CBS-subdistrict-62",
+          "subject_qid": "Q279745",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 1.0920522867018008,
+          "t2_margin_change": -5.145294746980653,
+          "generation_U": "אילת",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2839248-CBS-subdistrict-23",
+          "subject_qid": "Q2839248",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": -3.025247855926864,
+          "t2_margin_change": -1.7120496886782348,
+          "generation_U": "מרמורק",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2843398-CBS-subdistrict-11",
+          "subject_qid": "Q2843398",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": -2.8426697105169296,
+          "t2_margin_change": -5.740798681974411,
+          "generation_U": "שדה הארץ",
+          "generation_D": "שדה ורבין"
+        },
+        {
+          "fact_id": "Q2888533-CBS-subdistrict-24",
+          "subject_qid": "Q2888533",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -2.88751482963562,
+          "t2_margin_change": -2.3305203914642334,
+          "generation_U": "חיפה",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q2888594-CBS-subdistrict-22",
+          "subject_qid": "Q2888594",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": 0.038070209324359894,
+          "t2_margin_change": 1.7234314158558846,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה דומ\"ג"
+        },
+        {
+          "fact_id": "Q2888633-CBS-subdistrict-32",
+          "subject_qid": "Q2888633",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": 1.9853036082349718,
+          "t2_margin_change": -1.1706516537815332,
+          "generation_U": "שדה יצחק נמצאת בנפה: אזור תעשייה.",
+          "generation_D": "שדה ישע"
+        },
+        {
+          "fact_id": "Q2888798-CBS-subdistrict-61",
+          "subject_qid": "Q2888798",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -2.227249765477609,
+          "t2_margin_change": -0.2951016194856493,
+          "generation_U": "שדה משה נמצא בנפה מרכזית.",
+          "generation_D": "שדה משה נמצאת בנפה מרכז"
+        },
+        {
+          "fact_id": "Q2888811-CBS-subdistrict-62",
+          "subject_qid": "Q2888811",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": -5.213725585177599,
+          "t2_margin_change": -1.9816381583514158,
+          "generation_U": "שדה אלון",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2888841-CBS-subdistrict-62",
+          "subject_qid": "Q2888841",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 5.772472520242445,
+          "t2_margin_change": 2.849534447057522,
+          "generation_U": "שער הנגב",
+          "generation_D": "שפלת יהודה"
+        },
+        {
+          "fact_id": "Q2888897-CBS-subdistrict-61",
+          "subject_qid": "Q2888897",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": 0.13826313285244396,
+          "t2_margin_change": 1.1814404093456687,
+          "generation_U": "שפלת יכיני",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2889072-CBS-subdistrict-62",
+          "subject_qid": "Q2889072",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 0.5633348049741471,
+          "t2_margin_change": -0.2729453627252951,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפריר"
+        },
+        {
+          "fact_id": "Q2889122-CBS-subdistrict-62",
+          "subject_qid": "Q2889122",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": -0.6557832828257233,
+          "t2_margin_change": -0.8526775002392242,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2889225-CBS-subdistrict-22",
+          "subject_qid": "Q2889225",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -0.749011717736721,
+          "t2_margin_change": 0.41126372665166855,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q2889270-CBS-subdistrict-31",
+          "subject_qid": "Q2889270",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": -0.29757756274193525,
+          "t2_margin_change": -1.368747484870255,
+          "generation_U": "חי\"ש",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2889278-CBS-subdistrict-61",
+          "subject_qid": "Q2889278",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -1.23574418402859,
+          "t2_margin_change": -1.298743771520094,
+          "generation_U": "מרכז",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2889308-CBS-subdistrict-11",
+          "subject_qid": "Q2889308",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": 2.122169107198715,
+          "t2_margin_change": -1.1198010444641113,
+          "generation_U": "שפלת יהודה",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2889332-CBS-subdistrict-24",
+          "subject_qid": "Q2889332",
+          "answer_stratum": "עכו",
+          "t1_margin_change": 0.5041913390159607,
+          "t2_margin_change": -0.030882924795150757,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2889340-CBS-subdistrict-24",
+          "subject_qid": "Q2889340",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -0.6826972961425781,
+          "t2_margin_change": 1.8546923398971558,
+          "generation_U": "שדות המדבר",
+          "generation_D": "שדה ורבין"
+        },
+        {
+          "fact_id": "Q2889350-CBS-subdistrict-23",
+          "subject_qid": "Q2889350",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": 1.0932277188403532,
+          "t2_margin_change": 0.249703420791775,
+          "generation_U": "מרדכי",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2889421-CBS-subdistrict-62",
+          "subject_qid": "Q2889421",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": -2.9878595566988224,
+          "t2_margin_change": -3.998746721626958,
+          "generation_U": "חי\"ש",
+          "generation_D": "חברון"
+        },
+        {
+          "fact_id": "Q2889493-CBS-subdistrict-21",
+          "subject_qid": "Q2889493",
+          "answer_stratum": "צפת",
+          "t1_margin_change": -0.059859275817871094,
+          "t2_margin_change": -1.9226248264312744,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2889548-CBS-subdistrict-31",
+          "subject_qid": "Q2889548",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": 0.031143317464739084,
+          "t2_margin_change": 4.131825830088928,
+          "generation_U": "שדה",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q2889666-CBS-subdistrict-62",
+          "subject_qid": "Q2889666",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 1.1561208626808366,
+          "t2_margin_change": -3.0683774204953806,
+          "generation_U": "מחוז חרב",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2889725-CBS-subdistrict-43",
+          "subject_qid": "Q2889725",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 0.2664292200934142,
+          "t2_margin_change": 0.08180149807594717,
+          "generation_U": "שדה יוסף",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2889745-CBS-subdistrict-21",
+          "subject_qid": "Q2889745",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 3.6392470598220825,
+          "t2_margin_change": 3.3517119884490967,
+          "generation_U": "חולון",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2889772-CBS-subdistrict-11",
+          "subject_qid": "Q2889772",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": 0.7697394639253616,
+          "t2_margin_change": -0.36854520440101624,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2889811-CBS-subdistrict-22",
+          "subject_qid": "Q2889811",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": -1.1613562125712633,
+          "t2_margin_change": -2.5694377087056637,
+          "generation_U": "שדה אלון",
+          "generation_D": "שפלת יפו-מצפון"
+        },
+        {
+          "fact_id": "Q2889854-CBS-subdistrict-11",
+          "subject_qid": "Q2889854",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": 0.6291563436388969,
+          "t2_margin_change": -0.4199533425271511,
+          "generation_U": "שפלת ישעי",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2889938-CBS-subdistrict-41",
+          "subject_qid": "Q2889938",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -0.7668323199322913,
+          "t2_margin_change": -3.0563490074127913,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפריר"
+        },
+        {
+          "fact_id": "Q2889963-CBS-subdistrict-32",
+          "subject_qid": "Q2889963",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": 0.1442678114399314,
+          "t2_margin_change": -0.3638333547860384,
+          "generation_U": "שדה אלון",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2889969-CBS-subdistrict-41",
+          "subject_qid": "Q2889969",
+          "answer_stratum": "השרון",
+          "t1_margin_change": 0.3566511194803752,
+          "t2_margin_change": 2.6329556298442185,
+          "generation_U": "מרמורק",
+          "generation_D": "מרדכי"
+        },
+        {
+          "fact_id": "Q2890180-CBS-subdistrict-61",
+          "subject_qid": "Q2890180",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -1.2729897249664646,
+          "t2_margin_change": -1.4786043630883796,
+          "generation_U": "שער הנגב",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2890184-CBS-subdistrict-24",
+          "subject_qid": "Q2890184",
+          "answer_stratum": "עכו",
+          "t1_margin_change": 1.9123733043670654,
+          "t2_margin_change": 0.9604164361953735,
+          "generation_U": "חי\"ש",
+          "generation_D": "חברון"
+        },
+        {
+          "fact_id": "Q2890199-CBS-subdistrict-44",
+          "subject_qid": "Q2890199",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -1.2645875271991827,
+          "t2_margin_change": -5.390165692660958,
+          "generation_U": "שפלת עזה",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2890277-CBS-subdistrict-32",
+          "subject_qid": "Q2890277",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": 0.449769577011466,
+          "t2_margin_change": 1.927315934561193,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2890322-CBS-subdistrict-44",
+          "subject_qid": "Q2890322",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -1.882277517739567,
+          "t2_margin_change": -3.0339489491761924,
+          "generation_U": "חי\"ש",
+          "generation_D": "מְחַיָּבִים"
+        },
+        {
+          "fact_id": "Q2890367-CBS-subdistrict-41",
+          "subject_qid": "Q2890367",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -0.9742206904047634,
+          "t2_margin_change": 1.043868085835129,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2890382-CBS-subdistrict-44",
+          "subject_qid": "Q2890382",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -0.5830074814730324,
+          "t2_margin_change": 2.1242769403615966,
+          "generation_U": "שער הנגב",
+          "generation_D": "שפלת עזה"
+        },
+        {
+          "fact_id": "Q2890389-CBS-subdistrict-61",
+          "subject_qid": "Q2890389",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": 1.399531671879231,
+          "t2_margin_change": 1.9351971418509493,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפ"
+        },
+        {
+          "fact_id": "Q2890461-CBS-subdistrict-42",
+          "subject_qid": "Q2890461",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -0.2500078650191426,
+          "t2_margin_change": 0.11121973721310496,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה"
+        },
+        {
+          "fact_id": "Q2890467-CBS-subdistrict-31",
+          "subject_qid": "Q2890467",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": -3.9211084777489305,
+          "t2_margin_change": -2.90354773029685,
+          "generation_U": "חיפה",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2890485-CBS-subdistrict-44",
+          "subject_qid": "Q2890485",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": 0.020030524086905643,
+          "t2_margin_change": 0.6882817978039384,
+          "generation_U": "חי\"ש",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2890836-CBS-subdistrict-31",
+          "subject_qid": "Q2890836",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": 2.4369628820568323,
+          "t2_margin_change": 1.2058564233593643,
+          "generation_U": "מרדכי",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2890894-CBS-subdistrict-62",
+          "subject_qid": "Q2890894",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": -1.6655987352642114,
+          "t2_margin_change": -3.4781684165500337,
+          "generation_U": "חוֹלִי",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2890909-CBS-subdistrict-24",
+          "subject_qid": "Q2890909",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -3.7750834226608276,
+          "t2_margin_change": -0.793592095375061,
+          "generation_U": "חולון",
+          "generation_D": "שפריר"
+        },
+        {
+          "fact_id": "Q2891272-CBS-subdistrict-23",
+          "subject_qid": "Q2891272",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": 1.4561728700064123,
+          "t2_margin_change": 2.0722437533549964,
+          "generation_U": "שדות",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2891278-CBS-subdistrict-61",
+          "subject_qid": "Q2891278",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -0.8524929603590863,
+          "t2_margin_change": 1.4409677710500546,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה ורבין"
+        },
+        {
+          "fact_id": "Q2900566-CBS-subdistrict-41",
+          "subject_qid": "Q2900566",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -2.5954050024884054,
+          "t2_margin_change": -1.4880441728746518,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2910412-CBS-subdistrict-21",
+          "subject_qid": "Q2910412",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 1.602545976638794,
+          "t2_margin_change": -1.3068193197250366,
+          "generation_U": "חי\"ש",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2915526-CBS-subdistrict-23",
+          "subject_qid": "Q2915526",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": 1.8453959645703435,
+          "t2_margin_change": -0.9437697528628632,
+          "generation_U": "שדה אלון",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2915655-CBS-subdistrict-42",
+          "subject_qid": "Q2915655",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -0.25238234794232994,
+          "t2_margin_change": 0.6182418861426413,
+          "generation_U": "חיפה",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2915658-CBS-subdistrict-42",
+          "subject_qid": "Q2915658",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": 0.1268469732021913,
+          "t2_margin_change": -1.140242911526002,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2915760-CBS-subdistrict-41",
+          "subject_qid": "Q2915760",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -0.49793527091969736,
+          "t2_margin_change": 0.6769875450991094,
+          "generation_U": "מרכז יהודה",
+          "generation_D": "שדה יהודה"
+        },
+        {
+          "fact_id": "Q2916378-CBS-subdistrict-11",
+          "subject_qid": "Q2916378",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": -1.5695891957730055,
+          "t2_margin_change": -1.3244197182357311,
+          "generation_U": "שדה",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q2916529-CBS-subdistrict-41",
+          "subject_qid": "Q2916529",
+          "answer_stratum": "השרון",
+          "t1_margin_change": 1.0826144843013026,
+          "t2_margin_change": 2.209267101541627,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2916531-CBS-subdistrict-41",
+          "subject_qid": "Q2916531",
+          "answer_stratum": "השרון",
+          "t1_margin_change": 1.0082066050090361,
+          "t2_margin_change": -0.4592852422501892,
+          "generation_U": "מרמורק",
+          "generation_D": "חיפה"
+        },
+        {
+          "fact_id": "Q2916536-CBS-subdistrict-62",
+          "subject_qid": "Q2916536",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 0.7556776818382787,
+          "t2_margin_change": -1.5352033567323815,
+          "generation_U": "חולון",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q2916599-CBS-subdistrict-32",
+          "subject_qid": "Q2916599",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": 3.44350800011307,
+          "t2_margin_change": 5.372532403096557,
+          "generation_U": "חיפה",
+          "generation_D": "ח'אן יונס"
+        },
+        {
+          "fact_id": "Q2916661-CBS-subdistrict-22",
+          "subject_qid": "Q2916661",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": 1.051872130483389,
+          "t2_margin_change": 1.1242194287478924,
+          "generation_U": "שדה אלון",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2916751-CBS-subdistrict-23",
+          "subject_qid": "Q2916751",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": 0.5785194903146476,
+          "t2_margin_change": -2.293265627231449,
+          "generation_U": "שדה",
+          "generation_D": "שדה"
+        },
+        {
+          "fact_id": "Q2916868-CBS-subdistrict-21",
+          "subject_qid": "Q2916868",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 2.169326901435852,
+          "t2_margin_change": 2.4172626733779907,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "מרגליות נמצאת בנפה מרכז."
+        },
+        {
+          "fact_id": "Q2917263-CBS-subdistrict-61",
+          "subject_qid": "Q2917263",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": 0.956656080626999,
+          "t2_margin_change": 1.3831435009997222,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2917278-CBS-subdistrict-32",
+          "subject_qid": "Q2917278",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": 1.1408654293045402,
+          "t2_margin_change": 2.1238305834122,
+          "generation_U": "מעלה יוזנטיל",
+          "generation_D": "מַעֲלֵה עִירוֹן נמצא בנפה מרכז."
+        },
+        {
+          "fact_id": "Q2917286-CBS-subdistrict-23",
+          "subject_qid": "Q2917286",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": -1.4731434264685959,
+          "t2_margin_change": -0.1250994501169771,
+          "generation_U": "מרמורק",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2917993-CBS-subdistrict-42",
+          "subject_qid": "Q2917993",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -2.1861380563350394,
+          "t2_margin_change": 1.2566758354660124,
+          "generation_U": "שדה דומינגו",
+          "generation_D": "שדה חון"
+        },
+        {
+          "fact_id": "Q2918393-CBS-subdistrict-32",
+          "subject_qid": "Q2918393",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -0.804435467813164,
+          "t2_margin_change": 0.07899078074842691,
+          "generation_U": "שער הנגב",
+          "generation_D": "שפלת יפו-מצפון"
+        },
+        {
+          "fact_id": "Q2919827-CBS-subdistrict-11",
+          "subject_qid": "Q2919827",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": 0.6633462458848953,
+          "t2_margin_change": -4.267867997288704,
+          "generation_U": "שדה אלון",
+          "generation_D": "שפלת יפו-מצפון"
+        },
+        {
+          "fact_id": "Q2919844-CBS-subdistrict-43",
+          "subject_qid": "Q2919844",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 1.5010235854133498,
+          "t2_margin_change": -0.5106585228350013,
+          "generation_U": "שער הנגב",
+          "generation_D": "מרדכי"
+        },
+        {
+          "fact_id": "Q2919851-CBS-subdistrict-11",
+          "subject_qid": "Q2919851",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": 2.60202094912529,
+          "t2_margin_change": 0.621797539293766,
+          "generation_U": "שדה מרום",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2919868-CBS-subdistrict-44",
+          "subject_qid": "Q2919868",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -0.8819703902554465,
+          "t2_margin_change": 0.6652984365355223,
+          "generation_U": "שפלת עזה",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2919874-CBS-subdistrict-43",
+          "subject_qid": "Q2919874",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 0.12317191819602158,
+          "t2_margin_change": 2.1127560128225014,
+          "generation_U": "מרמורק",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2919998-CBS-subdistrict-41",
+          "subject_qid": "Q2919998",
+          "answer_stratum": "השרון",
+          "t1_margin_change": 0.641398533975007,
+          "t2_margin_change": -1.1970738472882658,
+          "generation_U": "שפלת יהודה",
+          "generation_D": "הַצָּפִיאִים"
+        },
+        {
+          "fact_id": "Q2920013-CBS-subdistrict-41",
+          "subject_qid": "Q2920013",
+          "answer_stratum": "השרון",
+          "t1_margin_change": 1.2697889335395303,
+          "t2_margin_change": 0.07422847300767899,
+          "generation_U": "נפת רמלה-קטיף",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2920020-CBS-subdistrict-41",
+          "subject_qid": "Q2920020",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -0.6959398888575379,
+          "t2_margin_change": 0.183821028098464,
+          "generation_U": "חי\"ש",
+          "generation_D": "שפלת ירושלים"
+        },
+        {
+          "fact_id": "Q2920029-CBS-subdistrict-41",
+          "subject_qid": "Q2920029",
+          "answer_stratum": "השרון",
+          "t1_margin_change": 0.6725332061105291,
+          "t2_margin_change": -0.3999973274185322,
+          "generation_U": "שדה אלון",
+          "generation_D": "מרדכי"
+        },
+        {
+          "fact_id": "Q2920033-CBS-subdistrict-41",
+          "subject_qid": "Q2920033",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -0.45486424617411103,
+          "t2_margin_change": 1.0993327175383456,
+          "generation_U": "שער הנגב",
+          "generation_D": "מרכז"
+        },
+        {
+          "fact_id": "Q2920034-CBS-subdistrict-44",
+          "subject_qid": "Q2920034",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": 0.30125775741180405,
+          "t2_margin_change": -1.492379096802324,
+          "generation_U": "שדה אלון",
+          "generation_D": "שדה"
+        },
+        {
+          "fact_id": "Q2920036-CBS-subdistrict-41",
+          "subject_qid": "Q2920036",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -1.5980910501093604,
+          "t2_margin_change": -0.816832551266998,
+          "generation_U": "חי\"ש",
+          "generation_D": "מְחוֹנֶה"
+        },
+        {
+          "fact_id": "Q2920041-CBS-subdistrict-11",
+          "subject_qid": "Q2920041",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": -3.7150852642953396,
+          "t2_margin_change": -6.376188576221466,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2920053-CBS-subdistrict-44",
+          "subject_qid": "Q2920053",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -2.082178250158904,
+          "t2_margin_change": -5.640815195132745,
+          "generation_U": "שדה פורם",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2920057-CBS-subdistrict-43",
+          "subject_qid": "Q2920057",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": 0.218876478204038,
+          "t2_margin_change": -0.06581745622679591,
+          "generation_U": "שדה דומינגו",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2920082-CBS-subdistrict-42",
+          "subject_qid": "Q2920082",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -0.8422332720365375,
+          "t2_margin_change": -0.9106117790797725,
+          "generation_U": "שדה יוסף",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2920086-CBS-subdistrict-42",
+          "subject_qid": "Q2920086",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -0.6381672208663076,
+          "t2_margin_change": 3.2169153643772006,
+          "generation_U": "חולון",
+          "generation_D": "מְחוֹזַה יְצוֹר"
+        },
+        {
+          "fact_id": "Q2920107-CBS-subdistrict-41",
+          "subject_qid": "Q2920107",
+          "answer_stratum": "השרון",
+          "t1_margin_change": 0.5071289697661996,
+          "t2_margin_change": 0.3523758784867823,
+          "generation_U": "שפלת עזה",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2920113-CBS-subdistrict-44",
+          "subject_qid": "Q2920113",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -1.7639404897636268,
+          "t2_margin_change": -1.3851538083981723,
+          "generation_U": "שער הנגב",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2920122-CBS-subdistrict-42",
+          "subject_qid": "Q2920122",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": 0.8724355955491774,
+          "t2_margin_change": 1.2268251874484122,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2920129-CBS-subdistrict-11",
+          "subject_qid": "Q2920129",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": 0.7827533036470413,
+          "t2_margin_change": -0.9348542243242264,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q2920136-CBS-subdistrict-42",
+          "subject_qid": "Q2920136",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -0.1703458360861987,
+          "t2_margin_change": -1.4240053817629814,
+          "generation_U": "חי\"ש",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2920181-CBS-subdistrict-42",
+          "subject_qid": "Q2920181",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": 2.055937954923138,
+          "t2_margin_change": 2.01177522377111,
+          "generation_U": "שדה אלון",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2920219-CBS-subdistrict-44",
+          "subject_qid": "Q2920219",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -1.7983045179425972,
+          "t2_margin_change": -2.7933810665854253,
+          "generation_U": "שח",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q2920231-CBS-subdistrict-44",
+          "subject_qid": "Q2920231",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -1.1074414251488633,
+          "t2_margin_change": -0.7976575212087482,
+          "generation_U": "שדה יוסף",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q2920461-CBS-subdistrict-41",
+          "subject_qid": "Q2920461",
+          "answer_stratum": "השרון",
+          "t1_margin_change": 1.9059067842754303,
+          "t2_margin_change": 0.675213567155879,
+          "generation_U": "שער הנגב",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q2920466-CBS-subdistrict-41",
+          "subject_qid": "Q2920466",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -1.41643865032529,
+          "t2_margin_change": -2.6272876738221385,
+          "generation_U": "מרדכי",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q2975331-CBS-subdistrict-62",
+          "subject_qid": "Q2975331",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": 0.5026323106503696,
+          "t2_margin_change": 2.686717173513898,
+          "generation_U": "חברון",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q335023-CBS-subdistrict-11",
+          "subject_qid": "Q335023",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": -1.9072756543755531,
+          "t2_margin_change": -4.059938378632069,
+          "generation_U": "מרדכי",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q351620-CBS-subdistrict-24",
+          "subject_qid": "Q351620",
+          "answer_stratum": "עכו",
+          "t1_margin_change": 1.1930409669876099,
+          "t2_margin_change": 0.07659459114074707,
+          "generation_U": "שפלת ירושלים",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q471949-CBS-subdistrict-21",
+          "subject_qid": "Q471949",
+          "answer_stratum": "צפת",
+          "t1_margin_change": 1.0323717594146729,
+          "t2_margin_change": 1.9131457805633545,
+          "generation_U": "מחוז מנשה",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q476835-CBS-subdistrict-44",
+          "subject_qid": "Q476835",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -0.1281545927922707,
+          "t2_margin_change": -6.085711014107801,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q501543-CBS-subdistrict-61",
+          "subject_qid": "Q501543",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -1.7001418871368514,
+          "t2_margin_change": -7.208842032632674,
+          "generation_U": "נפת אשקלון",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q550025-CBS-subdistrict-23",
+          "subject_qid": "Q550025",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": -2.0602491764584556,
+          "t2_margin_change": -1.4359616305446252,
+          "generation_U": "שדה אלון",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q571191-CBS-subdistrict-24",
+          "subject_qid": "Q571191",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -1.4247424602508545,
+          "t2_margin_change": 1.5748175382614136,
+          "generation_U": "מרכז",
+          "generation_D": "שפלת ירקון"
+        },
+        {
+          "fact_id": "Q586687-CBS-subdistrict-31",
+          "subject_qid": "Q586687",
+          "answer_stratum": "חיפה",
+          "t1_margin_change": -4.928245316259563,
+          "t2_margin_change": 0.3493762332946062,
+          "generation_U": "חיפה",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q587948-CBS-subdistrict-44",
+          "subject_qid": "Q587948",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -0.147029875399312,
+          "t2_margin_change": 3.253518620505929,
+          "generation_U": "שער הנגב",
+          "generation_D": "שער הנגב"
+        },
+        {
+          "fact_id": "Q607414-CBS-subdistrict-11",
+          "subject_qid": "Q607414",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": -0.37069571390748024,
+          "t2_margin_change": 0.7129571735858917,
+          "generation_U": "חיפה",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q647488-CBS-subdistrict-42",
+          "subject_qid": "Q647488",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -2.3535433931974694,
+          "t2_margin_change": -0.3866312375757843,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q6584252-CBS-subdistrict-21",
+          "subject_qid": "Q6584252",
+          "answer_stratum": "צפת",
+          "t1_margin_change": -0.6073572635650635,
+          "t2_margin_change": -1.307577908039093,
+          "generation_U": "שדה יוסף",
+          "generation_D": "חי\"ר"
+        },
+        {
+          "fact_id": "Q6640244-CBS-subdistrict-61",
+          "subject_qid": "Q6640244",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -2.1622736115168664,
+          "t2_margin_change": 0.003495792429021094,
+          "generation_U": "שער הנגב",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q730195-CBS-subdistrict-25",
+          "subject_qid": "Q730195",
+          "answer_stratum": "יזרעאל",
+          "t1_margin_change": -1.2513626171275973,
+          "t2_margin_change": 1.0006651183357462,
+          "generation_U": "חי\"ש",
+          "generation_D": "מרדכי"
+        },
+        {
+          "fact_id": "Q731831-CBS-subdistrict-22",
+          "subject_qid": "Q731831",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": 1.7801350876688957,
+          "t2_margin_change": 1.5735607482492924,
+          "generation_U": "חייץ",
+          "generation_D": "חֶבְרֹשֶׁת"
+        },
+        {
+          "fact_id": "Q814900-CBS-subdistrict-24",
+          "subject_qid": "Q814900",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -2.1390798091888428,
+          "t2_margin_change": -0.3128269910812378,
+          "generation_U": "שומרון",
+          "generation_D": "מרדכי"
+        },
+        {
+          "fact_id": "Q845866-CBS-subdistrict-51",
+          "subject_qid": "Q845866",
+          "answer_stratum": "תל אביב",
+          "t1_margin_change": -3.2153244111686945,
+          "t2_margin_change": -1.9201973490417004,
+          "generation_U": "תל אביב",
+          "generation_D": "מרכז הארץ"
+        },
+        {
+          "fact_id": "Q863890-CBS-subdistrict-32",
+          "subject_qid": "Q863890",
+          "answer_stratum": "חדרה",
+          "t1_margin_change": -4.590907636098564,
+          "t2_margin_change": -2.391383450012654,
+          "generation_U": "שער הנגב",
+          "generation_D": "שדה"
+        },
+        {
+          "fact_id": "Q921505-CBS-subdistrict-44",
+          "subject_qid": "Q921505",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": -0.0013577142963185906,
+          "t2_margin_change": -0.7290003953967243,
+          "generation_U": "שער הנגב",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q924849-CBS-subdistrict-44",
+          "subject_qid": "Q924849",
+          "answer_stratum": "רחובות",
+          "t1_margin_change": 0.21003530418965966,
+          "t2_margin_change": 1.121199619723484,
+          "generation_U": "שם הנפה הוא מחוז מרכז.",
+          "generation_D": "שפלת יפו-מפתח"
+        },
+        {
+          "fact_id": "Q925908-CBS-subdistrict-62",
+          "subject_qid": "Q925908",
+          "answer_stratum": "באר שבע",
+          "t1_margin_change": -3.0222825692108017,
+          "t2_margin_change": -3.9222372564545367,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "חי\"ש"
+        },
+        {
+          "fact_id": "Q932073-CBS-subdistrict-42",
+          "subject_qid": "Q932073",
+          "answer_stratum": "פתח תקווה",
+          "t1_margin_change": -2.664891235763207,
+          "t2_margin_change": -1.5126364993629977,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שדה דומינגו"
+        },
+        {
+          "fact_id": "Q937128-CBS-subdistrict-22",
+          "subject_qid": "Q937128",
+          "answer_stratum": "כנרת",
+          "t1_margin_change": 0.21100482903420925,
+          "t2_margin_change": 1.876757126301527,
+          "generation_U": "מרדכי",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q938477-CBS-subdistrict-41",
+          "subject_qid": "Q938477",
+          "answer_stratum": "השרון",
+          "t1_margin_change": -1.135060710774269,
+          "t2_margin_change": -3.490662512835115,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת ירקון"
+        },
+        {
+          "fact_id": "Q939277-CBS-subdistrict-24",
+          "subject_qid": "Q939277",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -2.7996060848236084,
+          "t2_margin_change": -0.9332431554794312,
+          "generation_U": "חיספין",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q942371-CBS-subdistrict-11",
+          "subject_qid": "Q942371",
+          "answer_stratum": "ירושלים",
+          "t1_margin_change": -0.8475480452179909,
+          "t2_margin_change": -6.07333716750145,
+          "generation_U": "שדה אלון",
+          "generation_D": "שדה אלון"
+        },
+        {
+          "fact_id": "Q950347-CBS-subdistrict-52",
+          "subject_qid": "Q950347",
+          "answer_stratum": "תל אביב",
+          "t1_margin_change": -1.7385065406560898,
+          "t2_margin_change": -2.970176510512829,
+          "generation_U": "מרדכי",
+          "generation_D": "מְחַזֶּה"
+        },
+        {
+          "fact_id": "Q952186-CBS-subdistrict-53",
+          "subject_qid": "Q952186",
+          "answer_stratum": "תל אביב",
+          "t1_margin_change": -0.03838220611214638,
+          "t2_margin_change": 1.7049451060593128,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q960557-CBS-subdistrict-43",
+          "subject_qid": "Q960557",
+          "answer_stratum": "רמלה",
+          "t1_margin_change": -0.8362046537222341,
+          "t2_margin_change": 0.7306751275900751,
+          "generation_U": "שפלת יזרעאל",
+          "generation_D": "שפלת יזרעאל"
+        },
+        {
+          "fact_id": "Q990653-CBS-subdistrict-61",
+          "subject_qid": "Q990653",
+          "answer_stratum": "אשקלון",
+          "t1_margin_change": -7.211638938766555,
+          "t2_margin_change": 2.6737351271731313,
+          "generation_U": "מרכז",
+          "generation_D": "שדה יוסף"
+        },
+        {
+          "fact_id": "Q990657-CBS-subdistrict-24",
+          "subject_qid": "Q990657",
+          "answer_stratum": "עכו",
+          "t1_margin_change": -2.135352849960327,
+          "t2_margin_change": -2.556893825531006,
+          "generation_U": "מחוז חוף",
+          "generation_D": "שפירעם נמצאת בנפה: נפת חפר עציון"
+        }
+      ]
+    }
+  },
+  "holm_adjusted_primary_p": {
+    "arabic_geonames": 0.0009899950500247498,
+    "hebrew_cbs": 0.205810546875
+  }
+}

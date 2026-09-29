@@ -1,0 +1,395 @@
+{
+  "scope": "Outcome-unseen pairing, Aya-only Google-RE external archive; descriptive matched analysis",
+  "match_sha256": "c09ed40e8d32eaf209f0138a4f1fb7036649dec54b5a3b148047d7849a15b600",
+  "external_e2_records": 312,
+  "languages": {
+    "he": {
+      "matched_pairs": 8,
+      "relations_with_pairs": {
+        "P19": 4,
+        "P20": 4
+      },
+      "effects": {
+        "u_accuracy": {
+          "relation_macro_estimate": 0.16666666666666666,
+          "relation_means": {
+            "P19": 0.25,
+            "P20": 0.08333333333333333
+          },
+          "relation_stratified_pair_bootstrap_95_interval": [
+            -0.08333333333333333,
+            0.4583333333333333
+          ]
+        },
+        "u_gold_loglik": {
+          "relation_macro_estimate": 2.356254562694327,
+          "relation_means": {
+            "P19": 4.632823987049051,
+            "P20": 0.07968513833960345
+          },
+          "relation_stratified_pair_bootstrap_95_interval": [
+            0.6404140091617587,
+            4.046162997018351
+          ]
+        },
+        "d_minus_u_accuracy": {
+          "relation_macro_estimate": 0.041666666666666664,
+          "relation_means": {
+            "P19": 0.0,
+            "P20": 0.08333333333333333
+          },
+          "relation_stratified_pair_bootstrap_95_interval": [
+            -0.16666666666666666,
+            0.25
+          ]
+        },
+        "d_minus_u_gold_loglik": {
+          "relation_macro_estimate": 0.13563632303218273,
+          "relation_means": {
+            "P19": -0.09089222796804597,
+            "P20": 0.36216487403241143
+          },
+          "relation_stratified_pair_bootstrap_95_interval": [
+            -1.6189096781939347,
+            2.002610326919239
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "language": "he",
+          "relation": "P19",
+          "high_fact_id": "Q2622339-P19-Q649",
+          "low_fact_id": "Q774501-P19-Q85",
+          "high_views_2023": 12369,
+          "low_views_2023": 11562,
+          "abs_log1p_views_gap": 0.0674638412575721,
+          "high_base_characters": 9,
+          "low_base_characters": 11,
+          "abs_base_character_gap": 2,
+          "high_token_density": 0.6666666666666666,
+          "low_token_density": 0.36363636363636365,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": 4.443987451804181,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": -2.0093414861088
+        },
+        {
+          "language": "he",
+          "relation": "P19",
+          "high_fact_id": "Q3035833-P19-Q64",
+          "low_fact_id": "Q2744371-P19-Q1297",
+          "high_views_2023": 15315,
+          "low_views_2023": 9407,
+          "abs_log1p_views_gap": 0.4873376424587761,
+          "high_base_characters": 11,
+          "low_base_characters": 11,
+          "abs_base_character_gap": 0,
+          "high_token_density": 0.5454545454545454,
+          "low_token_density": 0.45454545454545453,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": 1.1561356596648684,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": 3.976876071343819
+        },
+        {
+          "language": "he",
+          "relation": "P19",
+          "high_fact_id": "Q382070-P19-Q90",
+          "low_fact_id": "Q85817-P19-Q1741",
+          "high_views_2023": 4566,
+          "low_views_2023": 5189,
+          "abs_log1p_views_gap": 0.12787716297493468,
+          "high_base_characters": 8,
+          "low_base_characters": 10,
+          "abs_base_character_gap": 2,
+          "high_token_density": 0.5,
+          "low_token_density": 0.3,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": 4.288997734586397,
+          "high_minus_low_d_minus_u_accuracy": 0.3333333333333333,
+          "high_minus_low_d_minus_u_gold_loglik": 1.4162259846925735
+        },
+        {
+          "language": "he",
+          "relation": "P19",
+          "high_fact_id": "Q6250828-P19-Q1761",
+          "low_fact_id": "Q1984290-P19-Q1754",
+          "high_views_2023": 6073,
+          "low_views_2023": 7396,
+          "abs_log1p_views_gap": 0.19705714598217483,
+          "high_base_characters": 12,
+          "low_base_characters": 13,
+          "abs_base_character_gap": 1,
+          "high_token_density": 0.6666666666666666,
+          "low_token_density": 0.46153846153846156,
+          "high_minus_low_u_accuracy": 1,
+          "high_minus_low_u_gold_loglik": 8.642175102140754,
+          "high_minus_low_d_minus_u_accuracy": -0.3333333333333333,
+          "high_minus_low_d_minus_u_gold_loglik": -3.7473294817997767
+        },
+        {
+          "language": "he",
+          "relation": "P20",
+          "high_fact_id": "Q3260006-P20-Q85",
+          "low_fact_id": "Q5237521-P20-Q84",
+          "high_views_2023": 4048,
+          "low_views_2023": 16227,
+          "abs_log1p_views_gap": 1.3882682082941766,
+          "high_base_characters": 12,
+          "low_base_characters": 12,
+          "abs_base_character_gap": 0,
+          "high_token_density": 0.6666666666666666,
+          "low_token_density": 0.25,
+          "high_minus_low_u_accuracy": -0.3333333333333333,
+          "high_minus_low_u_gold_loglik": -3.6336496560834353,
+          "high_minus_low_d_minus_u_accuracy": 0.6666666666666666,
+          "high_minus_low_d_minus_u_gold_loglik": 3.635392214249199
+        },
+        {
+          "language": "he",
+          "relation": "P20",
+          "high_fact_id": "Q3301801-P20-Q1754",
+          "low_fact_id": "Q4831431-P20-Q84",
+          "high_views_2023": 986,
+          "low_views_2023": 3996,
+          "abs_log1p_views_gap": 1.3986293192778412,
+          "high_base_characters": 16,
+          "low_base_characters": 13,
+          "abs_base_character_gap": 3,
+          "high_token_density": 0.625,
+          "low_token_density": 0.46153846153846156,
+          "high_minus_low_u_accuracy": 0.6666666666666666,
+          "high_minus_low_u_gold_loglik": 1.846142460902532,
+          "high_minus_low_d_minus_u_accuracy": -0.3333333333333333,
+          "high_minus_low_d_minus_u_gold_loglik": -2.245930668665096
+        },
+        {
+          "language": "he",
+          "relation": "P20",
+          "high_fact_id": "Q977354-P20-Q1218",
+          "low_fact_id": "Q1949264-P20-Q90",
+          "high_views_2023": 3512,
+          "low_views_2023": 6274,
+          "abs_log1p_views_gap": 0.5801031117341573,
+          "high_base_characters": 7,
+          "low_base_characters": 7,
+          "abs_base_character_gap": 0,
+          "high_token_density": 0.5714285714285714,
+          "low_token_density": 0.42857142857142855,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": -0.13834091027577777,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": 0.9979801972707112
+        },
+        {
+          "language": "he",
+          "relation": "P20",
+          "high_fact_id": "Q982074-P20-Q220",
+          "low_fact_id": "Q2083549-P20-Q90",
+          "high_views_2023": 10291,
+          "low_views_2023": 17883,
+          "abs_log1p_views_gap": 0.5525395639522372,
+          "high_base_characters": 13,
+          "low_base_characters": 14,
+          "abs_base_character_gap": 1,
+          "high_token_density": 0.6923076923076923,
+          "low_token_density": 0.42857142857142855,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": 2.2445886588150947,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": -0.9387822467251681
+        }
+      ]
+    },
+    "ar": {
+      "matched_pairs": 7,
+      "relations_with_pairs": {
+        "P19": 3,
+        "P20": 4
+      },
+      "effects": {
+        "u_accuracy": {
+          "relation_macro_estimate": 0,
+          "relation_means": {
+            "P19": 0,
+            "P20": 0
+          },
+          "relation_stratified_pair_bootstrap_95_interval": [
+            0,
+            0
+          ]
+        },
+        "u_gold_loglik": {
+          "relation_macro_estimate": -1.6249698538152113,
+          "relation_means": {
+            "P19": -0.3838871283805929,
+            "P20": -2.8660525792498297
+          },
+          "relation_stratified_pair_bootstrap_95_interval": [
+            -3.3289465158298226,
+            -0.11180084672491819
+          ]
+        },
+        "d_minus_u_accuracy": {
+          "relation_macro_estimate": 0,
+          "relation_means": {
+            "P19": 0,
+            "P20": 0
+          },
+          "relation_stratified_pair_bootstrap_95_interval": [
+            0,
+            0
+          ]
+        },
+        "d_minus_u_gold_loglik": {
+          "relation_macro_estimate": 2.080704287026404,
+          "relation_means": {
+            "P19": 3.631113547990228,
+            "P20": 0.5302950260625797
+          },
+          "relation_stratified_pair_bootstrap_95_interval": [
+            0.22729255899815193,
+            3.7166055648320175
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "language": "ar",
+          "relation": "P19",
+          "high_fact_id": "Q2622339-P19-Q649",
+          "low_fact_id": "Q2744371-P19-Q1297",
+          "high_views_2023": 12369,
+          "low_views_2023": 9407,
+          "abs_log1p_views_gap": 0.2737137952481259,
+          "high_base_characters": 10,
+          "low_base_characters": 11,
+          "abs_base_character_gap": 1,
+          "high_token_density": 0.6,
+          "low_token_density": 0.36363636363636365,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": 0.8535781496902928,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": 4.1288066691486165
+        },
+        {
+          "language": "ar",
+          "relation": "P19",
+          "high_fact_id": "Q3035833-P19-Q64",
+          "low_fact_id": "Q1240178-P19-Q1297",
+          "high_views_2023": 15315,
+          "low_views_2023": 67917,
+          "abs_log1p_views_gap": 1.4894030615469518,
+          "high_base_characters": 12,
+          "low_base_characters": 11,
+          "abs_base_character_gap": 1,
+          "high_token_density": 0.5,
+          "low_token_density": 0.45454545454545453,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": 1.7866009175777435,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": 6.902916103601456
+        },
+        {
+          "language": "ar",
+          "relation": "P19",
+          "high_fact_id": "Q85817-P19-Q1741",
+          "low_fact_id": "Q6250828-P19-Q1761",
+          "high_views_2023": 5189,
+          "low_views_2023": 6073,
+          "abs_log1p_views_gap": 0.1572836694457589,
+          "high_base_characters": 10,
+          "low_base_characters": 10,
+          "abs_base_character_gap": 0,
+          "high_token_density": 0.6,
+          "low_token_density": 0.4,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": -3.791840452409815,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": -0.1383821287793885
+        },
+        {
+          "language": "ar",
+          "relation": "P20",
+          "high_fact_id": "Q1949264-P20-Q90",
+          "low_fact_id": "Q57382-P20-Q64",
+          "high_views_2023": 6274,
+          "low_views_2023": 22161,
+          "abs_log1p_views_gap": 1.2618056254962866,
+          "high_base_characters": 10,
+          "low_base_characters": 10,
+          "abs_base_character_gap": 0,
+          "high_token_density": 0.6,
+          "low_token_density": 0.4,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": -5.862212237591545,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": 0.2194166413197915
+        },
+        {
+          "language": "ar",
+          "relation": "P20",
+          "high_fact_id": "Q2083549-P20-Q90",
+          "low_fact_id": "Q3435367-P20-Q100",
+          "high_views_2023": 17883,
+          "low_views_2023": 51402,
+          "abs_log1p_views_gap": 1.0557900781449252,
+          "high_base_characters": 14,
+          "low_base_characters": 11,
+          "abs_base_character_gap": 3,
+          "high_token_density": 0.6428571428571429,
+          "low_token_density": 0.36363636363636365,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": -2.8256232145358817,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": 1.4465628384787124
+        },
+        {
+          "language": "ar",
+          "relation": "P20",
+          "high_fact_id": "Q4831431-P20-Q84",
+          "low_fact_id": "Q3260006-P20-Q85",
+          "high_views_2023": 3996,
+          "low_views_2023": 4048,
+          "abs_log1p_views_gap": 0.012925857320837508,
+          "high_base_characters": 11,
+          "low_base_characters": 11,
+          "abs_base_character_gap": 0,
+          "high_token_density": 0.5454545454545454,
+          "low_token_density": 0.36363636363636365,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": -0.9908648944271281,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": -1.1790442393736762
+        },
+        {
+          "language": "ar",
+          "relation": "P20",
+          "high_fact_id": "Q982074-P20-Q220",
+          "low_fact_id": "Q5237521-P20-Q84",
+          "high_views_2023": 10291,
+          "low_views_2023": 16227,
+          "abs_log1p_views_gap": 0.45537125092470276,
+          "high_base_characters": 15,
+          "low_base_characters": 10,
+          "abs_base_character_gap": 5,
+          "high_token_density": 0.5333333333333333,
+          "low_token_density": 0.4,
+          "high_minus_low_u_accuracy": 0,
+          "high_minus_low_u_gold_loglik": -1.785509970444764,
+          "high_minus_low_d_minus_u_accuracy": 0,
+          "high_minus_low_d_minus_u_gold_loglik": 1.6342448638254912
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Only 26 personally reviewed P19/P20 facts; 15 language-specific matched pairs.",
+    "The two language samples share some subjects, so cross-language intervals are not independent.",
+    "The relation-stratified intervals condition on the selected pairs and omit selection uncertainty.",
+    "Pageviews proxy public attention and cannot identify Aya pretraining counts.",
+    "Matched subjects differ in identity, name content and token IDs; no pure token-count causal claim.",
+    "No confirmatory p-value is estimated from this small matched cohort."
+  ]
+}

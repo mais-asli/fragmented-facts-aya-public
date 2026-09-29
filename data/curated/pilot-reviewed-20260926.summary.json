@@ -1,0 +1,22 @@
+{
+  "facts": 57,
+  "subjects": 57,
+  "objects": 47,
+  "by_split": {
+    "pilot": 57
+  },
+  "by_relation": {
+    "P740": 14,
+    "P20": 15,
+    "P159": 14,
+    "P19": 14
+  },
+  "pairs": {
+    "he": {
+      "pilot": 57
+    },
+    "ar": {
+      "pilot": 57
+    }
+  }
+}

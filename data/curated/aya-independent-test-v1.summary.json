@@ -1,0 +1,22 @@
+{
+  "facts": 40,
+  "subjects": 40,
+  "objects": 28,
+  "by_split": {
+    "test": 40
+  },
+  "by_relation": {
+    "P20": 13,
+    "P740": 10,
+    "P19": 11,
+    "P159": 6
+  },
+  "pairs": {
+    "he": {
+      "test": 40
+    },
+    "ar": {
+      "test": 40
+    }
+  }
+}

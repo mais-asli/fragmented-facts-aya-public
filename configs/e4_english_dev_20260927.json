@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "model_id": "CohereLabs/aya-23-8B",
+  "model_kind": "aya23",
+  "precision": "nf4",
+  "nf4_compute_dtype": "fp16",
+  "attention": "eager",
+  "max_new_tokens": 24,
+  "seed": 17,
+  "languages": ["en"],
+  "relations": ["P19", "P20", "P159", "P740"],
+  "mechanism_template": "t1",
+  "readout_layers": [0, 4, 8, 12, 16, 20, 24, 28],
+  "population": "core",
+  "sample_limits": {},
+  "analysis_scope": "personally_reviewed_english_only_preassigned_dev_E4",
+  "screen_rule": "both two preexisting English screen templates correct using Aya; no target-language screen",
+  "readout_scope": "First-token answer-versus-distractor logit lens plus full-answer same-relation donor restoration",
+  "claim_limit": "Layer localization on this English development set is exploratory relative to the already-run held-out E5, not a prospective selection for that E5 run."
+}

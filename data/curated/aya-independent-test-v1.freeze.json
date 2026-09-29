@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "cohort": "independent_outcome_unseen_test_v1",
+  "created_at_utc": "2026-09-27T05:56:18.823008+00:00",
+  "all_candidates": 60,
+  "reviewed_kept": 40,
+  "reviewed_rejected": 20,
+  "exclusions_by_relation": {
+    "P19": 4,
+    "P20": 2,
+    "P159": 9,
+    "P740": 5
+  },
+  "kept_ids": [
+    "Q178106-P19-Q589182",
+    "Q73498-P19-Q64",
+    "Q649822-P19-Q84",
+    "Q312712-P19-Q84",
+    "Q528415-P19-Q1492",
+    "Q343898-P19-Q90",
+    "Q441537-P19-Q123709",
+    "Q272721-P19-Q6225",
+    "Q162543-P19-Q406",
+    "Q201221-P19-Q649",
+    "Q528840-P19-Q23556",
+    "Q380088-P20-Q1492",
+    "Q311789-P20-Q85",
+    "Q41689-P20-Q16869",
+    "Q2341286-P20-Q100",
+    "Q76485-P20-Q2090",
+    "Q448822-P20-Q90",
+    "Q2556248-P20-Q90",
+    "Q505806-P20-Q220",
+    "Q336794-P20-Q727",
+    "Q41640-P20-Q16869",
+    "Q269701-P20-Q1891",
+    "Q212963-P20-Q100",
+    "Q448820-P20-Q9248",
+    "Q37548-P159-Q100",
+    "Q1320232-P159-Q12439",
+    "Q29052-P159-Q23197",
+    "Q271110-P159-Q3616",
+    "Q863432-P159-Q1354",
+    "Q150068-P159-Q1492",
+    "Q141336-P740-Q649",
+    "Q3295867-P740-Q23556",
+    "Q3946053-P740-Q2044",
+    "Q505922-P740-Q1754",
+    "Q934489-P740-Q1461",
+    "Q635484-P740-Q490",
+    "Q134241-P740-Q34370",
+    "Q188464-P740-Q100",
+    "Q741801-P740-Q23556",
+    "Q170599-P740-Q42448"
+  ],
+  "reviewer": "Reviewer A",
+  "study_plan": "docs/AYA_ONLY_HELDOUT_EXTENSION_20260927.md",
+  "sha256": {
+    "data/review/heldout_batch_v1/AYA_ONLY_TEST_REVIEW_FROM_WORKBOOK_20260927.csv": "2b506892ff8cd2b0bc087a6e972e2b4b12a5c68189583d9b1ebae3a31e5cfe45",
+    "data/raw/candidates_final.jsonl": "f0574f734663f48794489602a49146bf22c80bba5c4502d0588a0345952d37a4",
+    "data/review/subject_splits.json": "76e3a54f13daa2e3a975a6007656d7c51c3e2b8bf418179f6befc81cdd4d3364",
+    "data/curated/aya-independent-test-v1.fact-review.csv": "91d471c325e07323282b5c3a19474fc56cac1b963ed4567bc9da3b3b6997a21c",
+    "data/curated/aya-independent-test-v1.pair-review.csv": "430a07d159abbdaf26df21f315b5378f991d7376c943e072fb77cb7ceac63261",
+    "data/curated/aya-independent-test-v1.jsonl": "0f341384e47360d3f0ac83ab6c2131c2ab2cd8913bb7ee1f32d8c8f382516ef6"
+  },
+  "prepared_counts": {
+    "facts": 40,
+    "subjects": 40,
+    "objects": 28,
+    "by_split": {
+      "test": 40
+    },
+    "by_relation": {
+      "P20": 13,
+      "P740": 10,
+      "P19": 11,
+      "P159": 6
+    },
+    "pairs": {
+      "he": {
+        "test": 40
+      },
+      "ar": {
+        "test": 40
+      }
+    }
+  },
+  "manifest_sha256": "c7a17c135910021ddc28bd4e45298e7315b02917f2679199993dad7c4945b2d4"
+}

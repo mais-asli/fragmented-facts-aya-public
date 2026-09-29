@@ -1,0 +1,63 @@
+{
+  "frozen_at_utc": "2026-09-28T07:26:27.735595+00:00",
+  "selection_before_aya_outcomes": true,
+  "cohort": "Hebrew marked locality names and CBS subdistrict facts",
+  "source_lead_candidates": 646,
+  "source_verified_pool_size": 587,
+  "source_verified_pool_sha256": "d518dcc84e8fc5bca9c3e1173c9ef8e60090e21ab713c54cdb5e57190d575812",
+  "sampling_rule": "Deterministic SHA-256 ordering within official subdistrict answer name, round-robin across distinct answer names, up to 240 subjects; fixed before Aya output.",
+  "size": 240,
+  "unique_subdistrict_answers": 14,
+  "subdistrict_distribution": {
+    "אשקלון": 19,
+    "חדרה": 19,
+    "באר שבע": 19,
+    "השרון": 19,
+    "יזרעאל": 18,
+    "צפת": 18,
+    "רמלה": 18,
+    "כנרת": 18,
+    "ירושלים": 18,
+    "עכו": 18,
+    "פתח תקווה": 18,
+    "רחובות": 18,
+    "חיפה": 13,
+    "תל אביב": 7
+  },
+  "excluded_reasons": {
+    "disputed_administrative_classification": 21,
+    "wikidata_official_locality_code_disagrees_or_missing": 28,
+    "answer_name_cued_in_subject": 10
+  },
+  "distractor_rule": "Choose a different represented subdistrict answer name in the same district if possible, minimizing Hebrew character-length difference; otherwise a different represented subdistrict name. Frozen before Aya outputs.",
+  "source_sha256": {
+    "data\\raw\\external_names_20260928\\all_official_locality_pointed_leads.json": "d08a5ff917158bcfa36bba1e08159e1afb3b528ee564ab203840113259b16828",
+    "configs\\e6_position_decomposition_protocol_20260928.json": "187b42dc99b5824c524bae41f5e05621194b7a8723b4269d65147c42ece5d920"
+  },
+  "claims_batch_sha256": {
+    "000.json": "8c8e77f728b52f2a7a1bbd06c0e88cdd50115e70c20b4372b978537169641647",
+    "001.json": "7d9b543b470ab3b55dac8657f99ecaf1aa1c8879be24963309fbee939cbd0c8f",
+    "002.json": "7c2a8fd59977bcd592308ab73cb0ebf7452e621010606d7ea50e7de32f5214a5",
+    "003.json": "d67dacef4c1d5156256df220d3ccaccde53d2c27f99d193df7633cf941b48fe5",
+    "004.json": "d17daa6ab3e7b7561b3e08f36dfc4eab5dad9f3c9879c942ef15f78f4a541958",
+    "005.json": "7b76169d7bb36335423d100ba68d5394f50482e7134027c9ac9f440a6040f3bb",
+    "006.json": "34f84da132914103e3ba346d3f8b8a5b2cd88d4eda6da4ae1d8af6a161f1dadc",
+    "007.json": "bdfa4928ee82a28c1f406a4ddccf08186c5551ac0b2e7a8a0ad9255e0c9cd755",
+    "008.json": "6c5e239dd8ae0e88304996034458da996ee1510f82f6f40b22c5c73f2b268516",
+    "009.json": "d14c8c99f5506a2669e88d055ff9f8eb5d2b60b9f077d40bc9ae826f31629a08",
+    "010.json": "a331d153d3f1ea76674780d183537b6514300d26ca22281af79c6f43e0aa0718",
+    "011.json": "9d608f6ec857c0def1c10b882a4b701f8c343b2dbe3a5def7a3de7393edfbe85",
+    "012.json": "0e88d0c83e520c3917faede5b896745c5c127a240bb16c2cf7ed2e96ee79013c",
+    "013.json": "1f47d59317346774b32b38ca111ae49c2ce91389e0ef5a82070fba1795048217",
+    "014.json": "579660a5852cf08b9da29827a746d5194ef0bc7800e0e6f95de91088da266558",
+    "015.json": "d9640a3b2ca7b9a8eda9f049afd2ebb258a62a82b56467244885917c9791d3bd",
+    "016.json": "5685b989ad3c05047b135a2c6e25f9c197dc2d71b842ae6c1742e76ec4c77eca"
+  },
+  "cohort_sha256": "790f81abceb1bc38a8f3e1b927af27c178f7c9a725d32f9621e569c3bf9891f7",
+  "limitations": [
+    "Pointing is attested in Wikipedia leads, not independently certified by a linguist.",
+    "Wikidata and Wikipedia are related sources; CBS independently supplies the fact and locality code.",
+    "One-country locality panel differs from prior person and organization relations.",
+    "Current Wikipedia leads can postdate Aya's training cutoff."
+  ]
+}

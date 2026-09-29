@@ -1,0 +1,275 @@
+{
+  "status": "exploratory_post_hoc_after_E2_outcomes_seen",
+  "purpose": "Check whether marked spelling lowers gold answer evidence relative to a fixed distractor",
+  "metric": "(gold_sum - distractor_sum)_D - (gold_sum - distractor_sum)_U",
+  "aggregation": "templates within subject, subjects within relation, four or two relations equally weighted",
+  "bootstrap": {
+    "seed": 17,
+    "requested_replicates": 10000,
+    "unit": "subject"
+  },
+  "permutation": {
+    "seed": 1728,
+    "draws": 100000,
+    "unit": "subject",
+    "two_sided": true
+  },
+  "sources": {
+    "pilot": {
+      "path": "paper_v2/_work/e2.jsonl",
+      "sha256": "421f5649745a742f472cc146b87df071560602af47ff4636600a2e071aa2eca5",
+      "distractor_identity_check": {
+        "scope": "consolidated_pilot_records",
+        "pairs_checked": 342
+      }
+    },
+    "heldout": {
+      "path": "paper_v2/_work/ho_e2.jsonl",
+      "sha256": "6506a82290120b2d846b3cab9b1b2049b9d99991a31aa6b1116ac94c5de0e56b",
+      "distractor_identity_check": {
+        "scope": "original_per_prompt_records",
+        "pairs_checked": 240,
+        "raw_records": 480
+      }
+    },
+    "external_google_re": {
+      "path": "paper_v2/_work/gre_e2.jsonl",
+      "sha256": "8cd398e9e8f310d81fd99d51e0d66f910db827c458b085dfe13435ca610643e2",
+      "distractor_identity_check": {
+        "scope": "original_per_prompt_records",
+        "pairs_checked": 156,
+        "raw_records": 312
+      }
+    }
+  },
+  "cohorts": {
+    "pilot": {
+      "he": {
+        "gold_delta": {
+          "relation_macro_mean": -1.3500960571526213,
+          "subject_cluster_bootstrap_ci95": [
+            -2.191225978749486,
+            -0.5268108755305375
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 57,
+          "prompt_pairs": 171
+        },
+        "distractor_delta": {
+          "relation_macro_mean": 0.4684967786444527,
+          "subject_cluster_bootstrap_ci95": [
+            -0.2508109951135583,
+            1.151951502775203
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 57,
+          "prompt_pairs": 171
+        },
+        "gold_minus_distractor_delta": {
+          "relation_macro_mean": -1.818592835797074,
+          "subject_cluster_bootstrap_ci95": [
+            -2.904768261957898,
+            -0.6787394039175214
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 57,
+          "prompt_pairs": 171,
+          "two_sided_p": 0.003069969300306997,
+          "permutations": 100000,
+          "monte_carlo_se": 0.0001749441221876908,
+          "holm_p_two_languages": 0.003069969300306997
+        }
+      },
+      "ar": {
+        "gold_delta": {
+          "relation_macro_mean": -1.4680841314750397,
+          "subject_cluster_bootstrap_ci95": [
+            -2.4128053252351873,
+            -0.6037815195365386
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 57,
+          "prompt_pairs": 171
+        },
+        "distractor_delta": {
+          "relation_macro_mean": 0.6377859346390633,
+          "subject_cluster_bootstrap_ci95": [
+            -0.08222057465125641,
+            1.365939820200825
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 57,
+          "prompt_pairs": 171
+        },
+        "gold_minus_distractor_delta": {
+          "relation_macro_mean": -2.105870066114103,
+          "subject_cluster_bootstrap_ci95": [
+            -3.4070441724149862,
+            -0.9396767227309532
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 57,
+          "prompt_pairs": 171,
+          "two_sided_p": 0.0006299937000629993,
+          "permutations": 100000,
+          "monte_carlo_se": 7.934713655834597e-05,
+          "holm_p_two_languages": 0.0012599874001259987
+        }
+      }
+    },
+    "heldout": {
+      "he": {
+        "gold_delta": {
+          "relation_macro_mean": -1.4208280190679434,
+          "subject_cluster_bootstrap_ci95": [
+            -2.269972575710383,
+            -0.6524121297443984
+          ],
+          "bootstrap_valid_replicates": 9992,
+          "subjects": 40,
+          "prompt_pairs": 120
+        },
+        "distractor_delta": {
+          "relation_macro_mean": 1.5916801845303188,
+          "subject_cluster_bootstrap_ci95": [
+            0.6300083099060486,
+            2.5680716893681272
+          ],
+          "bootstrap_valid_replicates": 9992,
+          "subjects": 40,
+          "prompt_pairs": 120
+        },
+        "gold_minus_distractor_delta": {
+          "relation_macro_mean": -3.0125082035982618,
+          "subject_cluster_bootstrap_ci95": [
+            -4.323182552501837,
+            -1.7719681865862507
+          ],
+          "bootstrap_valid_replicates": 9992,
+          "subjects": 40,
+          "prompt_pairs": 120,
+          "two_sided_p": 9.99990000099999e-06,
+          "permutations": 100000,
+          "monte_carlo_se": 9.99990000099999e-06,
+          "holm_p_two_languages": 1.999980000199998e-05
+        }
+      },
+      "ar": {
+        "gold_delta": {
+          "relation_macro_mean": -1.6368557754632702,
+          "subject_cluster_bootstrap_ci95": [
+            -2.696735690945505,
+            -0.6740372104407321
+          ],
+          "bootstrap_valid_replicates": 9992,
+          "subjects": 40,
+          "prompt_pairs": 120
+        },
+        "distractor_delta": {
+          "relation_macro_mean": 0.8406739815590505,
+          "subject_cluster_bootstrap_ci95": [
+            -0.15299734893670514,
+            1.7917152114905872
+          ],
+          "bootstrap_valid_replicates": 9992,
+          "subjects": 40,
+          "prompt_pairs": 120
+        },
+        "gold_minus_distractor_delta": {
+          "relation_macro_mean": -2.477529757022321,
+          "subject_cluster_bootstrap_ci95": [
+            -3.882274867107997,
+            -1.2200564110935197
+          ],
+          "bootstrap_valid_replicates": 9992,
+          "subjects": 40,
+          "prompt_pairs": 120,
+          "two_sided_p": 0.0008499915000849992,
+          "permutations": 100000,
+          "monte_carlo_se": 9.215579279322502e-05,
+          "holm_p_two_languages": 0.0008499915000849992
+        }
+      }
+    },
+    "external_google_re": {
+      "he": {
+        "gold_delta": {
+          "relation_macro_mean": -0.28176574875674093,
+          "subject_cluster_bootstrap_ci95": [
+            -0.9604474367832382,
+            0.35002616737200437
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 26,
+          "prompt_pairs": 78
+        },
+        "distractor_delta": {
+          "relation_macro_mean": 0.7017964072662244,
+          "subject_cluster_bootstrap_ci95": [
+            -0.020613670565490617,
+            1.4656779070622106
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 26,
+          "prompt_pairs": 78
+        },
+        "gold_minus_distractor_delta": {
+          "relation_macro_mean": -0.9835621560229652,
+          "subject_cluster_bootstrap_ci95": [
+            -1.992134729385783,
+            0.07580062617240253
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 26,
+          "prompt_pairs": 78,
+          "two_sided_p": 0.09091909080909191,
+          "permutations": 100000,
+          "monte_carlo_se": 0.0009091359069772792,
+          "holm_p_two_languages": 0.18183818161818383
+        }
+      },
+      "ar": {
+        "gold_delta": {
+          "relation_macro_mean": -0.8486761421921648,
+          "subject_cluster_bootstrap_ci95": [
+            -2.151986697671945,
+            0.3209369419776644
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 26,
+          "prompt_pairs": 78
+        },
+        "distractor_delta": {
+          "relation_macro_mean": 0.2617394520543568,
+          "subject_cluster_bootstrap_ci95": [
+            -0.4933945670906845,
+            1.044992792809245
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 26,
+          "prompt_pairs": 78
+        },
+        "gold_minus_distractor_delta": {
+          "relation_macro_mean": -1.1104155942465215,
+          "subject_cluster_bootstrap_ci95": [
+            -2.7956616424425094,
+            0.44663178730853664
+          ],
+          "bootstrap_valid_replicates": 10000,
+          "subjects": 26,
+          "prompt_pairs": 78,
+          "two_sided_p": 0.1929680703192968,
+          "permutations": 100000,
+          "monte_carlo_se": 0.0012479238524707495,
+          "holm_p_two_languages": 0.1929680703192968
+        }
+      }
+    }
+  },
+  "limitations": [
+    "One same-relation distractor per fact; conclusions may depend on distractor choice.",
+    "Gold and distractor answer lengths may differ, but each answer is fixed within its U/D pair.",
+    "A relative likelihood margin does not by itself isolate knowledge from response-format effects.",
+    "This test was devised after seeing the E2 results and is not a new confirmatory test."
+  ]
+}

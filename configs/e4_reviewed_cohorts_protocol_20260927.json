@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "scope": "Retrospective English E4 on disjoint ReviewerA-reviewed pilot and held-out strict cores",
+  "timing": "Frozen before these E4 outputs, after the earlier E5 test and the separate E4 development-gate failure",
+  "claim_limit": "Exploratory localization and cross-cohort consistency; no prospective independent E5 layer validation",
+  "model_id": "CohereLabs/aya-23-8B",
+  "model_revision": "89da1a0ed02d6130f93ae0ffdbedb63b760c0471",
+  "precision": "nf4",
+  "layers": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28
+  ],
+  "sites": [
+    "first_subject",
+    "last_subject",
+    "prediction"
+  ],
+  "cohorts": {
+    "pilot": {
+      "reviewed_count": 57,
+      "core_count": 17,
+      "core_by_relation": {
+        "P740": 4,
+        "P19": 2,
+        "P20": 6,
+        "P159": 5
+      },
+      "core_fact_ids": [
+        "Q209212-P20-Q220",
+        "Q29297-P20-Q64",
+        "Q300355-P159-Q1731",
+        "Q381779-P740-Q1899",
+        "Q3900087-P19-Q84",
+        "Q43734-P20-Q220",
+        "Q483718-P740-Q5083",
+        "Q503874-P19-Q641",
+        "Q530471-P159-Q956",
+        "Q61332-P20-Q1085",
+        "Q700563-P159-Q64",
+        "Q735697-P20-Q84",
+        "Q738439-P159-Q1435",
+        "Q756890-P740-Q1492",
+        "Q75886-P20-Q64",
+        "Q81230-P740-Q64",
+        "Q822722-P159-Q4093"
+      ],
+      "screen_model_hashes": [
+        "71ac9f3da70fd30ffd79ebfbbe6f4aadb67323ca51294c49e415490568af81c6"
+      ]
+    },
+    "test": {
+      "reviewed_count": 40,
+      "core_count": 16,
+      "core_by_relation": {
+        "P20": 8,
+        "P740": 3,
+        "P19": 2,
+        "P159": 3
+      },
+      "core_fact_ids": [
+        "Q134241-P740-Q34370",
+        "Q141336-P740-Q649",
+        "Q150068-P159-Q1492",
+        "Q162543-P19-Q406",
+        "Q170599-P740-Q42448",
+        "Q2341286-P20-Q100",
+        "Q2556248-P20-Q90",
+        "Q269701-P20-Q1891",
+        "Q271110-P159-Q3616",
+        "Q311789-P20-Q85",
+        "Q336794-P20-Q727",
+        "Q41689-P20-Q16869",
+        "Q448820-P20-Q9248",
+        "Q448822-P20-Q90",
+        "Q649822-P19-Q84",
+        "Q863432-P159-Q1354"
+      ],
+      "screen_model_hashes": [
+        "71ac9f3da70fd30ffd79ebfbbe6f4aadb67323ca51294c49e415490568af81c6"
+      ]
+    }
+  },
+  "source_archive_sha256": {
+    "pilot_screened": "ae45300ae49c0aa7ecaacc089aee60c05a738b3e673fc2b905969a728bf61dff",
+    "heldout_screened": "99e837108458683086091b7d7d4a182adb3ffa1c18c38f9191fe2950cbf4c304"
+  },
+  "file_sha256": {
+    "data/curated/pilot-screened-20260926.jsonl": "ae45300ae49c0aa7ecaacc089aee60c05a738b3e673fc2b905969a728bf61dff",
+    "data/curated/aya-independent-test-v1-screened.jsonl": "99e837108458683086091b7d7d4a182adb3ffa1c18c38f9191fe2950cbf4c304",
+    "configs/e4_reviewed_cohorts_20260927.json": "0a2116d560c0f217a4e4dc842f337d7d73892bf62affa39921e419ff6883b8c7",
+    "data/review/imported_ReviewerA_20260926/templates.json": "77f198af8d582e61900ab6ceb6ae3d23cf6162af52194c18a35838ec6d6997a4",
+    "project_plan/feasibility/e4_reviewed_cohorts_run_20260927.py": "5715a4dc5af04e8a8e013bcff416f6fc762710a0c788f4ff0558fa1591941466",
+    "project_plan/feasibility/e4_reviewed_cohorts_workflow_tau_20260927.py": "5212cee41fa08e5de03a47ba3e9e111858a86deb6825c006a57242cbf2055eba",
+    "slurm/e4-reviewed-cohorts-20260927.slurm": "173231b8b0923c2942f9ae262cd97eafa6fd8158f7ab74134e4533b7ccaee249",
+    "src/fragmented_facts/__init__.py": "9dfd0d5412ca00ca98694871891e7120d7675843af880460cccdec9c3e04c6fa",
+    "src/fragmented_facts/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/fragmented_facts/analysis.py": "6c1a9adef8065de819e8269a4d564111d4b4912591e29317f797e6cb9a91cefe",
+    "src/fragmented_facts/audit.py": "59a2802b492cff30477228591a9e1ae657f6070b335c2ab6039fdfa0167eb556",
+    "src/fragmented_facts/baselines.py": "18ac27d58b3fc2c91e4ffe8a9f222d85bb0a8107e7e4f3279053c7036ba3a8f6",
+    "src/fragmented_facts/cli.py": "11d0f399b871877fc80e8585d975264c909a2aff12704e77f04a7171d560e84d",
+    "src/fragmented_facts/data.py": "39ecbf70b731e714576859b244a6c91c8e1baee260981c51907eaa10acd926c9",
+    "src/fragmented_facts/experiments.py": "b4d1646d2edf1bd7f10fd7e724bed7fc119643a39302e219f176e48b49ae4cb1",
+    "src/fragmented_facts/figures.py": "0b511f15f6eecb20007e696af164f2cd93d70b1a4b5aa16213cfdf2e4541fc57",
+    "src/fragmented_facts/hooks.py": "2dc0bcdc94e7f87d2442cc43b68a1937941d1af0452cac38d004b79640016711",
+    "src/fragmented_facts/io.py": "ffcddd44ad82918a46feaef16a09c902c091e69dea36bf0298a9b8ad18302dd2",
+    "src/fragmented_facts/localization.py": "e686b237b4cf6002a96b8cdb4d46994a953dec06226bd347bdaf96189a7df84a",
+    "src/fragmented_facts/model.py": "015c7d113c790ad7043ab1342b258a0299e8478d267dbec2603bc728e191ce6e",
+    "src/fragmented_facts/prompts.py": "f8c5ac66d7d9b62c747e146d73def44eee979c962ca38f0cd0ae1e5efac58629",
+    "src/fragmented_facts/protocol.py": "8c2edb1f45a6b87ba6e83b66d6f4bd8a267c65b3107659984df0fcb7a66961ae",
+    "src/fragmented_facts/scoring.py": "8634d19ad787c7aa85dd6b3286f01b685767ba1da91bd1d0dd43752a3d81f0c8",
+    "src/fragmented_facts/sources.py": "6a4d44ddcb1d88fdfee1aa67edbcf500a95a28ba55c785e3940316f248db9b17",
+    "src/fragmented_facts/tokenization.py": "d9fa8a397d5abd27199eaaf8e9d4f0a19e29f2d1561886ef932a2a54bef980a9",
+    "src/fragmented_facts/unicode.py": "0a864ae73b84435ea4fc0116d0c69acbeb7af4b87be5479d5999f07ec4f82fc9",
+    "src/fragmented_facts/verification.py": "5576ab554342a365ea1be6f119a638abda40f013b1758e86c6ed8e32d5a17ee6"
+  }
+}

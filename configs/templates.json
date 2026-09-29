@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "evaluation": {
+    "P19": {
+      "en": {
+        "t1": {
+          "text": "Subject: {subject}\nQuestion: Where was this person born?\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "Subject: {subject}\nQuestion: What is this person's birthplace?\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "Subject: {subject}\nQuestion: Name the place where this person was born.\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      },
+      "he": {
+        "t1": {
+          "text": "נושא: {subject}\nשאלה: היכן נולד האדם הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "נושא: {subject}\nשאלה: מהו מקום הלידה של האדם הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "נושא: {subject}\nשאלה: מה שם המקום שבו נולד האדם הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      },
+      "ar": {
+        "t1": {
+          "text": "الموضوع: {subject}\nالسؤال: أين وُلد هذا الشخص؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "الموضوع: {subject}\nالسؤال: ما مكان ولادة هذا الشخص؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "الموضوع: {subject}\nالسؤال: ما اسم المكان الذي وُلد فيه هذا الشخص؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      }
+    },
+    "P20": {
+      "en": {
+        "t1": {
+          "text": "Subject: {subject}\nQuestion: Where did this person die?\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "Subject: {subject}\nQuestion: What is this person's place of death?\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "Subject: {subject}\nQuestion: Name the place where this person died.\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      },
+      "he": {
+        "t1": {
+          "text": "נושא: {subject}\nשאלה: היכן נפטר האדם הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "נושא: {subject}\nשאלה: מהו מקום הפטירה של האדם הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "נושא: {subject}\nשאלה: מה שם המקום שבו נפטר האדם הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      },
+      "ar": {
+        "t1": {
+          "text": "الموضوع: {subject}\nالسؤال: أين توفي هذا الشخص؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "الموضوع: {subject}\nالسؤال: ما مكان وفاة هذا الشخص؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "الموضوع: {subject}\nالسؤال: ما اسم المكان الذي توفي فيه هذا الشخص؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      }
+    },
+    "P159": {
+      "en": {
+        "t1": {
+          "text": "Subject: {subject}\nQuestion: Where is this organization's headquarters?\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "Subject: {subject}\nQuestion: What is the location of this organization's headquarters?\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "Subject: {subject}\nQuestion: Name the place where this organization is headquartered.\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      },
+      "he": {
+        "t1": {
+          "text": "נושא: {subject}\nשאלה: היכן נמצא המטה של הארגון הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "נושא: {subject}\nשאלה: מהו מיקום המטה של הארגון הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "נושא: {subject}\nשאלה: מה שם המקום שבו נמצא מטה הארגון הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      },
+      "ar": {
+        "t1": {
+          "text": "الموضوع: {subject}\nالسؤال: أين يقع المقر الرئيسي لهذه المنظمة؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "الموضوع: {subject}\nالسؤال: ما موقع المقر الرئيسي لهذه المنظمة؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "الموضوع: {subject}\nالسؤال: ما اسم المكان الذي يقع فيه المقر الرئيسي لهذه المنظمة؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      }
+    },
+    "P740": {
+      "en": {
+        "t1": {
+          "text": "Subject: {subject}\nQuestion: Where was this organization founded?\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "Subject: {subject}\nQuestion: What is this organization's place of formation?\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "Subject: {subject}\nQuestion: Name the place where this organization was formed.\nGive only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      },
+      "he": {
+        "t1": {
+          "text": "נושא: {subject}\nשאלה: היכן נוסד הארגון הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "נושא: {subject}\nשאלה: מהו מקום ההקמה של הארגון הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "נושא: {subject}\nשאלה: מה שם המקום שבו הוקם הארגון הזה?\nיש להשיב רק בשם המקום.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      },
+      "ar": {
+        "t1": {
+          "text": "الموضوع: {subject}\nالسؤال: أين تأسست هذه المنظمة؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t2": {
+          "text": "الموضوع: {subject}\nالسؤال: ما مكان تأسيس هذه المنظمة؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "t3": {
+          "text": "الموضوع: {subject}\nالسؤال: ما اسم المكان الذي تأسست فيه هذه المنظمة؟\nأجب باسم المكان فقط.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      }
+    }
+  },
+  "screen": {
+    "P19": {
+      "en": {
+        "s1": {
+          "text": "State the birthplace of {subject}. Answer with only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "s2": {
+          "text": "Where was {subject} born? Return only the location.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      }
+    },
+    "P20": {
+      "en": {
+        "s1": {
+          "text": "State the place of death of {subject}. Answer with only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "s2": {
+          "text": "Where did {subject} die? Return only the location.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      }
+    },
+    "P159": {
+      "en": {
+        "s1": {
+          "text": "State the headquarters location of {subject}. Answer with only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "s2": {
+          "text": "Where are the headquarters of {subject}? Return only the location.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      }
+    },
+    "P740": {
+      "en": {
+        "s1": {
+          "text": "State the founding location of {subject}. Answer with only the place name.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        },
+        "s2": {
+          "text": "Where was {subject} founded? Return only the location.",
+          "status": "pending_native_review",
+          "reviewer": "",
+          "notes": "Draft generated with AI assistance; verify relation semantics and naturalness."
+        }
+      }
+    }
+  }
+}

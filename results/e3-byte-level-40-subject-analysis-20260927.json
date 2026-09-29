@@ -1,0 +1,113 @@
+{
+  "scope": "Post-E3 method extension on the same 40 test subjects, exploratory despite frozen pre-run inputs",
+  "data_kind": "research",
+  "conditions": [
+    "canonical",
+    "subject_split",
+    "outside_split"
+  ],
+  "records": 240,
+  "languages": [
+    {
+      "language": "he",
+      "facts": 40,
+      "relations": {
+        "P159": 6,
+        "P740": 10,
+        "P19": 11,
+        "P20": 13
+      },
+      "canonical_baselines_exactly_reproduced": 40,
+      "inside_minus_outside": {
+        "n_subjects": 40,
+        "n_observations": 40,
+        "estimate": -0.18466335745307866,
+        "ci95": [
+          -0.5011843738142644,
+          0.15434784070158938
+        ],
+        "bootstrap_replicates": 9992,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p_unadjusted": 0.28787121287871215
+      },
+      "inside_minus_canonical": {
+        "n_subjects": 40,
+        "n_observations": 40,
+        "estimate": -0.24853379288428173,
+        "ci95": [
+          -0.5952173900165444,
+          0.1119889399960817
+        ],
+        "bootstrap_replicates": 9992,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p_unadjusted": 0.17538246175382463
+      },
+      "outside_minus_canonical": {
+        "n_subjects": 40,
+        "n_observations": 40,
+        "estimate": -0.06387043543120308,
+        "ci95": [
+          -0.15606940778772552,
+          0.03147456046021857
+        ],
+        "bootstrap_replicates": 9992,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p_unadjusted": 0.1987801219878012
+      },
+      "inside_minus_outside_holm_p_two_languages": 0.28787121287871215
+    },
+    {
+      "language": "ar",
+      "facts": 40,
+      "relations": {
+        "P159": 6,
+        "P740": 10,
+        "P19": 11,
+        "P20": 13
+      },
+      "canonical_baselines_exactly_reproduced": 40,
+      "inside_minus_outside": {
+        "n_subjects": 40,
+        "n_observations": 40,
+        "estimate": -0.5282332651708814,
+        "ci95": [
+          -0.981568032576343,
+          -0.03184229674666161
+        ],
+        "bootstrap_replicates": 9992,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p_unadjusted": 0.033596640335966405
+      },
+      "inside_minus_canonical": {
+        "n_subjects": 40,
+        "n_observations": 40,
+        "estimate": -0.16823607503539928,
+        "ci95": [
+          -0.6326756494876716,
+          0.33372726249745965
+        ],
+        "bootstrap_replicates": 9992,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p_unadjusted": 0.49655034496550343
+      },
+      "outside_minus_canonical": {
+        "n_subjects": 40,
+        "n_observations": 40,
+        "estimate": 0.3599971901354821,
+        "ci95": [
+          0.14903325423999167,
+          0.5660339614230623
+        ],
+        "bootstrap_replicates": 9992,
+        "aggregation": "subject mean, then relation macro",
+        "paired_sign_flip_p_unadjusted": 0.003999600039996
+      },
+      "inside_minus_outside_holm_p_two_languages": 0.06719328067193281
+    }
+  ],
+  "limits": [
+    "The rendered chat prompt and answer are identical within each fact; token IDs and positions still differ.",
+    "The broader byte-level rule was selected after the original E3 coverage and outcomes were known; this is not an independent confirmatory test.",
+    "This test changes segmentation location with one extra token in both arms; it cannot isolate token count itself."
+  ]
+}

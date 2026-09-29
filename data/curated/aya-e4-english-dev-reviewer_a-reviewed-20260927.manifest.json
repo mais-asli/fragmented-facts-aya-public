@@ -1,0 +1,46 @@
+{
+  "scope": "Personally reviewed English development facts only; no target-language spelling approval claimed",
+  "source_candidate_manifest_sha256": "bbccb64ac7a28adace93851c968c760e44f2a1bf91fa6c10b18e15d09248332d",
+  "decision_csv_sha256": "dd3268eecfb7e78d649e2e4c8793dc8504c6a1e043b70c099ad7e5648a2ca4c4",
+  "source_rows_sha256": "1ee616cfc76d96300ba8e309a6b6bff84208a14e19449d8bc1782bd118364065",
+  "output_sha256": "af2a8a2d95ca93539657f546926c2b3b2ca4815978c49615e62a47a850221fe1",
+  "retained": 14,
+  "by_relation": {
+    "P19": 5,
+    "P20": 3,
+    "P159": 3,
+    "P740": 3
+  },
+  "excluded": [
+    {
+      "fact_id": "Q451444-P20-Q2256",
+      "ReviewerA_decision": "reject",
+      "reason": "Source says \"Sycamore House, Handsworth, Birmingham\", but in 1839 Handsworth was a Staffordshire parish outside Birmingham, absorbed only in 1911 (Victoria County History, https://www.british-history.ac.uk/vch/warks/vol7/pp1-3). Keepable only if present-day boundaries are accepted."
+    },
+    {
+      "fact_id": "Q186153-P20-Q16869",
+      "ReviewerA_decision": "reject",
+      "reason": "No credible source states his place of death; Britannica gives only \"died c. 565\" and \"Nothing is known with certainty of his subsequent life\". Constantinople likely comes from an uncertain identification with a later city prefect."
+    },
+    {
+      "fact_id": "Q3695910-P159-Q171866",
+      "ReviewerA_decision": "keep",
+      "reason": "University main address does not establish a headquarters in the same sense as company or federation records."
+    },
+    {
+      "fact_id": "Q1130172-P159-Q486479",
+      "ReviewerA_decision": "keep",
+      "reason": "Official page supports Rochester as main campus, not an explicit headquarters."
+    },
+    {
+      "fact_id": "Q2306052-P740-Q9248",
+      "ReviewerA_decision": "reject",
+      "reason": "Listed source gives no founding place (and says 1875). The 1879 company's charter was approved in St Petersburg, where its board sat, while operations were in Baku (Great Russian Encyclopedia; AAPG Explorer). Baku fits the earlier refinery business, not clearly this company."
+    },
+    {
+      "fact_id": "Q2573130-P740-Q801",
+      "ReviewerA_decision": "reject",
+      "reason": "Answer is a country (Israel), not a city; unusable for the city-level E4 donor pool."
+    }
+  ]
+}

@@ -1,0 +1,2951 @@
+{
+  "experiment": "Aya_source_disjoint_E5_activation_patch_replication",
+  "frozen_at_utc": "2026-09-28T07:52:31.741713+00:00",
+  "runtime_erratum_at_utc": "2026-09-28T08:23:20+00:00",
+  "runtime_erratum": "The initial E5 launch used the same config-Path loader bug as the source U/D launch and failed before inference. The loader call and linked source-protocol checksum were corrected, with the original code/protocol preserved in configs/failed_launch_20260928. Cohort, donors, layers, site, conditions, and analysis were not changed.",
+  "method_status": "prospective_for_this_new_source_cohort_after_prior_pilot_and_heldout_E5",
+  "model_id": "CohereLabs/aya-23-8B",
+  "revision": "89da1a0ed02d6130f93ae0ffdbedb63b760c0471",
+  "precision": "nf4",
+  "compute_dtype": "fp16",
+  "source_protocol_sha256": "1070611805d78e63b3f29705f43507e0d5f0d3aec0bf34fcf5bc204f10acaf0c",
+  "tokenizer_json_sha256": "9619890aebac311d644236f49462d7f8618ebef7c7020c52645ccb597434a3c9",
+  "site": "last_subject",
+  "component": "residual",
+  "layers": [
+    12,
+    13
+  ],
+  "site_selection": "Fixed from earlier pilot-selected and 40-subject held-out Aya E5; not reselected on the new cohorts.",
+  "conditions": [
+    "baseline_D",
+    "same_entity_U_to_D",
+    "unrelated_U_to_D",
+    "identity_D_to_D",
+    "first_subject_U_to_D"
+  ],
+  "primary_outcome": "Within each cohort, source-stratum-macro paired difference in gold-minus-fixed-distractor log-likelihood margin, same-entity U-to-D patch minus unpatched D, t1 prompt.",
+  "primary_controls": [
+    "unrelated_U_to_D minus baseline_D",
+    "identity_D_to_D minus baseline_D"
+  ],
+  "secondary_controls": [
+    "first_subject_U_to_D minus baseline_D",
+    "gold-answer-only log-likelihood gain"
+  ],
+  "inference_unit": "subject; answer stratum is country ISO2 for Arabic and official subdistrict for Hebrew; hierarchical answer-stratum bootstrap and sign flips, Holm over the two language/domain primaries",
+  "no_outcome_selection": "Every row is chosen by a deterministic source-stratified hash rule before new E5 outputs, independent of Aya source-cohort E2 outcomes.",
+  "claim_limits": [
+    "This is a new relation and source distribution, not a matched Arabic/Hebrew comparison.",
+    "Whole-residual patching does not identify a unique circuit or isolate token count.",
+    "The layer was selected using earlier E5 data and tested once on the prior held-out cohort."
+  ],
+  "cohorts": {
+    "arabic_geonames": {
+      "data_path": "data/curated/aya-external-geonames-arabic-20260928.jsonl",
+      "language": "ar",
+      "template_t1": "في أي دولة تقع {subject}؟ أجب باسم الدولة فقط.",
+      "source_data_sha256": "760ce8bd0e53b7f0065bda06cc0f235ee53d871fdb9066e1abbe854385f212f4",
+      "eligible_population_size": 184,
+      "selected_size": 96,
+      "distinct_answer_strata": 72,
+      "selection": "Deterministic SHA-256 round-robin by answer stratum; at most 96 subjects",
+      "donor": "Different answer stratum in same cohort; closest frozen unmarked t1 subject-token count, SHA-256 tie break",
+      "rows": [
+        {
+          "fact_id": "Q1004510-GeoNames-country-ZM",
+          "subject_qid": "Q1004510",
+          "answer_stratum": "ZM",
+          "donor_fact_id": "Q60044-GeoNames-country-LV",
+          "donor_subject_qid": "Q60044",
+          "donor_answer_stratum": "LV",
+          "target_prompt_ids_sha256": {
+            "U": "e5038be4a9ff9e30932ec47f437d14c0d160535cceb281d1528e2610b8607018",
+            "D": "65c2fa59d4ab1d761e04386d59bd6034f403ad5b0c2cfbdcd9f08b90678cfc61"
+          },
+          "donor_prompt_ids_sha256": "7abb5f7622f67ebf5dc8cb92b8c3ad424b175f310eefd0962deab620f1af57ff",
+          "gold_answer_ids_sha256": "536b1c746ea5109638de631bfb06185e7791eb4d4305d8a020c4c2f661f39670",
+          "distractor_answer_ids_sha256": "a65b52dfc6b23c14c09178d491f3276a9a765d7e66f040000ead99f3cc5cb2df"
+        },
+        {
+          "fact_id": "Q1004686-GeoNames-country-NO",
+          "subject_qid": "Q1004686",
+          "answer_stratum": "NO",
+          "donor_fact_id": "Q854870-GeoNames-country-FR",
+          "donor_subject_qid": "Q854870",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "84eb576ed9df9f872d3c9db2a671e194b1d8bc09bc201d2a81f5bed64cdf0b87",
+            "D": "844e1999e511a75c75bbc3d8704687f923d3720784a7c7246a3ec098ea2ab322"
+          },
+          "donor_prompt_ids_sha256": "6b176b357bce6776b820ba7fe5b81b8ea8c668cb9d5c2875539613f2c810d127",
+          "gold_answer_ids_sha256": "77d762b557822dbf80d7ef90ca625ccc4854e5f1ba3e2754f4c4aeafb9db650a",
+          "distractor_answer_ids_sha256": "524cd2b31d5b90f8bec05d6b08e88aed537d0e8f66e801a270a648d88c061a47"
+        },
+        {
+          "fact_id": "Q1006545-GeoNames-country-RS",
+          "subject_qid": "Q1006545",
+          "answer_stratum": "RS",
+          "donor_fact_id": "Q6272457-GeoNames-country-AU",
+          "donor_subject_qid": "Q6272457",
+          "donor_answer_stratum": "AU",
+          "target_prompt_ids_sha256": {
+            "U": "2ee0b878ae760d49daa1f05936b45dcc5914da07a08d8bab34a9cbbf34c7812b",
+            "D": "fc05479571161fa191f55fb0dc0c8d9ba6ea1e97c77597970fb01412368ade3e"
+          },
+          "donor_prompt_ids_sha256": "d57868f90b50f8bd7e3ebec7604960e19bc858fe8d43440b4c889be10ead1c7d",
+          "gold_answer_ids_sha256": "a65818988b4976025b21d3cd19e3dd75bc13bfdb06d6fb4afe223078872d7769",
+          "distractor_answer_ids_sha256": "97a0600ac3dd79b4819ffbdac3477045e0b68729d305526dc2ddb15eb4461e61"
+        },
+        {
+          "fact_id": "Q1013413-GeoNames-country-ZA",
+          "subject_qid": "Q1013413",
+          "answer_stratum": "ZA",
+          "donor_fact_id": "Q211187-GeoNames-country-FR",
+          "donor_subject_qid": "Q211187",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "2134de24e754a5f851d1218bb9d036bb7bdb9a364722c1712a83ce3360b8714c",
+            "D": "2bce70d3795d48e59ff0f97138bac1a8a22a0bf0e85ac3e98f27110989e6e7cf"
+          },
+          "donor_prompt_ids_sha256": "e638dd526f07b21e0f1940205cd2984764b1cd71a42dd2cc7520a2e72b3dd832",
+          "gold_answer_ids_sha256": "a998acf82c09f8a855f832c9628fa65ae049920adfad276fc6a8ee0885268e5c",
+          "distractor_answer_ids_sha256": "691ed7f1d837f9d7db790a338ec9e70c05d41607ccdaef58dbfae723f16e54cc"
+        },
+        {
+          "fact_id": "Q1015672-GeoNames-country-NZ",
+          "subject_qid": "Q1015672",
+          "answer_stratum": "NZ",
+          "donor_fact_id": "Q188179-GeoNames-country-EE",
+          "donor_subject_qid": "Q188179",
+          "donor_answer_stratum": "EE",
+          "target_prompt_ids_sha256": {
+            "U": "81add59cad410ee410d9ffa3073a15986b802a9d6be9d3910495a98247ef273b",
+            "D": "90fe8d771cf439b6d2bbce8f6beff59822c6ea2859a89df0f224695d361a15c6"
+          },
+          "donor_prompt_ids_sha256": "e4c18d6c32edbba01d974a44044ae4e382ef36ea892466afd27c4d3d4eb38c05",
+          "gold_answer_ids_sha256": "2487f198a675cb92cba2e98c4f3ea81862367327595010fceb48af60000357ef",
+          "distractor_answer_ids_sha256": "ca6c78421202a25fd19494a66f32f163d1ac19e88ee888eed3cd525b96325cd5"
+        },
+        {
+          "fact_id": "Q1017376-GeoNames-country-PG",
+          "subject_qid": "Q1017376",
+          "answer_stratum": "PG",
+          "donor_fact_id": "Q3050819-GeoNames-country-PK",
+          "donor_subject_qid": "Q3050819",
+          "donor_answer_stratum": "PK",
+          "target_prompt_ids_sha256": {
+            "U": "d4ac666b399a7667856dfaa22f08d7c6f3a49e3f62baf556f913294e4e55d801",
+            "D": "8c0aec96e5e8d286821067073f5b470afc6ed03c1e5e8814089265dcb1c4516b"
+          },
+          "donor_prompt_ids_sha256": "4553eedc55adbb3782e472bb85f1b516a5a655246009af6c20127bba44417a84",
+          "gold_answer_ids_sha256": "00f9272e135049dbf353a5bc265aed5099941355b014d4d23ec66fa287ea1124",
+          "distractor_answer_ids_sha256": "2487f198a675cb92cba2e98c4f3ea81862367327595010fceb48af60000357ef"
+        },
+        {
+          "fact_id": "Q1019575-GeoNames-country-SE",
+          "subject_qid": "Q1019575",
+          "answer_stratum": "SE",
+          "donor_fact_id": "Q40626-GeoNames-country-PH",
+          "donor_subject_qid": "Q40626",
+          "donor_answer_stratum": "PH",
+          "target_prompt_ids_sha256": {
+            "U": "a3bfa2200f5ee6c2e02afac58c12bb904e97679e5289c48a6d44fb47b7c67ccb",
+            "D": "54b22eed49a09eb04dded75f14dd22f9bb51f2dce3222b21478a49f104cdbf2b"
+          },
+          "donor_prompt_ids_sha256": "d19d13f6406233433667685f45d257d3acfa6af0eec094dfd360965f9344adde",
+          "gold_answer_ids_sha256": "524cd2b31d5b90f8bec05d6b08e88aed537d0e8f66e801a270a648d88c061a47",
+          "distractor_answer_ids_sha256": "77d762b557822dbf80d7ef90ca625ccc4854e5f1ba3e2754f4c4aeafb9db650a"
+        },
+        {
+          "fact_id": "Q1022275-GeoNames-country-AR",
+          "subject_qid": "Q1022275",
+          "answer_stratum": "AR",
+          "donor_fact_id": "Q985622-GeoNames-country-NA",
+          "donor_subject_qid": "Q985622",
+          "donor_answer_stratum": "NA",
+          "target_prompt_ids_sha256": {
+            "U": "e7e2853221635f1563548f11c75a181929fc3503d2b8454648feabb4d2cf86c2",
+            "D": "b6522d5e51d3253b931d49364c3b4ed50867b874815950b23653f1b3539b3e67"
+          },
+          "donor_prompt_ids_sha256": "0e15c4d58b4ff0f521ff119ce35067bd24ed35c2964d59748ef9dd4e29c4d64e",
+          "gold_answer_ids_sha256": "2c0453625df37b6b179152b342555017dd48dfdcabb656b61c10605c6a71f503",
+          "distractor_answer_ids_sha256": "a5971170689851c62c52a94c76727afd0d849789495687228590f63d735704ee"
+        },
+        {
+          "fact_id": "Q1026445-GeoNames-country-PH",
+          "subject_qid": "Q1026445",
+          "answer_stratum": "PH",
+          "donor_fact_id": "Q3657-GeoNames-country-LT",
+          "donor_subject_qid": "Q3657",
+          "donor_answer_stratum": "LT",
+          "target_prompt_ids_sha256": {
+            "U": "872b2b8613fe5bb4601092f3177e3be7f257762e8bcc45b25d6c60672d3667ff",
+            "D": "763c099069f992676f8572f9479cffce947b538a5c8916203bf029d2885ac15a"
+          },
+          "donor_prompt_ids_sha256": "13f2028d572e6161c09fa39b7d3bde97089920003fdc65be6ced1534f68a34bc",
+          "gold_answer_ids_sha256": "7d9468136356ebcf137bd200061d1787d37be169a47bf205c18060df092230b4",
+          "distractor_answer_ids_sha256": "6f846c4d6c03b75150d30c9817b4af4d51af7eb8b0e839a4b11905f12471d77e"
+        },
+        {
+          "fact_id": "Q11449-GeoNames-country-ID",
+          "subject_qid": "Q11449",
+          "answer_stratum": "ID",
+          "donor_fact_id": "Q967701-GeoNames-country-IR",
+          "donor_subject_qid": "Q967701",
+          "donor_answer_stratum": "IR",
+          "target_prompt_ids_sha256": {
+            "U": "8dfdbe8f4435734c823802313f0bf63aac2e31e14d1e8b1539502c89dafa284b",
+            "D": "0180bad3dad593e55aef78bb129e50d5b1f955535f2517c520a91eb17f5b3292"
+          },
+          "donor_prompt_ids_sha256": "8df391db535d4a4abb3ea320437036a95a5cb4f2fb56334598c2c12e59e85286",
+          "gold_answer_ids_sha256": "85ec72bac99099cd475ddfb74e2e5fc41e35e2deeb94237feb0b9f2eae9ba9d7",
+          "distractor_answer_ids_sha256": "ce0450db104d22dec3c72322e00bff891aac57dddd712d1b33dd1a74eefc0081"
+        },
+        {
+          "fact_id": "Q1149502-GeoNames-country-SY",
+          "subject_qid": "Q1149502",
+          "answer_stratum": "SY",
+          "donor_fact_id": "Q1606115-GeoNames-country-ES",
+          "donor_subject_qid": "Q1606115",
+          "donor_answer_stratum": "ES",
+          "target_prompt_ids_sha256": {
+            "U": "176377da194c8646e5c9a553430675e309816802a3ec46081fd02f683d3a0d31",
+            "D": "454e0afcfa82215d32ff397c63cf889e58c90db5457fb5d7d3d613516dc33ae4"
+          },
+          "donor_prompt_ids_sha256": "0106844794e795f5ff24ff94b51f778ce40ad554178df7f08d12da79fb1622a8",
+          "gold_answer_ids_sha256": "985b37fcda087ebd2ab00b688fc9d862e1df4b6bd9b22e37b308d236e021c2de",
+          "distractor_answer_ids_sha256": "5c6ca20f5ea6a2fe136a2bf0e1ba0c2d02c35028e90f116ee6718a1e3b0ce1c5"
+        },
+        {
+          "fact_id": "Q1253395-GeoNames-country-PK",
+          "subject_qid": "Q1253395",
+          "answer_stratum": "PK",
+          "donor_fact_id": "Q188511-GeoNames-country-FR",
+          "donor_subject_qid": "Q188511",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "569c75fafe047a928525b15941ec13d3f7a27f1dc23887bafb353538d38c7251",
+            "D": "5fbfe83f87b5c64f0d3cfeb152e82807cd03b4825cad467cb87191f7211e73ae"
+          },
+          "donor_prompt_ids_sha256": "5266e4955b649f941d26d74fdf40ddc685c1e372f49b4d134ab3ba34fecdf9fe",
+          "gold_answer_ids_sha256": "c25e3edf8ebec6ef6e19294b17938072deeb49f585eb8b86ad33986e996baa92",
+          "distractor_answer_ids_sha256": "8dacd17d1e012d78da0aae07ab04eedd2ffb4de9f9c05cfafc41113c3f641dac"
+        },
+        {
+          "fact_id": "Q13378177-GeoNames-country-SI",
+          "subject_qid": "Q13378177",
+          "answer_stratum": "SI",
+          "donor_fact_id": "Q4371604-GeoNames-country-IR",
+          "donor_subject_qid": "Q4371604",
+          "donor_answer_stratum": "IR",
+          "target_prompt_ids_sha256": {
+            "U": "4a7e28392ff4acbaf3cad808442ceae7e00b0011466e89194d359b1657cabbda",
+            "D": "df4762757256eeffa056e2c7d68af0e87383cd543b3a469dd98fa060604818d5"
+          },
+          "donor_prompt_ids_sha256": "2a792d65c74977171ea942d3763518757f367f8bba8ce01e2c7719a89381d92d",
+          "gold_answer_ids_sha256": "77fb1d20106243322eab824524905ee45f83c2069fa889175ed40d9b7c4e4a58",
+          "distractor_answer_ids_sha256": "4013ccac541dec0c5514d3f8d7e5236176d21f20e5740e83a477b463bff01cd4"
+        },
+        {
+          "fact_id": "Q1350362-GeoNames-country-KH",
+          "subject_qid": "Q1350362",
+          "answer_stratum": "KH",
+          "donor_fact_id": "Q535534-GeoNames-country-CN",
+          "donor_subject_qid": "Q535534",
+          "donor_answer_stratum": "CN",
+          "target_prompt_ids_sha256": {
+            "U": "aa93afbdc62ff211d19032f47cb6a6d0047999ee4861deb5f2fa065659dbc7ea",
+            "D": "d4f62e9252b69b4a7c2e7264966adf0ab5789c01d2551f70d8cd64e21c0e2354"
+          },
+          "donor_prompt_ids_sha256": "2801d69f1ac515d9eaea19a9c050f9c28eb2319c7fb61448d79291762257698d",
+          "gold_answer_ids_sha256": "5ce5121c84d2f04abb565a6545c1deaa78b2a5272945ccf1700d10910369edd5",
+          "distractor_answer_ids_sha256": "6f846c4d6c03b75150d30c9817b4af4d51af7eb8b0e839a4b11905f12471d77e"
+        },
+        {
+          "fact_id": "Q143892-GeoNames-country-BF",
+          "subject_qid": "Q143892",
+          "answer_stratum": "BF",
+          "donor_fact_id": "Q2429147-GeoNames-country-IR",
+          "donor_subject_qid": "Q2429147",
+          "donor_answer_stratum": "IR",
+          "target_prompt_ids_sha256": {
+            "U": "67a0cbe882684fd2b2e2b95a0d9c3684587aada4f7d142aae59cd66415f4739a",
+            "D": "e3eb84179ba7d990fdabb2afcab68f778a6f1ad90412a0e39b4b7b2d8e379378"
+          },
+          "donor_prompt_ids_sha256": "b9a10a9ecc221470321e6b512d5de9938308282816a6606a01c4b722a23c73d5",
+          "gold_answer_ids_sha256": "cb2e6d9e7743ac4654878f0777330c18dfdc2fccbc6b37ca451ef94a5feb41d3",
+          "distractor_answer_ids_sha256": "15ad3a1a91e1d1f2c10f04b9cf75f5ad921346dc9d9a0bf4aabed001d89edba8"
+        },
+        {
+          "fact_id": "Q16014-GeoNames-country-LU",
+          "subject_qid": "Q16014",
+          "answer_stratum": "LU",
+          "donor_fact_id": "Q404873-GeoNames-country-CN",
+          "donor_subject_qid": "Q404873",
+          "donor_answer_stratum": "CN",
+          "target_prompt_ids_sha256": {
+            "U": "13a8a112f6114a684c915d3c8480c6e6fcc924e89e44848fa30d62a5edf0484c",
+            "D": "37b3a05d6fd16fe200dcb6dc711c0814b4ea6003b8ca5c576c2412b9f82dc604"
+          },
+          "donor_prompt_ids_sha256": "48d6871ae7dff878bcb7cf2ca9f9b950ca4cf788e58c568874ddb9dba020edfc",
+          "gold_answer_ids_sha256": "9a5927975067babc01d531c41b39fe12a3704861e8d0267ac9342d89197af456",
+          "distractor_answer_ids_sha256": "db999da0133b4214f757a99b9924c151b00fe97ceaaf6114c102bfc800b69970"
+        },
+        {
+          "fact_id": "Q1618499-GeoNames-country-SI",
+          "subject_qid": "Q1618499",
+          "answer_stratum": "SI",
+          "donor_fact_id": "Q2625453-GeoNames-country-IR",
+          "donor_subject_qid": "Q2625453",
+          "donor_answer_stratum": "IR",
+          "target_prompt_ids_sha256": {
+            "U": "5a854e4c8a7346c5fee3516ab169f984d04eae584ece9e465bf09cbd226c6c8a",
+            "D": "c3b7b254387f54ca9b4110e1ce803e52156faa411ce86f80d0c56f34bfc323a4"
+          },
+          "donor_prompt_ids_sha256": "dbd0f2be3044c3bbaf7fb3c1fab52566a710bbb54e23aab3605c0b99ce160c0f",
+          "gold_answer_ids_sha256": "77fb1d20106243322eab824524905ee45f83c2069fa889175ed40d9b7c4e4a58",
+          "distractor_answer_ids_sha256": "4013ccac541dec0c5514d3f8d7e5236176d21f20e5740e83a477b463bff01cd4"
+        },
+        {
+          "fact_id": "Q1628122-GeoNames-country-ES",
+          "subject_qid": "Q1628122",
+          "answer_stratum": "ES",
+          "donor_fact_id": "Q3619248-GeoNames-country-IN",
+          "donor_subject_qid": "Q3619248",
+          "donor_answer_stratum": "IN",
+          "target_prompt_ids_sha256": {
+            "U": "210c41d7bbfa7cdd62c4802b621f31c0da70bfdd3e518ab85990881704b391d9",
+            "D": "6f93a07a7ebfc45a74f49292e89202e1e803b0ef4e720259c11a46ec6a2caea5"
+          },
+          "donor_prompt_ids_sha256": "dc5a4c183d756b18b1d5bf5859a59a2dcf6195dd68eeff2e34766d7b48cc2df4",
+          "gold_answer_ids_sha256": "237b15e707e8d34251152f6e85fdd77dffc5fc3b92b1228c363cce200f9327f2",
+          "distractor_answer_ids_sha256": "2f0a40006f87bdb7e265602c677403e7709b003ba68f6c690975539e213862ce"
+        },
+        {
+          "fact_id": "Q1632465-GeoNames-country-ES",
+          "subject_qid": "Q1632465",
+          "answer_stratum": "ES",
+          "donor_fact_id": "Q22801-GeoNames-country-FR",
+          "donor_subject_qid": "Q22801",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "d2589d5b2046dd95be5404a2909eedac094756b461e8b8e359ee32185efed546",
+            "D": "92874ca926f7df0857fa83aed355cef8ce96d52a0313256874b992559eecb1b6"
+          },
+          "donor_prompt_ids_sha256": "6c017ac21a82ec883fa05f20c945e04178cbc4adc228889f5f01248c004fe508",
+          "gold_answer_ids_sha256": "237b15e707e8d34251152f6e85fdd77dffc5fc3b92b1228c363cce200f9327f2",
+          "distractor_answer_ids_sha256": "2f0a40006f87bdb7e265602c677403e7709b003ba68f6c690975539e213862ce"
+        },
+        {
+          "fact_id": "Q1649746-GeoNames-country-DZ",
+          "subject_qid": "Q1649746",
+          "answer_stratum": "DZ",
+          "donor_fact_id": "Q2889703-GeoNames-country-IL",
+          "donor_subject_qid": "Q2889703",
+          "donor_answer_stratum": "IL",
+          "target_prompt_ids_sha256": {
+            "U": "48e65830c89f303fe7eba3d7f4a949f3306fa5a81f0f74088f87b77832fe5084",
+            "D": "6c55296433cd36157d0786796e270705924d8431ab7004edfeadd76eefb71cd7"
+          },
+          "donor_prompt_ids_sha256": "41e646ccec2415e1c0a91e6ec15e6c94f107e7990512cb50a90276081b2b2c67",
+          "gold_answer_ids_sha256": "aac7e02f9271229de60f683a17f073f2254ed46f5753e813574e8f608ad76c8f",
+          "distractor_answer_ids_sha256": "6e702de76662d8a3daed5d8a88a7a49f4aabfa3d8f60cd74cc20a8ee6bbbce6f"
+        },
+        {
+          "fact_id": "Q168648-GeoNames-country-HU",
+          "subject_qid": "Q168648",
+          "answer_stratum": "HU",
+          "donor_fact_id": "Q2625453-GeoNames-country-IR",
+          "donor_subject_qid": "Q2625453",
+          "donor_answer_stratum": "IR",
+          "target_prompt_ids_sha256": {
+            "U": "5c8f37c1997dac17e2799dff76836cd4fcab25fff627befdcbbd319aef449a6c",
+            "D": "4695a535494e7980af2ad2ba4d42b448811276f0c5aae33e8b065f1e873f7bb9"
+          },
+          "donor_prompt_ids_sha256": "dbd0f2be3044c3bbaf7fb3c1fab52566a710bbb54e23aab3605c0b99ce160c0f",
+          "gold_answer_ids_sha256": "4013ccac541dec0c5514d3f8d7e5236176d21f20e5740e83a477b463bff01cd4",
+          "distractor_answer_ids_sha256": "77fb1d20106243322eab824524905ee45f83c2069fa889175ed40d9b7c4e4a58"
+        },
+        {
+          "fact_id": "Q173219-GeoNames-country-BE",
+          "subject_qid": "Q173219",
+          "answer_stratum": "BE",
+          "donor_fact_id": "Q67068-GeoNames-country-CH",
+          "donor_subject_qid": "Q67068",
+          "donor_answer_stratum": "CH",
+          "target_prompt_ids_sha256": {
+            "U": "4ad018f98f17f6cc646ba3d5e27f98aff783bf711a864573a164dbcbb275bb8e",
+            "D": "04f47db10967d67599d6aabef67c61b03530dadc19d1dd4636590c0f7886f1c3"
+          },
+          "donor_prompt_ids_sha256": "1aff569e5f6cfa12fa649b015929709f113bf4f9a68e1f97bb55d9673a5b159b",
+          "gold_answer_ids_sha256": "db999da0133b4214f757a99b9924c151b00fe97ceaaf6114c102bfc800b69970",
+          "distractor_answer_ids_sha256": "2f0a40006f87bdb7e265602c677403e7709b003ba68f6c690975539e213862ce"
+        },
+        {
+          "fact_id": "Q179604-GeoNames-country-DZ",
+          "subject_qid": "Q179604",
+          "answer_stratum": "DZ",
+          "donor_fact_id": "Q259216-GeoNames-country-FR",
+          "donor_subject_qid": "Q259216",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "786580cf9cd87125746adbf7eac6b88520743aece0d7c5815b62f637d622dd25",
+            "D": "0539213f04eb098755b95feb01a7fcb5b3fc457e713b67a659a842dc05a6ed21"
+          },
+          "donor_prompt_ids_sha256": "30fd316f036011f6b182c024dc6cccbdbc9b0d4209d9d6cb407570ea0f9e48bb",
+          "gold_answer_ids_sha256": "aac7e02f9271229de60f683a17f073f2254ed46f5753e813574e8f608ad76c8f",
+          "distractor_answer_ids_sha256": "6e702de76662d8a3daed5d8a88a7a49f4aabfa3d8f60cd74cc20a8ee6bbbce6f"
+        },
+        {
+          "fact_id": "Q1857915-GeoNames-country-GR",
+          "subject_qid": "Q1857915",
+          "answer_stratum": "GR",
+          "donor_fact_id": "Q241125-GeoNames-country-SK",
+          "donor_subject_qid": "Q241125",
+          "donor_answer_stratum": "SK",
+          "target_prompt_ids_sha256": {
+            "U": "f2c148747790bcb1ec4dcc0c6cf9d5381ce8054d90be965d5a216cfbdd4d41c7",
+            "D": "a516d7b329ebd51771a8918fa7d296d3603fe125ecb828b26dca9ba2e910dd85"
+          },
+          "donor_prompt_ids_sha256": "247a8218a29287cd1115d98eb7160d831393b4d915bb249b227c6a514e268dd0",
+          "gold_answer_ids_sha256": "4245b5735dbcc528085891eb296a01f789a46e7a6c14ddc9bfda163766058b09",
+          "distractor_answer_ids_sha256": "97a0600ac3dd79b4819ffbdac3477045e0b68729d305526dc2ddb15eb4461e61"
+        },
+        {
+          "fact_id": "Q188179-GeoNames-country-EE",
+          "subject_qid": "Q188179",
+          "answer_stratum": "EE",
+          "donor_fact_id": "Q6397-GeoNames-country-FR",
+          "donor_subject_qid": "Q6397",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "e4c18d6c32edbba01d974a44044ae4e382ef36ea892466afd27c4d3d4eb38c05",
+            "D": "0c6272533e5b0ddb8ef5cc4508894f4656d5de4af331e816a4400f7de4cd1418"
+          },
+          "donor_prompt_ids_sha256": "931882154d5a9852eeb069c036ffb2c1112b84596d219170127ab84cf6ac476b",
+          "gold_answer_ids_sha256": "8c4e64cc3020688b1cd2df72ed12b99d66465140ecaa442e939cc22059e9ca66",
+          "distractor_answer_ids_sha256": "d1fb8043ba150bc8c05b823f4dc856b8f26f0f40ff5a25b185f07885ec60c8c8"
+        },
+        {
+          "fact_id": "Q1911759-GeoNames-country-TR",
+          "subject_qid": "Q1911759",
+          "answer_stratum": "TR",
+          "donor_fact_id": "Q349982-GeoNames-country-CN",
+          "donor_subject_qid": "Q349982",
+          "donor_answer_stratum": "CN",
+          "target_prompt_ids_sha256": {
+            "U": "d9650a558178ffb6dfdea050f0af80ee641815872a50d464ad1830ed1d943e42",
+            "D": "494743dc4f3e891c20e5a7aae5a47f525f0c45727741b24cd88c782db26f305c"
+          },
+          "donor_prompt_ids_sha256": "99aa92107984f7144d481dade79bcab122caa26350dbc25b0bb2831c9c02eda4",
+          "gold_answer_ids_sha256": "69f82444e9210461f0962d1740513fab61cf29962ae3d530c36c4782f79a1050",
+          "distractor_answer_ids_sha256": "c0119fd8352459bf6cf0858939d774114200e0e03b21bea4aa671b6177b8c811"
+        },
+        {
+          "fact_id": "Q192859-GeoNames-country-BE",
+          "subject_qid": "Q192859",
+          "answer_stratum": "BE",
+          "donor_fact_id": "Q837478-GeoNames-country-SK",
+          "donor_subject_qid": "Q837478",
+          "donor_answer_stratum": "SK",
+          "target_prompt_ids_sha256": {
+            "U": "8d619999640075bc60e68de2890b0e06578b551e22088aac4304a54ed97c9424",
+            "D": "9bb2a9df2ddd19dad0c2ea53e5f5931c413af9fad6c2c3e80616e24da0cfb31b"
+          },
+          "donor_prompt_ids_sha256": "31e34ff2b28b57e364029cf4b07ba14675bfcfea9b22942b8792416fc7345ea2",
+          "gold_answer_ids_sha256": "db999da0133b4214f757a99b9924c151b00fe97ceaaf6114c102bfc800b69970",
+          "distractor_answer_ids_sha256": "2f0a40006f87bdb7e265602c677403e7709b003ba68f6c690975539e213862ce"
+        },
+        {
+          "fact_id": "Q192926-GeoNames-country-BG",
+          "subject_qid": "Q192926",
+          "answer_stratum": "BG",
+          "donor_fact_id": "Q875070-GeoNames-country-PH",
+          "donor_subject_qid": "Q875070",
+          "donor_answer_stratum": "PH",
+          "target_prompt_ids_sha256": {
+            "U": "4b97be7b20283acb36017117a7bf9b37b8bf60606c916dc277a6f2b3195a6233",
+            "D": "c1bb37abef3e7f1f40841a84e35b71fe5fd5826bd9525e1bd232e2830a2ecc14"
+          },
+          "donor_prompt_ids_sha256": "9ae46a60a101a507a0567e599ad2562700c9c79a9ecf35763dd002d09df0e702",
+          "gold_answer_ids_sha256": "97a0600ac3dd79b4819ffbdac3477045e0b68729d305526dc2ddb15eb4461e61",
+          "distractor_answer_ids_sha256": "4245b5735dbcc528085891eb296a01f789a46e7a6c14ddc9bfda163766058b09"
+        },
+        {
+          "fact_id": "Q1946056-GeoNames-country-PL",
+          "subject_qid": "Q1946056",
+          "answer_stratum": "PL",
+          "donor_fact_id": "Q765472-GeoNames-country-MX",
+          "donor_subject_qid": "Q765472",
+          "donor_answer_stratum": "MX",
+          "target_prompt_ids_sha256": {
+            "U": "8021df107abe23bfdb9cfd7ddd60bdbb8fedb45ef713405b0bec7ac7404fb040",
+            "D": "f59c9d6b6647b9de0633264999c5f791f7665253ab086351e5240868487bf107"
+          },
+          "donor_prompt_ids_sha256": "d1ad6b4acba91f73592e53bd7ee0b744ffccc0d2307de0bbb03b0f4deeedb0a9",
+          "gold_answer_ids_sha256": "5703fd459198d56a42fa7f5160b3be694086d144a10d426c61248bd1f2afaee4",
+          "distractor_answer_ids_sha256": "a75372eff5d609a6793e8489b9bbbcebdb941191dbdeb35ccbb1eaa5ccf1cd9a"
+        },
+        {
+          "fact_id": "Q1968465-GeoNames-country-LR",
+          "subject_qid": "Q1968465",
+          "answer_stratum": "LR",
+          "donor_fact_id": "Q2341909-GeoNames-country-IN",
+          "donor_subject_qid": "Q2341909",
+          "donor_answer_stratum": "IN",
+          "target_prompt_ids_sha256": {
+            "U": "9d845a7f4c011d54380ecfc9b58e436dd550e79253492bce3021bd0021d4a4ac",
+            "D": "a90df3b9b71a069ffe839b9e35c3f6ee9e47ea5734cba7873e42ad097720bbdc"
+          },
+          "donor_prompt_ids_sha256": "149de5ee18130e08285ff28cdfda71fb8262c387f181dc29b1708559eeb6af55",
+          "gold_answer_ids_sha256": "3f384a7f8eeb92babde00c2e6b495b457374a83f8c13043592f76eeacbe84009",
+          "distractor_answer_ids_sha256": "facc1f4f90c540682c5a22c2607533ead0f8939483eb9324b888ecaca37205f7"
+        },
+        {
+          "fact_id": "Q202991-GeoNames-country-LY",
+          "subject_qid": "Q202991",
+          "answer_stratum": "LY",
+          "donor_fact_id": "Q854870-GeoNames-country-FR",
+          "donor_subject_qid": "Q854870",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "ccc35d2f7d0cc34d5a6e7ab40cca64fc41c135cc1aa738b64f2e36760ad1b826",
+            "D": "50a94acc159a7f9ad15f8c281a288d3af776ea9cfa1a7343d68f2a42643aa30f"
+          },
+          "donor_prompt_ids_sha256": "6b176b357bce6776b820ba7fe5b81b8ea8c668cb9d5c2875539613f2c810d127",
+          "gold_answer_ids_sha256": "6e702de76662d8a3daed5d8a88a7a49f4aabfa3d8f60cd74cc20a8ee6bbbce6f",
+          "distractor_answer_ids_sha256": "17d1fe12e0676164d52efec6a0ce94027a2cfeafcc5803080ac80fbe97b718d7"
+        },
+        {
+          "fact_id": "Q2044578-GeoNames-country-LT",
+          "subject_qid": "Q2044578",
+          "answer_stratum": "LT",
+          "donor_fact_id": "Q188511-GeoNames-country-FR",
+          "donor_subject_qid": "Q188511",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "6b37c52a19f1df962789d1a32b25693aa868522d41b392238051bb5194103d4f",
+            "D": "b4ae64c85ef2e5c13b54768374083a5d1d09be2bba0ccd7525007355a6d440f2"
+          },
+          "donor_prompt_ids_sha256": "5266e4955b649f941d26d74fdf40ddc685c1e372f49b4d134ab3ba34fecdf9fe",
+          "gold_answer_ids_sha256": "b66e69a469d8bb9e9f3206bd223d96ebb18f8b7f98197e18897402238414dec3",
+          "distractor_answer_ids_sha256": "d1fb8043ba150bc8c05b823f4dc856b8f26f0f40ff5a25b185f07885ec60c8c8"
+        },
+        {
+          "fact_id": "Q2204078-GeoNames-country-AE",
+          "subject_qid": "Q2204078",
+          "answer_stratum": "AE",
+          "donor_fact_id": "Q2429147-GeoNames-country-IR",
+          "donor_subject_qid": "Q2429147",
+          "donor_answer_stratum": "IR",
+          "target_prompt_ids_sha256": {
+            "U": "73067811f3b0170edecfdd6ac1e9cbaaca449343be743aed47cf3773e2f8b367",
+            "D": "476a248ec3f6b069e5a64c05c4cfd14fbc866a4cc0e1b222f2ccc1aa207c4e99"
+          },
+          "donor_prompt_ids_sha256": "b9a10a9ecc221470321e6b512d5de9938308282816a6606a01c4b722a23c73d5",
+          "gold_answer_ids_sha256": "d6b908972499142e3ac03d02b330542fe2ff9939bdf4877646aae04c07787a9b",
+          "distractor_answer_ids_sha256": "12967a6093d3489cc4e8ac4868fbb030e91b1eedd01d4e4425532506bf419da5"
+        },
+        {
+          "fact_id": "Q245307-GeoNames-country-FR",
+          "subject_qid": "Q245307",
+          "answer_stratum": "FR",
+          "donor_fact_id": "Q2341909-GeoNames-country-IN",
+          "donor_subject_qid": "Q2341909",
+          "donor_answer_stratum": "IN",
+          "target_prompt_ids_sha256": {
+            "U": "7a02adb2211c6b0e389bb4a0510360e13cb5caeafd6cf79f73eb580d59cfb18a",
+            "D": "9e09efba0c5c56aed674e2a3350bc18ae39b7e96b7314b64a202b3503295b6fe"
+          },
+          "donor_prompt_ids_sha256": "149de5ee18130e08285ff28cdfda71fb8262c387f181dc29b1708559eeb6af55",
+          "gold_answer_ids_sha256": "2f0a40006f87bdb7e265602c677403e7709b003ba68f6c690975539e213862ce",
+          "distractor_answer_ids_sha256": "db999da0133b4214f757a99b9924c151b00fe97ceaaf6114c102bfc800b69970"
+        },
+        {
+          "fact_id": "Q2470205-GeoNames-country-TJ",
+          "subject_qid": "Q2470205",
+          "answer_stratum": "TJ",
+          "donor_fact_id": "Q638621-GeoNames-country-IN",
+          "donor_subject_qid": "Q638621",
+          "donor_answer_stratum": "IN",
+          "target_prompt_ids_sha256": {
+            "U": "134bdb699fdcbb6f80a780295645547cbcc9d52e484a31b21795cf2b70925f2e",
+            "D": "e815bef9eb1124ebed4757ee47dc2c98799d0d58e618174cb64f600357f96f03"
+          },
+          "donor_prompt_ids_sha256": "3dd4e10e3e9a0d4059c3e340cf00f458e3c30b3e3745001c2770c19a6a8a99c6",
+          "gold_answer_ids_sha256": "d0544cdf18450dee5c911733829fe889657c858e0f1b9a2cffd7729f79b86824",
+          "distractor_answer_ids_sha256": "4fae6585c70b45d57671d70b388b36e5c31826d9e55773a0b9296f39aed1ad1b"
+        },
+        {
+          "fact_id": "Q2471-GeoNames-country-YE",
+          "subject_qid": "Q2471",
+          "answer_stratum": "YE",
+          "donor_fact_id": "Q860304-GeoNames-country-CI",
+          "donor_subject_qid": "Q860304",
+          "donor_answer_stratum": "CI",
+          "target_prompt_ids_sha256": {
+            "U": "d432339e325b7461a112bc130b5340918af1fd931070bdd5fe5a9fd66cbf1fd5",
+            "D": "522914479f7563b85fdc0397f26c58067542a9f3e65e0332c4ffce73e418edbc"
+          },
+          "donor_prompt_ids_sha256": "09ceea99fd2ced23df54186442bd306df49b1ccf59363e7b94b19f5ecc7daa17",
+          "gold_answer_ids_sha256": "95af5dd3c52eed33588db5cd1cf451f5d1ac02a7acbaa7d0977201e4f8da2239",
+          "distractor_answer_ids_sha256": "8dacd17d1e012d78da0aae07ab04eedd2ffb4de9f9c05cfafc41113c3f641dac"
+        },
+        {
+          "fact_id": "Q2488907-GeoNames-country-UG",
+          "subject_qid": "Q2488907",
+          "answer_stratum": "UG",
+          "donor_fact_id": "Q43387-GeoNames-country-TR",
+          "donor_subject_qid": "Q43387",
+          "donor_answer_stratum": "TR",
+          "target_prompt_ids_sha256": {
+            "U": "1ec8eed89dea031fede94fa033e1eb7c0c225d0e39f52ccc242e3d35615d540c",
+            "D": "d2b708b10260540965d04081392821908afd54b12721072225748f99388da838"
+          },
+          "donor_prompt_ids_sha256": "bd96b60fe1d3da2d8c8c24fcd3f7ac49e6c6db73da23f667882848f1e8647dc8",
+          "gold_answer_ids_sha256": "4abebd85f0a72a1412acda41032e515ef47de95e8c327b7f421946739e6cff21",
+          "distractor_answer_ids_sha256": "56dd033ed44406394ea870cc8f94c231597289da6a9ff68adbdc09709bc9baf2"
+        },
+        {
+          "fact_id": "Q259216-GeoNames-country-FR",
+          "subject_qid": "Q259216",
+          "answer_stratum": "FR",
+          "donor_fact_id": "Q750989-GeoNames-country-UZ",
+          "donor_subject_qid": "Q750989",
+          "donor_answer_stratum": "UZ",
+          "target_prompt_ids_sha256": {
+            "U": "30fd316f036011f6b182c024dc6cccbdbc9b0d4209d9d6cb407570ea0f9e48bb",
+            "D": "63598190156419aca5378d6988897b7b5cfca33760d1f0a87823c0eb9f94e5fa"
+          },
+          "donor_prompt_ids_sha256": "739995dfaa7c18428758c078f6b4390b3c8c3f9aefe7205757da6ad01e044f20",
+          "gold_answer_ids_sha256": "2f0a40006f87bdb7e265602c677403e7709b003ba68f6c690975539e213862ce",
+          "distractor_answer_ids_sha256": "db999da0133b4214f757a99b9924c151b00fe97ceaaf6114c102bfc800b69970"
+        },
+        {
+          "fact_id": "Q2625453-GeoNames-country-IR",
+          "subject_qid": "Q2625453",
+          "answer_stratum": "IR",
+          "donor_fact_id": "Q693093-GeoNames-country-KE",
+          "donor_subject_qid": "Q693093",
+          "donor_answer_stratum": "KE",
+          "target_prompt_ids_sha256": {
+            "U": "dbd0f2be3044c3bbaf7fb3c1fab52566a710bbb54e23aab3605c0b99ce160c0f",
+            "D": "c8f6596176bc11d6ffe9b31430fe3e94e904b09bf0bcfc4cc032aaf0d68feecc"
+          },
+          "donor_prompt_ids_sha256": "1f40ab2deb50a6f59ce633f029d3b1cd3e57290b4f040dbaa3ec7606367cb3eb",
+          "gold_answer_ids_sha256": "c0119fd8352459bf6cf0858939d774114200e0e03b21bea4aa671b6177b8c811",
+          "distractor_answer_ids_sha256": "69f82444e9210461f0962d1740513fab61cf29962ae3d530c36c4782f79a1050"
+        },
+        {
+          "fact_id": "Q2658219-GeoNames-country-SE",
+          "subject_qid": "Q2658219",
+          "answer_stratum": "SE",
+          "donor_fact_id": "Q734315-GeoNames-country-GE",
+          "donor_subject_qid": "Q734315",
+          "donor_answer_stratum": "GE",
+          "target_prompt_ids_sha256": {
+            "U": "1acdf7c0852f4ed08524c8f99749df8e1b6d37b0e854b42e4de30c702d5b5aed",
+            "D": "0619fc4c59210506df98f3097b5136501813fc20d2df60c5a9b00fa63091be26"
+          },
+          "donor_prompt_ids_sha256": "e2641993c50fc3dfbf5fe28cee4287f728e981dab5bbfe7d72219089c98369e9",
+          "gold_answer_ids_sha256": "524cd2b31d5b90f8bec05d6b08e88aed537d0e8f66e801a270a648d88c061a47",
+          "distractor_answer_ids_sha256": "77d762b557822dbf80d7ef90ca625ccc4854e5f1ba3e2754f4c4aeafb9db650a"
+        },
+        {
+          "fact_id": "Q2658228-GeoNames-country-IL",
+          "subject_qid": "Q2658228",
+          "answer_stratum": "IL",
+          "donor_fact_id": "Q2341909-GeoNames-country-IN",
+          "donor_subject_qid": "Q2341909",
+          "donor_answer_stratum": "IN",
+          "target_prompt_ids_sha256": {
+            "U": "4e2724a77da3669dd2f322856bd9abd9fe98632e377ca371f3464043b61f6ff1",
+            "D": "977f8a3f512b72c92b84ce356b54a8ca765195768cca4da00d46094eaf9bb90e"
+          },
+          "donor_prompt_ids_sha256": "149de5ee18130e08285ff28cdfda71fb8262c387f181dc29b1708559eeb6af55",
+          "gold_answer_ids_sha256": "6f846c4d6c03b75150d30c9817b4af4d51af7eb8b0e839a4b11905f12471d77e",
+          "distractor_answer_ids_sha256": "5c6ca20f5ea6a2fe136a2bf0e1ba0c2d02c35028e90f116ee6718a1e3b0ce1c5"
+        },
+        {
+          "fact_id": "Q26757559-GeoNames-country-ID",
+          "subject_qid": "Q26757559",
+          "answer_stratum": "ID",
+          "donor_fact_id": "Q489679-GeoNames-country-AR",
+          "donor_subject_qid": "Q489679",
+          "donor_answer_stratum": "AR",
+          "target_prompt_ids_sha256": {
+            "U": "210a58a624858bd1704e7901637025dbf32935f7b43cb01958bc47da9707aaa3",
+            "D": "d8eabc89af032f4a324558048cb7adfb9541334103ad8e0a0fcb963b3a0d77f8"
+          },
+          "donor_prompt_ids_sha256": "ddd844517b62e062d53fa1ecb7db7677bf5096173357e41654758910a760c203",
+          "gold_answer_ids_sha256": "85ec72bac99099cd475ddfb74e2e5fc41e35e2deeb94237feb0b9f2eae9ba9d7",
+          "distractor_answer_ids_sha256": "ce0450db104d22dec3c72322e00bff891aac57dddd712d1b33dd1a74eefc0081"
+        },
+        {
+          "fact_id": "Q270821-GeoNames-country-IQ",
+          "subject_qid": "Q270821",
+          "answer_stratum": "IQ",
+          "donor_fact_id": "Q1251473-GeoNames-country-PK",
+          "donor_subject_qid": "Q1251473",
+          "donor_answer_stratum": "PK",
+          "target_prompt_ids_sha256": {
+            "U": "3559084fcf48f36582df6b2b09dd2d738a12549cf275297a1b9b3eed1aa7e13a",
+            "D": "d0e36345a737a33db4a4cfa0c3d35aa0ee4173c4246a3e1804ef113aa4731ef2"
+          },
+          "donor_prompt_ids_sha256": "808c161737efbdcc47133484e7f8ee1ff6266d86cefc340f43b2ebea77d1a36a",
+          "gold_answer_ids_sha256": "319980856052ec6d4bb6a5368a8b58f11e51892e2e24357032590a1155f9f85d",
+          "distractor_answer_ids_sha256": "c0119fd8352459bf6cf0858939d774114200e0e03b21bea4aa671b6177b8c811"
+        },
+        {
+          "fact_id": "Q2731405-GeoNames-country-MK",
+          "subject_qid": "Q2731405",
+          "answer_stratum": "MK",
+          "donor_fact_id": "Q619440-GeoNames-country-FJ",
+          "donor_subject_qid": "Q619440",
+          "donor_answer_stratum": "FJ",
+          "target_prompt_ids_sha256": {
+            "U": "faf6c4236556f8936b31d7d16e9be2fc4d1027fd40772615276d1f35dd40b925",
+            "D": "3d1546927ea15332b0ed09e8c816577ee9d07ddb0fe927594f5733a59af1d892"
+          },
+          "donor_prompt_ids_sha256": "3977a86f18f508562e6b4b7ae46f36ea08681c06b84da4667d117ab8357e443c",
+          "gold_answer_ids_sha256": "214a526b815e1b00c9c36e8f72162519a0967ed1cffdce1d6d0ace803ca33bb3",
+          "distractor_answer_ids_sha256": "97a0600ac3dd79b4819ffbdac3477045e0b68729d305526dc2ddb15eb4461e61"
+        },
+        {
+          "fact_id": "Q2889703-GeoNames-country-IL",
+          "subject_qid": "Q2889703",
+          "answer_stratum": "IL",
+          "donor_fact_id": "Q1004510-GeoNames-country-ZM",
+          "donor_subject_qid": "Q1004510",
+          "donor_answer_stratum": "ZM",
+          "target_prompt_ids_sha256": {
+            "U": "41e646ccec2415e1c0a91e6ec15e6c94f107e7990512cb50a90276081b2b2c67",
+            "D": "bfcb646d40ea595d13be3a506e633bcc21f1174dea4d4216c60820ed90fcc3ce"
+          },
+          "donor_prompt_ids_sha256": "e5038be4a9ff9e30932ec47f437d14c0d160535cceb281d1528e2610b8607018",
+          "gold_answer_ids_sha256": "6f846c4d6c03b75150d30c9817b4af4d51af7eb8b0e839a4b11905f12471d77e",
+          "distractor_answer_ids_sha256": "5c6ca20f5ea6a2fe136a2bf0e1ba0c2d02c35028e90f116ee6718a1e3b0ce1c5"
+        },
+        {
+          "fact_id": "Q2900650-GeoNames-country-LB",
+          "subject_qid": "Q2900650",
+          "answer_stratum": "LB",
+          "donor_fact_id": "Q1262380-GeoNames-country-IN",
+          "donor_subject_qid": "Q1262380",
+          "donor_answer_stratum": "IN",
+          "target_prompt_ids_sha256": {
+            "U": "96fa32e804fff9772da77f6f5aef9f253d6657da8134dd0462cb282e9deaca9d",
+            "D": "c69f555519d516acf82249a743bbc1048abd06031e44fa26ee3c6d6888c06990"
+          },
+          "donor_prompt_ids_sha256": "0650da962c919315f5c766a30d0679c0936a4532cbeeebfb3856cce77e053739",
+          "gold_answer_ids_sha256": "5c6ca20f5ea6a2fe136a2bf0e1ba0c2d02c35028e90f116ee6718a1e3b0ce1c5",
+          "distractor_answer_ids_sha256": "985b37fcda087ebd2ab00b688fc9d862e1df4b6bd9b22e37b308d236e021c2de"
+        },
+        {
+          "fact_id": "Q3079830-GeoNames-country-TN",
+          "subject_qid": "Q3079830",
+          "answer_stratum": "TN",
+          "donor_fact_id": "Q1017376-GeoNames-country-PG",
+          "donor_subject_qid": "Q1017376",
+          "donor_answer_stratum": "PG",
+          "target_prompt_ids_sha256": {
+            "U": "bca35f0b5d11c2b3e0d1b2df5d48bfc8d9eb96a02f589589f0a48325fc96b9f3",
+            "D": "53ff287c27256100677e262b5d04df7a095afdef427a853852ae9d673a96928e"
+          },
+          "donor_prompt_ids_sha256": "d4ac666b399a7667856dfaa22f08d7c6f3a49e3f62baf556f913294e4e55d801",
+          "gold_answer_ids_sha256": "17d1fe12e0676164d52efec6a0ce94027a2cfeafcc5803080ac80fbe97b718d7",
+          "distractor_answer_ids_sha256": "6e702de76662d8a3daed5d8a88a7a49f4aabfa3d8f60cd74cc20a8ee6bbbce6f"
+        },
+        {
+          "fact_id": "Q3132444-GeoNames-country-SS",
+          "subject_qid": "Q3132444",
+          "answer_stratum": "SS",
+          "donor_fact_id": "Q360769-GeoNames-country-CN",
+          "donor_subject_qid": "Q360769",
+          "donor_answer_stratum": "CN",
+          "target_prompt_ids_sha256": {
+            "U": "edd391378fc067065b0e4e43afa56ec6ac237fb5d617b79e70692ebef8c100e8",
+            "D": "4997e49ef1a82b8607e9302226d47584083802abe3ccc343068a392f43a9ddda"
+          },
+          "donor_prompt_ids_sha256": "bd7aa31da2c450f1e0c3e4be3e3c4625a4a8da4a14b50f60f9e4009263d2e459",
+          "gold_answer_ids_sha256": "86e7e67f67a531bfd5b25539647e843be7e13135f97caa77b5915335f1bc5c30",
+          "distractor_answer_ids_sha256": "4abebd85f0a72a1412acda41032e515ef47de95e8c327b7f421946739e6cff21"
+        },
+        {
+          "fact_id": "Q3138871-GeoNames-country-KM",
+          "subject_qid": "Q3138871",
+          "answer_stratum": "KM",
+          "donor_fact_id": "Q1968465-GeoNames-country-LR",
+          "donor_subject_qid": "Q1968465",
+          "donor_answer_stratum": "LR",
+          "target_prompt_ids_sha256": {
+            "U": "c2106bee68dc2ae9cbf54b361f43232b0f04a70ba6d004434c352df2a2c7b675",
+            "D": "8f56950495dad8b8cdcda11fc52364f2841c2a2177f04baf453931827e0ac2eb"
+          },
+          "donor_prompt_ids_sha256": "9d845a7f4c011d54380ecfc9b58e436dd550e79253492bce3021bd0021d4a4ac",
+          "gold_answer_ids_sha256": "6cc9a207192fd8a8f503b4e0e86e583f8b8f35dcb158c23ecd864f813608c0a7",
+          "distractor_answer_ids_sha256": "15ad3a1a91e1d1f2c10f04b9cf75f5ad921346dc9d9a0bf4aabed001d89edba8"
+        },
+        {
+          "fact_id": "Q3248111-GeoNames-country-PK",
+          "subject_qid": "Q3248111",
+          "answer_stratum": "PK",
+          "donor_fact_id": "Q870475-GeoNames-country-IQ",
+          "donor_subject_qid": "Q870475",
+          "donor_answer_stratum": "IQ",
+          "target_prompt_ids_sha256": {
+            "U": "1308a17a995ff8bea4bd86f3dcd0c6c28182836f52c5a5b058f5c7ea4dfa5489",
+            "D": "e814254f2f99d241b27aefa0fbd59e4b300630d77edd0ee272d6f433a623b936"
+          },
+          "donor_prompt_ids_sha256": "b17a4853adb18b8a7c44be41188e15707435de46882e142548aba2b74c97769a",
+          "gold_answer_ids_sha256": "c25e3edf8ebec6ef6e19294b17938072deeb49f585eb8b86ad33986e996baa92",
+          "distractor_answer_ids_sha256": "8dacd17d1e012d78da0aae07ab04eedd2ffb4de9f9c05cfafc41113c3f641dac"
+        },
+        {
+          "fact_id": "Q33377-GeoNames-country-IN",
+          "subject_qid": "Q33377",
+          "answer_stratum": "IN",
+          "donor_fact_id": "Q1013413-GeoNames-country-ZA",
+          "donor_subject_qid": "Q1013413",
+          "donor_answer_stratum": "ZA",
+          "target_prompt_ids_sha256": {
+            "U": "83fded9b62713bd9b0bc0c1bc0fb5a83836ee43c56b19a2680d3758db9abfa8c",
+            "D": "47ff2f8e714ff24732a91df9c0f3512439c59354419150e1b67e9618e069c1ff"
+          },
+          "donor_prompt_ids_sha256": "2134de24e754a5f851d1218bb9d036bb7bdb9a364722c1712a83ce3360b8714c",
+          "gold_answer_ids_sha256": "8f7dfdeae4efe340b15420bed03a24bb6b3a12ca1665134bd5bce8b16a00e171",
+          "distractor_answer_ids_sha256": "8dacd17d1e012d78da0aae07ab04eedd2ffb4de9f9c05cfafc41113c3f641dac"
+        },
+        {
+          "fact_id": "Q3347001-GeoNames-country-CA",
+          "subject_qid": "Q3347001",
+          "answer_stratum": "CA",
+          "donor_fact_id": "Q1350362-GeoNames-country-KH",
+          "donor_subject_qid": "Q1350362",
+          "donor_answer_stratum": "KH",
+          "target_prompt_ids_sha256": {
+            "U": "a6d8eaa3fe6e0f96da42e64b320cb7fef89b64c47d54ebcf043f11d8d03864cc",
+            "D": "9722e48f289a4e34b7e3b61592991892c6fee9338ff6bf8bc510602c3ae7f9a7"
+          },
+          "donor_prompt_ids_sha256": "aa93afbdc62ff211d19032f47cb6a6d0047999ee4861deb5f2fa065659dbc7ea",
+          "gold_answer_ids_sha256": "ebad3a7e0462dca9a8415c719ffc5e9d7fd890d307ebb8931667a8b6f7ea6189",
+          "distractor_answer_ids_sha256": "8bc2253315562028370a071f63f6893fcd616a9d816b40edcae8556f273b6bab"
+        },
+        {
+          "fact_id": "Q3560020-GeoNames-country-GR",
+          "subject_qid": "Q3560020",
+          "answer_stratum": "GR",
+          "donor_fact_id": "Q1013413-GeoNames-country-ZA",
+          "donor_subject_qid": "Q1013413",
+          "donor_answer_stratum": "ZA",
+          "target_prompt_ids_sha256": {
+            "U": "94e63e63615862bc83ae6ebca8679a8cae500538e394bbc64e2a3d4e30a3d8f4",
+            "D": "112ad5f695afc5980680d4ac2dac91535d9573eb8aca9227b9f25120a7e43771"
+          },
+          "donor_prompt_ids_sha256": "2134de24e754a5f851d1218bb9d036bb7bdb9a364722c1712a83ce3360b8714c",
+          "gold_answer_ids_sha256": "4245b5735dbcc528085891eb296a01f789a46e7a6c14ddc9bfda163766058b09",
+          "distractor_answer_ids_sha256": "97a0600ac3dd79b4819ffbdac3477045e0b68729d305526dc2ddb15eb4461e61"
+        },
+        {
+          "fact_id": "Q360769-GeoNames-country-CN",
+          "subject_qid": "Q360769",
+          "answer_stratum": "CN",
+          "donor_fact_id": "Q2438632-GeoNames-country-IR",
+          "donor_subject_qid": "Q2438632",
+          "donor_answer_stratum": "IR",
+          "target_prompt_ids_sha256": {
+            "U": "bd7aa31da2c450f1e0c3e4be3e3c4625a4a8da4a14b50f60f9e4009263d2e459",
+            "D": "cc6e6022738bc77f40299fa96e0b37d93ef732a614f3058561c288b6605ec0c4"
+          },
+          "donor_prompt_ids_sha256": "1ff21b94af227de27a748636978996ed66abf09f20d4eefe88eec050ba381692",
+          "gold_answer_ids_sha256": "8dacd17d1e012d78da0aae07ab04eedd2ffb4de9f9c05cfafc41113c3f641dac",
+          "distractor_answer_ids_sha256": "8f7dfdeae4efe340b15420bed03a24bb6b3a12ca1665134bd5bce8b16a00e171"
+        },
+        {
+          "fact_id": "Q3657-GeoNames-country-LT",
+          "subject_qid": "Q3657",
+          "answer_stratum": "LT",
+          "donor_fact_id": "Q192926-GeoNames-country-BG",
+          "donor_subject_qid": "Q192926",
+          "donor_answer_stratum": "BG",
+          "target_prompt_ids_sha256": {
+            "U": "13f2028d572e6161c09fa39b7d3bde97089920003fdc65be6ced1534f68a34bc",
+            "D": "97ff760f67ddd6093a80773ff28a4857f9fd34b5a468455a76209160799eecb8"
+          },
+          "donor_prompt_ids_sha256": "4b97be7b20283acb36017117a7bf9b37b8bf60606c916dc277a6f2b3195a6233",
+          "gold_answer_ids_sha256": "b66e69a469d8bb9e9f3206bd223d96ebb18f8b7f98197e18897402238414dec3",
+          "distractor_answer_ids_sha256": "d1fb8043ba150bc8c05b823f4dc856b8f26f0f40ff5a25b185f07885ec60c8c8"
+        },
+        {
+          "fact_id": "Q371354-GeoNames-country-AR",
+          "subject_qid": "Q371354",
+          "answer_stratum": "AR",
+          "donor_fact_id": "Q659887-GeoNames-country-IN",
+          "donor_subject_qid": "Q659887",
+          "donor_answer_stratum": "IN",
+          "target_prompt_ids_sha256": {
+            "U": "f22ea7f4aca61fa92e36cc74376f73a5dbd7ca26582bf41cee7a3572fd90e5ac",
+            "D": "aef5574b41f425d24c55a2eb6b598d2f76e7d983d90590c04707107d700f6b80"
+          },
+          "donor_prompt_ids_sha256": "9e886a351e947278b9e846ad4603a6eb1946ff4af693b0fc7aeb1773eee6111a",
+          "gold_answer_ids_sha256": "2c0453625df37b6b179152b342555017dd48dfdcabb656b61c10605c6a71f503",
+          "distractor_answer_ids_sha256": "a5971170689851c62c52a94c76727afd0d849789495687228590f63d735704ee"
+        },
+        {
+          "fact_id": "Q3763-GeoNames-country-CL",
+          "subject_qid": "Q3763",
+          "answer_stratum": "CL",
+          "donor_fact_id": "Q1019575-GeoNames-country-SE",
+          "donor_subject_qid": "Q1019575",
+          "donor_answer_stratum": "SE",
+          "target_prompt_ids_sha256": {
+            "U": "4ec668870ff3140207cf6bb7a078322177cf510b55f0e60bcab920398d61c501",
+            "D": "dca2e5ae561eb216c52cbfe9caef59388ccb142c4e7dc618ee8e4385884cc9bd"
+          },
+          "donor_prompt_ids_sha256": "a3bfa2200f5ee6c2e02afac58c12bb904e97679e5289c48a6d44fb47b7c67ccb",
+          "gold_answer_ids_sha256": "5a753f50fc38fbe1ed5c4e058315420a19721f495982d718798e9565b3f5ab4c",
+          "distractor_answer_ids_sha256": "a5971170689851c62c52a94c76727afd0d849789495687228590f63d735704ee"
+        },
+        {
+          "fact_id": "Q389942-GeoNames-country-SK",
+          "subject_qid": "Q389942",
+          "answer_stratum": "SK",
+          "donor_fact_id": "Q106681-GeoNames-country-PL",
+          "donor_subject_qid": "Q106681",
+          "donor_answer_stratum": "PL",
+          "target_prompt_ids_sha256": {
+            "U": "381819a0cc02e33ce0c6323de49dd07f904db2b3f6c881aa802e5d5ac8df6d42",
+            "D": "3b3d9b37a2be221fa1a8dc8fa275bf65a53c65e7ff2f69d1aac788124ad78f30"
+          },
+          "donor_prompt_ids_sha256": "1cb37fc8006db53cde96606cf11ecd0aefbd70331faf54a56772c224ef142afc",
+          "gold_answer_ids_sha256": "e0056f0a424d21c78aade75a23c7645eb2d74be1d6a2e1d9cc5a9e8e7f92322e",
+          "distractor_answer_ids_sha256": "4013ccac541dec0c5514d3f8d7e5236176d21f20e5740e83a477b463bff01cd4"
+        },
+        {
+          "fact_id": "Q399083-GeoNames-country-ZW",
+          "subject_qid": "Q399083",
+          "answer_stratum": "ZW",
+          "donor_fact_id": "Q1253395-GeoNames-country-PK",
+          "donor_subject_qid": "Q1253395",
+          "donor_answer_stratum": "PK",
+          "target_prompt_ids_sha256": {
+            "U": "b7dd3a7296b45f798309f9770642fba256a4da9644c1e5198577c6cb51cdca10",
+            "D": "76ea46ac9caf3bc3aefbcd71932fc3158861661d1c08082ff590cd4e53aad586"
+          },
+          "donor_prompt_ids_sha256": "569c75fafe047a928525b15941ec13d3f7a27f1dc23887bafb353538d38c7251",
+          "gold_answer_ids_sha256": "691ed7f1d837f9d7db790a338ec9e70c05d41607ccdaef58dbfae723f16e54cc",
+          "distractor_answer_ids_sha256": "536b1c746ea5109638de631bfb06185e7791eb4d4305d8a020c4c2f661f39670"
+        },
+        {
+          "fact_id": "Q4072894-GeoNames-country-IE",
+          "subject_qid": "Q4072894",
+          "answer_stratum": "IE",
+          "donor_fact_id": "Q34001-GeoNames-country-FR",
+          "donor_subject_qid": "Q34001",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "87e778b05e504cb95861c23045c25a5892112cd7c7e2e8ed316fe261e83fa85d",
+            "D": "9d2d793ece1a399ac32eaf8ab349f054da0380146dbb499621abda1fb3c538db"
+          },
+          "donor_prompt_ids_sha256": "2a81e8ead6c0bcb43b23b1f9045dc348cd51c47e7aa8513bf8bad2e9f9591e10",
+          "gold_answer_ids_sha256": "cd28b0ec03161e132b5acdfa99481811d90e11b9b9edb66605603be0d0c9d115",
+          "distractor_answer_ids_sha256": "97a0600ac3dd79b4819ffbdac3477045e0b68729d305526dc2ddb15eb4461e61"
+        },
+        {
+          "fact_id": "Q42089-GeoNames-country-KR",
+          "subject_qid": "Q42089",
+          "answer_stratum": "KR",
+          "donor_fact_id": "Q11449-GeoNames-country-ID",
+          "donor_subject_qid": "Q11449",
+          "donor_answer_stratum": "ID",
+          "target_prompt_ids_sha256": {
+            "U": "d9b3703ff19f2c6081a62c577ad09a88831ed11761a973a5c49b908c7375194b",
+            "D": "cbe45562f747d03cbc9563dfdf896fe3c32a8ee198cc24bcb9b1dd0bb9dde2a3"
+          },
+          "donor_prompt_ids_sha256": "8dfdbe8f4435734c823802313f0bf63aac2e31e14d1e8b1539502c89dafa284b",
+          "gold_answer_ids_sha256": "12967a6093d3489cc4e8ac4868fbb030e91b1eedd01d4e4425532506bf419da5",
+          "distractor_answer_ids_sha256": "b24555eeb2fdb615900ae37739e973e15c66c258524576675d98522f33de6822"
+        },
+        {
+          "fact_id": "Q42117-GeoNames-country-KR",
+          "subject_qid": "Q42117",
+          "answer_stratum": "KR",
+          "donor_fact_id": "Q583619-GeoNames-country-NG",
+          "donor_subject_qid": "Q583619",
+          "donor_answer_stratum": "NG",
+          "target_prompt_ids_sha256": {
+            "U": "1ab0b1f615e996d91f551759e60859c732e483389cff07a2c942378ab630593c",
+            "D": "1b489d9955aba9dd3c0076b1a769c86734a4d3d9ec1662c40c8bc49a7ed8b953"
+          },
+          "donor_prompt_ids_sha256": "05a42577f6111ccb3de5cb084a14a0424e35823a14ce16831d3dfd870fd20d68",
+          "gold_answer_ids_sha256": "12967a6093d3489cc4e8ac4868fbb030e91b1eedd01d4e4425532506bf419da5",
+          "distractor_answer_ids_sha256": "b24555eeb2fdb615900ae37739e973e15c66c258524576675d98522f33de6822"
+        },
+        {
+          "fact_id": "Q4709-GeoNames-country-VE",
+          "subject_qid": "Q4709",
+          "answer_stratum": "VE",
+          "donor_fact_id": "Q3560020-GeoNames-country-GR",
+          "donor_subject_qid": "Q3560020",
+          "donor_answer_stratum": "GR",
+          "target_prompt_ids_sha256": {
+            "U": "c5e33c7b5ea792d5537491e37e9a68e9a96e19d7a1d815eaa9070e424b36bce0",
+            "D": "acffab0191c018c4a1723c2ee5ad56efa9085406115f4f73e19466333a2deae1"
+          },
+          "donor_prompt_ids_sha256": "94e63e63615862bc83ae6ebca8679a8cae500538e394bbc64e2a3d4e30a3d8f4",
+          "gold_answer_ids_sha256": "3a77ae5692165624adeec2c0a353d7b248fb75e681960497f0de0bbbd7f927f8",
+          "distractor_answer_ids_sha256": "a5971170689851c62c52a94c76727afd0d849789495687228590f63d735704ee"
+        },
+        {
+          "fact_id": "Q502023-GeoNames-country-MX",
+          "subject_qid": "Q502023",
+          "answer_stratum": "MX",
+          "donor_fact_id": "Q993200-GeoNames-country-ZM",
+          "donor_subject_qid": "Q993200",
+          "donor_answer_stratum": "ZM",
+          "target_prompt_ids_sha256": {
+            "U": "e5e61df1f1cb9b48a005d2adda2718f34ae0b048cb7acc293d438882b0f35811",
+            "D": "3152720e3c40f987a33fc04e40e8107c9a1ec198d0fb7c12bb4bd9773de2d282"
+          },
+          "donor_prompt_ids_sha256": "e825031f48d4a517d08fb7725af631da446272eb14f2471cc838370ce867b52c",
+          "gold_answer_ids_sha256": "1aabe9a56a5c144e2b11a729c81acac98a8b7b86488d291e5732715ca28d0aa8",
+          "distractor_answer_ids_sha256": "8bc2253315562028370a071f63f6893fcd616a9d816b40edcae8556f273b6bab"
+        },
+        {
+          "fact_id": "Q515229-GeoNames-country-PW",
+          "subject_qid": "Q515229",
+          "answer_stratum": "PW",
+          "donor_fact_id": "Q985622-GeoNames-country-NA",
+          "donor_subject_qid": "Q985622",
+          "donor_answer_stratum": "NA",
+          "target_prompt_ids_sha256": {
+            "U": "c7f4c725da4f67e9df96480b1c6c3c59938b159154621215707ca8b319b5364d",
+            "D": "4975068b275c16e42c42d3f69f43a2e3a63495d5e171fe5187e3a6b7d226bb20"
+          },
+          "donor_prompt_ids_sha256": "0e15c4d58b4ff0f521ff119ce35067bd24ed35c2964d59748ef9dd4e29c4d64e",
+          "gold_answer_ids_sha256": "fb6c8192995594d6e853331b5e157290da8b0cd27e3ff8b8a3316ac29b4fe37a",
+          "distractor_answer_ids_sha256": "0d908a3199997da9f0c401db12f8e93308b6ccd9dd4addb66459117c6957bf35"
+        },
+        {
+          "fact_id": "Q5254191-GeoNames-country-MY",
+          "subject_qid": "Q5254191",
+          "answer_stratum": "MY",
+          "donor_fact_id": "Q13378177-GeoNames-country-SI",
+          "donor_subject_qid": "Q13378177",
+          "donor_answer_stratum": "SI",
+          "target_prompt_ids_sha256": {
+            "U": "7130e8ac7e52fdbdaaf657fdf6d2e185925c6c9757c88d05c6e66c6c1c8334c8",
+            "D": "4cec7a11f6ef2195f97230dea4a5dcff02fe79087bf1787a5b1f64c609095a2b"
+          },
+          "donor_prompt_ids_sha256": "4a7e28392ff4acbaf3cad808442ceae7e00b0011466e89194d359b1657cabbda",
+          "gold_answer_ids_sha256": "ce0450db104d22dec3c72322e00bff891aac57dddd712d1b33dd1a74eefc0081",
+          "distractor_answer_ids_sha256": "85ec72bac99099cd475ddfb74e2e5fc41e35e2deeb94237feb0b9f2eae9ba9d7"
+        },
+        {
+          "fact_id": "Q583619-GeoNames-country-NG",
+          "subject_qid": "Q583619",
+          "answer_stratum": "NG",
+          "donor_fact_id": "Q259216-GeoNames-country-FR",
+          "donor_subject_qid": "Q259216",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "05a42577f6111ccb3de5cb084a14a0424e35823a14ce16831d3dfd870fd20d68",
+            "D": "8e14679a7eabfa6abea67bab1c56776acbb25bdb68ecf2033699d204f15336ee"
+          },
+          "donor_prompt_ids_sha256": "30fd316f036011f6b182c024dc6cccbdbc9b0d4209d9d6cb407570ea0f9e48bb",
+          "gold_answer_ids_sha256": "e136aedede065e56e670f2438fda1b36ac1931da562e25a1cee6ef9ba34d2d3f",
+          "distractor_answer_ids_sha256": "d206e67ed0291730602cb4f444d8e520c77f45ae2baa8c5431c3d0f54cb0307b"
+        },
+        {
+          "fact_id": "Q5845677-GeoNames-country-IR",
+          "subject_qid": "Q5845677",
+          "answer_stratum": "IR",
+          "donor_fact_id": "Q2296366-GeoNames-country-ZA",
+          "donor_subject_qid": "Q2296366",
+          "donor_answer_stratum": "ZA",
+          "target_prompt_ids_sha256": {
+            "U": "1d23537f0456d7edd25649d64abe42f14ccbd902ec3873895e1753b044097451",
+            "D": "e2ac65f48a102de217c4d40279ad719751176c88332237d857b2f412b3f68b76"
+          },
+          "donor_prompt_ids_sha256": "285fa3ae617ee18c56ca09e754488454d31cd07b94913480b4e5b62c41dd30e1",
+          "gold_answer_ids_sha256": "c0119fd8352459bf6cf0858939d774114200e0e03b21bea4aa671b6177b8c811",
+          "distractor_answer_ids_sha256": "69f82444e9210461f0962d1740513fab61cf29962ae3d530c36c4782f79a1050"
+        },
+        {
+          "fact_id": "Q60044-GeoNames-country-LV",
+          "subject_qid": "Q60044",
+          "answer_stratum": "LV",
+          "donor_fact_id": "Q820972-GeoNames-country-DJ",
+          "donor_subject_qid": "Q820972",
+          "donor_answer_stratum": "DJ",
+          "target_prompt_ids_sha256": {
+            "U": "7abb5f7622f67ebf5dc8cb92b8c3ad424b175f310eefd0962deab620f1af57ff",
+            "D": "b5580869b439b21dba3473d2060c17d6fc22ef0041c855855315a31ce2577444"
+          },
+          "donor_prompt_ids_sha256": "8e69243c1e1c121a4437fb9db0d90accbf50d0668505fb91934f166618359e1e",
+          "gold_answer_ids_sha256": "d1fb8043ba150bc8c05b823f4dc856b8f26f0f40ff5a25b185f07885ec60c8c8",
+          "distractor_answer_ids_sha256": "8c4e64cc3020688b1cd2df72ed12b99d66465140ecaa442e939cc22059e9ca66"
+        },
+        {
+          "fact_id": "Q61750-GeoNames-country-BO",
+          "subject_qid": "Q61750",
+          "answer_stratum": "BO",
+          "donor_fact_id": "Q213916-GeoNames-country-GR",
+          "donor_subject_qid": "Q213916",
+          "donor_answer_stratum": "GR",
+          "target_prompt_ids_sha256": {
+            "U": "45874c03cfe5160fcdc13563ab1df6b6342c4500a00ec11e2f2bb62686f7882d",
+            "D": "2e5b8ace24f9f103799891306de28737c5defbaec3da004b6333d6ef81fe9755"
+          },
+          "donor_prompt_ids_sha256": "b53f3517fc5a05f74ea6715e3168aa59ca2a72ba40583b9cbdf9302ce8ad4688",
+          "gold_answer_ids_sha256": "a5971170689851c62c52a94c76727afd0d849789495687228590f63d735704ee",
+          "distractor_answer_ids_sha256": "2c0453625df37b6b179152b342555017dd48dfdcabb656b61c10605c6a71f503"
+        },
+        {
+          "fact_id": "Q619440-GeoNames-country-FJ",
+          "subject_qid": "Q619440",
+          "answer_stratum": "FJ",
+          "donor_fact_id": "Q1013413-GeoNames-country-ZA",
+          "donor_subject_qid": "Q1013413",
+          "donor_answer_stratum": "ZA",
+          "target_prompt_ids_sha256": {
+            "U": "3977a86f18f508562e6b4b7ae46f36ea08681c06b84da4667d117ab8357e443c",
+            "D": "a8ca8979b33207ee6cdb9a29cb5018858aa348401ff5d73a7aa886ba6d4e24a0"
+          },
+          "donor_prompt_ids_sha256": "2134de24e754a5f851d1218bb9d036bb7bdb9a364722c1712a83ce3360b8714c",
+          "gold_answer_ids_sha256": "0d908a3199997da9f0c401db12f8e93308b6ccd9dd4addb66459117c6957bf35",
+          "distractor_answer_ids_sha256": "fb6c8192995594d6e853331b5e157290da8b0cd27e3ff8b8a3316ac29b4fe37a"
+        },
+        {
+          "fact_id": "Q626136-GeoNames-country-US",
+          "subject_qid": "Q626136",
+          "answer_stratum": "US",
+          "donor_fact_id": "Q754776-GeoNames-country-SK",
+          "donor_subject_qid": "Q754776",
+          "donor_answer_stratum": "SK",
+          "target_prompt_ids_sha256": {
+            "U": "7326049612daee6ce3e4f9d7d91b5e016c23e2e7dd116f5d52c8497cb75841e6",
+            "D": "f9138d4d486bbd165fb05badde9902008faa0519d5a1b36e34b3229f4334c1ab"
+          },
+          "donor_prompt_ids_sha256": "204e7829476ab4758423f03d9e79a477186ec5283de5836c9730ae06c942f374",
+          "gold_answer_ids_sha256": "8bc2253315562028370a071f63f6893fcd616a9d816b40edcae8556f273b6bab",
+          "distractor_answer_ids_sha256": "1aabe9a56a5c144e2b11a729c81acac98a8b7b86488d291e5732715ca28d0aa8"
+        },
+        {
+          "fact_id": "Q6272457-GeoNames-country-AU",
+          "subject_qid": "Q6272457",
+          "answer_stratum": "AU",
+          "donor_fact_id": "Q21536-GeoNames-country-FR",
+          "donor_subject_qid": "Q21536",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "d57868f90b50f8bd7e3ebec7604960e19bc858fe8d43440b4c889be10ead1c7d",
+            "D": "386a981c1b72acd9a2c745aa936869e4174087ea32fd55af1c5b9b827801258a"
+          },
+          "donor_prompt_ids_sha256": "7c251f3258ecf8e95fbb9ba5b51f44e9c2166955ca0e6cb4aaa2bc6a53e30aea",
+          "gold_answer_ids_sha256": "ca6c78421202a25fd19494a66f32f163d1ac19e88ee888eed3cd525b96325cd5",
+          "distractor_answer_ids_sha256": "2487f198a675cb92cba2e98c4f3ea81862367327595010fceb48af60000357ef"
+        },
+        {
+          "fact_id": "Q659887-GeoNames-country-IN",
+          "subject_qid": "Q659887",
+          "answer_stratum": "IN",
+          "donor_fact_id": "Q3763-GeoNames-country-CL",
+          "donor_subject_qid": "Q3763",
+          "donor_answer_stratum": "CL",
+          "target_prompt_ids_sha256": {
+            "U": "9e886a351e947278b9e846ad4603a6eb1946ff4af693b0fc7aeb1773eee6111a",
+            "D": "2c312a6953cda33fa873c3888ea2fd1ffa635da41bd4945edf5057f5400aa02c"
+          },
+          "donor_prompt_ids_sha256": "4ec668870ff3140207cf6bb7a078322177cf510b55f0e60bcab920398d61c501",
+          "gold_answer_ids_sha256": "8f7dfdeae4efe340b15420bed03a24bb6b3a12ca1665134bd5bce8b16a00e171",
+          "distractor_answer_ids_sha256": "8dacd17d1e012d78da0aae07ab04eedd2ffb4de9f9c05cfafc41113c3f641dac"
+        },
+        {
+          "fact_id": "Q67068-GeoNames-country-CH",
+          "subject_qid": "Q67068",
+          "answer_stratum": "CH",
+          "donor_fact_id": "Q143892-GeoNames-country-BF",
+          "donor_subject_qid": "Q143892",
+          "donor_answer_stratum": "BF",
+          "target_prompt_ids_sha256": {
+            "U": "1aff569e5f6cfa12fa649b015929709f113bf4f9a68e1f97bb55d9673a5b159b",
+            "D": "969a17908fb22ddcd990c77744edf70774b31259da3e16d08776990aa5c92b88"
+          },
+          "donor_prompt_ids_sha256": "67a0cbe882684fd2b2e2b95a0d9c3684587aada4f7d142aae59cd66415f4739a",
+          "gold_answer_ids_sha256": "192415f9eab7c56dec412b3364694926b7a0ca0bf70b6ba86abd3bf1d8b2fab2",
+          "distractor_answer_ids_sha256": "2f0a40006f87bdb7e265602c677403e7709b003ba68f6c690975539e213862ce"
+        },
+        {
+          "fact_id": "Q6748057-GeoNames-country-GN",
+          "subject_qid": "Q6748057",
+          "answer_stratum": "GN",
+          "donor_fact_id": "Q34001-GeoNames-country-FR",
+          "donor_subject_qid": "Q34001",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "a354016819f6a595d8e91191341436f6ff4b282147819288b7fb715251c73886",
+            "D": "e407e5644511420170c9943fd3e209542a6892d98e7571bdff937aecb61cddc3"
+          },
+          "donor_prompt_ids_sha256": "2a81e8ead6c0bcb43b23b1f9045dc348cd51c47e7aa8513bf8bad2e9f9591e10",
+          "gold_answer_ids_sha256": "facc1f4f90c540682c5a22c2607533ead0f8939483eb9324b888ecaca37205f7",
+          "distractor_answer_ids_sha256": "3f384a7f8eeb92babde00c2e6b495b457374a83f8c13043592f76eeacbe84009"
+        },
+        {
+          "fact_id": "Q684152-GeoNames-country-BI",
+          "subject_qid": "Q684152",
+          "answer_stratum": "BI",
+          "donor_fact_id": "Q173219-GeoNames-country-BE",
+          "donor_subject_qid": "Q173219",
+          "donor_answer_stratum": "BE",
+          "target_prompt_ids_sha256": {
+            "U": "fd6439f0a32f250b4f6b2c3ee417af126e188bf48354f4b5b56f5a7469e2eca9",
+            "D": "9d27b57de1671ea0898508bedf91c85484c8fa267331b2587a1e3a7e77a783cc"
+          },
+          "donor_prompt_ids_sha256": "4ad018f98f17f6cc646ba3d5e27f98aff783bf711a864573a164dbcbb275bb8e",
+          "gold_answer_ids_sha256": "d206e67ed0291730602cb4f444d8e520c77f45ae2baa8c5431c3d0f54cb0307b",
+          "distractor_answer_ids_sha256": "aac7e02f9271229de60f683a17f073f2254ed46f5753e813574e8f608ad76c8f"
+        },
+        {
+          "fact_id": "Q69216-GeoNames-country-CH",
+          "subject_qid": "Q69216",
+          "answer_stratum": "CH",
+          "donor_fact_id": "Q734315-GeoNames-country-GE",
+          "donor_subject_qid": "Q734315",
+          "donor_answer_stratum": "GE",
+          "target_prompt_ids_sha256": {
+            "U": "c7625dd25f1223018ee7a89f3b5fbfa868891ae6ceaf0e7c51bea2947ee65708",
+            "D": "70308603efbe40049e76fd81e9edab24d93458fcbc4d7cebf3482270a137b43d"
+          },
+          "donor_prompt_ids_sha256": "e2641993c50fc3dfbf5fe28cee4287f728e981dab5bbfe7d72219089c98369e9",
+          "gold_answer_ids_sha256": "192415f9eab7c56dec412b3364694926b7a0ca0bf70b6ba86abd3bf1d8b2fab2",
+          "distractor_answer_ids_sha256": "2f0a40006f87bdb7e265602c677403e7709b003ba68f6c690975539e213862ce"
+        },
+        {
+          "fact_id": "Q693093-GeoNames-country-KE",
+          "subject_qid": "Q693093",
+          "answer_stratum": "KE",
+          "donor_fact_id": "Q535534-GeoNames-country-CN",
+          "donor_subject_qid": "Q535534",
+          "donor_answer_stratum": "CN",
+          "target_prompt_ids_sha256": {
+            "U": "1f40ab2deb50a6f59ce633f029d3b1cd3e57290b4f040dbaa3ec7606367cb3eb",
+            "D": "abaa60cd5f6788e146b8fbf53ce56864b5061692ebc2ef1d765c988e9e677889"
+          },
+          "donor_prompt_ids_sha256": "2801d69f1ac515d9eaea19a9c050f9c28eb2319c7fb61448d79291762257698d",
+          "gold_answer_ids_sha256": "56dd033ed44406394ea870cc8f94c231597289da6a9ff68adbdc09709bc9baf2",
+          "distractor_answer_ids_sha256": "4abebd85f0a72a1412acda41032e515ef47de95e8c327b7f421946739e6cff21"
+        },
+        {
+          "fact_id": "Q71247-GeoNames-country-CN",
+          "subject_qid": "Q71247",
+          "answer_stratum": "CN",
+          "donor_fact_id": "Q1371634-GeoNames-country-GR",
+          "donor_subject_qid": "Q1371634",
+          "donor_answer_stratum": "GR",
+          "target_prompt_ids_sha256": {
+            "U": "ce1ffb1197cf1f430b4ca1eda11bf5dcc6c6b267fa138a541e51d352198d2779",
+            "D": "7c4175b6cee106fe80679b767fbbe390373f19764de3dbe1cda19ded283afcaf"
+          },
+          "donor_prompt_ids_sha256": "e2118404bc5fc7eafd26504f9ec79359b61653e47f391737e8eed0a820fa315e",
+          "gold_answer_ids_sha256": "8dacd17d1e012d78da0aae07ab04eedd2ffb4de9f9c05cfafc41113c3f641dac",
+          "distractor_answer_ids_sha256": "8f7dfdeae4efe340b15420bed03a24bb6b3a12ca1665134bd5bce8b16a00e171"
+        },
+        {
+          "fact_id": "Q719707-GeoNames-country-CA",
+          "subject_qid": "Q719707",
+          "answer_stratum": "CA",
+          "donor_fact_id": "Q197378-GeoNames-country-CN",
+          "donor_subject_qid": "Q197378",
+          "donor_answer_stratum": "CN",
+          "target_prompt_ids_sha256": {
+            "U": "474322e916d9691a0fe32f0c73e8c32f10ab4f8589033587226cdd0791b8bfdb",
+            "D": "52ffc2723eabd46045fe5d40c807482cd5abd45d47b373dcc776b23bf54e4cca"
+          },
+          "donor_prompt_ids_sha256": "60c76e0dff57714ddb5fa63b2a05dd6a5b0e47db5cdf8fd09d8d291bd97102a1",
+          "gold_answer_ids_sha256": "ebad3a7e0462dca9a8415c719ffc5e9d7fd890d307ebb8931667a8b6f7ea6189",
+          "distractor_answer_ids_sha256": "8bc2253315562028370a071f63f6893fcd616a9d816b40edcae8556f273b6bab"
+        },
+        {
+          "fact_id": "Q734315-GeoNames-country-GE",
+          "subject_qid": "Q734315",
+          "answer_stratum": "GE",
+          "donor_fact_id": "Q3657-GeoNames-country-LT",
+          "donor_subject_qid": "Q3657",
+          "donor_answer_stratum": "LT",
+          "target_prompt_ids_sha256": {
+            "U": "e2641993c50fc3dfbf5fe28cee4287f728e981dab5bbfe7d72219089c98369e9",
+            "D": "39ce2016d0e7ab8b0ac5cc6bad6ed9f5fead811968fd831945c125eb5eb33f95"
+          },
+          "donor_prompt_ids_sha256": "13f2028d572e6161c09fa39b7d3bde97089920003fdc65be6ced1534f68a34bc",
+          "gold_answer_ids_sha256": "38674918afaf5f4095a933e4c22ee70b28fa40a4e07ec652d8d9bc982f2a9f9d",
+          "distractor_answer_ids_sha256": "69f82444e9210461f0962d1740513fab61cf29962ae3d530c36c4782f79a1050"
+        },
+        {
+          "fact_id": "Q745051-GeoNames-country-PL",
+          "subject_qid": "Q745051",
+          "answer_stratum": "PL",
+          "donor_fact_id": "Q21530-GeoNames-country-FR",
+          "donor_subject_qid": "Q21530",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "47fc121139e558c5541a0306324371b2b620d40d75b9553ec55efe29a9789232",
+            "D": "a7063705da604d544ade935ed0eecf5cacb225e4227db2a4883f45a4eaeba9a8"
+          },
+          "donor_prompt_ids_sha256": "16f94ce3f7d7e77547774036c5a8648aa5f5f25a62d8d19fcf13863c6287dea8",
+          "gold_answer_ids_sha256": "5703fd459198d56a42fa7f5160b3be694086d144a10d426c61248bd1f2afaee4",
+          "distractor_answer_ids_sha256": "a75372eff5d609a6793e8489b9bbbcebdb941191dbdeb35ccbb1eaa5ccf1cd9a"
+        },
+        {
+          "fact_id": "Q750989-GeoNames-country-UZ",
+          "subject_qid": "Q750989",
+          "answer_stratum": "UZ",
+          "donor_fact_id": "Q798872-GeoNames-country-GR",
+          "donor_subject_qid": "Q798872",
+          "donor_answer_stratum": "GR",
+          "target_prompt_ids_sha256": {
+            "U": "739995dfaa7c18428758c078f6b4390b3c8c3f9aefe7205757da6ad01e044f20",
+            "D": "1dd6ae4787d8bd1fb7a29058bb1237c7c622f0058c5f468929dd66cbfbd24f1d"
+          },
+          "donor_prompt_ids_sha256": "fa00972cb51595cfb8198ba9352f58c399448cb93a328d9e75c1514cda394503",
+          "gold_answer_ids_sha256": "4fae6585c70b45d57671d70b388b36e5c31826d9e55773a0b9296f39aed1ad1b",
+          "distractor_answer_ids_sha256": "d0544cdf18450dee5c911733829fe889657c858e0f1b9a2cffd7729f79b86824"
+        },
+        {
+          "fact_id": "Q765472-GeoNames-country-MX",
+          "subject_qid": "Q765472",
+          "answer_stratum": "MX",
+          "donor_fact_id": "Q1261509-GeoNames-country-LT",
+          "donor_subject_qid": "Q1261509",
+          "donor_answer_stratum": "LT",
+          "target_prompt_ids_sha256": {
+            "U": "d1ad6b4acba91f73592e53bd7ee0b744ffccc0d2307de0bbb03b0f4deeedb0a9",
+            "D": "504094e7214549837c44b02a9ddb10a136dccc02408ce3a94940d78d2743745b"
+          },
+          "donor_prompt_ids_sha256": "ac441db3a59a2f5396e90e62c07d3ecc35095e27e387310afb861192989af644",
+          "gold_answer_ids_sha256": "1aabe9a56a5c144e2b11a729c81acac98a8b7b86488d291e5732715ca28d0aa8",
+          "distractor_answer_ids_sha256": "8bc2253315562028370a071f63f6893fcd616a9d816b40edcae8556f273b6bab"
+        },
+        {
+          "fact_id": "Q820972-GeoNames-country-DJ",
+          "subject_qid": "Q820972",
+          "answer_stratum": "DJ",
+          "donor_fact_id": "Q259216-GeoNames-country-FR",
+          "donor_subject_qid": "Q259216",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "8e69243c1e1c121a4437fb9db0d90accbf50d0668505fb91934f166618359e1e",
+            "D": "839b92e9d4d87eacf71931e793634fb5b073adc54f819f9c78b9b486a9387bcd"
+          },
+          "donor_prompt_ids_sha256": "30fd316f036011f6b182c024dc6cccbdbc9b0d4209d9d6cb407570ea0f9e48bb",
+          "gold_answer_ids_sha256": "95da82439385e39eb67db58377c7e448a238f9f64f66f898207fc73c0751769e",
+          "distractor_answer_ids_sha256": "4abebd85f0a72a1412acda41032e515ef47de95e8c327b7f421946739e6cff21"
+        },
+        {
+          "fact_id": "Q833016-GeoNames-country-UY",
+          "subject_qid": "Q833016",
+          "answer_stratum": "UY",
+          "donor_fact_id": "Q1606829-GeoNames-country-ES",
+          "donor_subject_qid": "Q1606829",
+          "donor_answer_stratum": "ES",
+          "target_prompt_ids_sha256": {
+            "U": "0453f70b230e42476b7f38a705f780aacc94b9cd3a9948365df9d49da24117e8",
+            "D": "0c14d0369a26d5d415e0352b4f3ac727d12364fdf747ffe858dd45a43a36c69f"
+          },
+          "donor_prompt_ids_sha256": "e75bd3dff6beabcabc6d3cfaa5b75f3a71d0c63d027c5406a47fd6ae73b8afcf",
+          "gold_answer_ids_sha256": "23dc7fb366224a41b63b61e63143ce72f5708504e098ec053fd3392787306f04",
+          "distractor_answer_ids_sha256": "2c0453625df37b6b179152b342555017dd48dfdcabb656b61c10605c6a71f503"
+        },
+        {
+          "fact_id": "Q837478-GeoNames-country-SK",
+          "subject_qid": "Q837478",
+          "answer_stratum": "SK",
+          "donor_fact_id": "Q3050819-GeoNames-country-PK",
+          "donor_subject_qid": "Q3050819",
+          "donor_answer_stratum": "PK",
+          "target_prompt_ids_sha256": {
+            "U": "31e34ff2b28b57e364029cf4b07ba14675bfcfea9b22942b8792416fc7345ea2",
+            "D": "90c1a5a1696819662399e0c7776947417fa44de124b4f2eef29cfc3246606048"
+          },
+          "donor_prompt_ids_sha256": "4553eedc55adbb3782e472bb85f1b516a5a655246009af6c20127bba44417a84",
+          "gold_answer_ids_sha256": "e0056f0a424d21c78aade75a23c7645eb2d74be1d6a2e1d9cc5a9e8e7f92322e",
+          "distractor_answer_ids_sha256": "4013ccac541dec0c5514d3f8d7e5236176d21f20e5740e83a477b463bff01cd4"
+        },
+        {
+          "fact_id": "Q850676-GeoNames-country-CZ",
+          "subject_qid": "Q850676",
+          "answer_stratum": "CZ",
+          "donor_fact_id": "Q143892-GeoNames-country-BF",
+          "donor_subject_qid": "Q143892",
+          "donor_answer_stratum": "BF",
+          "target_prompt_ids_sha256": {
+            "U": "534ce80c8aef09a26379399aafbc55dad6f2a0488fc417a87b7fb02a0c5724f3",
+            "D": "0e35bf89f0703d207e957a9a726496dadf49863e568473dca374c697990f023c"
+          },
+          "donor_prompt_ids_sha256": "67a0cbe882684fd2b2e2b95a0d9c3684587aada4f7d142aae59cd66415f4739a",
+          "gold_answer_ids_sha256": "a75372eff5d609a6793e8489b9bbbcebdb941191dbdeb35ccbb1eaa5ccf1cd9a",
+          "distractor_answer_ids_sha256": "5703fd459198d56a42fa7f5160b3be694086d144a10d426c61248bd1f2afaee4"
+        },
+        {
+          "fact_id": "Q854333-GeoNames-country-KG",
+          "subject_qid": "Q854333",
+          "answer_stratum": "KG",
+          "donor_fact_id": "Q3657-GeoNames-country-LT",
+          "donor_subject_qid": "Q3657",
+          "donor_answer_stratum": "LT",
+          "target_prompt_ids_sha256": {
+            "U": "2e4d84ad533e8962ee6c40751147aa77b0434bc054e3d9523cbcd2dbbbe6c393",
+            "D": "627cb57da25513f8cc56bcee0519ccf4b77a8549f36d9750376c036a02535952"
+          },
+          "donor_prompt_ids_sha256": "13f2028d572e6161c09fa39b7d3bde97089920003fdc65be6ced1534f68a34bc",
+          "gold_answer_ids_sha256": "b24555eeb2fdb615900ae37739e973e15c66c258524576675d98522f33de6822",
+          "distractor_answer_ids_sha256": "d0544cdf18450dee5c911733829fe889657c858e0f1b9a2cffd7729f79b86824"
+        },
+        {
+          "fact_id": "Q860304-GeoNames-country-CI",
+          "subject_qid": "Q860304",
+          "answer_stratum": "CI",
+          "donor_fact_id": "Q5680552-GeoNames-country-IR",
+          "donor_subject_qid": "Q5680552",
+          "donor_answer_stratum": "IR",
+          "target_prompt_ids_sha256": {
+            "U": "09ceea99fd2ced23df54186442bd306df49b1ccf59363e7b94b19f5ecc7daa17",
+            "D": "cd4d6adf483a1151fa5c1c00f8698f557bf4d9fb897954563f64bc5945b045bf"
+          },
+          "donor_prompt_ids_sha256": "f604f5258b3a10092379ae1fb22ee3f58f1a6493ec8ed12710fe3e8cf1aa2ccd",
+          "gold_answer_ids_sha256": "15ad3a1a91e1d1f2c10f04b9cf75f5ad921346dc9d9a0bf4aabed001d89edba8",
+          "distractor_answer_ids_sha256": "cb2e6d9e7743ac4654878f0777330c18dfdc2fccbc6b37ca451ef94a5feb41d3"
+        },
+        {
+          "fact_id": "Q870475-GeoNames-country-IQ",
+          "subject_qid": "Q870475",
+          "answer_stratum": "IQ",
+          "donor_fact_id": "Q13378177-GeoNames-country-SI",
+          "donor_subject_qid": "Q13378177",
+          "donor_answer_stratum": "SI",
+          "target_prompt_ids_sha256": {
+            "U": "b17a4853adb18b8a7c44be41188e15707435de46882e142548aba2b74c97769a",
+            "D": "ab4480ba74a68603691f40f4e0cc27013140bd419092f925a9c92b92f6dbb7ce"
+          },
+          "donor_prompt_ids_sha256": "4a7e28392ff4acbaf3cad808442ceae7e00b0011466e89194d359b1657cabbda",
+          "gold_answer_ids_sha256": "319980856052ec6d4bb6a5368a8b58f11e51892e2e24357032590a1155f9f85d",
+          "distractor_answer_ids_sha256": "c0119fd8352459bf6cf0858939d774114200e0e03b21bea4aa671b6177b8c811"
+        },
+        {
+          "fact_id": "Q875070-GeoNames-country-PH",
+          "subject_qid": "Q875070",
+          "answer_stratum": "PH",
+          "donor_fact_id": "Q16014-GeoNames-country-LU",
+          "donor_subject_qid": "Q16014",
+          "donor_answer_stratum": "LU",
+          "target_prompt_ids_sha256": {
+            "U": "9ae46a60a101a507a0567e599ad2562700c9c79a9ecf35763dd002d09df0e702",
+            "D": "c922a3d7dc6879d01545af75438f655d5bb802e2686975090e6418a51a8a35dd"
+          },
+          "donor_prompt_ids_sha256": "13a8a112f6114a684c915d3c8480c6e6fcc924e89e44848fa30d62a5edf0484c",
+          "gold_answer_ids_sha256": "7d9468136356ebcf137bd200061d1787d37be169a47bf205c18060df092230b4",
+          "distractor_answer_ids_sha256": "6f846c4d6c03b75150d30c9817b4af4d51af7eb8b0e839a4b11905f12471d77e"
+        },
+        {
+          "fact_id": "Q896185-GeoNames-country-CF",
+          "subject_qid": "Q896185",
+          "answer_stratum": "CF",
+          "donor_fact_id": "Q535534-GeoNames-country-CN",
+          "donor_subject_qid": "Q535534",
+          "donor_answer_stratum": "CN",
+          "target_prompt_ids_sha256": {
+            "U": "8dec96cf5d28f04c2f34e31cd47dbb8bf10d0151412127cfd1d07f419bcc7a56",
+            "D": "8f63f8f943f627436debb98e7b52c6477002826131d57253edb1d984d2acea44"
+          },
+          "donor_prompt_ids_sha256": "2801d69f1ac515d9eaea19a9c050f9c28eb2319c7fb61448d79291762257698d",
+          "gold_answer_ids_sha256": "7c4570b25fc91e7aed5549cb437ae309de9516f3e29391dedb4b30c544382279",
+          "distractor_answer_ids_sha256": "86e7e67f67a531bfd5b25539647e843be7e13135f97caa77b5915335f1bc5c30"
+        },
+        {
+          "fact_id": "Q942842-GeoNames-country-CZ",
+          "subject_qid": "Q942842",
+          "answer_stratum": "CZ",
+          "donor_fact_id": "Q69060-GeoNames-country-CN",
+          "donor_subject_qid": "Q69060",
+          "donor_answer_stratum": "CN",
+          "target_prompt_ids_sha256": {
+            "U": "405b2a5a5ee1350a6d386bf45da44cd3b0e9d9509752c6351356114187f27d76",
+            "D": "d2bdd991903af8471d4ac623468036fa292204f78ab32e2e620895090f210d61"
+          },
+          "donor_prompt_ids_sha256": "e7433afcac8aa7f7a365618b56102500ce50e2c651267a8f7532c59b7745b60b",
+          "gold_answer_ids_sha256": "a75372eff5d609a6793e8489b9bbbcebdb941191dbdeb35ccbb1eaa5ccf1cd9a",
+          "distractor_answer_ids_sha256": "5703fd459198d56a42fa7f5160b3be694086d144a10d426c61248bd1f2afaee4"
+        },
+        {
+          "fact_id": "Q985622-GeoNames-country-NA",
+          "subject_qid": "Q985622",
+          "answer_stratum": "NA",
+          "donor_fact_id": "Q21530-GeoNames-country-FR",
+          "donor_subject_qid": "Q21530",
+          "donor_answer_stratum": "FR",
+          "target_prompt_ids_sha256": {
+            "U": "0e15c4d58b4ff0f521ff119ce35067bd24ed35c2964d59748ef9dd4e29c4d64e",
+            "D": "7386cd67c5c49ff4e80cff3873256cf7e7aacff857deff054b2f514d18c40806"
+          },
+          "donor_prompt_ids_sha256": "16f94ce3f7d7e77547774036c5a8648aa5f5f25a62d8d19fcf13863c6287dea8",
+          "gold_answer_ids_sha256": "a65b52dfc6b23c14c09178d491f3276a9a765d7e66f040000ead99f3cc5cb2df",
+          "distractor_answer_ids_sha256": "536b1c746ea5109638de631bfb06185e7791eb4d4305d8a020c4c2f661f39670"
+        }
+      ]
+    },
+    "hebrew_cbs": {
+      "data_path": "data/curated/aya-external-cbs-hebrew-20260928.jsonl",
+      "language": "he",
+      "template_t1": "באיזו נפה נמצא היישוב {subject}? השב בשם הנפה בלבד.",
+      "source_data_sha256": "790f81abceb1bc38a8f3e1b927af27c178f7c9a725d32f9621e569c3bf9891f7",
+      "eligible_population_size": 240,
+      "selected_size": 96,
+      "distinct_answer_strata": 14,
+      "selection": "Deterministic SHA-256 round-robin by answer stratum; at most 96 subjects",
+      "donor": "Different answer stratum in same cohort; closest frozen unmarked t1 subject-token count, SHA-256 tie break",
+      "rows": [
+        {
+          "fact_id": "Q1001622-CBS-subdistrict-21",
+          "subject_qid": "Q1001622",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q730195-CBS-subdistrict-25",
+          "donor_subject_qid": "Q730195",
+          "donor_answer_stratum": "יזרעאל",
+          "target_prompt_ids_sha256": {
+            "U": "e6ce176100e1da360c82f5317f1219cccbb942579efb55067a38924157bcf200",
+            "D": "7b0f05a11ace9e3e498a7f6cb5f406494b34a8f711a39abfc8eae2cce53f1df5"
+          },
+          "donor_prompt_ids_sha256": "2520b047bde0158548afe122de52f39f15912d2dd2a6486656b4c410cb16ca75",
+          "gold_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e",
+          "distractor_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f"
+        },
+        {
+          "fact_id": "Q1025294-CBS-subdistrict-11",
+          "subject_qid": "Q1025294",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2778107-CBS-subdistrict-43",
+          "donor_subject_qid": "Q2778107",
+          "donor_answer_stratum": "רמלה",
+          "target_prompt_ids_sha256": {
+            "U": "0a35f74db7fd21800f1d0f1a94dab5763bdbc269479bc621461fe8ada8792df5",
+            "D": "58a533a92257e406a775c7ae27c053b1fd402bb50b457b793778827c5db31689"
+          },
+          "donor_prompt_ids_sha256": "8546f87656189f12d21c4b62adb2444d4146c187cd47c1cf0050dc31d7724ae5",
+          "gold_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6",
+          "distractor_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1"
+        },
+        {
+          "fact_id": "Q1026806-CBS-subdistrict-62",
+          "subject_qid": "Q1026806",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2449546-CBS-subdistrict-61",
+          "donor_subject_qid": "Q2449546",
+          "donor_answer_stratum": "אשקלון",
+          "target_prompt_ids_sha256": {
+            "U": "d23642a873d62a9fe37d6b728c0f70edeed562be5e59efb00cb5b2bef6b74c79",
+            "D": "8e0bf1273cd381433161024fe345d85d632f41467f9c4a9d17ff96d710786486"
+          },
+          "donor_prompt_ids_sha256": "93579ae4782a2bf347930dea2dea73ee5bd73c721e62daa48299ed665260fc7b",
+          "gold_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9",
+          "distractor_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8"
+        },
+        {
+          "fact_id": "Q1026815-CBS-subdistrict-11",
+          "subject_qid": "Q1026815",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2570427-CBS-subdistrict-61",
+          "donor_subject_qid": "Q2570427",
+          "donor_answer_stratum": "אשקלון",
+          "target_prompt_ids_sha256": {
+            "U": "7db7dc1d325a356eca23d8035044e585084acd792284ed06f8c594188f272f36",
+            "D": "103766a03f85eae917b01b5b4cb6372dc1f59938a1f8f707b9306c7eae317026"
+          },
+          "donor_prompt_ids_sha256": "03bb6fd781337484f991808944cdb58925dae6e040b842a06790faa5abe63bb2",
+          "gold_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6",
+          "distractor_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1"
+        },
+        {
+          "fact_id": "Q1186956-CBS-subdistrict-22",
+          "subject_qid": "Q1186956",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q152659-CBS-subdistrict-42",
+          "donor_subject_qid": "Q152659",
+          "donor_answer_stratum": "פתח תקווה",
+          "target_prompt_ids_sha256": {
+            "U": "cedbe8b241ec56c0534cfc7bd261779e54c6817b1e70406e1f29a148b48f5db4",
+            "D": "a7867454e289bc1245e01eb499ad755fa3cd6b0ad5927ac9ab8f7da47a08401d"
+          },
+          "donor_prompt_ids_sha256": "0942b650c259073596274550d024cea8fb19cde6b4309a9572866c4adb5cb4b5",
+          "gold_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q1339896-CBS-subdistrict-22",
+          "subject_qid": "Q1339896",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q2130036-CBS-subdistrict-11",
+          "donor_subject_qid": "Q2130036",
+          "donor_answer_stratum": "ירושלים",
+          "target_prompt_ids_sha256": {
+            "U": "93df0a4f60abcaf54a004c1551cbeb96193b2b39a9446b37e4981993204e647a",
+            "D": "715bb4baf4947d19c5743c5681defc251570b502be569c76b06196f9dbdcb0eb"
+          },
+          "donor_prompt_ids_sha256": "2c03fbb8729db2548e34c6c33e1c2f488c377728743f29aaf4dd7d311d2edb26",
+          "gold_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q151920-CBS-subdistrict-22",
+          "subject_qid": "Q151920",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q1019478-CBS-subdistrict-21",
+          "donor_subject_qid": "Q1019478",
+          "donor_answer_stratum": "צפת",
+          "target_prompt_ids_sha256": {
+            "U": "a5f244c2fca053b1db3ac57f4578c835e3ecf1bd6f49e70d3bc763fd90da7910",
+            "D": "b0ae0d66f155dd1037fb1d5301233b99df049093c4e711704a4be03a4b8b07ad"
+          },
+          "donor_prompt_ids_sha256": "f08e4d4157ceca7c563d47a9e5cfa0e5489e1a0b2ae6864a075773860a7e5922",
+          "gold_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q152387-CBS-subdistrict-31",
+          "subject_qid": "Q152387",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q152418-CBS-subdistrict-24",
+          "donor_subject_qid": "Q152418",
+          "donor_answer_stratum": "עכו",
+          "target_prompt_ids_sha256": {
+            "U": "9c1a9b27c6cddef088f86a547f828a5aa0d4c0b6f20aec365e21484f0124f53b",
+            "D": "d5a09e25017a556fee15237821c3b6b2fb86c9a49c366a81a346935b3ef4b775"
+          },
+          "donor_prompt_ids_sha256": "50c4dc456ede70f24b91b91e748c01bf430e364804515998523cddfcd5974265",
+          "gold_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076",
+          "distractor_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab"
+        },
+        {
+          "fact_id": "Q152418-CBS-subdistrict-24",
+          "subject_qid": "Q152418",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2920033-CBS-subdistrict-41",
+          "donor_subject_qid": "Q2920033",
+          "donor_answer_stratum": "השרון",
+          "target_prompt_ids_sha256": {
+            "U": "50c4dc456ede70f24b91b91e748c01bf430e364804515998523cddfcd5974265",
+            "D": "500a141d3d7dcb4a71700e76def48183389b6575d94cc25ecf8e312365034057"
+          },
+          "donor_prompt_ids_sha256": "009be4f2d847785453f96850ec1634abd540b314772667683acdfd7a377c4af3",
+          "gold_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q152467-CBS-subdistrict-52",
+          "subject_qid": "Q152467",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q939277-CBS-subdistrict-24",
+          "donor_subject_qid": "Q939277",
+          "donor_answer_stratum": "עכו",
+          "target_prompt_ids_sha256": {
+            "U": "8decf5f11cfc255bda52ed40dc9a6aef035bb5694697218890a45296ade5fc60",
+            "D": "17adf08c47c3468fc529c4ec14370c9f0ee2a5167f20e6b08deec7420efc7cb4"
+          },
+          "donor_prompt_ids_sha256": "5929de3c85cf9a65440c4905acdf397469923296448ea3180c13492c98f15a22",
+          "gold_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1",
+          "distractor_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6"
+        },
+        {
+          "fact_id": "Q152501-CBS-subdistrict-52",
+          "subject_qid": "Q152501",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q2588837-CBS-subdistrict-21",
+          "donor_subject_qid": "Q2588837",
+          "donor_answer_stratum": "צפת",
+          "target_prompt_ids_sha256": {
+            "U": "0bf595a58671c6c6489594272d9cbceed203519a32b43a5047b2a0a82893aa6e",
+            "D": "4c7e9eeca7391be5a17b4523b67e813443a3ac834215759d773e05db67e2e205"
+          },
+          "donor_prompt_ids_sha256": "e2c33f71d0cd3b4406b19eb5780e00e4b2e56b25198b480e5e49533003117500",
+          "gold_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1",
+          "distractor_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6"
+        },
+        {
+          "fact_id": "Q152659-CBS-subdistrict-42",
+          "subject_qid": "Q152659",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q2777893-CBS-subdistrict-61",
+          "donor_subject_qid": "Q2777893",
+          "donor_answer_stratum": "אשקלון",
+          "target_prompt_ids_sha256": {
+            "U": "0942b650c259073596274550d024cea8fb19cde6b4309a9572866c4adb5cb4b5",
+            "D": "59223717f58c5e538ccf4a2e3ff54db37e81d54e5df9ced1cde18e2e73b2a8b8"
+          },
+          "donor_prompt_ids_sha256": "92799752ae6cdc173f4cc0a3606b0a765fd4f082d65e16444c3f2791d2391afc",
+          "gold_answer_ids_sha256": "9a60af9d31117e6abfd6854386f7957652c1d3cd47d5ac654769fd9fcf18f4a3",
+          "distractor_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a"
+        },
+        {
+          "fact_id": "Q16132344-CBS-subdistrict-44",
+          "subject_qid": "Q16132344",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2777766-CBS-subdistrict-25",
+          "donor_subject_qid": "Q2777766",
+          "donor_answer_stratum": "יזרעאל",
+          "target_prompt_ids_sha256": {
+            "U": "b315a72eecba628e84e1b6b53a16d7fcb8070f0183a936e9d6c85213cb9645a6",
+            "D": "cab9c86ff5262e459576f61f4c54423a76a114b5d7dc1bf7aa8b4fc673782291"
+          },
+          "donor_prompt_ids_sha256": "9c168d68e301a53536e3538125035c2e8626bd02d852982202bf00868a4b756b",
+          "gold_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q1660243-CBS-subdistrict-21",
+          "subject_qid": "Q1660243",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q960557-CBS-subdistrict-43",
+          "donor_subject_qid": "Q960557",
+          "donor_answer_stratum": "רמלה",
+          "target_prompt_ids_sha256": {
+            "U": "c93d0c8a3e9abba9ae290caf20077d321c227cecd9ebb49ff3fa6a8be0413ed4",
+            "D": "e2ea5af679c3a3ff8df0d98a8a7f4468bdcd51db91fc1842a6f44fff91a63ad7"
+          },
+          "donor_prompt_ids_sha256": "05419ec03e226a7de345584bb21b5f0323797b36d90041ae863d949076829cab",
+          "gold_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e",
+          "distractor_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f"
+        },
+        {
+          "fact_id": "Q1759981-CBS-subdistrict-44",
+          "subject_qid": "Q1759981",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2777055-CBS-subdistrict-22",
+          "donor_subject_qid": "Q2777055",
+          "donor_answer_stratum": "כנרת",
+          "target_prompt_ids_sha256": {
+            "U": "3e380e95167c4c37a7a43e1da12252c0a47d2635bb88579b4dead51709053d7f",
+            "D": "251c67a7adfa1169acd61da2012542dcec1a42a1f042b17c39e0030bddb94301"
+          },
+          "donor_prompt_ids_sha256": "b63e23bcd996c86a3798d885e3d5796a78581a0c6f12c962b7a3dff83e7c48d5",
+          "gold_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q1814658-CBS-subdistrict-32",
+          "subject_qid": "Q1814658",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q2890894-CBS-subdistrict-62",
+          "donor_subject_qid": "Q2890894",
+          "donor_answer_stratum": "באר שבע",
+          "target_prompt_ids_sha256": {
+            "U": "23df24cac1df00a68bf3027eba2980c49f8bab36f126ed0ff1d4e90cc354aa32",
+            "D": "4dfc452d6ad6c672854205cef3265387b9ea8cdad78657d917c489d71fe7f4ed"
+          },
+          "donor_prompt_ids_sha256": "48ea51b67c918cc37e9a25b2e7d055e603ae619f5b127747e01288e49b6b9add",
+          "gold_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab",
+          "distractor_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076"
+        },
+        {
+          "fact_id": "Q1941126-CBS-subdistrict-32",
+          "subject_qid": "Q1941126",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q2614828-CBS-subdistrict-43",
+          "donor_subject_qid": "Q2614828",
+          "donor_answer_stratum": "רמלה",
+          "target_prompt_ids_sha256": {
+            "U": "cc613a3235f4673023666c5ebe99a49d795387720b15ec5f4008ed7e72232517",
+            "D": "8c6b2eed6a04d4f5a4612d0f9346399a065e7adaf67e0188c94164efbcc34b65"
+          },
+          "donor_prompt_ids_sha256": "6cd6e873a3d164c47771602bca1a335068c50dc7da7edfef2d6f215a7516adec",
+          "gold_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab",
+          "distractor_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076"
+        },
+        {
+          "fact_id": "Q2389508-CBS-subdistrict-51",
+          "subject_qid": "Q2389508",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q587948-CBS-subdistrict-44",
+          "donor_subject_qid": "Q587948",
+          "donor_answer_stratum": "רחובות",
+          "target_prompt_ids_sha256": {
+            "U": "889c94aa18f407f9a0aea9fb832636905ef46ba76cfb5a89abdcdd3a839cb348",
+            "D": "c5f557fdf2f770d671e0e4679d7300164f4553d55c0700b2e9f9deb21fb670f3"
+          },
+          "donor_prompt_ids_sha256": "517adb3e17ec0ada34eee7a696d377897a0d78c0548c9c433cee8716def1f7a1",
+          "gold_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1",
+          "distractor_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6"
+        },
+        {
+          "fact_id": "Q2390257-CBS-subdistrict-24",
+          "subject_qid": "Q2390257",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2777371-CBS-subdistrict-44",
+          "donor_subject_qid": "Q2777371",
+          "donor_answer_stratum": "רחובות",
+          "target_prompt_ids_sha256": {
+            "U": "a5bd49ec128c3891d8370ac9203df12c034c1e3017ae29439844461463080f2d",
+            "D": "d41aeb61ef65714d4cecbba685c9f3be971dd7519acd3a8c85880f036afc321c"
+          },
+          "donor_prompt_ids_sha256": "6f2101e6480c0c4837ccd2ab7b81f536a190fccdc2a5e5f0df0251b09a773a40",
+          "gold_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q2413397-CBS-subdistrict-21",
+          "subject_qid": "Q2413397",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2889225-CBS-subdistrict-22",
+          "donor_subject_qid": "Q2889225",
+          "donor_answer_stratum": "כנרת",
+          "target_prompt_ids_sha256": {
+            "U": "868889fe9a8006dbde1fb140664ce03c4bc4e86783f5f546b40aa5bd5787bf09",
+            "D": "e07c6506f3a79599f30f952dc38c9816a210c2d5ceef447112cf076cc61deb29"
+          },
+          "donor_prompt_ids_sha256": "1221b96e898f487362c1b7bc9cb54903e144506d36e7b09251e20c2d2524a8c0",
+          "gold_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e",
+          "distractor_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f"
+        },
+        {
+          "fact_id": "Q2473572-CBS-subdistrict-62",
+          "subject_qid": "Q2473572",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2613353-CBS-subdistrict-42",
+          "donor_subject_qid": "Q2613353",
+          "donor_answer_stratum": "פתח תקווה",
+          "target_prompt_ids_sha256": {
+            "U": "1c63341cc72bb464960b70a2aacc7b0001b4be965f679511078eed7999503008",
+            "D": "cb3c9dde14613a0a626e8b03cc0e2945b546ad49b58ac10f57952b6a39a7dc47"
+          },
+          "donor_prompt_ids_sha256": "0dadf4eb6e32ae1f7404f36ddaaf49bf105a3b6af5d08a373c5047942c9acbb0",
+          "gold_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9",
+          "distractor_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8"
+        },
+        {
+          "fact_id": "Q2475182-CBS-subdistrict-32",
+          "subject_qid": "Q2475182",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q2667061-CBS-subdistrict-31",
+          "donor_subject_qid": "Q2667061",
+          "donor_answer_stratum": "חיפה",
+          "target_prompt_ids_sha256": {
+            "U": "82f59f5055aded3c248d8b582f5c08daf47162b82d01028ed57929d6257fdc5f",
+            "D": "a195bb612c1ae4ee147b78d2a8880d3447a4ca228a72ecac5b7eaf5fc38d16e8"
+          },
+          "donor_prompt_ids_sha256": "fda837895e75ea344285f02c01bfcd78d100efbf72adb1a926785789faee6f3a",
+          "gold_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab",
+          "distractor_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076"
+        },
+        {
+          "fact_id": "Q2572624-CBS-subdistrict-24",
+          "subject_qid": "Q2572624",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2623238-CBS-subdistrict-62",
+          "donor_subject_qid": "Q2623238",
+          "donor_answer_stratum": "באר שבע",
+          "target_prompt_ids_sha256": {
+            "U": "1d93c5a2387813d403e240249c706e8d1e48edfb9ac122f5c6935b96ce15f88f",
+            "D": "c4049a3a881ca934d0da5772141bb4a6ac2b70bd588c65c19b1c0539f62aad34"
+          },
+          "donor_prompt_ids_sha256": "eb73eb6fba7d9dc8c8c3a63f244fc69d609d6f8af524db9035f69f3a63602e92",
+          "gold_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q2612736-CBS-subdistrict-43",
+          "subject_qid": "Q2612736",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q1186956-CBS-subdistrict-22",
+          "donor_subject_qid": "Q1186956",
+          "donor_answer_stratum": "כנרת",
+          "target_prompt_ids_sha256": {
+            "U": "5cd93ff730fc651a8c1281331d429102ab695482fe608478d92c152f83cbe565",
+            "D": "0053de9c71f3794ff11c3c8677fd559713eaa32f086cd79be601827025189bf1"
+          },
+          "donor_prompt_ids_sha256": "cedbe8b241ec56c0534cfc7bd261779e54c6817b1e70406e1f29a148b48f5db4",
+          "gold_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2613167-CBS-subdistrict-43",
+          "subject_qid": "Q2613167",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q2920129-CBS-subdistrict-11",
+          "donor_subject_qid": "Q2920129",
+          "donor_answer_stratum": "ירושלים",
+          "target_prompt_ids_sha256": {
+            "U": "9f924076f916d14908d0946cca95e6e807ee821cc38b83f0217b4c9d70a66a58",
+            "D": "98404380dfb7a4469e0e4ee0695ae3d7a6cff7307434b9efe63e1bc3657cd428"
+          },
+          "donor_prompt_ids_sha256": "baccdecbc072dfc6cc2f945ff70091dd2a2f7fe323c09f77d3f2df820e81d2cd",
+          "gold_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2614214-CBS-subdistrict-43",
+          "subject_qid": "Q2614214",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q1186956-CBS-subdistrict-22",
+          "donor_subject_qid": "Q1186956",
+          "donor_answer_stratum": "כנרת",
+          "target_prompt_ids_sha256": {
+            "U": "c1de3b567c5f6d829da7aaecd3319d798c03b2477b620bc5000c33b1594add2f",
+            "D": "ac093fcd9aea4a88441bd7ab0a241337607b5aa41335ec6206f5e71ac3f6a356"
+          },
+          "donor_prompt_ids_sha256": "cedbe8b241ec56c0534cfc7bd261779e54c6817b1e70406e1f29a148b48f5db4",
+          "gold_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2614824-CBS-subdistrict-43",
+          "subject_qid": "Q2614824",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q2776285-CBS-subdistrict-41",
+          "donor_subject_qid": "Q2776285",
+          "donor_answer_stratum": "השרון",
+          "target_prompt_ids_sha256": {
+            "U": "b295e551aeabdca696d4dd9375631eaf54d9732316c60e6776a98d84125b2cf5",
+            "D": "54f9ab1be8acb9d07fe7ce3b337d7650dc2ea858bfa1dd70538626a37d26e398"
+          },
+          "donor_prompt_ids_sha256": "9074b85f660d627789d2efcb925fe4f92d7991970ff32c61472008b7ee1aa813",
+          "gold_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2614828-CBS-subdistrict-43",
+          "subject_qid": "Q2614828",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q2916378-CBS-subdistrict-11",
+          "donor_subject_qid": "Q2916378",
+          "donor_answer_stratum": "ירושלים",
+          "target_prompt_ids_sha256": {
+            "U": "6cd6e873a3d164c47771602bca1a335068c50dc7da7edfef2d6f215a7516adec",
+            "D": "e3dcb07a82abc19d21b8ba57ba0bd8e3b9bab4e0e5061eb105ec45c00d80aab2"
+          },
+          "donor_prompt_ids_sha256": "52d1503fe5d1db20fe5472940734541a214f9a8a7e3223e0c6026165d2a4e8da",
+          "gold_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2623238-CBS-subdistrict-62",
+          "subject_qid": "Q2623238",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2916378-CBS-subdistrict-11",
+          "donor_subject_qid": "Q2916378",
+          "donor_answer_stratum": "ירושלים",
+          "target_prompt_ids_sha256": {
+            "U": "eb73eb6fba7d9dc8c8c3a63f244fc69d609d6f8af524db9035f69f3a63602e92",
+            "D": "5f35675b0d88514391a0e7091b9cdc77acdaeb4c741e35d47886d0f41d9497ba"
+          },
+          "donor_prompt_ids_sha256": "52d1503fe5d1db20fe5472940734541a214f9a8a7e3223e0c6026165d2a4e8da",
+          "gold_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9",
+          "distractor_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8"
+        },
+        {
+          "fact_id": "Q2639602-CBS-subdistrict-21",
+          "subject_qid": "Q2639602",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2890836-CBS-subdistrict-31",
+          "donor_subject_qid": "Q2890836",
+          "donor_answer_stratum": "חיפה",
+          "target_prompt_ids_sha256": {
+            "U": "37d5171dccb1635dc569811d81f3b500d41337ff7a343ae13e15882ccb63a515",
+            "D": "7523c191bf84cbd42ffcaa605710bd59790e9eb41869d1086c5d95db88923839"
+          },
+          "donor_prompt_ids_sha256": "b8154a3d852e7321f9b7c5a1dba86320ed88c374f14f417f962f2f20100bc059",
+          "gold_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e",
+          "distractor_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f"
+        },
+        {
+          "fact_id": "Q2640151-CBS-subdistrict-24",
+          "subject_qid": "Q2640151",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2889270-CBS-subdistrict-31",
+          "donor_subject_qid": "Q2889270",
+          "donor_answer_stratum": "חיפה",
+          "target_prompt_ids_sha256": {
+            "U": "be5c3604f864d91e56e6fde75d21ac0e2b7847563ad2e2d45a98c0e208915d7a",
+            "D": "72501efaac7b69417aa9322c1941919fd6563935afcb2adb04faa4c1c43b7445"
+          },
+          "donor_prompt_ids_sha256": "142f9273bcbe654496567464e84b88ff4cbab259ad9fe4bd66e1e08364309d03",
+          "gold_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q2655682-CBS-subdistrict-25",
+          "subject_qid": "Q2655682",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2778126-CBS-subdistrict-43",
+          "donor_subject_qid": "Q2778126",
+          "donor_answer_stratum": "רמלה",
+          "target_prompt_ids_sha256": {
+            "U": "c1bcb9a633175302ba84cc1fe683bfb77d1fba82121326bfd5b4a65bb114bbee",
+            "D": "67ea00489a75a0dc7d84dc1efdfc5021fb9c3d02e62eb9cf547bc4dba8e7b178"
+          },
+          "donor_prompt_ids_sha256": "00b828d1866cfa0427544dc641503c342a25ef116b7a66d774625919def9b8d4",
+          "gold_answer_ids_sha256": "c0ac6f2dd24dbd9fb5ba0e169196cadd7593806fb061fb8d82848de96e41d89d",
+          "distractor_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc"
+        },
+        {
+          "fact_id": "Q2667061-CBS-subdistrict-31",
+          "subject_qid": "Q2667061",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q152385-CBS-subdistrict-24",
+          "donor_subject_qid": "Q152385",
+          "donor_answer_stratum": "עכו",
+          "target_prompt_ids_sha256": {
+            "U": "fda837895e75ea344285f02c01bfcd78d100efbf72adb1a926785789faee6f3a",
+            "D": "625d4dcb51ce1c95313687d27832f328a8a6c1dbc42451801c44892f5eae9b79"
+          },
+          "donor_prompt_ids_sha256": "ef90b2e43de3e883ee43bcd55c1a2640af39860827b4df9dccc17cec0ebc6245",
+          "gold_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076",
+          "distractor_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab"
+        },
+        {
+          "fact_id": "Q2667322-CBS-subdistrict-31",
+          "subject_qid": "Q2667322",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q166865-CBS-subdistrict-32",
+          "donor_subject_qid": "Q166865",
+          "donor_answer_stratum": "חדרה",
+          "target_prompt_ids_sha256": {
+            "U": "f9fcdb21ca11593ff34fb1da005e4ca4183f0a951ef0c4d3a73e1cda61f2d304",
+            "D": "29d03250a792fba165893a06b6718f248a7295bdb93ff7779085cedf2ef64188"
+          },
+          "donor_prompt_ids_sha256": "0d4ce4b88f3d56266a565ade9ebf3e9139f3300a916acae7a7283dc057c54198",
+          "gold_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076",
+          "distractor_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab"
+        },
+        {
+          "fact_id": "Q269858-CBS-subdistrict-32",
+          "subject_qid": "Q269858",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q1026806-CBS-subdistrict-62",
+          "donor_subject_qid": "Q1026806",
+          "donor_answer_stratum": "באר שבע",
+          "target_prompt_ids_sha256": {
+            "U": "a44b41e7f55478e0f7ff3e9507059a6307d126e9608a7bba043fb653d40e4db8",
+            "D": "f55fba29a0e52d77e06fe14ca3488cf61dc69aac3398a2326a5942fc5d5bef41"
+          },
+          "donor_prompt_ids_sha256": "d23642a873d62a9fe37d6b728c0f70edeed562be5e59efb00cb5b2bef6b74c79",
+          "gold_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab",
+          "distractor_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076"
+        },
+        {
+          "fact_id": "Q2776779-CBS-subdistrict-42",
+          "subject_qid": "Q2776779",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q2777930-CBS-subdistrict-61",
+          "donor_subject_qid": "Q2777930",
+          "donor_answer_stratum": "אשקלון",
+          "target_prompt_ids_sha256": {
+            "U": "7cc4881d6bf51f9f9d6f15ce50ea86fa7bf08f29e357adf4f3390ca24ca08a3d",
+            "D": "328183027df8bb0d16b4b96f168bbecef40c8c9e6ca569729075e1506301f23d"
+          },
+          "donor_prompt_ids_sha256": "c9c89ddab8499e3a15dab3a4f07f62716a06482212b2564e51ebec4c1ac5597d",
+          "gold_answer_ids_sha256": "9a60af9d31117e6abfd6854386f7957652c1d3cd47d5ac654769fd9fcf18f4a3",
+          "distractor_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a"
+        },
+        {
+          "fact_id": "Q2776880-CBS-subdistrict-21",
+          "subject_qid": "Q2776880",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2915658-CBS-subdistrict-42",
+          "donor_subject_qid": "Q2915658",
+          "donor_answer_stratum": "פתח תקווה",
+          "target_prompt_ids_sha256": {
+            "U": "150704aa0c146640ff76878d8d186ce419d17fc613bf3d07fec6b78612bca039",
+            "D": "092cd5ff7480cb3355eaf56ba77a546fbe5299d2f7e6928fa5a0f6e07cbc2119"
+          },
+          "donor_prompt_ids_sha256": "13d741903615f81f868fa980773cf25d8d6a621b19081a849c90a83333c142bc",
+          "gold_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e",
+          "distractor_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f"
+        },
+        {
+          "fact_id": "Q2777055-CBS-subdistrict-22",
+          "subject_qid": "Q2777055",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q2390257-CBS-subdistrict-24",
+          "donor_subject_qid": "Q2390257",
+          "donor_answer_stratum": "עכו",
+          "target_prompt_ids_sha256": {
+            "U": "b63e23bcd996c86a3798d885e3d5796a78581a0c6f12c962b7a3dff83e7c48d5",
+            "D": "a96d29d825bfe48142d67cf84048e97a403b71988d72b25abbd2da8cf3e6e3d4"
+          },
+          "donor_prompt_ids_sha256": "a5bd49ec128c3891d8370ac9203df12c034c1e3017ae29439844461463080f2d",
+          "gold_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q2777328-CBS-subdistrict-31",
+          "subject_qid": "Q2777328",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q165623-CBS-subdistrict-21",
+          "donor_subject_qid": "Q165623",
+          "donor_answer_stratum": "צפת",
+          "target_prompt_ids_sha256": {
+            "U": "13751716648368e70caf8480df4c6cd31d86c2958e18d22c7cab089da4b59fe6",
+            "D": "5d29f4469b51f773475c3b538dd44df336782e1586e0cef6bcae44a6f321732a"
+          },
+          "donor_prompt_ids_sha256": "8a295034bb7018c6e62eda2c10b96acb15e2e240e19cad98001b3a62c2b8a2d5",
+          "gold_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076",
+          "distractor_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab"
+        },
+        {
+          "fact_id": "Q2777339-CBS-subdistrict-23",
+          "subject_qid": "Q2777339",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q1676894-CBS-subdistrict-22",
+          "donor_subject_qid": "Q1676894",
+          "donor_answer_stratum": "כנרת",
+          "target_prompt_ids_sha256": {
+            "U": "2e630f28ec2d64226dfef5ad5397936a8309fa936c3e23b114c725f14d6b2e01",
+            "D": "29d725c1547cbc0b8857a1a0e56951e5580621de9c9e83c6d816b9d887d16efa"
+          },
+          "donor_prompt_ids_sha256": "c27b7acf44779753c4e51cdacbba82b9cf48cc192b3866f4eb489e080fce59fc",
+          "gold_answer_ids_sha256": "c0ac6f2dd24dbd9fb5ba0e169196cadd7593806fb061fb8d82848de96e41d89d",
+          "distractor_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc"
+        },
+        {
+          "fact_id": "Q2777355-CBS-subdistrict-32",
+          "subject_qid": "Q2777355",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q932073-CBS-subdistrict-42",
+          "donor_subject_qid": "Q932073",
+          "donor_answer_stratum": "פתח תקווה",
+          "target_prompt_ids_sha256": {
+            "U": "fe7034817b0aa5e577cae3fbfa922c83ad131297d1cb8a6eb5c83fe6caec247b",
+            "D": "1e2a025a7244df732d64fe5ecd589845213613d8b2474ac48c52a881f29a2b18"
+          },
+          "donor_prompt_ids_sha256": "5b9190361fccfd10fb151e8255789e30b296e1aa53186c88b36a26d6ead019ed",
+          "gold_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab",
+          "distractor_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076"
+        },
+        {
+          "fact_id": "Q2777886-CBS-subdistrict-11",
+          "subject_qid": "Q2777886",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q1012741-CBS-subdistrict-32",
+          "donor_subject_qid": "Q1012741",
+          "donor_answer_stratum": "חדרה",
+          "target_prompt_ids_sha256": {
+            "U": "f3421c06477372523c8996f0d914db76205f56377d74006c291206a45bd11e35",
+            "D": "f0aa11710a88493cdf8d641b2fb5d2aed3582fec47db3f0155852883646dadb8"
+          },
+          "donor_prompt_ids_sha256": "b3b9daa2be90b69a84768f8ff254aba47bf50d4768b703ca0ca56d1cb179d626",
+          "gold_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6",
+          "distractor_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1"
+        },
+        {
+          "fact_id": "Q2777930-CBS-subdistrict-61",
+          "subject_qid": "Q2777930",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q1025294-CBS-subdistrict-11",
+          "donor_subject_qid": "Q1025294",
+          "donor_answer_stratum": "ירושלים",
+          "target_prompt_ids_sha256": {
+            "U": "c9c89ddab8499e3a15dab3a4f07f62716a06482212b2564e51ebec4c1ac5597d",
+            "D": "f933d26459b0f0be29790277ad4fe27c2eeaf8be319337d96526d02fe7cda822"
+          },
+          "donor_prompt_ids_sha256": "0a35f74db7fd21800f1d0f1a94dab5763bdbc269479bc621461fe8ada8792df5",
+          "gold_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8",
+          "distractor_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9"
+        },
+        {
+          "fact_id": "Q2778078-CBS-subdistrict-43",
+          "subject_qid": "Q2778078",
+          "answer_stratum": "רמלה",
+          "donor_fact_id": "Q2614185-CBS-subdistrict-42",
+          "donor_subject_qid": "Q2614185",
+          "donor_answer_stratum": "פתח תקווה",
+          "target_prompt_ids_sha256": {
+            "U": "eebbe8461ddc05109ecfd2971ae6d8a00927d35d172f6b931d4540ff138d465c",
+            "D": "3a373b698f0ac141aa1177e22cfc5f10fc6fb3e47a1453a70ae597f266a2b391"
+          },
+          "donor_prompt_ids_sha256": "29e0f81f77fcd99d9c2cea66dc5312992cdec431b383652c2b797b0d7831c5e0",
+          "gold_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2843398-CBS-subdistrict-11",
+          "subject_qid": "Q2843398",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2777766-CBS-subdistrict-25",
+          "donor_subject_qid": "Q2777766",
+          "donor_answer_stratum": "יזרעאל",
+          "target_prompt_ids_sha256": {
+            "U": "14f09e836eed6b5b6da0c43e007d0704fb802223f724a6bccf59494e11124a6a",
+            "D": "0a6f08b9490c481e5ca8e1adb00e70add8ff1162b4e7f2e6c3e526bf3a7c8b6c"
+          },
+          "donor_prompt_ids_sha256": "9c168d68e301a53536e3538125035c2e8626bd02d852982202bf00868a4b756b",
+          "gold_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6",
+          "distractor_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1"
+        },
+        {
+          "fact_id": "Q2888798-CBS-subdistrict-61",
+          "subject_qid": "Q2888798",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2614192-CBS-subdistrict-42",
+          "donor_subject_qid": "Q2614192",
+          "donor_answer_stratum": "פתח תקווה",
+          "target_prompt_ids_sha256": {
+            "U": "f26db4456bbd2e6f6447363e2a6a5c236ef637726ca379193694c0d6ceb90df1",
+            "D": "36086c3f38e18dc19f6883988f2d6b8bc37e691e6b31b0e47cec5743cc2fba0a"
+          },
+          "donor_prompt_ids_sha256": "20aebc6f87d7af9003b78afb3a0caeb64ccd49978d884266873e3b9329c5328d",
+          "gold_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8",
+          "distractor_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9"
+        },
+        {
+          "fact_id": "Q2888897-CBS-subdistrict-61",
+          "subject_qid": "Q2888897",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2776831-CBS-subdistrict-22",
+          "donor_subject_qid": "Q2776831",
+          "donor_answer_stratum": "כנרת",
+          "target_prompt_ids_sha256": {
+            "U": "1999f3c30ea59feff24535cb8bf06c449dfc88a2c57261612ae70dffbf4a1308",
+            "D": "29de813b27eda2288ef24b22a2aaca387cd9dd97dda19dcd97e8d454ec4d358d"
+          },
+          "donor_prompt_ids_sha256": "824a80eb2c1ff57b062b9363da6683efd1cba455b2308233eef62ee3ef3aac7b",
+          "gold_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8",
+          "distractor_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9"
+        },
+        {
+          "fact_id": "Q2889072-CBS-subdistrict-62",
+          "subject_qid": "Q2889072",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2778107-CBS-subdistrict-43",
+          "donor_subject_qid": "Q2778107",
+          "donor_answer_stratum": "רמלה",
+          "target_prompt_ids_sha256": {
+            "U": "a0f80c54082bff5fa3cedcb612b804459c7626a1094893abe8f11ebcbaea7345",
+            "D": "cb08b5ab97ab7e651e04ff979fc007691d0eecf594ba3076d0324b330b33f97b"
+          },
+          "donor_prompt_ids_sha256": "8546f87656189f12d21c4b62adb2444d4146c187cd47c1cf0050dc31d7724ae5",
+          "gold_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9",
+          "distractor_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8"
+        },
+        {
+          "fact_id": "Q2889225-CBS-subdistrict-22",
+          "subject_qid": "Q2889225",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q950347-CBS-subdistrict-52",
+          "donor_subject_qid": "Q950347",
+          "donor_answer_stratum": "תל אביב",
+          "target_prompt_ids_sha256": {
+            "U": "1221b96e898f487362c1b7bc9cb54903e144506d36e7b09251e20c2d2524a8c0",
+            "D": "7f1283750e80f6d3896adfa90e0f750bf01ae45ffbc696fc705310a009cc02bf"
+          },
+          "donor_prompt_ids_sha256": "23b8951c2093187fafcebc544ad14e4794e4ccdb744294676123380e8190533d",
+          "gold_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q2889270-CBS-subdistrict-31",
+          "subject_qid": "Q2889270",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q2130036-CBS-subdistrict-11",
+          "donor_subject_qid": "Q2130036",
+          "donor_answer_stratum": "ירושלים",
+          "target_prompt_ids_sha256": {
+            "U": "142f9273bcbe654496567464e84b88ff4cbab259ad9fe4bd66e1e08364309d03",
+            "D": "a5604de486bef91d1254c0c0825b89128719fe34d9dbb8044a5c5734c42b17c1"
+          },
+          "donor_prompt_ids_sha256": "2c03fbb8729db2548e34c6c33e1c2f488c377728743f29aaf4dd7d311d2edb26",
+          "gold_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076",
+          "distractor_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab"
+        },
+        {
+          "fact_id": "Q2889493-CBS-subdistrict-21",
+          "subject_qid": "Q2889493",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2614818-CBS-subdistrict-43",
+          "donor_subject_qid": "Q2614818",
+          "donor_answer_stratum": "רמלה",
+          "target_prompt_ids_sha256": {
+            "U": "3541eb87ff36256121992db9e776e39ae7f1c5cd7dae663e47b20e0afa9261aa",
+            "D": "9d62f42cdaf723b2c94d109a888e92aff579b86ef0ea2fa1c334f4f023ed1e2a"
+          },
+          "donor_prompt_ids_sha256": "4110b173c5a692b899508502c4cf62b905bf91fc274d038515aa9f60c518505e",
+          "gold_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e",
+          "distractor_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f"
+        },
+        {
+          "fact_id": "Q2889745-CBS-subdistrict-21",
+          "subject_qid": "Q2889745",
+          "answer_stratum": "צפת",
+          "donor_fact_id": "Q2168131-CBS-subdistrict-61",
+          "donor_subject_qid": "Q2168131",
+          "donor_answer_stratum": "אשקלון",
+          "target_prompt_ids_sha256": {
+            "U": "34e53eba14741a5353085a25debdba0b0dfb21161b310e4c67ded15b592d85ab",
+            "D": "9a6f4f0baed3e12035509ae3f1ce494b21e941169d8fcc5b035a9a3a1087ea01"
+          },
+          "donor_prompt_ids_sha256": "50426c5ce0a606c43c435a1bba975a87f66373eeba7bc971267218b35f04361e",
+          "gold_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e",
+          "distractor_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f"
+        },
+        {
+          "fact_id": "Q2889772-CBS-subdistrict-11",
+          "subject_qid": "Q2889772",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q921505-CBS-subdistrict-44",
+          "donor_subject_qid": "Q921505",
+          "donor_answer_stratum": "רחובות",
+          "target_prompt_ids_sha256": {
+            "U": "4f132d23974b11927d5342c7216c56b5de2b96bc41c6b609967d68514f0de9e3",
+            "D": "eb636acaaa7e2a205a2bd8306e62a153af8c4d35c3c555ed4362e0d5503f122c"
+          },
+          "donor_prompt_ids_sha256": "9cc46a4ff63ae41ba28448a1164e7f04530b783aaa948968611de2d5997cb967",
+          "gold_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6",
+          "distractor_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1"
+        },
+        {
+          "fact_id": "Q2889969-CBS-subdistrict-41",
+          "subject_qid": "Q2889969",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q168215-CBS-subdistrict-31",
+          "donor_subject_qid": "Q168215",
+          "donor_answer_stratum": "חיפה",
+          "target_prompt_ids_sha256": {
+            "U": "1676c75f1713997513582dd65c185aaafa9065688178747251e4c006a9003c16",
+            "D": "9e39f5e036e15494ee55dff17fd3c0fc37a8fdf4cc2b12a0fec82eb208f7829b"
+          },
+          "donor_prompt_ids_sha256": "4bf3dc3864948bf4ed3c037bff13d0e4ff43b5327800d31f06034a2f93175968",
+          "gold_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d",
+          "distractor_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e"
+        },
+        {
+          "fact_id": "Q2890199-CBS-subdistrict-44",
+          "subject_qid": "Q2890199",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2389508-CBS-subdistrict-51",
+          "donor_subject_qid": "Q2389508",
+          "donor_answer_stratum": "תל אביב",
+          "target_prompt_ids_sha256": {
+            "U": "fe0bb55cf6027d97369aa4d972fab2a1fac7a111d163597d1e46642edb8af0ba",
+            "D": "92a1a4ce1357213207721b1136af26818f5ba96b86e7d8067c53ce4ea81c7dd8"
+          },
+          "donor_prompt_ids_sha256": "889c94aa18f407f9a0aea9fb832636905ef46ba76cfb5a89abdcdd3a839cb348",
+          "gold_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2890367-CBS-subdistrict-41",
+          "subject_qid": "Q2890367",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q2891278-CBS-subdistrict-61",
+          "donor_subject_qid": "Q2891278",
+          "donor_answer_stratum": "אשקלון",
+          "target_prompt_ids_sha256": {
+            "U": "fbbb92859e7e7e7a13542d8d61fad5180a1c4c1cd38da5125e93acc6093251d0",
+            "D": "28b0a80a01afa356a6dce806286f611405974571ba2483fe1de724042454fa5c"
+          },
+          "donor_prompt_ids_sha256": "8c8569f4a095f29e45c77aef6c4f3ce6d26abc003afa5bcef7abf5f1e8072be2",
+          "gold_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d",
+          "distractor_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e"
+        },
+        {
+          "fact_id": "Q2890389-CBS-subdistrict-61",
+          "subject_qid": "Q2890389",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2890467-CBS-subdistrict-31",
+          "donor_subject_qid": "Q2890467",
+          "donor_answer_stratum": "חיפה",
+          "target_prompt_ids_sha256": {
+            "U": "041b9b54b1417c9afbcf4868922fa9321b315480ca47f65c94fd7154e5282b3c",
+            "D": "28f5e4df49fae3295b2df7bc3f1b6d56e57c5ffeff3e8c103d49e3b3f8e2f468"
+          },
+          "donor_prompt_ids_sha256": "915dcdc3fe09706f209c183dc76e7cea70a6198c47ea20fe25d7b908a05b2686",
+          "gold_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8",
+          "distractor_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9"
+        },
+        {
+          "fact_id": "Q2890461-CBS-subdistrict-42",
+          "subject_qid": "Q2890461",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q2920033-CBS-subdistrict-41",
+          "donor_subject_qid": "Q2920033",
+          "donor_answer_stratum": "השרון",
+          "target_prompt_ids_sha256": {
+            "U": "35178cdd6bcb1731eb92befe7168e7227a4738dbd93f035ab80857caf16958c2",
+            "D": "a274d4afd4a567516ebb4fd2d85a7470730ead0c5fd2bd1955840a5fcfed36da"
+          },
+          "donor_prompt_ids_sha256": "009be4f2d847785453f96850ec1634abd540b314772667683acdfd7a377c4af3",
+          "gold_answer_ids_sha256": "9a60af9d31117e6abfd6854386f7957652c1d3cd47d5ac654769fd9fcf18f4a3",
+          "distractor_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a"
+        },
+        {
+          "fact_id": "Q2890467-CBS-subdistrict-31",
+          "subject_qid": "Q2890467",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q2889308-CBS-subdistrict-11",
+          "donor_subject_qid": "Q2889308",
+          "donor_answer_stratum": "ירושלים",
+          "target_prompt_ids_sha256": {
+            "U": "915dcdc3fe09706f209c183dc76e7cea70a6198c47ea20fe25d7b908a05b2686",
+            "D": "a38a3324f831bd6231e1b8b403c2b8fc7451fe7b0b3621492f7291a205ff0b9d"
+          },
+          "donor_prompt_ids_sha256": "b86ecc32d67b2b61e77f60da2e2d02eb2cc292677248584c96d2ada272352278",
+          "gold_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076",
+          "distractor_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab"
+        },
+        {
+          "fact_id": "Q2890485-CBS-subdistrict-44",
+          "subject_qid": "Q2890485",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2623238-CBS-subdistrict-62",
+          "donor_subject_qid": "Q2623238",
+          "donor_answer_stratum": "באר שבע",
+          "target_prompt_ids_sha256": {
+            "U": "ca3433faf0e63149ef26519af744c7793777931913f1e6043223da255a754554",
+            "D": "ce702c416314a47f6f7909fd60c6d2f374f3e358bc35aac1382bba698787a11a"
+          },
+          "donor_prompt_ids_sha256": "eb73eb6fba7d9dc8c8c3a63f244fc69d609d6f8af524db9035f69f3a63602e92",
+          "gold_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2890894-CBS-subdistrict-62",
+          "subject_qid": "Q2890894",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2588837-CBS-subdistrict-21",
+          "donor_subject_qid": "Q2588837",
+          "donor_answer_stratum": "צפת",
+          "target_prompt_ids_sha256": {
+            "U": "48ea51b67c918cc37e9a25b2e7d055e603ae619f5b127747e01288e49b6b9add",
+            "D": "046da228a57121190ad2632e0aaf9d7076de6a9f2aa23ff62f072a9df365d4c5"
+          },
+          "donor_prompt_ids_sha256": "e2c33f71d0cd3b4406b19eb5780e00e4b2e56b25198b480e5e49533003117500",
+          "gold_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9",
+          "distractor_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8"
+        },
+        {
+          "fact_id": "Q2891272-CBS-subdistrict-23",
+          "subject_qid": "Q2891272",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q1759981-CBS-subdistrict-44",
+          "donor_subject_qid": "Q1759981",
+          "donor_answer_stratum": "רחובות",
+          "target_prompt_ids_sha256": {
+            "U": "4292517fbdee1a3facf0ccc62f09609e1f98dceca47449553fe81874660759fe",
+            "D": "1122d015349f81cfe85dd769dc5e28a62d4db6c95e94e8e53e5d575b46b98936"
+          },
+          "donor_prompt_ids_sha256": "3e380e95167c4c37a7a43e1da12252c0a47d2635bb88579b4dead51709053d7f",
+          "gold_answer_ids_sha256": "c0ac6f2dd24dbd9fb5ba0e169196cadd7593806fb061fb8d82848de96e41d89d",
+          "distractor_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc"
+        },
+        {
+          "fact_id": "Q2915526-CBS-subdistrict-23",
+          "subject_qid": "Q2915526",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2916531-CBS-subdistrict-41",
+          "donor_subject_qid": "Q2916531",
+          "donor_answer_stratum": "השרון",
+          "target_prompt_ids_sha256": {
+            "U": "f48d1f3589f1fb7446873b6fc67604fb68bb3babd81f5608f84c69da60236a0d",
+            "D": "fd31c887f9292aa19243dd34a5ccd71a461693cff40fce1281b6ca4a6cf0ab11"
+          },
+          "donor_prompt_ids_sha256": "7c8470db3d630ed0c49eb4d1a4b2af4c76fd819196a09fe3eded83b503c55849",
+          "gold_answer_ids_sha256": "c0ac6f2dd24dbd9fb5ba0e169196cadd7593806fb061fb8d82848de96e41d89d",
+          "distractor_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc"
+        },
+        {
+          "fact_id": "Q2916531-CBS-subdistrict-41",
+          "subject_qid": "Q2916531",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q2888897-CBS-subdistrict-61",
+          "donor_subject_qid": "Q2888897",
+          "donor_answer_stratum": "אשקלון",
+          "target_prompt_ids_sha256": {
+            "U": "7c8470db3d630ed0c49eb4d1a4b2af4c76fd819196a09fe3eded83b503c55849",
+            "D": "1696efb152e388be65e03a6109a78f7579d4b367d72fcfe29d176820907814b3"
+          },
+          "donor_prompt_ids_sha256": "1999f3c30ea59feff24535cb8bf06c449dfc88a2c57261612ae70dffbf4a1308",
+          "gold_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d",
+          "distractor_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e"
+        },
+        {
+          "fact_id": "Q2916599-CBS-subdistrict-32",
+          "subject_qid": "Q2916599",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q1853103-CBS-subdistrict-22",
+          "donor_subject_qid": "Q1853103",
+          "donor_answer_stratum": "כנרת",
+          "target_prompt_ids_sha256": {
+            "U": "5d9d92a368edb28260ec7e82b1bfae4d8aeabbc4196a07d06007333b961405a1",
+            "D": "555cd8afed16d695b98187fb70820d167a268d48f4d185f55f0e7acdecbd4514"
+          },
+          "donor_prompt_ids_sha256": "a436ab361d26d372614d37c14291317f660d46864d7f39b5f78b3c9134d68e8b",
+          "gold_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab",
+          "distractor_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076"
+        },
+        {
+          "fact_id": "Q2916661-CBS-subdistrict-22",
+          "subject_qid": "Q2916661",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q2920053-CBS-subdistrict-44",
+          "donor_subject_qid": "Q2920053",
+          "donor_answer_stratum": "רחובות",
+          "target_prompt_ids_sha256": {
+            "U": "c13c3cbf35b3f5dbbd703d4f55138c16ab064849f7838554524a430c8254f41a",
+            "D": "fd0b35bce3de35cf24f6ebcaad26dd8450663bd4d5b7b5d280d72dfe091852d4"
+          },
+          "donor_prompt_ids_sha256": "805bfddd3b96218d474086f644515252a819d9b14930310ca66a304b065f5e92",
+          "gold_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q2917263-CBS-subdistrict-61",
+          "subject_qid": "Q2917263",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q1026531-CBS-subdistrict-62",
+          "donor_subject_qid": "Q1026531",
+          "donor_answer_stratum": "באר שבע",
+          "target_prompt_ids_sha256": {
+            "U": "ea7f0834356e0c6d66e129729aec8da7c7e2b00faff76a0c64c05c34cef27d33",
+            "D": "4ac5b436db1fb9b8b44e1512fe262a729a5d2a661d34fedb98684fde9c04db0d"
+          },
+          "donor_prompt_ids_sha256": "76f8e87f266832ff9d2f93429bd3dc764f0f662031ea40810b62e288300b710d",
+          "gold_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8",
+          "distractor_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9"
+        },
+        {
+          "fact_id": "Q2917286-CBS-subdistrict-23",
+          "subject_qid": "Q2917286",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2777017-CBS-subdistrict-21",
+          "donor_subject_qid": "Q2777017",
+          "donor_answer_stratum": "צפת",
+          "target_prompt_ids_sha256": {
+            "U": "9bb29f6bf640e15fe67b503ea8ecd17c0e4d47153ec2b3805843ecb13e3a6e4e",
+            "D": "a248c71cd139127f5ead3d40c161dbc5ccee37a342c0c886e998446aeedf3ad8"
+          },
+          "donor_prompt_ids_sha256": "c84a811206ab16d358d6b4b91150caf478289ed8b89aa66a128b60255da7dc52",
+          "gold_answer_ids_sha256": "c0ac6f2dd24dbd9fb5ba0e169196cadd7593806fb061fb8d82848de96e41d89d",
+          "distractor_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc"
+        },
+        {
+          "fact_id": "Q2920013-CBS-subdistrict-41",
+          "subject_qid": "Q2920013",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q2390257-CBS-subdistrict-24",
+          "donor_subject_qid": "Q2390257",
+          "donor_answer_stratum": "עכו",
+          "target_prompt_ids_sha256": {
+            "U": "cba0530af0e0947ce3eac82aa696b269603a6a6003cfff5328964ce0cb2d4a80",
+            "D": "77eeedecf3a90acea4e22e9483a1569a9d0358089b6221515773292d1a915c09"
+          },
+          "donor_prompt_ids_sha256": "a5bd49ec128c3891d8370ac9203df12c034c1e3017ae29439844461463080f2d",
+          "gold_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d",
+          "distractor_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e"
+        },
+        {
+          "fact_id": "Q2920020-CBS-subdistrict-41",
+          "subject_qid": "Q2920020",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q647488-CBS-subdistrict-42",
+          "donor_subject_qid": "Q647488",
+          "donor_answer_stratum": "פתח תקווה",
+          "target_prompt_ids_sha256": {
+            "U": "c267018669741eb84eb6b3b31732fa7c1b4cb14cc1a1b3e4124eceeae63aa753",
+            "D": "8197119d09273b4647113d3a2bedcf7769503be9d0cb35a1b3f875c12549ee82"
+          },
+          "donor_prompt_ids_sha256": "754df895d311f609a037e55be25127ae5f1621f6299528c30c4717bdbd1d38ca",
+          "gold_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d",
+          "distractor_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e"
+        },
+        {
+          "fact_id": "Q2920034-CBS-subdistrict-44",
+          "subject_qid": "Q2920034",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q2777329-CBS-subdistrict-23",
+          "donor_subject_qid": "Q2777329",
+          "donor_answer_stratum": "יזרעאל",
+          "target_prompt_ids_sha256": {
+            "U": "99c5ebd9a39a395a6922f51bec951026dc780b32cdf0007e37bb093212c701bc",
+            "D": "0a1daf95119a66567393251264be39db1b39108d735dad95faf4719fabdf2b31"
+          },
+          "donor_prompt_ids_sha256": "81aa67ac7cde9e528d221356d39745aeb8ecc37508f30319567d6a882e0bdc50",
+          "gold_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2920041-CBS-subdistrict-11",
+          "subject_qid": "Q2920041",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2889493-CBS-subdistrict-21",
+          "donor_subject_qid": "Q2889493",
+          "donor_answer_stratum": "צפת",
+          "target_prompt_ids_sha256": {
+            "U": "d393105057575668021b40687285ee1bacf0b98a54ccf3bcc3eedc822532fad4",
+            "D": "54165cecd9a16de7fdb7917dfa2b6bf60483594ef9cb35afbfe66032f2e8923f"
+          },
+          "donor_prompt_ids_sha256": "3541eb87ff36256121992db9e776e39ae7f1c5cd7dae663e47b20e0afa9261aa",
+          "gold_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6",
+          "distractor_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1"
+        },
+        {
+          "fact_id": "Q2920053-CBS-subdistrict-44",
+          "subject_qid": "Q2920053",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q571191-CBS-subdistrict-24",
+          "donor_subject_qid": "Q571191",
+          "donor_answer_stratum": "עכו",
+          "target_prompt_ids_sha256": {
+            "U": "805bfddd3b96218d474086f644515252a819d9b14930310ca66a304b065f5e92",
+            "D": "f71056b5ab1195de34ec33919b84ec6fb2d589f6865336520d3b546b4e219584"
+          },
+          "donor_prompt_ids_sha256": "32178e61740ae47950331e39904e9f8bae9fa8d0e8698bae286fb0b95050c083",
+          "gold_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2920086-CBS-subdistrict-42",
+          "subject_qid": "Q2920086",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q731831-CBS-subdistrict-22",
+          "donor_subject_qid": "Q731831",
+          "donor_answer_stratum": "כנרת",
+          "target_prompt_ids_sha256": {
+            "U": "90089067996bb765bd43a9d4a81865061c4fe0bd64e2d7e75e1a5cdd10a7494d",
+            "D": "f1e54ece4b2ed7d3f5c475588184e3f1e2468c136bb255d4e152a8c770cba082"
+          },
+          "donor_prompt_ids_sha256": "2758067e526e267d9e4a54d82785eef7a47d727817a18610536cb8bc440ab011",
+          "gold_answer_ids_sha256": "9a60af9d31117e6abfd6854386f7957652c1d3cd47d5ac654769fd9fcf18f4a3",
+          "distractor_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a"
+        },
+        {
+          "fact_id": "Q2920107-CBS-subdistrict-41",
+          "subject_qid": "Q2920107",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q1012741-CBS-subdistrict-32",
+          "donor_subject_qid": "Q1012741",
+          "donor_answer_stratum": "חדרה",
+          "target_prompt_ids_sha256": {
+            "U": "dbba06babfc8c3f1e35a59cf9582813f950ed8ae8e19e454d2ff097e59b7ee51",
+            "D": "7d6b3fe9043bd79542133dc5f1178d4889e427bd3be468cc02691436cac99eca"
+          },
+          "donor_prompt_ids_sha256": "b3b9daa2be90b69a84768f8ff254aba47bf50d4768b703ca0ca56d1cb179d626",
+          "gold_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d",
+          "distractor_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e"
+        },
+        {
+          "fact_id": "Q2920136-CBS-subdistrict-42",
+          "subject_qid": "Q2920136",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q938477-CBS-subdistrict-41",
+          "donor_subject_qid": "Q938477",
+          "donor_answer_stratum": "השרון",
+          "target_prompt_ids_sha256": {
+            "U": "9a2b15474dd768519381e5f5176b62ae725a562c71cc887b69d33ac1d808a257",
+            "D": "6a64c3e3e1c109b6eac64acd6be4e58b1d5fc04041818f315716ce355b6ff991"
+          },
+          "donor_prompt_ids_sha256": "574e18361ab7edc8fe205a0323ca230f49d15edf1e20e00167201fb42a4dd139",
+          "gold_answer_ids_sha256": "9a60af9d31117e6abfd6854386f7957652c1d3cd47d5ac654769fd9fcf18f4a3",
+          "distractor_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a"
+        },
+        {
+          "fact_id": "Q2920181-CBS-subdistrict-42",
+          "subject_qid": "Q2920181",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q1026531-CBS-subdistrict-62",
+          "donor_subject_qid": "Q1026531",
+          "donor_answer_stratum": "באר שבע",
+          "target_prompt_ids_sha256": {
+            "U": "8d95bbd093a124e6da59ca8e59ea9d7c39a3a3099dba0f3df1ad2db2083d9734",
+            "D": "def485ef09228b8170bc838129b0c171d06edc7734f59e63ce78bfad9f276dfc"
+          },
+          "donor_prompt_ids_sha256": "76f8e87f266832ff9d2f93429bd3dc764f0f662031ea40810b62e288300b710d",
+          "gold_answer_ids_sha256": "9a60af9d31117e6abfd6854386f7957652c1d3cd47d5ac654769fd9fcf18f4a3",
+          "distractor_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a"
+        },
+        {
+          "fact_id": "Q2920231-CBS-subdistrict-44",
+          "subject_qid": "Q2920231",
+          "answer_stratum": "רחובות",
+          "donor_fact_id": "Q1026531-CBS-subdistrict-62",
+          "donor_subject_qid": "Q1026531",
+          "donor_answer_stratum": "באר שבע",
+          "target_prompt_ids_sha256": {
+            "U": "b1f57447bba1f171ef57062c9bf6d5c84ad00205105a67d30d42545cf17ef789",
+            "D": "e9eb072efcede601507fc0d8da4c6d0ed324da87b031fb99ace5a145954080dc"
+          },
+          "donor_prompt_ids_sha256": "76f8e87f266832ff9d2f93429bd3dc764f0f662031ea40810b62e288300b710d",
+          "gold_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a",
+          "distractor_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d"
+        },
+        {
+          "fact_id": "Q2920461-CBS-subdistrict-41",
+          "subject_qid": "Q2920461",
+          "answer_stratum": "השרון",
+          "donor_fact_id": "Q2889963-CBS-subdistrict-32",
+          "donor_subject_qid": "Q2889963",
+          "donor_answer_stratum": "חדרה",
+          "target_prompt_ids_sha256": {
+            "U": "9cc9610a3d2f02439651bd3316fe8f4e15768155ea4f2a5554c71fb07582f9fc",
+            "D": "1a4d6f2e33d587079b7c63f9074316d5a47e6d7aef7968baf0eb35545fbf4660"
+          },
+          "donor_prompt_ids_sha256": "851a9dd1f467a11a26b18f4d2313166bbb0de1156b43c8968a789234d2947f45",
+          "gold_answer_ids_sha256": "93abc00e548415b9616ffb592f62ddf760fa7685da05d70018c3d3e60961224d",
+          "distractor_answer_ids_sha256": "95a7e25f168cdc2b929214ef9f2355159fe3c912556d3955742add260d57ea9e"
+        },
+        {
+          "fact_id": "Q2975331-CBS-subdistrict-62",
+          "subject_qid": "Q2975331",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q2573500-CBS-subdistrict-22",
+          "donor_subject_qid": "Q2573500",
+          "donor_answer_stratum": "כנרת",
+          "target_prompt_ids_sha256": {
+            "U": "6e262c8ba92f6883a2626cb352fd6743f2e90aa7968cc954bda50b6dbe08752b",
+            "D": "d1dd8c6f0377e30b7c8819c83c37cf0abca5496b3dcce3e66ac360e5e9847018"
+          },
+          "donor_prompt_ids_sha256": "36473cd58d4f108a2689bb2a4d6c39913a749225157128fcf82497057aeb726c",
+          "gold_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9",
+          "distractor_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8"
+        },
+        {
+          "fact_id": "Q351620-CBS-subdistrict-24",
+          "subject_qid": "Q351620",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q1018902-CBS-subdistrict-62",
+          "donor_subject_qid": "Q1018902",
+          "donor_answer_stratum": "באר שבע",
+          "target_prompt_ids_sha256": {
+            "U": "8c652930a24d24a417ca652048d963717e55386642f9e6c251fc6362b9548dea",
+            "D": "012fd808b8cc704600c16207ee61e6a3c57d10250b52d1eac858903bceec4e80"
+          },
+          "donor_prompt_ids_sha256": "b128d77f7a329c75e145dcabecc595c1bc75a50ad47624811677af9dc2a84fe8",
+          "gold_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q501543-CBS-subdistrict-61",
+          "subject_qid": "Q501543",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2919844-CBS-subdistrict-43",
+          "donor_subject_qid": "Q2919844",
+          "donor_answer_stratum": "רמלה",
+          "target_prompt_ids_sha256": {
+            "U": "7f865fbe6f5618bca41d4c13942eeb1d2aa2aaf3b88c29a82199e28085cd9c28",
+            "D": "65aac15d0bca64175501def82d3e83c456d487f62a5fbb08587c9c731597a79f"
+          },
+          "donor_prompt_ids_sha256": "463b6c2bc5e68fb76304a08da992ae8f75529e67f9ac64feeaf69bfd06a6b548",
+          "gold_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8",
+          "distractor_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9"
+        },
+        {
+          "fact_id": "Q550025-CBS-subdistrict-23",
+          "subject_qid": "Q550025",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2613167-CBS-subdistrict-43",
+          "donor_subject_qid": "Q2613167",
+          "donor_answer_stratum": "רמלה",
+          "target_prompt_ids_sha256": {
+            "U": "5b1096cbafcfe6b9798929cfb6233a79037fdd3a59e1c145343893966dfa0009",
+            "D": "d410f1096878d9720eef070605545300e70cd86f965b91e37b4c3b054326c054"
+          },
+          "donor_prompt_ids_sha256": "9f924076f916d14908d0946cca95e6e807ee821cc38b83f0217b4c9d70a66a58",
+          "gold_answer_ids_sha256": "c0ac6f2dd24dbd9fb5ba0e169196cadd7593806fb061fb8d82848de96e41d89d",
+          "distractor_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc"
+        },
+        {
+          "fact_id": "Q571191-CBS-subdistrict-24",
+          "subject_qid": "Q571191",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2920036-CBS-subdistrict-41",
+          "donor_subject_qid": "Q2920036",
+          "donor_answer_stratum": "השרון",
+          "target_prompt_ids_sha256": {
+            "U": "32178e61740ae47950331e39904e9f8bae9fa8d0e8698bae286fb0b95050c083",
+            "D": "95e8266d2a90b28475ebe0142f7c82eec008ec75a2d85964bf32e54a9bb445ea"
+          },
+          "donor_prompt_ids_sha256": "1b63cc08e445d02a14dbf318765b1b37dd4b8344962e992c31d78534eadf39a7",
+          "gold_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q586687-CBS-subdistrict-31",
+          "subject_qid": "Q586687",
+          "answer_stratum": "חיפה",
+          "donor_fact_id": "Q2916751-CBS-subdistrict-23",
+          "donor_subject_qid": "Q2916751",
+          "donor_answer_stratum": "יזרעאל",
+          "target_prompt_ids_sha256": {
+            "U": "aa8cfa674a987d72211650067493b99bb8edfd49f1727311f7cd647fabdf776d",
+            "D": "c42712d94565f34b505252f92633db622e3058b9e5e224911c4bc393855ca4a6"
+          },
+          "donor_prompt_ids_sha256": "02ce877e4f9517204891a83986fe282bc42e4167f2fa9a3dcda9438fb93fa8a5",
+          "gold_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076",
+          "distractor_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab"
+        },
+        {
+          "fact_id": "Q607414-CBS-subdistrict-11",
+          "subject_qid": "Q607414",
+          "answer_stratum": "ירושלים",
+          "donor_fact_id": "Q2890180-CBS-subdistrict-61",
+          "donor_subject_qid": "Q2890180",
+          "donor_answer_stratum": "אשקלון",
+          "target_prompt_ids_sha256": {
+            "U": "8f78db857a2f283f6e2353106cd6f1bf76d9a112172761f33f7c756e37669521",
+            "D": "ac3f8858f2c5ab82a76efb7b2a48d5b1afda0332ec168eaba92604689e8cfca5"
+          },
+          "donor_prompt_ids_sha256": "7fe6ee7d170d83ebeb90abc021a81b51dd8e3a68dc074d5bb5f02de775a8d451",
+          "gold_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6",
+          "distractor_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1"
+        },
+        {
+          "fact_id": "Q647488-CBS-subdistrict-42",
+          "subject_qid": "Q647488",
+          "answer_stratum": "פתח תקווה",
+          "donor_fact_id": "Q607414-CBS-subdistrict-11",
+          "donor_subject_qid": "Q607414",
+          "donor_answer_stratum": "ירושלים",
+          "target_prompt_ids_sha256": {
+            "U": "754df895d311f609a037e55be25127ae5f1621f6299528c30c4717bdbd1d38ca",
+            "D": "5e40d1178734c8230f3227f15cc1beba2dda4d797fee29814a79548709d05ddd"
+          },
+          "donor_prompt_ids_sha256": "8f78db857a2f283f6e2353106cd6f1bf76d9a112172761f33f7c756e37669521",
+          "gold_answer_ids_sha256": "9a60af9d31117e6abfd6854386f7957652c1d3cd47d5ac654769fd9fcf18f4a3",
+          "distractor_answer_ids_sha256": "de91a57690f5f7ed8dc0c2a9be2274a3cd8b8fa22e0d4b396f374767b30deb1a"
+        },
+        {
+          "fact_id": "Q730195-CBS-subdistrict-25",
+          "subject_qid": "Q730195",
+          "answer_stratum": "יזרעאל",
+          "donor_fact_id": "Q2919998-CBS-subdistrict-41",
+          "donor_subject_qid": "Q2919998",
+          "donor_answer_stratum": "השרון",
+          "target_prompt_ids_sha256": {
+            "U": "2520b047bde0158548afe122de52f39f15912d2dd2a6486656b4c410cb16ca75",
+            "D": "a5981e525b9418f1b03217118b7ec01f8fc416dba9359e5cf720d1562902dabc"
+          },
+          "donor_prompt_ids_sha256": "ab2bcfffbef55a86339202df6209a8c6c3afd5a3de30c084c375f56197a21fbb",
+          "gold_answer_ids_sha256": "c0ac6f2dd24dbd9fb5ba0e169196cadd7593806fb061fb8d82848de96e41d89d",
+          "distractor_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc"
+        },
+        {
+          "fact_id": "Q731831-CBS-subdistrict-22",
+          "subject_qid": "Q731831",
+          "answer_stratum": "כנרת",
+          "donor_fact_id": "Q2777355-CBS-subdistrict-32",
+          "donor_subject_qid": "Q2777355",
+          "donor_answer_stratum": "חדרה",
+          "target_prompt_ids_sha256": {
+            "U": "2758067e526e267d9e4a54d82785eef7a47d727817a18610536cb8bc440ab011",
+            "D": "37743ac003e3bf07889029ca623afe44a02581be2a0551fbc3ed4155fb9a1f80"
+          },
+          "donor_prompt_ids_sha256": "fe7034817b0aa5e577cae3fbfa922c83ad131297d1cb8a6eb5c83fe6caec247b",
+          "gold_answer_ids_sha256": "304dacc3c770d3eaf6d94641b55d343a28ded6064b99c0bcacfead8c24ab1dcc",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q814900-CBS-subdistrict-24",
+          "subject_qid": "Q814900",
+          "answer_stratum": "עכו",
+          "donor_fact_id": "Q2776865-CBS-subdistrict-23",
+          "donor_subject_qid": "Q2776865",
+          "donor_answer_stratum": "יזרעאל",
+          "target_prompt_ids_sha256": {
+            "U": "a32660be5ab70e74152597deb9960404911fc388091a5c2d724ddbb4a25d2aea",
+            "D": "443a587af9703f195ce7b8c09b7c9a512540fb52ff384621d7051af3c1c38d96"
+          },
+          "donor_prompt_ids_sha256": "1d8c588d7f20b53dddf6214c4a6d2dc73ccee5c26349452114a36e087582c1fd",
+          "gold_answer_ids_sha256": "c122c204acafaa2caf3f1a9750fa7f6968b1085eed11139d0873389b6d08855f",
+          "distractor_answer_ids_sha256": "d8976e8a807d73ae79ee1952a6d1efff39aae6c4aed888ef3117bd6708c7271e"
+        },
+        {
+          "fact_id": "Q845866-CBS-subdistrict-51",
+          "subject_qid": "Q845866",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q277749-CBS-subdistrict-32",
+          "donor_subject_qid": "Q277749",
+          "donor_answer_stratum": "חדרה",
+          "target_prompt_ids_sha256": {
+            "U": "1e07cdb3844e661db9e4e6313b23a3afa432808824eb53ed3e228c9681a2da91",
+            "D": "900d0e47b51fa07169207c6d441e9444ab74bb120017214a930c7d4a7e7f97d4"
+          },
+          "donor_prompt_ids_sha256": "70ec8c914d8be0dfbe6a38ef0e561381bdae826993a019418a2436522ba902b7",
+          "gold_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1",
+          "distractor_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6"
+        },
+        {
+          "fact_id": "Q863890-CBS-subdistrict-32",
+          "subject_qid": "Q863890",
+          "answer_stratum": "חדרה",
+          "donor_fact_id": "Q2667061-CBS-subdistrict-31",
+          "donor_subject_qid": "Q2667061",
+          "donor_answer_stratum": "חיפה",
+          "target_prompt_ids_sha256": {
+            "U": "1b59159b5754a03c64c4e95b155b2cb146af4b467bab671060967c740a0dea0e",
+            "D": "6b83e91ee2b76b5b4e6cab3f5642c0a457789f5c42eeacff0685637b33f9e938"
+          },
+          "donor_prompt_ids_sha256": "fda837895e75ea344285f02c01bfcd78d100efbf72adb1a926785789faee6f3a",
+          "gold_answer_ids_sha256": "8d1671a27a63c18b3d2bc2c6d94a2af5352eaa659c5b96e3fa4d6d4d32e2a8ab",
+          "distractor_answer_ids_sha256": "78aabb1d8bf5c3618ac07a6093ac9f28768d3a57baf8dc291b96be81f8e65076"
+        },
+        {
+          "fact_id": "Q925908-CBS-subdistrict-62",
+          "subject_qid": "Q925908",
+          "answer_stratum": "באר שבע",
+          "donor_fact_id": "Q1011497-CBS-subdistrict-21",
+          "donor_subject_qid": "Q1011497",
+          "donor_answer_stratum": "צפת",
+          "target_prompt_ids_sha256": {
+            "U": "9b45f6dd98b0d4767fae5c86f817a5f293071149e0e45c3828d4d4e2d9d4205f",
+            "D": "d78295e06bed7280ef2433d6cb1ea67cc39fd39c0acc47b3a366a27927e3d497"
+          },
+          "donor_prompt_ids_sha256": "ece282f9eb90502c2e667e9d9db808ee1ac65d090dff929ccb6a2ae91fd6f45e",
+          "gold_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9",
+          "distractor_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8"
+        },
+        {
+          "fact_id": "Q950347-CBS-subdistrict-52",
+          "subject_qid": "Q950347",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q2916536-CBS-subdistrict-62",
+          "donor_subject_qid": "Q2916536",
+          "donor_answer_stratum": "באר שבע",
+          "target_prompt_ids_sha256": {
+            "U": "23b8951c2093187fafcebc544ad14e4794e4ccdb744294676123380e8190533d",
+            "D": "c31413208f70cf087ac99ec189071734a1aa0cbfbb16c5fe66717615c5cfdd70"
+          },
+          "donor_prompt_ids_sha256": "aaaa617d7e7955bc1c22272ab5043d5e2c7cea9ee4322b4a9f44f82e31df8933",
+          "gold_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1",
+          "distractor_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6"
+        },
+        {
+          "fact_id": "Q952186-CBS-subdistrict-53",
+          "subject_qid": "Q952186",
+          "answer_stratum": "תל אביב",
+          "donor_fact_id": "Q2776946-CBS-subdistrict-23",
+          "donor_subject_qid": "Q2776946",
+          "donor_answer_stratum": "יזרעאל",
+          "target_prompt_ids_sha256": {
+            "U": "25dbd1f37ff40bf5ad0c8caf578b73cc6d0969580732887e9f71bb044afd9905",
+            "D": "271d6d83fcfc6cf22faa31ee9de919ff36e993d8de926811261d3066aca1475b"
+          },
+          "donor_prompt_ids_sha256": "e1007c79f32794dcd8427f124f52d58a09bcfbae8cb97450a5d7daefc19af25e",
+          "gold_answer_ids_sha256": "f9c64b5be561772728f15ab9f1c40b98bf035b2d90e86e72efce42dc26cfecb1",
+          "distractor_answer_ids_sha256": "33fe10a48477b7440da35c56cb4457d4f685f9b98787888218be61f5dd4aabd6"
+        },
+        {
+          "fact_id": "Q990653-CBS-subdistrict-61",
+          "subject_qid": "Q990653",
+          "answer_stratum": "אשקלון",
+          "donor_fact_id": "Q2920053-CBS-subdistrict-44",
+          "donor_subject_qid": "Q2920053",
+          "donor_answer_stratum": "רחובות",
+          "target_prompt_ids_sha256": {
+            "U": "dade93c28191e23c03e364a60cedb3b69e6363fe4bf2d029fd2e1dd1a5e10949",
+            "D": "2500dce1aaa24031b627f75045e16dd28abaf87a5ae41c533674b369e14f2f63"
+          },
+          "donor_prompt_ids_sha256": "805bfddd3b96218d474086f644515252a819d9b14930310ca66a304b065f5e92",
+          "gold_answer_ids_sha256": "e5411d9ef9c6e1c7323f7e5e477d47844e0360393748b3d490fb5bf5beca28b8",
+          "distractor_answer_ids_sha256": "91f9ee23b7f7f8dadbe1ad61599f5b48bb286ea0319e18bcbb006162eb0104b9"
+        }
+      ]
+    }
+  }
+}

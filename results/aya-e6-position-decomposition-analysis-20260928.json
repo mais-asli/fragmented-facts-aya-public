@@ -1,0 +1,427 @@
+{
+  "method_status": "posthoc_exploratory",
+  "protocol_sha256": "42aa3855b0ef5095d675752bdf5817cf500194dd71f1708c57370b0b9894195e",
+  "archive_sha256": "786deba0ce4c8915a16d793adcf75083f3ed39ec115adfb0cf2bf13bef798bfd",
+  "model_id": "CohereLabs/aya-23-8B",
+  "revision": "89da1a0ed02d6130f93ae0ffdbedb63b760c0471",
+  "precision": "nf4",
+  "total_fact_language_pairs": 246,
+  "cells": {
+    "external_google_re_ar": {
+      "subject_count": 26,
+      "relation_count": 2,
+      "distinct_answer_qids": 13,
+      "relation_counts": {
+        "P19": 14,
+        "P20": 12
+      },
+      "components": {
+        "A_to_B": {
+          "relation_macro_mean_nats": -0.6260604804955933,
+          "subject_weighted_mean_nats": -0.5770887648659832,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -1.6279753334333138,
+            0.35031993477023426
+          ],
+          "negative_subjects": 15,
+          "positive_subjects": 11
+        },
+        "B_to_C": {
+          "relation_macro_mean_nats": 0.1664652388569125,
+          "subject_weighted_mean_nats": 0.15699759472706248,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -0.8529040595280422,
+            1.2063871791768401
+          ],
+          "negative_subjects": 10,
+          "positive_subjects": 16
+        },
+        "C_to_D": {
+          "relation_macro_mean_nats": -0.38866949562863007,
+          "subject_weighted_mean_nats": -0.4476775318550538,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -1.467697674674417,
+            0.6487108992493356
+          ],
+          "negative_subjects": 14,
+          "positive_subjects": 12
+        },
+        "A_to_D": {
+          "relation_macro_mean_nats": -0.8482647372673109,
+          "subject_weighted_mean_nats": -0.8677687019939745,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -2.0631133138558777,
+            0.2906466663042967
+          ],
+          "negative_subjects": 15,
+          "positive_subjects": 11
+        }
+      },
+      "subject_token_delta_D_minus_A": {
+        "median": 10.0,
+        "mean": 10.0
+      },
+      "subject_token_steps": {
+        "B_minus_A_median": 3.0,
+        "B_minus_A_range": [
+          0,
+          9
+        ],
+        "A_B_same_count_subjects": 1,
+        "D_minus_B_median": 6.0,
+        "D_minus_B_range": [
+          4,
+          14
+        ]
+      }
+    },
+    "external_google_re_he": {
+      "subject_count": 26,
+      "relation_count": 2,
+      "distinct_answer_qids": 13,
+      "relation_counts": {
+        "P19": 14,
+        "P20": 12
+      },
+      "components": {
+        "A_to_B": {
+          "relation_macro_mean_nats": -0.48680551018610246,
+          "subject_weighted_mean_nats": -0.44024631085966787,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -1.544687808087904,
+            0.430970393482435
+          ],
+          "negative_subjects": 12,
+          "positive_subjects": 14
+        },
+        "B_to_C": {
+          "relation_macro_mean_nats": -0.4901506764851677,
+          "subject_weighted_mean_nats": -0.45352259015019697,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -1.8321549945203368,
+            0.4012414197430398
+          ],
+          "negative_subjects": 14,
+          "positive_subjects": 12
+        },
+        "C_to_D": {
+          "relation_macro_mean_nats": 0.5380590069738295,
+          "subject_weighted_mean_nats": 0.4829106743138534,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -0.41493624705215365,
+            1.6649302791895966
+          ],
+          "negative_subjects": 11,
+          "positive_subjects": 15
+        },
+        "A_to_D": {
+          "relation_macro_mean_nats": -0.4388971796974407,
+          "subject_weighted_mean_nats": -0.4108582266960114,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -1.2813560670878468,
+            0.2861293022545626
+          ],
+          "negative_subjects": 14,
+          "positive_subjects": 12
+        }
+      },
+      "subject_token_delta_D_minus_A": {
+        "median": 11.0,
+        "mean": 11.846153846153847
+      },
+      "subject_token_steps": {
+        "B_minus_A_median": 4.0,
+        "B_minus_A_range": [
+          2,
+          11
+        ],
+        "A_B_same_count_subjects": 0,
+        "D_minus_B_median": 7.0,
+        "D_minus_B_range": [
+          4,
+          15
+        ]
+      }
+    },
+    "heldout_ar": {
+      "subject_count": 40,
+      "relation_count": 4,
+      "distinct_answer_qids": 28,
+      "relation_counts": {
+        "P159": 6,
+        "P19": 11,
+        "P20": 13,
+        "P740": 10
+      },
+      "components": {
+        "A_to_B": {
+          "relation_macro_mean_nats": -2.0370445179458914,
+          "subject_weighted_mean_nats": -1.6865636670548454,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -2.9879554626227365,
+            -1.1434327161755513
+          ],
+          "negative_subjects": 29,
+          "positive_subjects": 9
+        },
+        "B_to_C": {
+          "relation_macro_mean_nats": -1.4168883823482803,
+          "subject_weighted_mean_nats": -1.2096793849804173,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -2.397239970456427,
+            -0.45062118435202647
+          ],
+          "negative_subjects": 28,
+          "positive_subjects": 12
+        },
+        "C_to_D": {
+          "relation_macro_mean_nats": 1.572166608944844,
+          "subject_weighted_mean_nats": 1.2539822339678666,
+          "answer_cluster_bootstrap_ci95_nats": [
+            0.586214121042847,
+            2.5912521958521486
+          ],
+          "negative_subjects": 14,
+          "positive_subjects": 26
+        },
+        "A_to_D": {
+          "relation_macro_mean_nats": -1.8817662913493283,
+          "subject_weighted_mean_nats": -1.642260818067396,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -3.005649890530285,
+            -0.829749968989916
+          ],
+          "negative_subjects": 29,
+          "positive_subjects": 11
+        }
+      },
+      "subject_token_delta_D_minus_A": {
+        "median": 11.0,
+        "mean": 11.875
+      },
+      "subject_token_steps": {
+        "B_minus_A_median": 4.0,
+        "B_minus_A_range": [
+          0,
+          11
+        ],
+        "A_B_same_count_subjects": 2,
+        "D_minus_B_median": 7.0,
+        "D_minus_B_range": [
+          3,
+          15
+        ]
+      }
+    },
+    "heldout_he": {
+      "subject_count": 40,
+      "relation_count": 4,
+      "distinct_answer_qids": 28,
+      "relation_counts": {
+        "P159": 6,
+        "P19": 11,
+        "P20": 13,
+        "P740": 10
+      },
+      "components": {
+        "A_to_B": {
+          "relation_macro_mean_nats": -1.486262417164273,
+          "subject_weighted_mean_nats": -1.1217503647008926,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -2.2738158532882484,
+            -0.6645260670607409
+          ],
+          "negative_subjects": 27,
+          "positive_subjects": 13
+        },
+        "B_to_C": {
+          "relation_macro_mean_nats": -2.210385213403973,
+          "subject_weighted_mean_nats": -1.6105616710827235,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -3.411433092847376,
+            -1.101899464898618
+          ],
+          "negative_subjects": 25,
+          "positive_subjects": 15
+        },
+        "C_to_D": {
+          "relation_macro_mean_nats": 2.3272098603647433,
+          "subject_weighted_mean_nats": 1.4308901105629048,
+          "answer_cluster_bootstrap_ci95_nats": [
+            1.2651584051321874,
+            3.453247310358465
+          ],
+          "negative_subjects": 17,
+          "positive_subjects": 23
+        },
+        "A_to_D": {
+          "relation_macro_mean_nats": -1.3694377702035034,
+          "subject_weighted_mean_nats": -1.3014219252207113,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -2.082730722519291,
+            -0.6777053970917333
+          ],
+          "negative_subjects": 28,
+          "positive_subjects": 12
+        }
+      },
+      "subject_token_delta_D_minus_A": {
+        "median": 12.0,
+        "mean": 14.55
+      },
+      "subject_token_steps": {
+        "B_minus_A_median": 4.5,
+        "B_minus_A_range": [
+          0,
+          19
+        ],
+        "A_B_same_count_subjects": 1,
+        "D_minus_B_median": 7.0,
+        "D_minus_B_range": [
+          2,
+          31
+        ]
+      }
+    },
+    "pilot_ar": {
+      "subject_count": 57,
+      "relation_count": 4,
+      "distinct_answer_qids": 47,
+      "relation_counts": {
+        "P159": 14,
+        "P19": 14,
+        "P20": 15,
+        "P740": 14
+      },
+      "components": {
+        "A_to_B": {
+          "relation_macro_mean_nats": -1.120863585353181,
+          "subject_weighted_mean_nats": -1.123184256846872,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -1.8173389098913084,
+            -0.41588734521372595
+          ],
+          "negative_subjects": 36,
+          "positive_subjects": 21
+        },
+        "B_to_C": {
+          "relation_macro_mean_nats": -1.6068042800867164,
+          "subject_weighted_mean_nats": -1.594901846404195,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -2.5858145564539723,
+            -0.6502939121376117
+          ],
+          "negative_subjects": 40,
+          "positive_subjects": 17
+        },
+        "C_to_D": {
+          "relation_macro_mean_nats": 1.2368054929395438,
+          "subject_weighted_mean_nats": 1.2315387148963757,
+          "answer_cluster_bootstrap_ci95_nats": [
+            0.3568391478621034,
+            2.1712693981947497
+          ],
+          "negative_subjects": 20,
+          "positive_subjects": 37
+        },
+        "A_to_D": {
+          "relation_macro_mean_nats": -1.4908623725003536,
+          "subject_weighted_mean_nats": -1.4865473883546916,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -2.3922507313801673,
+            -0.6512388952163837
+          ],
+          "negative_subjects": 35,
+          "positive_subjects": 22
+        }
+      },
+      "subject_token_delta_D_minus_A": {
+        "median": 11.0,
+        "mean": 12.070175438596491
+      },
+      "subject_token_steps": {
+        "B_minus_A_median": 3.0,
+        "B_minus_A_range": [
+          1,
+          13
+        ],
+        "A_B_same_count_subjects": 0,
+        "D_minus_B_median": 7.0,
+        "D_minus_B_range": [
+          2,
+          19
+        ]
+      }
+    },
+    "pilot_he": {
+      "subject_count": 57,
+      "relation_count": 4,
+      "distinct_answer_qids": 47,
+      "relation_counts": {
+        "P159": 14,
+        "P19": 14,
+        "P20": 15,
+        "P740": 14
+      },
+      "components": {
+        "A_to_B": {
+          "relation_macro_mean_nats": -1.342351580612155,
+          "subject_weighted_mean_nats": -1.3386243131208175,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -2.1084047412013893,
+            -0.6043791114231272
+          ],
+          "negative_subjects": 42,
+          "positive_subjects": 15
+        },
+        "B_to_C": {
+          "relation_macro_mean_nats": -1.1177589748502863,
+          "subject_weighted_mean_nats": -1.0884045068578097,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -1.7910950560123131,
+            -0.44429032953926223
+          ],
+          "negative_subjects": 36,
+          "positive_subjects": 21
+        },
+        "C_to_D": {
+          "relation_macro_mean_nats": 1.1758725688662448,
+          "subject_weighted_mean_nats": 1.1547406852305198,
+          "answer_cluster_bootstrap_ci95_nats": [
+            0.520146172120718,
+            1.865484131641337
+          ],
+          "negative_subjects": 21,
+          "positive_subjects": 36
+        },
+        "A_to_D": {
+          "relation_macro_mean_nats": -1.2842379865961968,
+          "subject_weighted_mean_nats": -1.2722881347481074,
+          "answer_cluster_bootstrap_ci95_nats": [
+            -2.100670366857706,
+            -0.4005889911105287
+          ],
+          "negative_subjects": 39,
+          "positive_subjects": 18
+        }
+      },
+      "subject_token_delta_D_minus_A": {
+        "median": 11.0,
+        "mean": 12.666666666666666
+      },
+      "subject_token_steps": {
+        "B_minus_A_median": 4.0,
+        "B_minus_A_range": [
+          1,
+          13
+        ],
+        "A_B_same_count_subjects": 0,
+        "D_minus_B_median": 7.0,
+        "D_minus_B_range": [
+          2,
+          20
+        ]
+      }
+    }
+  }
+}

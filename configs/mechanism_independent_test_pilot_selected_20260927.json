@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "model_id": "CohereLabs/aya-23-8B",
+  "model_kind": "aya23",
+  "precision": "nf4",
+  "nf4_compute_dtype": "fp16",
+  "attention": "eager",
+  "max_new_tokens": 24,
+  "seed": 17,
+  "languages": ["en", "he", "ar"],
+  "relations": ["P19", "P20", "P159", "P740"],
+  "mechanism_template": "t1",
+  "partial_diacritics": false,
+  "segmentation_extra_tokens": [1],
+  "patch_generate": true,
+  "patch_components": ["residual"],
+  "native_smoke_review": {
+    "reviewer": "Reviewer A",
+    "notes": "Previously confirmed checkpoint feasibility; no additional human output review is implied."
+  },
+  "workload_pilot_report": "results/workload-ReviewerA-20260926.json",
+  "readout_layers": null,
+  "readout_layers_frozen": false,
+  "windows": [
+    {"name": "early", "layers": [4, 5]},
+    {"name": "lower_middle", "layers": [12, 13]},
+    {"name": "upper_middle", "layers": [20, 21]},
+    {"name": "late", "layers": [28, 29]}
+  ],
+  "primary_window": "lower_middle",
+  "window_selection_source": "pilot_E5_exploratory",
+  "window_selection_reason": "Pilot E5 exploratory same-entity middle-layer restoration selected before any held-out E5 outcome; not an independently localized English E4 site. Other fixed windows are depth controls.",
+  "late_prediction_layer": 31,
+  "population": "unfiltered",
+  "sample_limits": {},
+  "analysis_scope": "heldout_mechanism_replication_pilot_selected_20260927",
+  "primary_answer_policy": "canonical_reviewed_exact_name",
+  "sensitivity_answer_policy": "canonical_only_no_unreviewed_aliases",
+  "cohort_rule": "All 40 previously reviewed held-out subjects, irrespective of E1/E2 result"
+}
