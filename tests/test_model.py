@@ -1,5 +1,6 @@
 import pytest
-import torch
+
+torch = pytest.importorskip("torch")  # model tests need PyTorch; analysis-only installs skip them
 from fragmented_facts.hooks import Patch, capture_context
 from fragmented_facts.prompts import encode_prompt, paired_prompts, template_for
 from fragmented_facts.scoring import continuation_ids, sequence_logprobs

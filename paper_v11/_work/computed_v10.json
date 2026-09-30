@@ -1,0 +1,156 @@
+{
+ "e5_last_layer": {
+  "pilot/he": {
+   "gain": {
+    "estimate": 0.67327800853444,
+    "ci95": [
+     0.061445833101094825,
+     1.315034521370459
+    ],
+    "n_subjects": 57
+   },
+   "first_token_loss_share": 0.6729774980672768,
+   "total_loss": 1.2842379865961968,
+   "max_abs_later_token_change": 0.0,
+   "max_abs_first_token_minus_unmarked": 0.020932674407958984,
+   "correct_generations": 10,
+   "n": 57
+  },
+  "pilot/ar": {
+   "gain": {
+    "estimate": 0.9105862927733965,
+    "ci95": [
+     0.39496910956981146,
+     1.4516221010287695
+    ],
+    "n_subjects": 57
+   },
+   "first_token_loss_share": 0.9110877241872783,
+   "total_loss": 1.4908623725003534,
+   "max_abs_later_token_change": 0.0,
+   "max_abs_first_token_minus_unmarked": 0.03053140640258789,
+   "correct_generations": 7,
+   "n": 57
+  },
+  "heldout/he": {
+   "gain": {
+    "estimate": 0.6114441559980526,
+    "ci95": [
+     0.004879911531683151,
+     1.278591853313067
+    ],
+    "n_subjects": 40
+   },
+   "first_token_loss_share": 0.6124612812045093,
+   "total_loss": 1.3694377702035034,
+   "max_abs_later_token_change": 0.0,
+   "max_abs_first_token_minus_unmarked": 0.02656269073486328,
+   "correct_generations": 9,
+   "n": 40
+  },
+  "heldout/ar": {
+   "gain": {
+    "estimate": 1.416176840910305,
+    "ci95": [
+     0.4978009154850186,
+     2.477041286000363
+    ],
+    "n_subjects": 40
+   },
+   "first_token_loss_share": 1.4199624117966123,
+   "total_loss": 1.8817662913493283,
+   "max_abs_later_token_change": 0.0,
+   "max_abs_first_token_minus_unmarked": 0.03950023651123047,
+   "correct_generations": 5,
+   "n": 40
+  }
+ },
+ "e5_subject_patch_token_split": {
+  "pilot/he": {
+   "first_token": {
+    "estimate": 0.624323621259204,
+    "ci95": [
+     0.10158387709860706,
+     1.1936394470093699
+    ],
+    "n_subjects": 57
+   },
+   "later_tokens": {
+    "estimate": 0.3053267512497509,
+    "ci95": [
+     -0.053130563367137715,
+     0.7323865849668386
+    ],
+    "n_subjects": 57
+   }
+  },
+  "pilot/ar": {
+   "first_token": {
+    "estimate": 0.6999742480194462,
+    "ci95": [
+     0.36328509478331134,
+     1.0488941866653407
+    ],
+    "n_subjects": 57
+   },
+   "later_tokens": {
+    "estimate": 0.3002623913730621,
+    "ci95": [
+     -0.08055302629455903,
+     0.6769699445266982
+    ],
+    "n_subjects": 57
+   }
+  },
+  "heldout/he": {
+   "first_token": {
+    "estimate": 0.7480841217788331,
+    "ci95": [
+     0.26991289476821395,
+     1.3039556577945837
+    ],
+    "n_subjects": 40
+   },
+   "later_tokens": {
+    "estimate": 0.5866788347626128,
+    "ci95": [
+     0.25388370846968855,
+     0.9562352176372851
+    ],
+    "n_subjects": 40
+   }
+  },
+  "heldout/ar": {
+   "first_token": {
+    "estimate": 1.0840341406975305,
+    "ci95": [
+     0.3353603663297742,
+     1.930949751420476
+    ],
+    "n_subjects": 40
+   },
+   "later_tokens": {
+    "estimate": 0.2606216599739797,
+    "ci95": [
+     -0.18791017345200361,
+     0.7455629811742155
+    ],
+    "n_subjects": 40
+   }
+  }
+ },
+ "majority_baseline": {
+  "arabic_geonames": {
+   "most_frequent_answer": "فرنسا",
+   "count": 21,
+   "n": 184,
+   "accuracy": 0.11413043478260869
+  },
+  "hebrew_cbs": {
+   "most_frequent_answer": "אשקלון",
+   "count": 19,
+   "n": 240,
+   "accuracy": 0.07916666666666666
+  }
+ }
+}

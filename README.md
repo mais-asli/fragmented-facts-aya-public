@@ -2,9 +2,9 @@
 
 # Fragmented Facts: Aya-23-8B multilingual recall experiments
 
-Research code, frozen protocols, curated inputs, and privacy-redacted copies of the result artifacts for experiments on how Arabic and Hebrew name vocalization affects factual recall by Aya-23-8B. The repository includes the initial pilot, an independently selected held-out cohort, a Google-RE extension, later source-backed place-name cohorts, and controlled tokenization and activation-patching experiments. The paper is maintained separately.
+Research code, frozen protocols, curated inputs, and privacy-redacted copies of the result artifacts for experiments on how Arabic and Hebrew name vocalization affects factual recall by Aya-23-8B. The repository includes the initial pilot, an independently selected held-out cohort, a Google-RE extension, later source-backed place-name cohorts, and controlled tokenization and activation-patching experiments. The matching anonymized v11 manuscript and analysis files are in `paper_v11/`.
 
-**Reproducing the paper:** [REPRODUCIBILITY.md](REPRODUCIBILITY.md) records the original experiments and explains which checks remain available in this privacy-redacted copy. The complete archive (`Fragmented_Facts_Public_Reproducibility_v9.zip`), with the per-prompt records of every run and the paper source, is attached to the repository's release.
+**Reproducing the paper:** [REPRODUCIBILITY.md](REPRODUCIBILITY.md) records the original experiments and explains which checks remain available in this privacy-redacted copy. The complete archive (`Fragmented_Facts_Public_Reproducibility_v11.zip`), with the per-prompt records of every run and the paper source, is attached to the repository's release.
 
 ## Repository map
 
@@ -30,7 +30,7 @@ Use Python 3.11 or newer. For CPU-only analysis of saved outputs:
 python -m venv venv
 source venv/bin/activate
 python -m pip install -e '.[test]'
-pytest -q
+pytest -q    # the model tests are skipped unless PyTorch is installed
 python scripts/analyze_source_verified_aya_20260928.py
 python scripts/analyze_source_verified_e5_20260928.py
 python scripts/analyze_e6_position_decomposition_20260928.py
@@ -47,4 +47,8 @@ The Slurm templates accept `NLP_PROJECT_ROOT` as the cluster project root. They 
 
 ## Data and result integrity
 
-The curated source-backed cohorts include source identifiers, answer fields, and names used for the runs; the associated reports describe their checks and remaining linguistic uncertainty. Some archive completion records retain the original cluster execution path because they are part of the unmodified run provenance. No model weights, credentials, local review worksheets, or paper drafts are included.
+The curated source-backed cohorts include source identifiers, answer fields, and names used for the runs; the associated reports describe their checks and remaining linguistic uncertainty. Personal identifiers and private execution paths are redacted in this public derivative. The public checksums validate the redacted files; see `PUBLIC_REDACTION_NOTICE.md` for the effect on original protocol hashes. No model weights, credentials, personal review worksheets, or named submission PDFs are included.
+
+## Version 11 update
+
+The release `v11-public-redacted` contains the matching anonymized manuscript source, complete saved-output evidence and the layer-31/token-level computations used by Table 12. `paper_v9/` remains in Git as a historical source version; the v11 release archive contains the current `paper_v11/` source. No new Aya run or scientific estimate was introduced for v11.
